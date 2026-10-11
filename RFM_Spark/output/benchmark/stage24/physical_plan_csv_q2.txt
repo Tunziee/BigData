@@ -1,0 +1,48 @@
+== Physical Plan ==
+AdaptiveSparkPlan (7)
++- HashAggregate (6)
+   +- Exchange (5)
+      +- HashAggregate (4)
+         +- Project (3)
+            +- Filter (2)
+               +- Scan csv  (1)
+
+
+(1) Scan csv 
+Output [2]: [t_dat#986, price#989]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/data/transactions_train.csv]
+PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)]
+ReadSchema: struct<t_dat:date,price:double>
+
+(2) Filter
+Input [2]: [t_dat#986, price#989]
+Condition : (isnotnull(t_dat#986) AND (t_dat#986 >= 2020-01-01))
+
+(3) Project
+Output [1]: [price#989]
+Input [2]: [t_dat#986, price#989]
+
+(4) HashAggregate
+Input [1]: [price#989]
+Keys: []
+Functions [2]: [partial_count(1), partial_sum(price#989)]
+Aggregate Attributes [2]: [count#999L, sum#1000]
+Results [2]: [count#1001L, sum#1002]
+
+(5) Exchange
+Input [2]: [count#1001L, sum#1002]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=1604]
+
+(6) HashAggregate
+Input [2]: [count#1001L, sum#1002]
+Keys: []
+Functions [2]: [count(1), sum(price#989)]
+Aggregate Attributes [2]: [count(1)#997L, sum(price#989)#998]
+Results [2]: [count(1)#997L AS filtered_row_count#992L, sum(price#989)#998 AS filtered_sum_price#993]
+
+(7) AdaptiveSparkPlan
+Output [2]: [filtered_row_count#992L, filtered_sum_price#993]
+Arguments: isFinalPlan=false
+
+

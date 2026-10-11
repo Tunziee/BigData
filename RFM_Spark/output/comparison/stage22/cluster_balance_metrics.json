@@ -1,0 +1,131 @@
+{
+  "B0": {
+    "cluster_count": 4,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 535416,
+        "ratio": 0.535416,
+        "ratio_pct": 53.5416
+      },
+      {
+        "cluster_id": 1,
+        "count": 145205,
+        "ratio": 0.145205,
+        "ratio_pct": 14.5205
+      },
+      {
+        "cluster_id": 2,
+        "count": 301081,
+        "ratio": 0.301081,
+        "ratio_pct": 30.1081
+      },
+      {
+        "cluster_id": 3,
+        "count": 18298,
+        "ratio": 0.018298,
+        "ratio_pct": 1.8297999999999999
+      }
+    ],
+    "min_count": 18298,
+    "max_count": 535416,
+    "min_ratio_pct": 1.8297999999999999,
+    "max_ratio_pct": 53.5416,
+    "below_1pct": 0,
+    "below_2pct": 1,
+    "below_5pct": 1,
+    "mean_cluster_size": 250000.0,
+    "population_std_cluster_size": 192833.7175171915,
+    "cluster_size_cv": 0.771334870068766,
+    "entropy_natural_log": 1.0492892645987302,
+    "normalized_entropy": 0.7569022092473077
+  },
+  "M1": {
+    "cluster_count": 4,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 535490,
+        "ratio": 0.53549,
+        "ratio_pct": 53.549
+      },
+      {
+        "cluster_id": 1,
+        "count": 145123,
+        "ratio": 0.145123,
+        "ratio_pct": 14.5123
+      },
+      {
+        "cluster_id": 2,
+        "count": 301103,
+        "ratio": 0.301103,
+        "ratio_pct": 30.110300000000002
+      },
+      {
+        "cluster_id": 3,
+        "count": 18284,
+        "ratio": 0.018284,
+        "ratio_pct": 1.8284000000000002
+      }
+    ],
+    "min_count": 18284,
+    "max_count": 535490,
+    "min_ratio_pct": 1.8284000000000002,
+    "max_ratio_pct": 53.549,
+    "below_1pct": 0,
+    "below_2pct": 1,
+    "below_5pct": 1,
+    "mean_cluster_size": 250000.0,
+    "population_std_cluster_size": 192877.90600143917,
+    "cluster_size_cv": 0.7715116240057567,
+    "entropy_natural_log": 1.0491476256648056,
+    "normalized_entropy": 0.7568000383535228
+  },
+  "M2": {
+    "cluster_count": 5,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 154437,
+        "ratio": 0.154437,
+        "ratio_pct": 15.4437
+      },
+      {
+        "cluster_id": 1,
+        "count": 126550,
+        "ratio": 0.12655,
+        "ratio_pct": 12.655
+      },
+      {
+        "cluster_id": 2,
+        "count": 197817,
+        "ratio": 0.197817,
+        "ratio_pct": 19.7817
+      },
+      {
+        "cluster_id": 3,
+        "count": 252287,
+        "ratio": 0.252287,
+        "ratio_pct": 25.2287
+      },
+      {
+        "cluster_id": 4,
+        "count": 268909,
+        "ratio": 0.268909,
+        "ratio_pct": 26.890900000000002
+      }
+    ],
+    "min_count": 126550,
+    "max_count": 268909,
+    "min_ratio_pct": 12.655,
+    "max_ratio_pct": 26.890900000000002,
+    "below_1pct": 0,
+    "below_2pct": 0,
+    "below_5pct": 0,
+    "mean_cluster_size": 200000.0,
+    "population_std_cluster_size": 54695.5859425603,
+    "cluster_size_cv": 0.2734779297128015,
+    "entropy_natural_log": 1.5712494353549107,
+    "normalized_entropy": 0.9762721650930705
+  }
+}

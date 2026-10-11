@@ -1,0 +1,111 @@
+{
+  "basket_count": 9080179,
+  "min_support": 0.001,
+  "minimum_support_basket_count": 9081,
+  "distinct_articles": 104547,
+  "articles_meeting_min_support": 68,
+  "top20_articles_by_basket_support": [
+    {
+      "article_id": "0706016001",
+      "basket_frequency": 42146,
+      "support": 0.00464153845425294
+    },
+    {
+      "article_id": "0706016002",
+      "basket_frequency": 30544,
+      "support": 0.003363810338981203
+    },
+    {
+      "article_id": "0372860001",
+      "basket_frequency": 29179,
+      "support": 0.003213482906008791
+    },
+    {
+      "article_id": "0610776002",
+      "basket_frequency": 24975,
+      "support": 0.0027504964384512686
+    },
+    {
+      "article_id": "0759871002",
+      "basket_frequency": 23579,
+      "support": 0.002596754975865564
+    },
+    {
+      "article_id": "0372860002",
+      "basket_frequency": 22306,
+      "support": 0.002456559501745505
+    },
+    {
+      "article_id": "0464297007",
+      "basket_frequency": 21514,
+      "support": 0.0023693365516252486
+    },
+    {
+      "article_id": "0399223001",
+      "basket_frequency": 19394,
+      "support": 0.0021358609780710272
+    },
+    {
+      "article_id": "0720125001",
+      "basket_frequency": 18808,
+      "support": 0.0020713248053810395
+    },
+    {
+      "article_id": "0610776001",
+      "basket_frequency": 18582,
+      "support": 0.002046435428200259
+    },
+    {
+      "article_id": "0706016003",
+      "basket_frequency": 18487,
+      "support": 0.0020359730793853294
+    },
+    {
+      "article_id": "0673396002",
+      "basket_frequency": 18405,
+      "support": 0.002026942420408232
+    },
+    {
+      "article_id": "0673677002",
+      "basket_frequency": 17917,
+      "support": 0.0019731989864957508
+    },
+    {
+      "article_id": "0562245046",
+      "basket_frequency": 17819,
+      "support": 0.0019624062477182442
+    },
+    {
+      "article_id": "0399256001",
+      "basket_frequency": 17655,
+      "support": 0.0019443449297640498
+    },
+    {
+      "article_id": "0562245001",
+      "basket_frequency": 16898,
+      "support": 0.0018609765292071886
+    },
+    {
+      "article_id": "0568601006",
+      "basket_frequency": 16683,
+      "support": 0.0018372985818891896
+    },
+    {
+      "article_id": "0351484002",
+      "basket_frequency": 16621,
+      "support": 0.0018304705226626038
+    },
+    {
+      "article_id": "0608776002",
+      "basket_frequency": 16092,
+      "support": 0.001772211759261574
+    },
+    {
+      "article_id": "0448509014",
+      "basket_frequency": 15920,
+      "support": 0.0017532694014071749
+    }
+  ],
+  "threshold_changed_after_observation": false,
+  "pass": true
+}

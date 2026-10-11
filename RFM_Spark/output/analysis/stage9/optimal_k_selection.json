@@ -1,0 +1,1245 @@
+{
+  "stage": 9,
+  "model": "Main RFM K-Means",
+  "source_stage7_scaler_metadata": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaler_metadata\\scaler_metadata.json",
+  "source_stage8": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage8\\kmeans_k_sweep.json",
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "selection_method": {
+    "silhouette": true,
+    "wcss_elbow": true,
+    "cluster_balance": true,
+    "centroid_interpretability": true,
+    "convergence": true,
+    "business_usefulness": true,
+    "weighted_score_used": false
+  },
+  "authority_audit": {
+    "pass": true,
+    "stage7_withMean": true,
+    "stage7_withStd": true,
+    "stage7_mean_length": 3,
+    "stage7_std_length": 3,
+    "stage8_k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "stage8_all_pass": true,
+    "blockers": []
+  },
+  "silhouette_ranking": [
+    {
+      "rank": 1,
+      "k": 2,
+      "silhouette": 0.7572757388559014,
+      "difference_from_best": 0.0
+    },
+    {
+      "rank": 2,
+      "k": 4,
+      "silhouette": 0.6859294450224572,
+      "difference_from_best": 0.07134629383344415
+    },
+    {
+      "rank": 3,
+      "k": 3,
+      "silhouette": 0.6650979272890235,
+      "difference_from_best": 0.09217781156687788
+    },
+    {
+      "rank": 4,
+      "k": 5,
+      "silhouette": 0.6570942072422772,
+      "difference_from_best": 0.1001815316136242
+    },
+    {
+      "rank": 5,
+      "k": 6,
+      "silhouette": 0.6116205177066648,
+      "difference_from_best": 0.14565522114923657
+    },
+    {
+      "rank": 6,
+      "k": 8,
+      "silhouette": 0.6039793455099449,
+      "difference_from_best": 0.15329639334595646
+    },
+    {
+      "rank": 7,
+      "k": 7,
+      "silhouette": 0.5939436367506115,
+      "difference_from_best": 0.16333210210528992
+    }
+  ],
+  "best_silhouette": {
+    "k": 2,
+    "value": 0.7572757388559014
+  },
+  "second_best_silhouette": {
+    "k": 4,
+    "value": 0.6859294450224572
+  },
+  "wcss_reduction_table": [
+    {
+      "from_k": 2,
+      "to_k": 3,
+      "wcss_previous": 2514082.497202137,
+      "wcss_current": 1483537.5954085677,
+      "absolute_reduction": 1030544.9017935693,
+      "reduction_pct": 40.990894409409336
+    },
+    {
+      "from_k": 3,
+      "to_k": 4,
+      "wcss_previous": 1483537.5954085677,
+      "wcss_current": 1051831.216267805,
+      "absolute_reduction": 431706.3791407626,
+      "reduction_pct": 29.099793660562423
+    },
+    {
+      "from_k": 4,
+      "to_k": 5,
+      "wcss_previous": 1051831.216267805,
+      "wcss_current": 856603.9698525455,
+      "absolute_reduction": 195227.24641525955,
+      "reduction_pct": 18.56070093716947
+    },
+    {
+      "from_k": 5,
+      "to_k": 6,
+      "wcss_previous": 856603.9698525455,
+      "wcss_current": 717569.19390364,
+      "absolute_reduction": 139034.7759489055,
+      "reduction_pct": 16.23092827515599
+    },
+    {
+      "from_k": 6,
+      "to_k": 7,
+      "wcss_previous": 717569.19390364,
+      "wcss_current": 689225.2249182112,
+      "absolute_reduction": 28343.9689854288,
+      "reduction_pct": 3.94999802475286
+    },
+    {
+      "from_k": 7,
+      "to_k": 8,
+      "wcss_previous": 689225.2249182112,
+      "wcss_current": 560331.8224876041,
+      "absolute_reduction": 128893.40243060712,
+      "reduction_pct": 18.701202128216156
+    }
+  ],
+  "elbow_analysis": {
+    "method": "normalized maximum distance to the line connecting the first and last WCSS points",
+    "formula": "x=(K-Kmin)/(Kmax-Kmin); y=(WCSS-WCSSlast)/(WCSSfirst-WCSSlast); distance=abs(x+y-1)/sqrt(2)",
+    "endpoint_k_values": [
+      2,
+      8
+    ],
+    "points": [
+      {
+        "k": 2,
+        "normalized_x": 0.0,
+        "normalized_wcss": 1.0,
+        "distance_to_endpoint_line": 0.0
+      },
+      {
+        "k": 3,
+        "normalized_x": 0.16666666666666666,
+        "normalized_wcss": 0.4725299829037067,
+        "distance_to_endpoint_line": 0.25512649576361524
+      },
+      {
+        "k": 4,
+        "normalized_x": 0.3333333333333333,
+        "normalized_wcss": 0.2515671012382453,
+        "distance_to_endpoint_line": 0.29351971758202566
+      },
+      {
+        "k": 5,
+        "normalized_x": 0.5,
+        "normalized_wcss": 0.15164276138163352,
+        "distance_to_endpoint_line": 0.24632576570246714
+      },
+      {
+        "k": 6,
+        "normalized_x": 0.6666666666666666,
+        "normalized_wcss": 0.0804797528420612,
+        "distance_to_endpoint_line": 0.17879448141267704
+      },
+      {
+        "k": 7,
+        "normalized_x": 0.8333333333333334,
+        "normalized_wcss": 0.06597228812189151,
+        "distance_to_endpoint_line": 0.0712016778963757
+      },
+      {
+        "k": 8,
+        "normalized_x": 1.0,
+        "normalized_wcss": 0.0,
+        "distance_to_endpoint_line": 0.0
+      }
+    ],
+    "supporting_elbow_k": 4,
+    "supporting_elbow_distance": 0.29351971758202566,
+    "note": "Supporting evidence only; final selection also evaluates silhouette, balance, tiny clusters, convergence, and centroid patterns."
+  },
+  "cluster_balance_analysis": {
+    "2": {
+      "min_cluster_count": 173036,
+      "max_cluster_count": 1189245,
+      "min_cluster_ratio_pct": 12.701931539821814,
+      "max_cluster_ratio_pct": 87.29806846017819,
+      "max_min_count_ratio": 6.872818373055318,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 1189245,
+          "ratio_pct": 87.29806846017819,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 173036,
+          "ratio_pct": 12.701931539821814,
+          "flag": "NONE"
+        }
+      ]
+    },
+    "3": {
+      "min_cluster_count": 102738,
+      "max_cluster_count": 813355,
+      "min_cluster_ratio_pct": 7.541615863393823,
+      "max_cluster_ratio_pct": 59.70537649721312,
+      "max_min_count_ratio": 7.916788335377368,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 446188,
+          "ratio_pct": 32.75300763939305,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 102738,
+          "ratio_pct": 7.541615863393823,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 2,
+          "count": 813355,
+          "ratio_pct": 59.70537649721312,
+          "flag": "NONE"
+        }
+      ]
+    },
+    "4": {
+      "min_cluster_count": 24809,
+      "max_cluster_count": 729944,
+      "min_cluster_ratio_pct": 1.8211367551922109,
+      "max_cluster_ratio_pct": 53.582484083680235,
+      "max_min_count_ratio": 29.42254826877343,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 1,
+      "clusters_below_5_pct": 1,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109,
+          "flag": "MINOR"
+        }
+      ]
+    },
+    "5": {
+      "min_cluster_count": 8857,
+      "max_cluster_count": 647864,
+      "min_cluster_ratio_pct": 0.6501595485806526,
+      "max_cluster_ratio_pct": 47.55729544785547,
+      "max_min_count_ratio": 73.14711527605284,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 1,
+      "clusters_below_2_pct": 1,
+      "clusters_below_5_pct": 2,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 398072,
+          "ratio_pct": 29.220990383041386,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 8857,
+          "ratio_pct": 0.6501595485806526,
+          "flag": "SMALL"
+        },
+        {
+          "cluster_id": 2,
+          "count": 242341,
+          "ratio_pct": 17.78935476601377,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 3,
+          "count": 65147,
+          "ratio_pct": 4.7821998545087245,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 4,
+          "count": 647864,
+          "ratio_pct": 47.55729544785547,
+          "flag": "NONE"
+        }
+      ]
+    },
+    "6": {
+      "min_cluster_count": 7933,
+      "max_cluster_count": 514023,
+      "min_cluster_ratio_pct": 0.5823321326510463,
+      "max_cluster_ratio_pct": 37.732523612969715,
+      "max_min_count_ratio": 64.79553762763142,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 1,
+      "clusters_below_2_pct": 1,
+      "clusters_below_5_pct": 2,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 216485,
+          "ratio_pct": 15.891361620693528,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 58260,
+          "ratio_pct": 4.27665070569141,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 2,
+          "count": 306627,
+          "ratio_pct": 22.50835180113354,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 3,
+          "count": 258953,
+          "ratio_pct": 19.008780126860756,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 4,
+          "count": 7933,
+          "ratio_pct": 0.5823321326510463,
+          "flag": "SMALL"
+        },
+        {
+          "cluster_id": 5,
+          "count": 514023,
+          "ratio_pct": 37.732523612969715,
+          "flag": "NONE"
+        }
+      ]
+    },
+    "7": {
+      "min_cluster_count": 3825,
+      "max_cluster_count": 551149,
+      "min_cluster_ratio_pct": 0.28077907568262345,
+      "max_cluster_ratio_pct": 40.457805695007124,
+      "max_min_count_ratio": 144.09124183006537,
+      "clusters_below_0_5_pct": 1,
+      "clusters_below_1_pct": 1,
+      "clusters_below_2_pct": 3,
+      "clusters_below_5_pct": 3,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 269585,
+          "ratio_pct": 19.789235847817007,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 113334,
+          "ratio_pct": 8.319428957755411,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 2,
+          "count": 21788,
+          "ratio_pct": 1.5993763401236605,
+          "flag": "MINOR"
+        },
+        {
+          "cluster_id": 3,
+          "count": 385451,
+          "ratio_pct": 28.294529542730174,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 4,
+          "count": 3825,
+          "ratio_pct": 0.28077907568262345,
+          "flag": "VERY_SMALL"
+        },
+        {
+          "cluster_id": 5,
+          "count": 551149,
+          "ratio_pct": 40.457805695007124,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 6,
+          "count": 17149,
+          "ratio_pct": 1.2588445408840025,
+          "flag": "MINOR"
+        }
+      ]
+    },
+    "8": {
+      "min_cluster_count": 3252,
+      "max_cluster_count": 451208,
+      "min_cluster_ratio_pct": 0.23871726905095206,
+      "max_cluster_ratio_pct": 33.12150723675952,
+      "max_min_count_ratio": 138.7478474784748,
+      "clusters_below_0_5_pct": 1,
+      "clusters_below_1_pct": 1,
+      "clusters_below_2_pct": 3,
+      "clusters_below_5_pct": 3,
+      "cluster_flags": [
+        {
+          "cluster_id": 0,
+          "count": 229461,
+          "ratio_pct": 16.84388169547986,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 1,
+          "count": 3252,
+          "ratio_pct": 0.23871726905095206,
+          "flag": "VERY_SMALL"
+        },
+        {
+          "cluster_id": 2,
+          "count": 94589,
+          "ratio_pct": 6.943427971174816,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 3,
+          "count": 254237,
+          "ratio_pct": 18.6625960429603,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 4,
+          "count": 15856,
+          "ratio_pct": 1.1639302023591316,
+          "flag": "MINOR"
+        },
+        {
+          "cluster_id": 5,
+          "count": 451208,
+          "ratio_pct": 33.12150723675952,
+          "flag": "NONE"
+        },
+        {
+          "cluster_id": 6,
+          "count": 16816,
+          "ratio_pct": 1.234400244883398,
+          "flag": "MINOR"
+        },
+        {
+          "cluster_id": 7,
+          "count": 296862,
+          "ratio_pct": 21.79153933733202,
+          "flag": "NONE"
+        }
+      ]
+    }
+  },
+  "convergence_analysis": {
+    "maxIter": 100,
+    "by_k": {
+      "2": {
+        "num_iter": 33,
+        "convergence_flag": "NORMAL"
+      },
+      "3": {
+        "num_iter": 27,
+        "convergence_flag": "NORMAL"
+      },
+      "4": {
+        "num_iter": 35,
+        "convergence_flag": "NORMAL"
+      },
+      "5": {
+        "num_iter": 61,
+        "convergence_flag": "NORMAL"
+      },
+      "6": {
+        "num_iter": 65,
+        "convergence_flag": "NORMAL"
+      },
+      "7": {
+        "num_iter": 100,
+        "convergence_flag": "LIMIT_REACHED"
+      },
+      "8": {
+        "num_iter": 73,
+        "convergence_flag": "NORMAL"
+      }
+    },
+    "convergence_warning_k7": true,
+    "note": "K=7 reached the configured iteration limit and requires caution; no automatic rerun was performed."
+  },
+  "inverse_center_validation": {
+    "pass": true,
+    "formula": "original_value = scaled_center * scaler_std + scaler_mean",
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary"
+    ],
+    "negative_values_found": false,
+    "all_values_finite": true,
+    "all_dimensions_three": true
+  },
+  "interpretability_analysis": {
+    "2": {
+      "distinct_directional_pattern_count": 2,
+      "directional_patterns": [
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 3.2267527873342408,
+      "assessment": "All 2 centroids have distinct directional RFM patterns; the smallest cluster is 12.701932%; minimum scaled-center separation is 3.226753."
+    },
+    "3": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "NEAR_GLOBAL_MEAN",
+          "NEAR_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.93061749910464,
+      "assessment": "All 3 centroids have distinct directional RFM patterns; the smallest cluster is 7.541616%; minimum scaled-center separation is 1.930617."
+    },
+    "4": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.882267431240601,
+      "assessment": "3 broad directional RFM patterns are present across 4 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 1.821137% and is a minor but inspectable segment; minimum scaled-center separation is 1.882267."
+    },
+    "5": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.4588830899369791,
+      "assessment": "3 broad directional RFM patterns are present across 5 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.650160% and is a small diagnostic segment; minimum scaled-center separation is 1.458883."
+    },
+    "6": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.1326266932606903,
+      "assessment": "3 broad directional RFM patterns are present across 6 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.582332% and is a small diagnostic segment; minimum scaled-center separation is 1.132627."
+    },
+    "7": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.0141095134292986,
+      "assessment": "3 broad directional RFM patterns are present across 7 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.280779% and requires outlier scrutiny; minimum scaled-center separation is 1.014110."
+    },
+    "8": {
+      "distinct_directional_pattern_count": 3,
+      "directional_patterns": [
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "LOWER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "HIGHER_THAN_GLOBAL_MEAN"
+        ],
+        [
+          "HIGHER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN",
+          "LOWER_THAN_GLOBAL_MEAN"
+        ]
+      ],
+      "minimum_pairwise_scaled_center_distance": 1.1053633374451162,
+      "assessment": "3 broad directional RFM patterns are present across 8 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.238717% and requires outlier scrutiny; minimum scaled-center separation is 1.105363."
+    }
+  },
+  "decision_table": [
+    {
+      "K": 2,
+      "Silhouette": 0.7572757388559014,
+      "SilhouetteRank": 1,
+      "WCSS": 2514082.497202137,
+      "WCSSReductionPctFromPrevious": null,
+      "MinClusterRatioPct": 12.701931539821814,
+      "MaxClusterRatioPct": 87.29806846017819,
+      "ClustersBelow1Pct": 0,
+      "ClustersBelow2Pct": 0,
+      "NumIter": 33,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "PRE_ELBOW",
+      "InterpretabilityAssessment": "All 2 centroids have distinct directional RFM patterns; the smallest cluster is 12.701932%; minimum scaled-center separation is 3.226753.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 3,
+      "Silhouette": 0.6650979272890235,
+      "SilhouetteRank": 3,
+      "WCSS": 1483537.5954085677,
+      "WCSSReductionPctFromPrevious": 40.990894409409336,
+      "MinClusterRatioPct": 7.541615863393823,
+      "MaxClusterRatioPct": 59.70537649721312,
+      "ClustersBelow1Pct": 0,
+      "ClustersBelow2Pct": 0,
+      "NumIter": 27,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "ADJACENT_TO_GEOMETRIC_ELBOW",
+      "InterpretabilityAssessment": "All 3 centroids have distinct directional RFM patterns; the smallest cluster is 7.541616%; minimum scaled-center separation is 1.930617.",
+      "SelectionStatus": "CANDIDATE"
+    },
+    {
+      "K": 4,
+      "Silhouette": 0.6859294450224572,
+      "SilhouetteRank": 2,
+      "WCSS": 1051831.216267805,
+      "WCSSReductionPctFromPrevious": 29.099793660562423,
+      "MinClusterRatioPct": 1.8211367551922109,
+      "MaxClusterRatioPct": 53.582484083680235,
+      "ClustersBelow1Pct": 0,
+      "ClustersBelow2Pct": 1,
+      "NumIter": 35,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "PRIMARY_GEOMETRIC_ELBOW",
+      "InterpretabilityAssessment": "3 broad directional RFM patterns are present across 4 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 1.821137% and is a minor but inspectable segment; minimum scaled-center separation is 1.882267.",
+      "SelectionStatus": "SELECTED"
+    },
+    {
+      "K": 5,
+      "Silhouette": 0.6570942072422772,
+      "SilhouetteRank": 4,
+      "WCSS": 856603.9698525455,
+      "WCSSReductionPctFromPrevious": 18.56070093716947,
+      "MinClusterRatioPct": 0.6501595485806526,
+      "MaxClusterRatioPct": 47.55729544785547,
+      "ClustersBelow1Pct": 1,
+      "ClustersBelow2Pct": 1,
+      "NumIter": 61,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "ADJACENT_TO_GEOMETRIC_ELBOW",
+      "InterpretabilityAssessment": "3 broad directional RFM patterns are present across 5 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.650160% and is a small diagnostic segment; minimum scaled-center separation is 1.458883.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 6,
+      "Silhouette": 0.6116205177066648,
+      "SilhouetteRank": 5,
+      "WCSS": 717569.19390364,
+      "WCSSReductionPctFromPrevious": 16.23092827515599,
+      "MinClusterRatioPct": 0.5823321326510463,
+      "MaxClusterRatioPct": 37.732523612969715,
+      "ClustersBelow1Pct": 1,
+      "ClustersBelow2Pct": 1,
+      "NumIter": 65,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "POST_ELBOW",
+      "InterpretabilityAssessment": "3 broad directional RFM patterns are present across 6 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.582332% and is a small diagnostic segment; minimum scaled-center separation is 1.132627.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 7,
+      "Silhouette": 0.5939436367506115,
+      "SilhouetteRank": 7,
+      "WCSS": 689225.2249182112,
+      "WCSSReductionPctFromPrevious": 3.94999802475286,
+      "MinClusterRatioPct": 0.28077907568262345,
+      "MaxClusterRatioPct": 40.457805695007124,
+      "ClustersBelow1Pct": 1,
+      "ClustersBelow2Pct": 3,
+      "NumIter": 100,
+      "ConvergenceFlag": "LIMIT_REACHED",
+      "ElbowEvidence": "POST_ELBOW",
+      "InterpretabilityAssessment": "3 broad directional RFM patterns are present across 7 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.280779% and requires outlier scrutiny; minimum scaled-center separation is 1.014110.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 8,
+      "Silhouette": 0.6039793455099449,
+      "SilhouetteRank": 6,
+      "WCSS": 560331.8224876041,
+      "WCSSReductionPctFromPrevious": 18.701202128216156,
+      "MinClusterRatioPct": 0.23871726905095206,
+      "MaxClusterRatioPct": 33.12150723675952,
+      "ClustersBelow1Pct": 1,
+      "ClustersBelow2Pct": 3,
+      "NumIter": 73,
+      "ConvergenceFlag": "NORMAL",
+      "ElbowEvidence": "POST_ELBOW",
+      "InterpretabilityAssessment": "3 broad directional RFM patterns are present across 8 centroids; remaining non-identical centroids represent magnitude-level splits that require business review; the smallest cluster is 0.238717% and requires outlier scrutiny; minimum scaled-center separation is 1.105363.",
+      "SelectionStatus": "REJECTED"
+    }
+  ],
+  "candidates": [
+    3,
+    4
+  ],
+  "selected_k": 4,
+  "selected_k_metrics": {
+    "silhouette": 0.6859294450224572,
+    "wcss": 1051831.216267805,
+    "min_cluster_ratio_pct": 1.8211367551922109,
+    "max_cluster_ratio_pct": 53.582484083680235,
+    "num_iter": 35
+  },
+  "selection_checks": {
+    "supporting_geometric_elbow_is_interior_k": true,
+    "silhouette_rank_competitive": true,
+    "no_convergence_limit": true,
+    "no_cluster_below_1_pct": true,
+    "centroids_non_identical": true,
+    "inverse_centers_valid": true
+  },
+  "selection_reason": "K=4 is selected because it is the maximum-distance interior point of the objective normalized WCSS elbow diagnostic, has the second-best silhouette (0.6859294450), improves on K=3 silhouette, produces four distinct directional RFM centroid vectors with a magnitude-level split in the high-Frequency/high-Monetary pattern, and has no cluster below 1% (the smallest cluster is 1.8211367552%, a minor but inspectable segment). K=2 has the best silhouette but is highly imbalanced at 87.2980684602% / 12.7019315398% and is too coarse for the requested segmentation granularity. K=3 remains the closest balance-oriented candidate, but its silhouette and elbow evidence are both weaker than K=4. K>=5 are post-elbow solutions with lower silhouette and increasing small-cluster fragmentation; K=7 additionally reached maxIter=100. No weighted score was used.",
+  "rejected_alternatives": {
+    "2": "Rejected despite silhouette rank 1 because the two clusters are strongly imbalanced (87.2980684602% / 12.7019315398%) and provide only two broad groups; K=4 is the geometric elbow and has a competitive silhouette.",
+    "3": "Not selected; retained as a candidate because it is balanced with no sub-5% cluster, but K=4 has higher silhouette and the primary geometric elbow evidence.",
+    "5": "Rejected as post-elbow; silhouette falls below K=4 and a 0.6501595486% SMALL cluster appears.",
+    "6": "Rejected as post-elbow; silhouette falls to 0.6116205177% and a 0.5823321327% SMALL cluster appears.",
+    "7": "Rejected because silhouette is lowest, a 0.2807790757% VERY_SMALL cluster appears, and num_iter=100 reached the configured limit; convergence requires caution.",
+    "8": "Rejected as a more fragmented post-elbow solution; a 0.2387172691% VERY_SMALL cluster appears and silhouette remains below K=4 despite the WCSS reduction from K=7."
+  },
+  "no_retraining": true,
+  "final_model_trained": false,
+  "ready_for_stage10": true,
+  "inverse_centers": [
+    {
+      "k": 2,
+      "cluster_id": 0,
+      "Recency_original": 264.2522531006969,
+      "Frequency_original": 3.888407820050699,
+      "Monetary_original": 0.33258601039678015,
+      "cluster_count": 1189245,
+      "cluster_ratio_pct": 87.29806846017819
+    },
+    {
+      "k": 2,
+      "cluster_id": 1,
+      "Recency_original": 42.98962035706353,
+      "Frequency_original": 25.751975079612244,
+      "Monetary_original": 2.8267654997453775,
+      "cluster_count": 173036,
+      "cluster_ratio_pct": 12.701931539821814
+    },
+    {
+      "k": 3,
+      "cluster_id": 0,
+      "Recency_original": 516.8035304058119,
+      "Frequency_original": 1.8132820536993544,
+      "Monetary_original": 0.1671530549717315,
+      "cluster_count": 446188,
+      "cluster_ratio_pct": 32.75300763939305
+    },
+    {
+      "k": 3,
+      "cluster_id": 1,
+      "Recency_original": 38.43665261867031,
+      "Frequency_original": 31.548952240056423,
+      "Monetary_original": 3.6771593823786435,
+      "cluster_count": 102738,
+      "cluster_ratio_pct": 7.541615863393823
+    },
+    {
+      "k": 3,
+      "cluster_id": 2,
+      "Recency_original": 107.16513904718263,
+      "Frequency_original": 6.183868830046351,
+      "Monetary_original": 0.5314555237205529,
+      "cluster_count": 813355,
+      "cluster_ratio_pct": 59.70537649721312
+    },
+    {
+      "k": 4,
+      "cluster_id": 0,
+      "Recency_original": 125.08151254402787,
+      "Frequency_original": 4.392383577484173,
+      "Monetary_original": 0.3655620960842205,
+      "cluster_count": 729944,
+      "cluster_ratio_pct": 53.582484083680235
+    },
+    {
+      "k": 4,
+      "cluster_id": 1,
+      "Recency_original": 52.93274251377872,
+      "Frequency_original": 19.7918850679208,
+      "Monetary_original": 1.936449339297162,
+      "cluster_count": 198035,
+      "cluster_ratio_pct": 14.537015490930285
+    },
+    {
+      "k": 4,
+      "cluster_id": 2,
+      "Recency_original": 535.4611238775719,
+      "Frequency_original": 1.8030637886399346,
+      "Monetary_original": 0.16760376169176283,
+      "cluster_count": 409493,
+      "cluster_ratio_pct": 30.059363670197264
+    },
+    {
+      "k": 4,
+      "cluster_id": 3,
+      "Recency_original": 26.101455117094474,
+      "Frequency_original": 49.02390261598602,
+      "Monetary_original": 6.6788930520703484,
+      "cluster_count": 24809,
+      "cluster_ratio_pct": 1.8211367551922109
+    },
+    {
+      "k": 5,
+      "cluster_id": 0,
+      "Recency_original": 541.3030135554664,
+      "Frequency_original": 1.7947561723160543,
+      "Monetary_original": 0.1670671312779825,
+      "cluster_count": 398072,
+      "cluster_ratio_pct": 29.220990383041386
+    },
+    {
+      "k": 5,
+      "cluster_id": 1,
+      "Recency_original": 20.689849836286783,
+      "Frequency_original": 64.4292649881449,
+      "Monetary_original": 9.4731467038424,
+      "cluster_count": 8857,
+      "cluster_ratio_pct": 0.6501595485806526
+    },
+    {
+      "k": 5,
+      "cluster_id": 2,
+      "Recency_original": 63.13340073038299,
+      "Frequency_original": 14.491105655162226,
+      "Monetary_original": 1.3063115182830456,
+      "cluster_count": 242341,
+      "cluster_ratio_pct": 17.78935476601377
+    },
+    {
+      "k": 5,
+      "cluster_id": 3,
+      "Recency_original": 37.12979677042617,
+      "Frequency_original": 31.344492540062852,
+      "Monetary_original": 3.576159627674357,
+      "cluster_count": 65147,
+      "cluster_ratio_pct": 4.7821998545087245
+    },
+    {
+      "k": 5,
+      "cluster_id": 4,
+      "Recency_original": 136.3295557857154,
+      "Frequency_original": 3.4593980517498752,
+      "Monetary_original": 0.28506107396058356,
+      "cluster_count": 647864,
+      "cluster_ratio_pct": 47.55729544785547
+    },
+    {
+      "k": 6,
+      "cluster_id": 0,
+      "Recency_original": 61.74439594449433,
+      "Frequency_original": 15.618873415091706,
+      "Monetary_original": 1.4260767566166832,
+      "cluster_count": 216485,
+      "cluster_ratio_pct": 15.891361620693528
+    },
+    {
+      "k": 6,
+      "cluster_id": 1,
+      "Recency_original": 35.76034121725604,
+      "Frequency_original": 32.57958875424816,
+      "Monetary_original": 3.776975310534705,
+      "cluster_count": 58260,
+      "cluster_ratio_pct": 4.27665070569141
+    },
+    {
+      "k": 6,
+      "cluster_id": 2,
+      "Recency_original": 334.9885462325154,
+      "Frequency_original": 2.664543545191461,
+      "Monetary_original": 0.23837053016293686,
+      "cluster_count": 306627,
+      "cluster_ratio_pct": 22.50835180113354
+    },
+    {
+      "k": 6,
+      "cluster_id": 3,
+      "Recency_original": 612.5578811598899,
+      "Frequency_original": 1.4886987213940985,
+      "Monetary_original": 0.13787931996299796,
+      "cluster_count": 258953,
+      "cluster_ratio_pct": 19.008780126860756
+    },
+    {
+      "k": 6,
+      "cluster_id": 4,
+      "Recency_original": 20.460229421403227,
+      "Frequency_original": 66.27215429219707,
+      "Monetary_original": 9.800765713699686,
+      "cluster_count": 7933,
+      "cluster_ratio_pct": 0.5823321326510463
+    },
+    {
+      "k": 6,
+      "cluster_id": 5,
+      "Recency_original": 87.05631947768231,
+      "Frequency_original": 4.03173065325208,
+      "Monetary_original": 0.3293869188289058,
+      "cluster_count": 514023,
+      "cluster_ratio_pct": 37.732523612969715
+    },
+    {
+      "k": 7,
+      "cluster_id": 0,
+      "Recency_original": 70.09492950120088,
+      "Frequency_original": 10.15491191821366,
+      "Monetary_original": 0.8635435247087414,
+      "cluster_count": 269585,
+      "cluster_ratio_pct": 19.789235847817007
+    },
+    {
+      "k": 7,
+      "cluster_id": 1,
+      "Recency_original": 51.22160158835251,
+      "Frequency_original": 20.9019280829481,
+      "Monetary_original": 2.124072447400795,
+      "cluster_count": 113334,
+      "cluster_ratio_pct": 8.319428957755411
+    },
+    {
+      "k": 7,
+      "cluster_id": 2,
+      "Recency_original": 24.224732515956845,
+      "Frequency_original": 45.34848693575793,
+      "Monetary_original": 3.425003014376076,
+      "cluster_count": 21788,
+      "cluster_ratio_pct": 1.5993763401236605
+    },
+    {
+      "k": 7,
+      "cluster_id": 3,
+      "Recency_original": 547.7651237242248,
+      "Frequency_original": 1.7818312950481108,
+      "Monetary_original": 0.16613445922850095,
+      "cluster_count": 385451,
+      "cluster_ratio_pct": 28.294529542730174
+    },
+    {
+      "k": 7,
+      "cluster_id": 4,
+      "Recency_original": 17.004967320261898,
+      "Frequency_original": 82.21150326797394,
+      "Monetary_original": 11.852975119087183,
+      "cluster_count": 3825,
+      "cluster_ratio_pct": 0.28077907568262345
+    },
+    {
+      "k": 7,
+      "cluster_id": 5,
+      "Recency_original": 153.48482968204337,
+      "Frequency_original": 2.65966163196953,
+      "Monetary_original": 0.21864839393192192,
+      "cluster_count": 551149,
+      "cluster_ratio_pct": 40.457805695007124
+    },
+    {
+      "k": 7,
+      "cluster_id": 6,
+      "Recency_original": 39.18552432054102,
+      "Frequency_original": 30.27825731949139,
+      "Monetary_original": 6.221137481292271,
+      "cluster_count": 17149,
+      "cluster_ratio_pct": 1.2588445408840025
+    },
+    {
+      "k": 8,
+      "cluster_id": 0,
+      "Recency_original": 69.9211669797503,
+      "Frequency_original": 11.857596743474883,
+      "Monetary_original": 1.0280443704254885,
+      "cluster_count": 229461,
+      "cluster_ratio_pct": 16.84388169547986
+    },
+    {
+      "k": 8,
+      "cluster_id": 1,
+      "Recency_original": 16.927429274293075,
+      "Frequency_original": 84.44895448954497,
+      "Monetary_original": 12.507058159776518,
+      "cluster_count": 3252,
+      "cluster_ratio_pct": 0.23871726905095206
+    },
+    {
+      "k": 8,
+      "cluster_id": 2,
+      "Recency_original": 47.045557869806515,
+      "Frequency_original": 22.91730014907596,
+      "Monetary_original": 2.3428499364830158,
+      "cluster_count": 94589,
+      "cluster_ratio_pct": 6.943427971174816
+    },
+    {
+      "k": 8,
+      "cluster_id": 3,
+      "Recency_original": 615.0797995570948,
+      "Frequency_original": 1.4784000755246094,
+      "Monetary_original": 0.13659544034151905,
+      "cluster_count": 254237,
+      "cluster_ratio_pct": 18.6625960429603
+    },
+    {
+      "k": 8,
+      "cluster_id": 4,
+      "Recency_original": 38.68907669021169,
+      "Frequency_original": 30.509649344096854,
+      "Monetary_original": 6.394214376421692,
+      "cluster_count": 15856,
+      "cluster_ratio_pct": 1.1639302023591316
+    },
+    {
+      "k": 8,
+      "cluster_id": 5,
+      "Recency_original": 93.11440779384307,
+      "Frequency_original": 3.188246296773847,
+      "Monetary_original": 0.2582366302322694,
+      "cluster_count": 451208,
+      "cluster_ratio_pct": 33.12150723675952
+    },
+    {
+      "k": 8,
+      "cluster_id": 6,
+      "Recency_original": 22.114890580400157,
+      "Frequency_original": 49.82962654614647,
+      "Monetary_original": 3.7959700194729784,
+      "cluster_count": 16816,
+      "cluster_ratio_pct": 1.234400244883398
+    },
+    {
+      "k": 8,
+      "cluster_id": 7,
+      "Recency_original": 342.8372779271158,
+      "Frequency_original": 2.631148479767484,
+      "Monetary_original": 0.23588953978388616,
+      "cluster_count": 296862,
+      "cluster_ratio_pct": 21.79153933733202
+    }
+  ],
+  "artifact_readback": {
+    "selection_json_exists": true,
+    "selection_csv_exists": true,
+    "reduction_csv_exists": true,
+    "inverse_json_exists": true,
+    "inverse_csv_exists": true,
+    "decision_row_count": true,
+    "reduction_row_count": true,
+    "inverse_row_count": true,
+    "exactly_one_selected": true
+  }
+}

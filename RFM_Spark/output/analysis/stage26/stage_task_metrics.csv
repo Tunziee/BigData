@@ -1,0 +1,10 @@
+Workload,JobID,StageID,AttemptID,StageName,Status,NumTasks,CompletedTasks,FailedTasks,ExecutorRunTimeMs,ExecutorCpuTimeNs,InputBytes,InputRecords,ShuffleReadBytes,ShuffleReadRecords,ShuffleWriteBytes,ShuffleWriteRecords,MemoryBytesSpilled,DiskBytesSpilled,JvmGcTimeMs
+Q2_FILTER_AGGREGATION,,16,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,COMPLETE,8,8,0,1166,828125000,1043158,10993329,0,0,504,8,0,0,0
+Q2_FILTER_AGGREGATION,,17,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,SKIPPED,8,0,0,0,0,0,0,0,0,0,0,0,0,0
+Q2_FILTER_AGGREGATION,,18,0,collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462,COMPLETE,1,1,0,12,0,0,0,504,8,0,0,0,0,0
+Q3_CUSTOMER_AGGREGATION,,19,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,COMPLETE,8,8,0,22410,19578125000,156666,31788324,0,0,327775543,4271396,0,0,624
+Q3_CUSTOMER_AGGREGATION,,20,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,SKIPPED,8,0,0,0,0,0,0,0,0,0,0,0,0,0
+Q3_CUSTOMER_AGGREGATION,,21,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,COMPLETE,6,6,0,5911,2406250000,0,0,327775543,4271396,480,6,0,0,0
+Q3_CUSTOMER_AGGREGATION,,22,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,SKIPPED,8,0,0,0,0,0,0,0,0,0,0,0,0,0
+Q3_CUSTOMER_AGGREGATION,,23,0,$anonfun$withThreadLocalCaptured$1 at <unknown>:0,SKIPPED,6,0,0,0,0,0,0,0,0,0,0,0,0,0
+Q3_CUSTOMER_AGGREGATION,,24,0,collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482,COMPLETE,1,1,0,13,15625000,0,0,480,6,0,0,0,0,0

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="679" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="150" y1="553.75" x2="1330" y2="553.75" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="542.75" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.231453</text>
+<line x1="150" y1="417.5" x2="1330" y2="417.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="406.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.462907</text>
+<line x1="150" y1="281.25" x2="1330" y2="281.25" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="270.25" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.69436</text>
+<line x1="150" y1="145" x2="1330" y2="145" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="134" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.925814</text>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="145" x2="150" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="346.667" y1="690" x2="346.667" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="346.667" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">B0</text>
+<line x1="740" y1="690" x2="740" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="740" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">M1</text>
+<line x1="1133.33" y1="690" x2="1133.33" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1133.33" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">M2</text>
+<text x="66" y="417.5" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 417.5)">CV</text>
+<rect x="218.833" y="235.937" width="255.667" height="454.063" fill="#275DAD"/>
+<text x="346.667" y="207.937" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">0.771</text>
+<rect x="612.167" y="235.833" width="255.667" height="454.167" fill="#D97706"/>
+<text x="740" y="207.833" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">0.772</text>
+<rect x="1005.5" y="529.011" width="255.667" height="160.989" fill="#168A6A"/>
+<text x="1133.33" y="501.011" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">0.273</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Cluster coefficient of variation</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Stage 22 locked cluster-balance metrics</text>
+</svg>

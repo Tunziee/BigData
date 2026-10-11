@@ -1,0 +1,11 @@
+{
+  "selected_minSupport_before_reload": 0.0002,
+  "selected_minSupport_after_reload": 0.0002,
+  "minConfidence_after_reload": 0.2,
+  "numPartitions_after_reload": 64,
+  "frequent_itemset_count_before_reload": 2655,
+  "frequent_itemset_count_after_reload": 2655,
+  "association_rule_count_before_reload": 104,
+  "association_rule_count_after_reload": 104,
+  "model_reload_validation_pass": true
+}

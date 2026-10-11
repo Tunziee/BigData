@@ -1,0 +1,22 @@
+AdaptiveSparkPlan isFinalPlan=true
++- == Final Plan ==
+   ResultQueryStage 3
+   +- *(3) HashAggregate(keys=[], functions=[count(1), sum(customer_transaction_count#78L), sum(customer_sum_price#79), max(customer_max_t_dat#80)], output=[grouped_customer_count#87L, sum_grouped_transaction_rows#88L, sum_grouped_monetary#89, max_customer_max_t_dat#90])
+      +- ShuffleQueryStage 1
+         +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=441]
+            +- *(2) HashAggregate(keys=[], functions=[partial_count(1), partial_sum(customer_transaction_count#78L), partial_sum(customer_sum_price#79), partial_max(customer_max_t_dat#80)], output=[count#103L, sum#104L, sum#105, max#106])
+               +- *(2) HashAggregate(keys=[customer_id#1], functions=[count(1), sum(price#3), max(t_dat#0)], output=[customer_transaction_count#78L, customer_sum_price#79, customer_max_t_dat#80])
+                  +- AQEShuffleRead coalesced
+                     +- ShuffleQueryStage 0
+                        +- Exchange hashpartitioning(customer_id#1, 64), ENSURE_REQUIREMENTS, [plan_id=407]
+                           +- *(1) HashAggregate(keys=[customer_id#1], functions=[partial_count(1), partial_sum(price#3), partial_max(t_dat#0)], output=[customer_id#1, count#110L, sum#111, max#112])
+                              +- *(1) ColumnarToRow
+                                 +- FileScan parquet [t_dat#0,customer_id#1,price#3] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transacti..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<t_dat:date,customer_id:string,price:double>
++- == Initial Plan ==
+   HashAggregate(keys=[], functions=[count(1), sum(customer_transaction_count#78L), sum(customer_sum_price#79), max(customer_max_t_dat#80)], output=[grouped_customer_count#87L, sum_grouped_transaction_rows#88L, sum_grouped_monetary#89, max_customer_max_t_dat#90])
+   +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=388]
+      +- HashAggregate(keys=[], functions=[partial_count(1), partial_sum(customer_transaction_count#78L), partial_sum(customer_sum_price#79), partial_max(customer_max_t_dat#80)], output=[count#103L, sum#104L, sum#105, max#106])
+         +- HashAggregate(keys=[customer_id#1], functions=[count(1), sum(price#3), max(t_dat#0)], output=[customer_transaction_count#78L, customer_sum_price#79, customer_max_t_dat#80])
+            +- Exchange hashpartitioning(customer_id#1, 64), ENSURE_REQUIREMENTS, [plan_id=384]
+               +- HashAggregate(keys=[customer_id#1], functions=[partial_count(1), partial_sum(price#3), partial_max(t_dat#0)], output=[customer_id#1, count#110L, sum#111, max#112])
+                  +- FileScan parquet [t_dat#0,customer_id#1,price#3] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transacti..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<t_dat:date,customer_id:string,price:double>

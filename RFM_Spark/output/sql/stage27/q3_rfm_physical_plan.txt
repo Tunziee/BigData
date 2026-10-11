@@ -1,0 +1,68 @@
+== Physical Plan ==
+AdaptiveSparkPlan (10)
++- Project (9)
+   +- HashAggregate (8)
+      +- Exchange (7)
+         +- HashAggregate (6)
+            +- HashAggregate (5)
+               +- Exchange (4)
+                  +- HashAggregate (3)
+                     +- Expand (2)
+                        +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [4]: [t_dat#0, customer_id#1, article_id#2, price#3]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,article_id:string,price:double>
+
+(2) Expand
+Input [4]: [t_dat#0, customer_id#1, article_id#2, price#3]
+Arguments: [[customer_id#1, null, null, 0, t_dat#0, price#3], [customer_id#1, t_dat#0, null, 1, null, null], [customer_id#1, null, article_id#2, 2, null, null]], [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, transactions_clean.t_dat#1907, transactions_clean.price#1908]
+
+(3) HashAggregate
+Input [6]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, transactions_clean.t_dat#1907, transactions_clean.price#1908]
+Keys [4]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904]
+Functions [3]: [partial_max(transactions_clean.t_dat#1907), partial_sum(transactions_clean.price#1908), partial_count(1)]
+Aggregate Attributes [3]: [max#1937, sum#1938, count#1136L]
+Results [7]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, max#1939, sum#1940, count#1139L]
+
+(4) Exchange
+Input [7]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, max#1939, sum#1940, count#1139L]
+Arguments: hashpartitioning(customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, 64), ENSURE_REQUIREMENTS, [plan_id=1877]
+
+(5) HashAggregate
+Input [7]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, max#1939, sum#1940, count#1139L]
+Keys [4]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904]
+Functions [3]: [max(transactions_clean.t_dat#1907), sum(transactions_clean.price#1908), count(1)]
+Aggregate Attributes [3]: [max(transactions_clean.t_dat#1907)#1095, sum(transactions_clean.price#1908)#1098, count(1)#1099L]
+Results [8]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, max(transactions_clean.t_dat#1907)#1095 AS max(transactions_clean.t_dat)#1909, max(transactions_clean.t_dat#1907)#1095 AS max(transactions_clean.t_dat)#1911, sum(transactions_clean.price#1908)#1098 AS sum(transactions_clean.price)#1913, count(1)#1099L AS count(1)#1915L]
+
+(6) HashAggregate
+Input [8]: [customer_id#1, transactions_clean.t_dat#1905, transactions_clean.article_id#1906, gid#1904, max(transactions_clean.t_dat)#1909, max(transactions_clean.t_dat)#1911, sum(transactions_clean.price)#1913, count(1)#1915L]
+Keys [1]: [customer_id#1]
+Functions [6]: [partial_first(max(transactions_clean.t_dat)#1909, true) FILTER (WHERE (gid#1904 = 0)), partial_first(max(transactions_clean.t_dat)#1911, true) FILTER (WHERE (gid#1904 = 0)), partial_count(transactions_clean.t_dat#1905) FILTER (WHERE (gid#1904 = 1)), partial_first(sum(transactions_clean.price)#1913, true) FILTER (WHERE (gid#1904 = 0)), partial_first(count(1)#1915L, true) FILTER (WHERE (gid#1904 = 0)), partial_count(transactions_clean.article_id#1906) FILTER (WHERE (gid#1904 = 2))]
+Aggregate Attributes [10]: [first#1917, valueSet#1918, first#1919, valueSet#1920, count#1921L, first#1922, valueSet#1923, first#1924L, valueSet#1925, count#1926L]
+Results [11]: [customer_id#1, first#1927, valueSet#1928, first#1929, valueSet#1930, count#1931L, first#1932, valueSet#1933, first#1934L, valueSet#1935, count#1936L]
+
+(7) Exchange
+Input [11]: [customer_id#1, first#1927, valueSet#1928, first#1929, valueSet#1930, count#1931L, first#1932, valueSet#1933, first#1934L, valueSet#1935, count#1936L]
+Arguments: hashpartitioning(customer_id#1, 64), ENSURE_REQUIREMENTS, [plan_id=1881]
+
+(8) HashAggregate
+Input [11]: [customer_id#1, first#1927, valueSet#1928, first#1929, valueSet#1930, count#1931L, first#1932, valueSet#1933, first#1934L, valueSet#1935, count#1936L]
+Keys [1]: [customer_id#1]
+Functions [6]: [first(max(transactions_clean.t_dat)#1909, true), first(max(transactions_clean.t_dat)#1911, true), count(transactions_clean.t_dat#1905), first(sum(transactions_clean.price)#1913, true), first(count(1)#1915L, true), count(transactions_clean.article_id#1906)]
+Aggregate Attributes [6]: [first(max(transactions_clean.t_dat)#1909) ignore nulls#1910, first(max(transactions_clean.t_dat)#1911) ignore nulls#1912, count(transactions_clean.t_dat#1905)#1097L, first(sum(transactions_clean.price)#1913) ignore nulls#1914, first(count(1)#1915L) ignore nulls#1916L, count(transactions_clean.article_id#1906)#1100L]
+Results [7]: [customer_id#1, first(max(transactions_clean.t_dat)#1909) ignore nulls#1910 AS LastPurchaseDate#1089, datediff(2020-09-23, first(max(transactions_clean.t_dat)#1911) ignore nulls#1912) AS Recency#1090, count(transactions_clean.t_dat#1905)#1097L AS Frequency#1091L, first(sum(transactions_clean.price)#1913) ignore nulls#1914 AS Monetary#1092, coalesce(first(count(1)#1915L) ignore nulls#1916L, 0) AS TotalItems#1093L, count(transactions_clean.article_id#1906)#1100L AS ProductVariety#1094L]
+
+(9) Project
+Output [8]: [customer_id#1, LastPurchaseDate#1089, Recency#1090, Frequency#1091L, Monetary#1092, TotalItems#1093L, ProductVariety#1094L, (cast(TotalItems#1093L as double) / cast(Frequency#1091L as double)) AS AvgBasketSize#1088]
+Input [7]: [customer_id#1, LastPurchaseDate#1089, Recency#1090, Frequency#1091L, Monetary#1092, TotalItems#1093L, ProductVariety#1094L]
+
+(10) AdaptiveSparkPlan
+Output [8]: [customer_id#1, LastPurchaseDate#1089, Recency#1090, Frequency#1091L, Monetary#1092, TotalItems#1093L, ProductVariety#1094L, AvgBasketSize#1088]
+Arguments: isFinalPlan=false
+
+

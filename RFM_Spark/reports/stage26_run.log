@@ -1,0 +1,992 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+26/10/06 20:10:50 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 20:10:53 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 20:10:53 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 20:10:53 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 20:10:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 20:10:53 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 20:10:53 INFO ResourceUtils: ==============================================================
+26/10/06 20:10:53 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 20:10:53 INFO ResourceUtils: ==============================================================
+26/10/06 20:10:53 INFO SparkContext: Submitted application: Stage26_Spark_Execution_Evidence
+26/10/06 20:10:53 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 20:10:53 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 20:10:53 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 20:10:53 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 20:10:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 20:10:54 INFO Utils: Successfully started service 'sparkDriver' on port 57643.
+26/10/06 20:10:54 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 20:10:54 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 20:10:54 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 20:10:54 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 20:10:54 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 20:10:54 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-74e08691-c842-4a10-af8c-9a7a55295ac6
+26/10/06 20:10:54 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 20:10:54 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 20:10:54 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 20:10:54 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 20:10:54 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 20:10:54 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 20:10:54 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 20:10:54 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 20:10:54 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 20:10:54 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 20:10:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 20:10:54 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 20:10:54 INFO Executor: Running Spark version 4.2.0
+26/10/06 20:10:54 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 20:10:54 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 20:10:54 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 20:10:54 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7979394d for default.
+26/10/06 20:10:54 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 57644.
+26/10/06 20:10:54 INFO NettyBlockTransferService: Server created on Tay-Nguyen:57644
+26/10/06 20:10:54 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 20:10:54 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 57644, None)
+26/10/06 20:10:54 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:57644 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 57644, None)
+26/10/06 20:10:54 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 57644, None)
+26/10/06 20:10:54 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 57644, None)
+26/10/06 20:10:56 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+26/10/06 20:10:56 INFO SharedState: Warehouse path is 'file:/C:/Users/tayb1/Documents/ChatGPT/bigdata/spark-warehouse'.
+26/10/06 20:10:57 INFO InMemoryFileIndex: It took 38 ms to list leaf files for 1 paths.
+26/10/06 20:10:57 INFO SparkContext: Starting job: parquet at <unknown>:0
+26/10/06 20:10:57 INFO DAGScheduler: Got job 0 (parquet at <unknown>:0) with 1 output partitions
+26/10/06 20:10:57 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at <unknown>:0)
+26/10/06 20:10:57 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:10:57 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:10:57 INFO DAGScheduler: Missing parents found for ResultStage 0: List()
+26/10/06 20:10:57 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at <unknown>:0), which has no missing parents
+26/10/06 20:10:57 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/10/06 20:10:57 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 117.8 KiB, free 1048.7 MiB)
+26/10/06 20:10:57 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 42.4 KiB, free 1048.6 MiB)
+26/10/06 20:10:57 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:10:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:10:57 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+26/10/06 20:10:57 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 9931 bytes) 
+26/10/06 20:10:57 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/10/06 20:10:58 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2499 bytes result sent to driver
+26/10/06 20:10:58 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 332 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:10:58 INFO TaskSchedulerImpl: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+26/10/06 20:10:58 INFO DAGScheduler: ResultStage 0 (parquet at <unknown>:0) finished in 436 ms
+26/10/06 20:10:58 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:10:58 INFO TaskSchedulerImpl: Canceling stage 0
+26/10/06 20:10:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+26/10/06 20:10:58 INFO DAGScheduler: Job 0 finished: parquet at <unknown>:0, took 469.3546 ms
+26/10/06 20:10:58 INFO FileSourceStrategy: Pushed Filters: 
+26/10/06 20:10:58 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 188.1443 ms
+26/10/06 20:10:59 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 664.0 B, free 1048.8 MiB)
+26/10/06 20:10:59 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.8 MiB)
+26/10/06 20:10:59 INFO SparkContext: Created broadcast 1 from collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427
+26/10/06 20:10:59 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:10:59 INFO DAGScheduler: Registering RDD 5 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) as input to shuffle 0
+26/10/06 20:10:59 INFO DAGScheduler: Got map stage job 1 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) with 8 output partitions
+26/10/06 20:10:59 INFO DAGScheduler: Final stage: ShuffleMapStage 1 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427)
+26/10/06 20:10:59 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:10:59 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:10:59 INFO DAGScheduler: Missing parents found for ShuffleMapStage 1: List()
+26/10/06 20:10:59 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[5] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427), which has no missing parents
+26/10/06 20:10:59 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 48.2 KiB, free 1048.7 MiB)
+26/10/06 20:10:59 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 19.2 KiB, free 1048.7 MiB)
+26/10/06 20:10:59 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:10:59 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[5] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:10:59 INFO TaskSchedulerImpl: Adding task set 1.0 with 8 tasks resource profile 0
+26/10/06 20:10:59 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:10:59 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:10:59 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 3) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:10:59 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:10:59 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+26/10/06 20:10:59 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+26/10/06 20:10:59 INFO Executor: Running task 3.0 in stage 1.0 (TID 4)
+26/10/06 20:10:59 INFO Executor: Running task 2.0 in stage 1.0 (TID 3)
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 49.2004 ms
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 16.0898 ms
+26/10/06 20:10:59 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 20:10:59 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 20:10:59 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 20:10:59 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 20:10:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 7.4336 ms
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 10.9895 ms
+26/10/06 20:10:59 INFO CodeGenerator: Code generated in 7.0516 ms
+26/10/06 20:10:59 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:10:59 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:10:59 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:10:59 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:10:59 INFO CodecPool: Got brand-new decompressor [.snappy]
+26/10/06 20:10:59 INFO CodecPool: Got brand-new decompressor [.snappy]
+26/10/06 20:10:59 INFO CodecPool: Got brand-new decompressor [.snappy]
+26/10/06 20:10:59 INFO CodecPool: Got brand-new decompressor [.snappy]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:01 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:03 INFO Executor: Finished task 3.0 in stage 1.0 (TID 4). 2874 bytes result sent to driver
+26/10/06 20:11:03 INFO Executor: Finished task 2.0 in stage 1.0 (TID 3). 2874 bytes result sent to driver
+26/10/06 20:11:03 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 5) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:03 INFO Executor: Running task 4.0 in stage 1.0 (TID 5)
+26/10/06 20:11:03 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 6) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:03 INFO Executor: Running task 5.0 in stage 1.0 (TID 6)
+26/10/06 20:11:03 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 3) in 3593 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:03 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 3603 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:03 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 2831 bytes result sent to driver
+26/10/06 20:11:03 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 7) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:03 INFO Executor: Running task 6.0 in stage 1.0 (TID 7)
+26/10/06 20:11:03 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 3660 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:03 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2831 bytes result sent to driver
+26/10/06 20:11:03 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 8) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:03 INFO Executor: Running task 7.0 in stage 1.0 (TID 8)
+26/10/06 20:11:03 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 3747 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:03 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:04 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:04 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:04 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:04 INFO Executor: Finished task 7.0 in stage 1.0 (TID 8). 2788 bytes result sent to driver
+26/10/06 20:11:04 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 8) in 1684 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:05 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:05 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:05 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:06 INFO Executor: Finished task 6.0 in stage 1.0 (TID 7). 2831 bytes result sent to driver
+26/10/06 20:11:06 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 7) in 2992 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:06 INFO Executor: Finished task 5.0 in stage 1.0 (TID 6). 2788 bytes result sent to driver
+26/10/06 20:11:06 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 6) in 3068 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:06 INFO Executor: Finished task 4.0 in stage 1.0 (TID 5). 2788 bytes result sent to driver
+26/10/06 20:11:06 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 5) in 3107 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:06 INFO TaskSchedulerImpl: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+26/10/06 20:11:06 INFO DAGScheduler: ShuffleMapStage 1 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) finished in 6716 ms
+26/10/06 20:11:06 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:06 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:06 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:06 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:06 INFO ShufflePartitionsUtil: For shuffle(0, advisory target size: 67108864, actual target size 67108864, minimum partition size: 1048576
+26/10/06 20:11:06 INFO CodeGenerator: Code generated in 31.569 ms
+26/10/06 20:11:06 INFO DAGScheduler: Registering RDD 8 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) as input to shuffle 1
+26/10/06 20:11:06 INFO DAGScheduler: Got map stage job 2 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) with 6 output partitions
+26/10/06 20:11:06 INFO DAGScheduler: Final stage: ShuffleMapStage 3 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427)
+26/10/06 20:11:06 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+26/10/06 20:11:06 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:06 INFO DAGScheduler: Missing parents found for ShuffleMapStage 3: List()
+26/10/06 20:11:06 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[8] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427), which has no missing parents
+26/10/06 20:11:06 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 66.2 KiB, free 1048.6 MiB)
+26/10/06 20:11:06 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 25.3 KiB, free 1048.6 MiB)
+26/10/06 20:11:06 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:06 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[8] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5))
+26/10/06 20:11:06 INFO TaskSchedulerImpl: Adding task set 3.0 with 6 tasks resource profile 0
+26/10/06 20:11:06 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 9) (Tay-Nguyen,executor driver, partition 0, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:06 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 10) (Tay-Nguyen,executor driver, partition 1, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:06 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 11) (Tay-Nguyen,executor driver, partition 2, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:06 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 12) (Tay-Nguyen,executor driver, partition 3, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:06 INFO Executor: Running task 2.0 in stage 3.0 (TID 11)
+26/10/06 20:11:06 INFO Executor: Running task 1.0 in stage 3.0 (TID 10)
+26/10/06 20:11:06 INFO Executor: Running task 3.0 in stage 3.0 (TID 12)
+26/10/06 20:11:06 INFO Executor: Running task 0.0 in stage 3.0 (TID 9)
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Getting 8 (63.5 MiB) non-empty blocks including 8 (63.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Getting 8 (63.5 MiB) non-empty blocks including 8 (63.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Getting 8 (63.6 MiB) non-empty blocks including 8 (63.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Getting 8 (63.6 MiB) non-empty blocks including 8 (63.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 42 ms
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 42 ms
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 42 ms
+26/10/06 20:11:06 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 42 ms
+26/10/06 20:11:06 INFO CodeGenerator: Code generated in 28.6135 ms
+26/10/06 20:11:07 INFO Executor: Finished task 1.0 in stage 3.0 (TID 10). 5520 bytes result sent to driver
+26/10/06 20:11:07 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 13) (Tay-Nguyen,executor driver, partition 4, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:07 INFO Executor: Running task 4.0 in stage 3.0 (TID 13)
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 10) in 1028 ms on Tay-Nguyen (executor driver) (1/6)
+26/10/06 20:11:07 INFO ShuffleBlockFetcherIterator: Getting 8 (63.5 MiB) non-empty blocks including 8 (63.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:07 INFO Executor: Finished task 2.0 in stage 3.0 (TID 11). 5520 bytes result sent to driver
+26/10/06 20:11:07 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 14) (Tay-Nguyen,executor driver, partition 5, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 11) in 1039 ms on Tay-Nguyen (executor driver) (2/6)
+26/10/06 20:11:07 INFO Executor: Finished task 0.0 in stage 3.0 (TID 9). 5477 bytes result sent to driver
+26/10/06 20:11:07 INFO Executor: Running task 5.0 in stage 3.0 (TID 14)
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 9) in 1053 ms on Tay-Nguyen (executor driver) (3/6)
+26/10/06 20:11:07 INFO Executor: Finished task 3.0 in stage 3.0 (TID 12). 5520 bytes result sent to driver
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 12) in 1057 ms on Tay-Nguyen (executor driver) (4/6)
+26/10/06 20:11:07 INFO ShuffleBlockFetcherIterator: Getting 8 (21.2 MiB) non-empty blocks including 8 (21.2 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+26/10/06 20:11:07 INFO Executor: Finished task 5.0 in stage 3.0 (TID 14). 5563 bytes result sent to driver
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 14) in 234 ms on Tay-Nguyen (executor driver) (5/6)
+26/10/06 20:11:07 INFO Executor: Finished task 4.0 in stage 3.0 (TID 13). 5520 bytes result sent to driver
+26/10/06 20:11:07 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 13) in 612 ms on Tay-Nguyen (executor driver) (6/6)
+26/10/06 20:11:07 INFO TaskSchedulerImpl: Removed TaskSet 3.0 whose tasks have all completed, from pool 
+26/10/06 20:11:07 INFO DAGScheduler: ShuffleMapStage 3 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) finished in 1653 ms
+26/10/06 20:11:07 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:07 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:07 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:07 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:07 INFO CodeGenerator: Code generated in 10.6395 ms
+26/10/06 20:11:08 INFO SparkContext: Starting job: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427
+26/10/06 20:11:08 INFO DAGScheduler: Got job 3 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) with 1 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ResultStage 6 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ResultStage 6: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[11] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 19.2 KiB, free 1048.7 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[11] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 15) (Tay-Nguyen,executor driver, partition 0, NODE_LOCAL, 9631 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 6.0 (TID 15)
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Getting 6 (528.0 B) non-empty blocks including 6 (528.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 14.8781 ms
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 6.0 (TID 15). 3920 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 15) in 32 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 6.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ResultStage 6 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427) finished in 39 ms
+26/10/06 20:11:08 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Canceling stage 6
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+26/10/06 20:11:08 INFO DAGScheduler: Job 3 finished: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:427, took 42.0748 ms
+26/10/06 20:11:08 INFO DAGScheduler: Asked to cleanup jobs for query execution 0
+26/10/06 20:11:08 INFO FileSourceStrategy: Pushed Filters: IsNull(customer_id)
+26/10/06 20:11:08 INFO FileSourceStrategy: Post-Scan Filters: Set(isnull(customer_id#1))
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 4.7731 ms
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 664.0 B, free 1048.6 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 5 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:11:08 INFO DAGScheduler: Registering RDD 15 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 2
+26/10/06 20:11:08 INFO DAGScheduler: Got map stage job 4 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 8 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ShuffleMapStage 7 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ShuffleMapStage 7: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[15] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 18.0 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 8.0 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[15] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 7.0 with 8 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 16) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 17) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 18) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 19) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 2.0 in stage 7.0 (TID 18)
+26/10/06 20:11:08 INFO Executor: Running task 1.0 in stage 7.0 (TID 17)
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 7.0 (TID 16)
+26/10/06 20:11:08 INFO Executor: Running task 3.0 in stage 7.0 (TID 19)
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 6.6763 ms
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 7.0 (TID 16). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO Executor: Finished task 2.0 in stage 7.0 (TID 18). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO Executor: Finished task 1.0 in stage 7.0 (TID 17). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 20) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO Executor: Finished task 3.0 in stage 7.0 (TID 19). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 21) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 4.0 in stage 7.0 (TID 20)
+26/10/06 20:11:08 INFO Executor: Running task 5.0 in stage 7.0 (TID 21)
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 6.0 in stage 7.0 (TID 22) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 7.0 in stage 7.0 (TID 23) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 6.0 in stage 7.0 (TID 22)
+26/10/06 20:11:08 INFO Executor: Running task 7.0 in stage 7.0 (TID 23)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 19) in 51 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 18) in 55 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 17) in 56 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 16) in 57 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO Executor: Finished task 7.0 in stage 7.0 (TID 23). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 7.0 in stage 7.0 (TID 23) in 23 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 5.0 in stage 7.0 (TID 21). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 21) in 29 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(customer_id, null)
+26/10/06 20:11:08 INFO Executor: Finished task 6.0 in stage 7.0 (TID 22). 1897 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 6.0 in stage 7.0 (TID 22) in 32 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:08 INFO Executor: Finished task 4.0 in stage 7.0 (TID 20). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 20) in 36 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 7.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ShuffleMapStage 7 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 93 ms
+26/10/06 20:11:08 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:08 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 6.0626 ms
+26/10/06 20:11:08 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO DAGScheduler: Got job 5 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ResultStage 9 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ResultStage 9: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[19] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 15.7 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 7.0 KiB, free 1048.6 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[19] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 24) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 9631 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 9.0 (TID 24)
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 8.3873 ms
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 9.0 (TID 24). 3941 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 24) in 14 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 9.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ResultStage 9 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 19 ms
+26/10/06 20:11:08 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Canceling stage 9
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 9: Stage finished
+26/10/06 20:11:08 INFO DAGScheduler: Job 5 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 22.1087 ms
+26/10/06 20:11:08 INFO DAGScheduler: Asked to cleanup jobs for query execution 1
+26/10/06 20:11:08 INFO FileSourceStrategy: Pushed Filters: IsNull(t_dat)
+26/10/06 20:11:08 INFO FileSourceStrategy: Post-Scan Filters: Set(isnull(t_dat#0))
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 5.5601 ms
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 664.0 B, free 1048.6 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.5 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 8 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:11:08 INFO DAGScheduler: Registering RDD 23 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 3
+26/10/06 20:11:08 INFO DAGScheduler: Got map stage job 6 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 8 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ShuffleMapStage 10 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ShuffleMapStage 10: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[23] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 17.9 KiB, free 1048.5 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 1048.5 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[23] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 10.0 with 8 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 25) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 26) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 2.0 in stage 10.0 (TID 27) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 3.0 in stage 10.0 (TID 28) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 10.0 (TID 25)
+26/10/06 20:11:08 INFO Executor: Running task 1.0 in stage 10.0 (TID 26)
+26/10/06 20:11:08 INFO Executor: Running task 2.0 in stage 10.0 (TID 27)
+26/10/06 20:11:08 INFO Executor: Running task 3.0 in stage 10.0 (TID 28)
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 7.1024 ms
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 10.0 (TID 25). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO Executor: Finished task 1.0 in stage 10.0 (TID 26). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 4.0 in stage 10.0 (TID 29) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO Executor: Running task 4.0 in stage 10.0 (TID 29)
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 5.0 in stage 10.0 (TID 30) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 26) in 34 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:08 INFO Executor: Finished task 2.0 in stage 10.0 (TID 27). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 6.0 in stage 10.0 (TID 31) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO Executor: Finished task 3.0 in stage 10.0 (TID 28). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO Executor: Running task 5.0 in stage 10.0 (TID 30)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 7.0 in stage 10.0 (TID 32) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 7.0 in stage 10.0 (TID 32)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 25) in 37 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 3.0 in stage 10.0 (TID 28) in 39 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:08 INFO Executor: Running task 6.0 in stage 10.0 (TID 31)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 2.0 in stage 10.0 (TID 27) in 43 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 7.0 in stage 10.0 (TID 32). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 7.0 in stage 10.0 (TID 32) in 14 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(t_dat, null)
+26/10/06 20:11:08 INFO Executor: Finished task 5.0 in stage 10.0 (TID 30). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO Executor: Finished task 4.0 in stage 10.0 (TID 29). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 5.0 in stage 10.0 (TID 30) in 33 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:08 INFO Executor: Finished task 6.0 in stage 10.0 (TID 31). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 4.0 in stage 10.0 (TID 29) in 34 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 6.0 in stage 10.0 (TID 31) in 32 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:08 INFO DAGScheduler: ShuffleMapStage 10 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 71 ms
+26/10/06 20:11:08 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:08 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 10.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 5.7387 ms
+26/10/06 20:11:08 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO DAGScheduler: Got job 7 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ResultStage 12 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ResultStage 12: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[27] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 15.7 KiB, free 1048.5 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 7.0 KiB, free 1048.5 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[27] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 33) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 9631 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 12.0 (TID 33)
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 8.9368 ms
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 12.0 (TID 33). 3941 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 33) in 15 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 12.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ResultStage 12 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 20 ms
+26/10/06 20:11:08 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Canceling stage 12
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 12: Stage finished
+26/10/06 20:11:08 INFO DAGScheduler: Job 7 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 22.785 ms
+26/10/06 20:11:08 INFO DAGScheduler: Asked to cleanup jobs for query execution 2
+26/10/06 20:11:08 INFO FileSourceStrategy: Pushed Filters: IsNull(price)
+26/10/06 20:11:08 INFO FileSourceStrategy: Post-Scan Filters: Set(isnull(price#3))
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 7.416 ms
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 664.0 B, free 1048.5 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.4 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 11 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:11:08 INFO DAGScheduler: Registering RDD 31 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 4
+26/10/06 20:11:08 INFO DAGScheduler: Got map stage job 8 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 8 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ShuffleMapStage 13 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ShuffleMapStage 13: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[31] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 17.9 KiB, free 1048.4 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 1048.4 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[31] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 13.0 with 8 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 34) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 35) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 2.0 in stage 13.0 (TID 36) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 3.0 in stage 13.0 (TID 37) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 3.0 in stage 13.0 (TID 37)
+26/10/06 20:11:08 INFO Executor: Running task 1.0 in stage 13.0 (TID 35)
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 6.4151 ms
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 13.0 (TID 34)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Finished task 3.0 in stage 13.0 (TID 37). 1811 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 4.0 in stage 13.0 (TID 38) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 4.0 in stage 13.0 (TID 38)
+26/10/06 20:11:08 INFO Executor: Running task 2.0 in stage 13.0 (TID 36)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 3.0 in stage 13.0 (TID 37) in 51 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 4.0 in stage 13.0 (TID 38). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 5.0 in stage 13.0 (TID 39) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Running task 5.0 in stage 13.0 (TID 39)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Finished task 2.0 in stage 13.0 (TID 36). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 6.0 in stage 13.0 (TID 40) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 2.0 in stage 13.0 (TID 36) in 72 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 4.0 in stage 13.0 (TID 38) in 33 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:08 INFO Executor: Running task 6.0 in stage 13.0 (TID 40)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 13.0 (TID 34). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 7.0 in stage 13.0 (TID 41) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 34) in 79 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Running task 7.0 in stage 13.0 (TID 41)
+26/10/06 20:11:08 INFO Executor: Finished task 1.0 in stage 13.0 (TID 35). 1897 bytes result sent to driver
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 35) in 83 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Finished task 5.0 in stage 13.0 (TID 39). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 5.0 in stage 13.0 (TID 39) in 24 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:08 INFO Executor: Finished task 7.0 in stage 13.0 (TID 41). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 7.0 in stage 13.0 (TID 41) in 21 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:08 INFO FilterCompat: Filtering using predicate: eq(price, null)
+26/10/06 20:11:08 INFO Executor: Finished task 6.0 in stage 13.0 (TID 40). 1854 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 6.0 in stage 13.0 (TID 40) in 32 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 13.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ShuffleMapStage 13 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 108 ms
+26/10/06 20:11:08 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:08 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:08 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 12.2735 ms
+26/10/06 20:11:08 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:08 INFO DAGScheduler: Got job 9 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 1 output partitions
+26/10/06 20:11:08 INFO DAGScheduler: Final stage: ResultStage 15 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:08 INFO DAGScheduler: Missing parents found for ResultStage 15: List()
+26/10/06 20:11:08 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[35] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 15.7 KiB, free 1048.4 MiB)
+26/10/06 20:11:08 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 7.0 KiB, free 1048.4 MiB)
+26/10/06 20:11:08 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[35] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks resource profile 0
+26/10/06 20:11:08 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 42) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 9631 bytes) 
+26/10/06 20:11:08 INFO Executor: Running task 0.0 in stage 15.0 (TID 42)
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:08 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:08 INFO CodeGenerator: Code generated in 9.5414 ms
+26/10/06 20:11:08 INFO Executor: Finished task 0.0 in stage 15.0 (TID 42). 3941 bytes result sent to driver
+26/10/06 20:11:08 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 42) in 19 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Removed TaskSet 15.0 whose tasks have all completed, from pool 
+26/10/06 20:11:08 INFO DAGScheduler: ResultStage 15 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 22 ms
+26/10/06 20:11:08 INFO DAGScheduler: Job 9 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Canceling stage 15
+26/10/06 20:11:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 15: Stage finished
+26/10/06 20:11:08 INFO DAGScheduler: Job 9 finished: $anonfun$withThreadLocalCaptured$1 at <unknown>:0, took 25.1048 ms
+26/10/06 20:11:08 INFO DAGScheduler: Asked to cleanup jobs for query execution 3
+26/10/06 20:11:10 INFO FileSourceStrategy: Pushed Filters: IsNotNull(t_dat),GreaterThanOrEqual(t_dat,2020-01-01)
+26/10/06 20:11:10 INFO FileSourceStrategy: Post-Scan Filters: Set(isnotnull(t_dat#0), (t_dat#0 >= 2020-01-01))
+26/10/06 20:11:10 INFO CodeGenerator: Code generated in 8.4514 ms
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 664.0 B, free 1048.4 MiB)
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.3 MiB)
+26/10/06 20:11:10 INFO SparkContext: Created broadcast 14 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:10 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:11:10 INFO DAGScheduler: Registering RDD 39 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 5
+26/10/06 20:11:10 INFO DAGScheduler: Got map stage job 10 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 8 output partitions
+26/10/06 20:11:10 INFO DAGScheduler: Final stage: ShuffleMapStage 16 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:10 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:11:10 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:10 INFO DAGScheduler: Missing parents found for ShuffleMapStage 16: List()
+26/10/06 20:11:10 INFO DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[39] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 23.3 KiB, free 1048.3 MiB)
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 10.0 KiB, free 1048.3 MiB)
+26/10/06 20:11:10 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:10 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[39] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Adding task set 16.0 with 8 tasks resource profile 0
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 43) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 1.0 in stage 16.0 (TID 44) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 2.0 in stage 16.0 (TID 45) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 3.0 in stage 16.0 (TID 46) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:10 INFO Executor: Running task 1.0 in stage 16.0 (TID 44)
+26/10/06 20:11:10 INFO Executor: Running task 3.0 in stage 16.0 (TID 46)
+26/10/06 20:11:10 INFO Executor: Running task 2.0 in stage 16.0 (TID 45)
+26/10/06 20:11:10 INFO Executor: Running task 0.0 in stage 16.0 (TID 43)
+26/10/06 20:11:10 INFO CodeGenerator: Code generated in 14.4008 ms
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO Executor: Finished task 0.0 in stage 16.0 (TID 43). 2108 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 4.0 in stage 16.0 (TID 47) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 43) in 53 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:10 INFO Executor: Running task 4.0 in stage 16.0 (TID 47)
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO Executor: Finished task 4.0 in stage 16.0 (TID 47). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 5.0 in stage 16.0 (TID 48) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 4.0 in stage 16.0 (TID 47) in 27 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:10 INFO Executor: Running task 5.0 in stage 16.0 (TID 48)
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO Executor: Finished task 3.0 in stage 16.0 (TID 46). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 6.0 in stage 16.0 (TID 49) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 3.0 in stage 16.0 (TID 46) in 191 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:10 INFO Executor: Running task 6.0 in stage 16.0 (TID 49)
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:10 INFO Executor: Finished task 2.0 in stage 16.0 (TID 45). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 7.0 in stage 16.0 (TID 50) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:10 INFO Executor: Running task 7.0 in stage 16.0 (TID 50)
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 2.0 in stage 16.0 (TID 45) in 201 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO Executor: Finished task 5.0 in stage 16.0 (TID 48). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 5.0 in stage 16.0 (TID 48) in 179 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:10 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:10 INFO FilterCompat: Filtering using predicate: and(noteq(t_dat, null), gteq(t_dat, 18262))
+26/10/06 20:11:10 INFO Executor: Finished task 7.0 in stage 16.0 (TID 50). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 7.0 in stage 16.0 (TID 50) in 96 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:10 INFO Executor: Finished task 6.0 in stage 16.0 (TID 49). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 6.0 in stage 16.0 (TID 49) in 116 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:10 INFO Executor: Finished task 1.0 in stage 16.0 (TID 44). 2151 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 1.0 in stage 16.0 (TID 44) in 358 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Removed TaskSet 16.0 whose tasks have all completed, from pool 
+26/10/06 20:11:10 INFO DAGScheduler: ShuffleMapStage 16 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 365 ms
+26/10/06 20:11:10 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:10 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:10 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:10 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:10 INFO CodeGenerator: Code generated in 5.3254 ms
+26/10/06 20:11:10 INFO SparkContext: Starting job: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462
+26/10/06 20:11:10 INFO DAGScheduler: Got job 11 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462) with 1 output partitions
+26/10/06 20:11:10 INFO DAGScheduler: Final stage: ResultStage 18 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462)
+26/10/06 20:11:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 17)
+26/10/06 20:11:10 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:10 INFO DAGScheduler: Missing parents found for ResultStage 18: List()
+26/10/06 20:11:10 INFO DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[45] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462), which has no missing parents
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 15.9 KiB, free 1048.3 MiB)
+26/10/06 20:11:10 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 7.4 KiB, free 1048.3 MiB)
+26/10/06 20:11:10 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:10 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 18 (MapPartitionsRDD[45] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Adding task set 18.0 with 1 tasks resource profile 0
+26/10/06 20:11:10 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 51) (Tay-Nguyen,executor driver, partition 0, NODE_LOCAL, 9631 bytes) 
+26/10/06 20:11:10 INFO Executor: Running task 0.0 in stage 18.0 (TID 51)
+26/10/06 20:11:10 INFO ShuffleBlockFetcherIterator: Getting 8 (516.0 B) non-empty blocks including 8 (516.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:10 INFO CodeGenerator: Code generated in 5.719 ms
+26/10/06 20:11:10 INFO Executor: Finished task 0.0 in stage 18.0 (TID 51). 3815 bytes result sent to driver
+26/10/06 20:11:10 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 51) in 17 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Removed TaskSet 18.0 whose tasks have all completed, from pool 
+26/10/06 20:11:10 INFO DAGScheduler: ResultStage 18 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462) finished in 22 ms
+26/10/06 20:11:10 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Canceling stage 18
+26/10/06 20:11:10 INFO TaskSchedulerImpl: Killing all running tasks in stage 18: Stage finished
+26/10/06 20:11:10 INFO DAGScheduler: Job 11 finished: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:462, took 24.8965 ms
+26/10/06 20:11:10 INFO DAGScheduler: Asked to cleanup jobs for query execution 4
+26/10/06 20:11:10 INFO FileSourceStrategy: Pushed Filters: 
+26/10/06 20:11:10 INFO FileSourceStrategy: Post-Scan Filters: Set()
+26/10/06 20:11:11 INFO CodeGenerator: Code generated in 19.9345 ms
+26/10/06 20:11:11 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 664.0 B, free 1048.3 MiB)
+26/10/06 20:11:11 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 40.2 KiB, free 1048.4 MiB)
+26/10/06 20:11:11 INFO SparkContext: Created broadcast 17 from $anonfun$withThreadLocalCaptured$1 at <unknown>:0
+26/10/06 20:11:11 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+26/10/06 20:11:11 INFO DAGScheduler: Registering RDD 49 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 6
+26/10/06 20:11:11 INFO DAGScheduler: Got map stage job 12 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 8 output partitions
+26/10/06 20:11:11 INFO DAGScheduler: Final stage: ShuffleMapStage 19 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:11 INFO DAGScheduler: Parents of final stage: List()
+26/10/06 20:11:11 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:11 INFO DAGScheduler: Missing parents found for ShuffleMapStage 19: List()
+26/10/06 20:11:11 INFO DAGScheduler: Submitting ShuffleMapStage 19 (MapPartitionsRDD[49] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:11 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 45.5 KiB, free 1048.4 MiB)
+26/10/06 20:11:11 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 18.8 KiB, free 1048.4 MiB)
+26/10/06 20:11:11 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:11 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 19 (MapPartitionsRDD[49] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/06 20:11:11 INFO TaskSchedulerImpl: Adding task set 19.0 with 8 tasks resource profile 0
+26/10/06 20:11:11 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 52) (Tay-Nguyen,executor driver, partition 0, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:11 INFO TaskSetManager: Starting task 1.0 in stage 19.0 (TID 53) (Tay-Nguyen,executor driver, partition 1, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:11 INFO TaskSetManager: Starting task 2.0 in stage 19.0 (TID 54) (Tay-Nguyen,executor driver, partition 2, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:11 INFO TaskSetManager: Starting task 3.0 in stage 19.0 (TID 55) (Tay-Nguyen,executor driver, partition 3, PROCESS_LOCAL, 10726 bytes) 
+26/10/06 20:11:11 INFO Executor: Running task 0.0 in stage 19.0 (TID 52)
+26/10/06 20:11:11 INFO Executor: Running task 1.0 in stage 19.0 (TID 53)
+26/10/06 20:11:11 INFO Executor: Running task 2.0 in stage 19.0 (TID 54)
+26/10/06 20:11:11 INFO Executor: Running task 3.0 in stage 19.0 (TID 55)
+26/10/06 20:11:11 INFO CodeGenerator: Code generated in 20.0461 ms
+26/10/06 20:11:11 INFO CodeGenerator: Code generated in 5.2759 ms
+26/10/06 20:11:11 INFO CodeGenerator: Code generated in 3.955 ms
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31028435, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30894454, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31782738, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-33838586, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30760225, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31554078, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31018739, partition values: [empty row]
+26/10/06 20:11:11 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32952706, partition values: [empty row]
+26/10/06 20:11:12 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-31342799, partition values: [empty row]
+26/10/06 20:11:12 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30160627, partition values: [empty row]
+26/10/06 20:11:12 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30981485, partition values: [empty row]
+26/10/06 20:11:12 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-32604162, partition values: [empty row]
+26/10/06 20:11:13 INFO Executor: Finished task 2.0 in stage 19.0 (TID 54). 2788 bytes result sent to driver
+26/10/06 20:11:13 INFO TaskSetManager: Starting task 4.0 in stage 19.0 (TID 56) (Tay-Nguyen,executor driver, partition 4, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:13 INFO TaskSetManager: Finished task 2.0 in stage 19.0 (TID 54) in 2596 ms on Tay-Nguyen (executor driver) (1/8)
+26/10/06 20:11:13 INFO Executor: Running task 4.0 in stage 19.0 (TID 56)
+26/10/06 20:11:13 INFO Executor: Finished task 3.0 in stage 19.0 (TID 55). 2788 bytes result sent to driver
+26/10/06 20:11:13 INFO TaskSetManager: Starting task 5.0 in stage 19.0 (TID 57) (Tay-Nguyen,executor driver, partition 5, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:13 INFO Executor: Running task 5.0 in stage 19.0 (TID 57)
+26/10/06 20:11:13 INFO TaskSetManager: Finished task 3.0 in stage 19.0 (TID 55) in 2610 ms on Tay-Nguyen (executor driver) (2/8)
+26/10/06 20:11:13 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-30083600, partition values: [empty row]
+26/10/06 20:11:13 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28740402, partition values: [empty row]
+26/10/06 20:11:13 INFO Executor: Finished task 0.0 in stage 19.0 (TID 52). 2788 bytes result sent to driver
+26/10/06 20:11:13 INFO TaskSetManager: Starting task 6.0 in stage 19.0 (TID 58) (Tay-Nguyen,executor driver, partition 6, PROCESS_LOCAL, 10926 bytes) 
+26/10/06 20:11:13 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 52) in 2668 ms on Tay-Nguyen (executor driver) (3/8)
+26/10/06 20:11:13 INFO Executor: Running task 6.0 in stage 19.0 (TID 58)
+26/10/06 20:11:13 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27928500, partition values: [empty row]
+26/10/06 20:11:13 INFO Executor: Finished task 1.0 in stage 19.0 (TID 53). 2788 bytes result sent to driver
+26/10/06 20:11:13 INFO TaskSetManager: Starting task 7.0 in stage 19.0 (TID 59) (Tay-Nguyen,executor driver, partition 7, PROCESS_LOCAL, 10526 bytes) 
+26/10/06 20:11:13 INFO TaskSetManager: Finished task 1.0 in stage 19.0 (TID 53) in 2703 ms on Tay-Nguyen (executor driver) (4/8)
+26/10/06 20:11:13 INFO Executor: Running task 7.0 in stage 19.0 (TID 59)
+26/10/06 20:11:13 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27139077, partition values: [empty row]
+26/10/06 20:11:14 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29555490, partition values: [empty row]
+26/10/06 20:11:14 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28638069, partition values: [empty row]
+26/10/06 20:11:14 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27389596, partition values: [empty row]
+26/10/06 20:11:14 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-26446554, partition values: [empty row]
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27226760, partition values: [empty row]
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-29344793, partition values: [empty row]
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28594273, partition values: [empty row]
+26/10/06 20:11:15 INFO Executor: Finished task 7.0 in stage 19.0 (TID 59). 2831 bytes result sent to driver
+26/10/06 20:11:15 INFO TaskSetManager: Finished task 7.0 in stage 19.0 (TID 59) in 1667 ms on Tay-Nguyen (executor driver) (5/8)
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-27171255, partition values: [empty row]
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28811688, partition values: [empty row]
+26/10/06 20:11:15 INFO FileScanRDD: Reading File path: file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions/part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet, range: 0-28166176, partition values: [empty row]
+26/10/06 20:11:16 INFO Executor: Finished task 6.0 in stage 19.0 (TID 58). 2788 bytes result sent to driver
+26/10/06 20:11:16 INFO TaskSetManager: Finished task 6.0 in stage 19.0 (TID 58) in 2853 ms on Tay-Nguyen (executor driver) (6/8)
+26/10/06 20:11:17 INFO Executor: Finished task 5.0 in stage 19.0 (TID 57). 2788 bytes result sent to driver
+26/10/06 20:11:17 INFO TaskSetManager: Finished task 5.0 in stage 19.0 (TID 57) in 3675 ms on Tay-Nguyen (executor driver) (7/8)
+26/10/06 20:11:17 INFO Executor: Finished task 4.0 in stage 19.0 (TID 56). 2788 bytes result sent to driver
+26/10/06 20:11:17 INFO TaskSetManager: Finished task 4.0 in stage 19.0 (TID 56) in 3709 ms on Tay-Nguyen (executor driver) (8/8)
+26/10/06 20:11:17 INFO TaskSchedulerImpl: Removed TaskSet 19.0 whose tasks have all completed, from pool 
+26/10/06 20:11:17 INFO DAGScheduler: ShuffleMapStage 19 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 6311 ms
+26/10/06 20:11:17 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:17 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:17 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:17 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:17 INFO ShufflePartitionsUtil: For shuffle(6, advisory target size: 67108864, actual target size 67108864, minimum partition size: 1048576
+26/10/06 20:11:17 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+26/10/06 20:11:17 INFO CodeGenerator: Code generated in 12.5875 ms
+26/10/06 20:11:17 INFO DAGScheduler: Registering RDD 52 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) as input to shuffle 7
+26/10/06 20:11:17 INFO DAGScheduler: Got map stage job 13 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) with 6 output partitions
+26/10/06 20:11:17 INFO DAGScheduler: Final stage: ShuffleMapStage 21 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0)
+26/10/06 20:11:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 20)
+26/10/06 20:11:17 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:17 INFO DAGScheduler: Missing parents found for ShuffleMapStage 21: List()
+26/10/06 20:11:17 INFO DAGScheduler: Submitting ShuffleMapStage 21 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0), which has no missing parents
+26/10/06 20:11:17 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 58.3 KiB, free 1048.6 MiB)
+26/10/06 20:11:17 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 23.0 KiB, free 1048.5 MiB)
+26/10/06 20:11:17 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:17 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[52] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5))
+26/10/06 20:11:17 INFO TaskSchedulerImpl: Adding task set 21.0 with 6 tasks resource profile 0
+26/10/06 20:11:17 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 60) (Tay-Nguyen,executor driver, partition 0, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:17 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 61) (Tay-Nguyen,executor driver, partition 1, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:17 INFO TaskSetManager: Starting task 2.0 in stage 21.0 (TID 62) (Tay-Nguyen,executor driver, partition 2, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:17 INFO TaskSetManager: Starting task 3.0 in stage 21.0 (TID 63) (Tay-Nguyen,executor driver, partition 3, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:17 INFO Executor: Running task 0.0 in stage 21.0 (TID 60)
+26/10/06 20:11:17 INFO Executor: Running task 2.0 in stage 21.0 (TID 62)
+26/10/06 20:11:17 INFO Executor: Running task 1.0 in stage 21.0 (TID 61)
+26/10/06 20:11:17 INFO Executor: Running task 3.0 in stage 21.0 (TID 63)
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Getting 8 (62.2 MiB) non-empty blocks including 8 (62.2 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Getting 8 (61.7 MiB) non-empty blocks including 8 (61.7 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Getting 8 (62.1 MiB) non-empty blocks including 8 (62.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Getting 8 (61.9 MiB) non-empty blocks including 8 (61.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:17 INFO CodeGenerator: Code generated in 17.7224 ms
+26/10/06 20:11:18 INFO Executor: Finished task 2.0 in stage 21.0 (TID 62). 5477 bytes result sent to driver
+26/10/06 20:11:18 INFO TaskSetManager: Starting task 4.0 in stage 21.0 (TID 64) (Tay-Nguyen,executor driver, partition 4, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:18 INFO Executor: Running task 4.0 in stage 21.0 (TID 64)
+26/10/06 20:11:18 INFO TaskSetManager: Finished task 2.0 in stage 21.0 (TID 62) in 1084 ms on Tay-Nguyen (executor driver) (1/6)
+26/10/06 20:11:18 INFO ShuffleBlockFetcherIterator: Getting 8 (61.8 MiB) non-empty blocks including 8 (61.8 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:18 INFO Executor: Finished task 3.0 in stage 21.0 (TID 63). 5477 bytes result sent to driver
+26/10/06 20:11:18 INFO TaskSetManager: Starting task 5.0 in stage 21.0 (TID 65) (Tay-Nguyen,executor driver, partition 5, NODE_LOCAL, 9620 bytes) 
+26/10/06 20:11:18 INFO TaskSetManager: Finished task 3.0 in stage 21.0 (TID 63) in 1137 ms on Tay-Nguyen (executor driver) (2/6)
+26/10/06 20:11:18 INFO Executor: Running task 5.0 in stage 21.0 (TID 65)
+26/10/06 20:11:18 INFO ShuffleBlockFetcherIterator: Getting 8 (20.5 MiB) non-empty blocks including 8 (20.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:18 INFO Executor: Finished task 0.0 in stage 21.0 (TID 60). 5477 bytes result sent to driver
+26/10/06 20:11:18 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 60) in 1296 ms on Tay-Nguyen (executor driver) (3/6)
+26/10/06 20:11:18 INFO Executor: Finished task 1.0 in stage 21.0 (TID 61). 5477 bytes result sent to driver
+26/10/06 20:11:18 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 61) in 1467 ms on Tay-Nguyen (executor driver) (4/6)
+26/10/06 20:11:19 INFO Executor: Finished task 5.0 in stage 21.0 (TID 65). 5477 bytes result sent to driver
+26/10/06 20:11:19 INFO TaskSetManager: Finished task 5.0 in stage 21.0 (TID 65) in 447 ms on Tay-Nguyen (executor driver) (5/6)
+26/10/06 20:11:19 INFO Executor: Finished task 4.0 in stage 21.0 (TID 64). 5477 bytes result sent to driver
+26/10/06 20:11:19 INFO TaskSetManager: Finished task 4.0 in stage 21.0 (TID 64) in 538 ms on Tay-Nguyen (executor driver) (6/6)
+26/10/06 20:11:19 INFO TaskSchedulerImpl: Removed TaskSet 21.0 whose tasks have all completed, from pool 
+26/10/06 20:11:19 INFO DAGScheduler: ShuffleMapStage 21 ($anonfun$withThreadLocalCaptured$1 at <unknown>:0) finished in 1628 ms
+26/10/06 20:11:19 INFO DAGScheduler: looking for newly runnable stages
+26/10/06 20:11:19 INFO DAGScheduler: running: HashSet()
+26/10/06 20:11:19 INFO DAGScheduler: waiting: HashSet()
+26/10/06 20:11:19 INFO DAGScheduler: failed: HashSet()
+26/10/06 20:11:19 INFO CodeGenerator: Code generated in 6.0409 ms
+26/10/06 20:11:19 INFO SparkContext: Starting job: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482
+26/10/06 20:11:19 INFO DAGScheduler: Got job 14 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482) with 1 output partitions
+26/10/06 20:11:19 INFO DAGScheduler: Final stage: ResultStage 24 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482)
+26/10/06 20:11:19 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 23)
+26/10/06 20:11:19 INFO DAGScheduler: Missing parents: List()
+26/10/06 20:11:19 INFO DAGScheduler: Missing parents found for ResultStage 24: List()
+26/10/06 20:11:19 INFO DAGScheduler: Submitting ResultStage 24 (MapPartitionsRDD[58] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482), which has no missing parents
+26/10/06 20:11:19 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 19.0 KiB, free 1048.5 MiB)
+26/10/06 20:11:19 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 1048.5 MiB)
+26/10/06 20:11:19 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1760
+26/10/06 20:11:19 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 24 (MapPartitionsRDD[58] at collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482) (first 15 tasks are for partitions Vector(0))
+26/10/06 20:11:19 INFO TaskSchedulerImpl: Adding task set 24.0 with 1 tasks resource profile 0
+26/10/06 20:11:19 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 66) (Tay-Nguyen,executor driver, partition 0, NODE_LOCAL, 9631 bytes) 
+26/10/06 20:11:19 INFO Executor: Running task 0.0 in stage 24.0 (TID 66)
+26/10/06 20:11:19 INFO ShuffleBlockFetcherIterator: Getting 6 (480.0 B) non-empty blocks including 6 (480.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/10/06 20:11:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/10/06 20:11:19 INFO CodeGenerator: Code generated in 9.0271 ms
+26/10/06 20:11:19 INFO Executor: Finished task 0.0 in stage 24.0 (TID 66). 3874 bytes result sent to driver
+26/10/06 20:11:19 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 66) in 17 ms on Tay-Nguyen (executor driver) (1/1)
+26/10/06 20:11:19 INFO TaskSchedulerImpl: Removed TaskSet 24.0 whose tasks have all completed, from pool 
+26/10/06 20:11:19 INFO DAGScheduler: ResultStage 24 (collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482) finished in 21 ms
+26/10/06 20:11:19 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/06 20:11:19 INFO TaskSchedulerImpl: Canceling stage 24
+26/10/06 20:11:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 24: Stage finished
+26/10/06 20:11:19 INFO DAGScheduler: Job 14 finished: collect at D:\Doan_bigdata\BigData\BigData\RFM_Spark\src\26_collect_spark_execution_evidence.py:482, took 22.8595 ms
+26/10/06 20:11:19 INFO DAGScheduler: Asked to cleanup jobs for query execution 5
+SPARK_APPLICATION_ID=local-1791292254665
+SPARK_UI_URL=http://Tay-Nguyen:4040
+REST_API_AVAILABLE=True
+Q2_JOB_IDS=[11, 10]
+Q3_JOB_IDS=[14, 13, 12]
+Q3_SHUFFLE_CONFIRMED=True
+ARTIFACT_READBACK_PASS=True
+FINAL_SUMMARY_SELF_READBACK_PASS=True
+EXECUTION_EVIDENCE_COMPLETE=True
+READY_FOR_STAGE_27=True
+26/10/06 20:11:19 INFO SparkContext: SparkContext is stopping with exitCode 0 from stop at <unknown>:0.
+26/10/06 20:11:19 INFO SparkUI: Stopped Spark web UI at http://Tay-Nguyen:4040
+26/10/06 20:11:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/10/06 20:11:19 INFO MemoryStore: MemoryStore cleared
+26/10/06 20:11:19 INFO BlockManager: BlockManager stopped
+26/10/06 20:11:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/10/06 20:11:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/10/06 20:11:19 INFO SparkContext: Successfully stopped SparkContext (Uptime: 25917 ms)

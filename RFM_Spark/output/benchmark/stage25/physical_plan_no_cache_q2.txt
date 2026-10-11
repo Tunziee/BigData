@@ -1,0 +1,47 @@
+== Physical Plan ==
+AdaptiveSparkPlan (7)
++- HashAggregate (6)
+   +- Exchange (5)
+      +- HashAggregate (4)
+         +- Project (3)
+            +- Filter (2)
+               +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [2]: [t_dat#97, price#100]
+Batched: true
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,price:double>
+
+(2) Filter
+Input [2]: [t_dat#97, price#100]
+Condition : (coalesce(t_dat#97, 1900-01-01) >= 2020-01-01)
+
+(3) Project
+Output [1]: [coalesce(price#100, 0.0) AS price#105]
+Input [2]: [t_dat#97, price#100]
+
+(4) HashAggregate
+Input [1]: [price#105]
+Keys: []
+Functions [2]: [partial_count(1), partial_sum(price#105)]
+Aggregate Attributes [2]: [count#1716L, sum#1717]
+Results [2]: [count#1718L, sum#1719]
+
+(5) Exchange
+Input [2]: [count#1718L, sum#1719]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=1846]
+
+(6) HashAggregate
+Input [2]: [count#1718L, sum#1719]
+Keys: []
+Functions [2]: [count(1), sum(price#105)]
+Aggregate Attributes [2]: [count(1)#1714L, sum(price#105)#1715]
+Results [2]: [count(1)#1714L AS filtered_row_count#1709L, sum(price#105)#1715 AS filtered_sum_price#1710]
+
+(7) AdaptiveSparkPlan
+Output [2]: [filtered_row_count#1709L, filtered_sum_price#1710]
+Arguments: isFinalPlan=false
+
+

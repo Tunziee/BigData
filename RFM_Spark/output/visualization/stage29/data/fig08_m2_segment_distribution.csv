@@ -1,0 +1,6 @@
+﻿prediction,segment_name_en,customer_count,customer_ratio
+0,Infrequent Large-Basket Customers,210248,0.1543352656316868
+1,Active High-Value Customers,172774,0.1268269909071623
+2,Lapsed Customers,269066,0.1975113798107732
+3,Low-Engagement Customers,343639,0.2522526556562119
+4,Active Regular Customers,366554,0.2690737079941657

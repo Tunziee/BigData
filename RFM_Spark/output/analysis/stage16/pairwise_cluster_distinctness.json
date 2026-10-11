@@ -1,0 +1,516 @@
+{
+  "method": "Euclidean distance between cluster median differences normalized by global raw-feature IQR; descriptive only.",
+  "global_iqr": {
+    "Recency": 351.0,
+    "Frequency": 7.0,
+    "Monetary": 0.6120338983050847,
+    "AvgBasketSize": 2.1111111111111107,
+    "ProductVariety": 21.0
+  },
+  "pairs": [
+    {
+      "cluster_a": 0,
+      "cluster_b": 1,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 328.0,
+          "right_median": 29.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.8518518518518519
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 2.0,
+          "right_median": 20.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 2.5714285714285716
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.2676101694915254,
+          "right_median": 2.213135593220339,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 3.1787870396012186
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 6.0,
+          "right_median": 4.142857142857143,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.8796992481203008
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 9.0,
+          "right_median": 68.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 2.8095238095238093
+        }
+      ],
+      "normalized_median_distance": 5.109782610055333
+    },
+    {
+      "cluster_a": 0,
+      "cluster_b": 2,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 328.0,
+          "right_median": 579.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.7150997150997151
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 2.0,
+          "right_median": 1.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.14285714285714285
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.2676101694915254,
+          "right_median": 0.06776271186440677,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.32653004707837163
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 6.0,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.8947368421052635
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 9.0,
+          "right_median": 2.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.3333333333333333
+        }
+      ],
+      "normalized_median_distance": 2.0831554069219465
+    },
+    {
+      "cluster_a": 0,
+      "cluster_b": 3,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 328.0,
+          "right_median": 145.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.5213675213675214
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 2.0,
+          "right_median": 2.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.0
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.2676101694915254,
+          "right_median": 0.09488135593220337,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.28222099141512047
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 6.0,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.8947368421052635
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 9.0,
+          "right_median": 3.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.2857142857142857
+        }
+      ],
+      "normalized_median_distance": 2.005774946055638
+    },
+    {
+      "cluster_a": 0,
+      "cluster_b": 4,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 328.0,
+          "right_median": 64.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.7521367521367521
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 2.0,
+          "right_median": 8.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.8571428571428571
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.2676101694915254,
+          "right_median": 0.599593220338983,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.542425920797563
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 6.0,
+          "right_median": 2.75,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.5394736842105265
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 9.0,
+          "right_median": 21.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.5714285714285714
+        }
+      ],
+      "normalized_median_distance": 2.071506526091713
+    },
+    {
+      "cluster_a": 1,
+      "cluster_b": 2,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 29.0,
+          "right_median": 579.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 1.566951566951567
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 20.0,
+          "right_median": 1.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 2.7142857142857144
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 2.213135593220339,
+          "right_median": 0.06776271186440677,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 3.5053170866795904
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 4.142857142857143,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.0150375939849627
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 68.0,
+          "right_median": 2.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 3.142857142857143
+        }
+      ],
+      "normalized_median_distance": 5.746110368564662
+    },
+    {
+      "cluster_a": 1,
+      "cluster_b": 3,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 29.0,
+          "right_median": 145.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.33048433048433046
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 20.0,
+          "right_median": 2.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 2.5714285714285716
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 2.213135593220339,
+          "right_median": 0.09488135593220337,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 3.4610080310163394
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 4.142857142857143,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.0150375939849627
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 68.0,
+          "right_median": 3.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 3.0952380952380953
+        }
+      ],
+      "normalized_median_distance": 5.413948795918778
+    },
+    {
+      "cluster_a": 1,
+      "cluster_b": 4,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 29.0,
+          "right_median": 64.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.09971509971509972
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 20.0,
+          "right_median": 8.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 1.7142857142857142
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 2.213135593220339,
+          "right_median": 0.599593220338983,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 2.6363611188036553
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 4.142857142857143,
+          "right_median": 2.75,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.6597744360902259
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 68.0,
+          "right_median": 21.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 2.238095238095238
+        }
+      ],
+      "normalized_median_distance": 3.917076864366806
+    },
+    {
+      "cluster_a": 2,
+      "cluster_b": 3,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 579.0,
+          "right_median": 145.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 1.2364672364672364
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 1.0,
+          "right_median": 2.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.14285714285714285
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.06776271186440677,
+          "right_median": 0.09488135593220337,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.04430905566325116
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 2.0,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.0
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 2.0,
+          "right_median": 3.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.047619047619047616
+        }
+      ],
+      "normalized_median_distance": 1.2463908922292979
+    },
+    {
+      "cluster_a": 2,
+      "cluster_b": 4,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 579.0,
+          "right_median": 64.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 1.4672364672364673
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 1.0,
+          "right_median": 8.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 1.0
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.06776271186440677,
+          "right_median": 0.599593220338983,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.8689559678759347
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 2.0,
+          "right_median": 2.75,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.3552631578947369
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 2.0,
+          "right_median": 21.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.9047619047619048
+        }
+      ],
+      "normalized_median_distance": 2.2028784216477955
+    },
+    {
+      "cluster_a": 3,
+      "cluster_b": 4,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 145.0,
+          "right_median": 64.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 0.23076923076923078
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 2.0,
+          "right_median": 8.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.8571428571428571
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.09488135593220337,
+          "right_median": 0.599593220338983,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.8246469122126835
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 2.0,
+          "right_median": 2.75,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.3552631578947369
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 3.0,
+          "right_median": 21.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.8571428571428571
+        }
+      ],
+      "normalized_median_distance": 1.5260722899493055
+    }
+  ],
+  "closest_behavioral_pair": {
+    "cluster_a": 2,
+    "cluster_b": 3,
+    "feature_differences": [
+      {
+        "feature": "Recency",
+        "left_median": 579.0,
+        "right_median": 145.0,
+        "global_iqr": 351.0,
+        "normalized_absolute_difference": 1.2364672364672364
+      },
+      {
+        "feature": "Frequency",
+        "left_median": 1.0,
+        "right_median": 2.0,
+        "global_iqr": 7.0,
+        "normalized_absolute_difference": 0.14285714285714285
+      },
+      {
+        "feature": "Monetary",
+        "left_median": 0.06776271186440677,
+        "right_median": 0.09488135593220337,
+        "global_iqr": 0.6120338983050847,
+        "normalized_absolute_difference": 0.04430905566325116
+      },
+      {
+        "feature": "AvgBasketSize",
+        "left_median": 2.0,
+        "right_median": 2.0,
+        "global_iqr": 2.1111111111111107,
+        "normalized_absolute_difference": 0.0
+      },
+      {
+        "feature": "ProductVariety",
+        "left_median": 2.0,
+        "right_median": 3.0,
+        "global_iqr": 21.0,
+        "normalized_absolute_difference": 0.047619047619047616
+      }
+    ],
+    "normalized_median_distance": 1.2463908922292979
+  },
+  "farthest_behavioral_pair": {
+    "cluster_a": 1,
+    "cluster_b": 2,
+    "feature_differences": [
+      {
+        "feature": "Recency",
+        "left_median": 29.0,
+        "right_median": 579.0,
+        "global_iqr": 351.0,
+        "normalized_absolute_difference": 1.566951566951567
+      },
+      {
+        "feature": "Frequency",
+        "left_median": 20.0,
+        "right_median": 1.0,
+        "global_iqr": 7.0,
+        "normalized_absolute_difference": 2.7142857142857144
+      },
+      {
+        "feature": "Monetary",
+        "left_median": 2.213135593220339,
+        "right_median": 0.06776271186440677,
+        "global_iqr": 0.6120338983050847,
+        "normalized_absolute_difference": 3.5053170866795904
+      },
+      {
+        "feature": "AvgBasketSize",
+        "left_median": 4.142857142857143,
+        "right_median": 2.0,
+        "global_iqr": 2.1111111111111107,
+        "normalized_absolute_difference": 1.0150375939849627
+      },
+      {
+        "feature": "ProductVariety",
+        "left_median": 68.0,
+        "right_median": 2.0,
+        "global_iqr": 21.0,
+        "normalized_absolute_difference": 3.142857142857143
+      }
+    ],
+    "normalized_median_distance": 5.746110368564662
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "feature_space": "standardized improved 5D",
+  "by_k": {
+    "2": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.1171958424132438
+        }
+      ],
+      "minimum_pairwise_center_distance": 3.1171958424132438,
+      "mean_pairwise_center_distance": 3.1171958424132438,
+      "maximum_pairwise_center_distance": 3.1171958424132438,
+      "closest_pair": {
+        "cluster_a": 0,
+        "cluster_b": 1,
+        "distance": 3.1171958424132438
+      }
+    },
+    "3": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 4.411829228507592
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.6600739329342784
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.059816343756985
+        }
+      ],
+      "minimum_pairwise_center_distance": 2.059816343756985,
+      "mean_pairwise_center_distance": 3.043906501732952,
+      "maximum_pairwise_center_distance": 4.411829228507592,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 2,
+        "distance": 2.059816343756985
+      }
+    },
+    "4": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 4.802266025327255
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 3.95238333254632
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.571347239357864
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.230450284342307
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 2.4605693089609812
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 2.259965060875616
+        }
+      ],
+      "minimum_pairwise_center_distance": 2.230450284342307,
+      "mean_pairwise_center_distance": 3.046163541901724,
+      "maximum_pairwise_center_distance": 4.802266025327255,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 2,
+        "distance": 2.230450284342307
+      }
+    },
+    "5": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.981403680363495
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.5287779348163513
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.389841875986748
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 2.4120260074873254
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 5.322034455033682
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 4.59075337594346
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 2.4605473706604717
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8789022418266308
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 3.2764284099186733
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.2585008331088767
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.8789022418266308,
+      "mean_pairwise_center_distance": 3.1099216185145715,
+      "maximum_pairwise_center_distance": 5.322034455033682,
+      "closest_pair": {
+        "cluster_a": 2,
+        "cluster_b": 3,
+        "distance": 1.8789022418266308
+      }
+    },
+    "6": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 2.1611385563390675
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.5469180156894313
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.6183846485546205
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 3.010793264787202
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 4.5530710344797445
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.6519834458772706
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 1.7587230988072555
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 1.7118742622948153
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 3.8726755264538077
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8367043849660747
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 4.045670697648165
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 5.8909042927998065
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 3.4166260277177716
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 5.468145596967304
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 2.232915500204563
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.7118742622948153,
+      "mean_pairwise_center_distance": 3.1851018902391264,
+      "maximum_pairwise_center_distance": 5.8909042927998065,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 4,
+        "distance": 1.7118742622948153
+      }
+    },
+    "7": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.621700090569146
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.0366872575180217
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.4889050084883118
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 1.9415709704965989
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 5.161179642565862
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 6,
+          "distance": 2.5766992446633314
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 4.249151776616033
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 3.44781068539164
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 2.5047434377775533
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 2.226865230828362
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 6,
+          "distance": 1.7370237073744204
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8318329690176207
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 3.3624565243256503
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 6.085746397426716
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 6,
+          "distance": 2.783174388560105
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.6002485084861298
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 5.466284698955099
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 6,
+          "distance": 1.765654775764505
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 3.972898409916868
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 6,
+          "distance": 1.9187324600104207
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 6,
+          "distance": 3.8854362692838933
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.7370237073744204,
+      "mean_pairwise_center_distance": 3.126895354954109,
+      "maximum_pairwise_center_distance": 6.085746397426716,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 6,
+        "distance": 1.7370237073744204
+      }
+    },
+    "8": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 2.4415631502454995
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 1.6434511947685486
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 3.8042287190295205
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 1.794439646741327
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 3.4502776159048474
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 6,
+          "distance": 4.348269481924362
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 7,
+          "distance": 3.2767981876624477
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.5704196761574427
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 5.4915421620831495
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 4.038253469170338
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 5.596843883759365
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 6,
+          "distance": 6.320807942622068
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 7,
+          "distance": 4.69252755103702
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 3.247402773608159
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 2.0621594766697604
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 3.5344305324147642
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 6,
+          "distance": 4.381774759322649
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 7,
+          "distance": 2.1558922731133454
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.433242270983423
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 2.2279068011323653
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 6,
+          "distance": 1.770069231809362
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 7,
+          "distance": 1.8932264148663156
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 1.7260052357430458
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 6,
+          "distance": 2.8478275821541312
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 7,
+          "distance": 2.1851262658046213
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 6,
+          "distance": 1.8613702021224459
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 7,
+          "distance": 2.614262124420506
+        },
+        {
+          "cluster_a": 6,
+          "cluster_b": 7,
+          "distance": 3.3470685469580927
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.6434511947685486,
+      "mean_pairwise_center_distance": 3.134185256151033,
+      "maximum_pairwise_center_distance": 6.320807942622068,
+      "closest_pair": {
+        "cluster_a": 0,
+        "cluster_b": 2,
+        "distance": 1.6434511947685486
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "query_id": "Q1",
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "format": "CSV",
+      "runtime_sec": 3.6134826999998495,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.2881626000000779,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true
+    }
+  ],
+  "measured_order": [
+    [
+      "CSV",
+      "PARQUET"
+    ],
+    [
+      "PARQUET",
+      "CSV"
+    ],
+    [
+      "CSV",
+      "PARQUET"
+    ]
+  ],
+  "trials": [
+    {
+      "format": "CSV",
+      "runtime_sec": 3.731787999999824,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 1,
+      "order_index": 1,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.17797110000014982,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 1,
+      "order_index": 2,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.2150857999999971,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 2,
+      "order_index": 1,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 3.7546025000001464,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 2,
+      "order_index": 2,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 4.27168689999985,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 3,
+      "order_index": 1,
+      "trial": 3
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.22611050000000432,
+      "row_count": 31788324,
+      "result": {
+        "row_count": 31788324
+      },
+      "pass": true,
+      "round": 3,
+      "order_index": 2,
+      "trial": 3
+    }
+  ],
+  "summary_by_format": {
+    "CSV": {
+      "min_sec": 3.731787999999824,
+      "max_sec": 4.27168689999985,
+      "mean_sec": 3.9193591333332733,
+      "median_sec": 3.7546025000001464,
+      "population_std_sec": 0.24930739623439338,
+      "trial_times_sec": [
+        3.731787999999824,
+        3.7546025000001464,
+        4.27168689999985
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 0.17797110000014982,
+      "max_sec": 0.22611050000000432,
+      "mean_sec": 0.20638913333338374,
+      "median_sec": 0.2150857999999971,
+      "population_std_sec": 0.020592465716359077,
+      "trial_times_sec": [
+        0.17797110000014982,
+        0.2150857999999971,
+        0.22611050000000432
+      ],
+      "all_finite": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "authority": "FINAL_VISUALIZATION_LAYER_V1",
+  "recommended_for_report": [
+    "fig05_primary_model_quality_comparison",
+    "fig08_m2_segment_distribution",
+    "fig09_m2_segment_profile_heatmap",
+    "fig17_monthly_monetary_trend",
+    "fig20_fp_growth_threshold_sensitivity",
+    "fig24_project_analytics_story"
+  ],
+  "recommended_for_presentation": [
+    "fig24_project_analytics_story",
+    "fig05_primary_model_quality_comparison",
+    "fig08_m2_segment_distribution",
+    "fig18_top_product_groups",
+    "fig20_fp_growth_threshold_sensitivity",
+    "fig21_top_fp_growth_rules_by_lift"
+  ],
+  "selection_note": "Recommendations are presentation-layer choices only; no source metrics are changed."
+}

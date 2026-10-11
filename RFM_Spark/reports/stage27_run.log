@@ -1,0 +1,82 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+26/10/06 21:18:55 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 21:18:58 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 21:18:58 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 21:18:58 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 21:18:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 21:18:58 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 21:18:58 INFO ResourceUtils: ==============================================================
+26/10/06 21:18:58 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 21:18:58 INFO ResourceUtils: ==============================================================
+26/10/06 21:18:58 INFO SparkContext: Submitted application: Stage27_Spark_SQL_Analytical_Layer
+26/10/06 21:18:58 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 21:18:58 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 21:18:58 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 21:18:58 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 21:18:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 21:18:58 INFO Utils: Successfully started service 'sparkDriver' on port 64998.
+26/10/06 21:18:58 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 21:18:58 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 21:18:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 21:18:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 21:18:58 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 21:18:58 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-dfbb166d-2c3a-4f9d-9162-10f7a8d2596d
+26/10/06 21:18:58 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 21:18:58 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 21:18:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 21:18:59 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 21:18:59 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 21:18:59 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 21:18:59 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 21:18:59 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 21:18:59 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 21:18:59 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 21:18:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 21:18:59 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 21:18:59 INFO Executor: Running Spark version 4.2.0
+26/10/06 21:18:59 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 21:18:59 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 21:18:59 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 21:18:59 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@377922c4 for default.
+26/10/06 21:18:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 65000.
+26/10/06 21:18:59 INFO NettyBlockTransferService: Server created on Tay-Nguyen:65000
+26/10/06 21:18:59 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 21:18:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 65000, None)
+26/10/06 21:18:59 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:65000 with 2.2 GiB RAM, BlockManagerId(driver, Tay-Nguyen, 65000, None)
+26/10/06 21:18:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 65000, None)
+26/10/06 21:18:59 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 65000, None)
+26/10/06 21:19:01 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+26/10/06 21:19:01 INFO SharedState: Warehouse path is 'file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/spark-warehouse'.
+26/10/06 21:26:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:45 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:45 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:51 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:51 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:54 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:54 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:54 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+26/10/06 21:26:54 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+SPARK_APPLICATION_ID=local-1791296339145
+Q1_PASS=True
+Q2_PASS=True
+Q3_RFM_PASS=True
+Q4_PASS=True
+Q5_PASS=True
+Q6_PASS=True
+Q7_ROWS=90
+ARTIFACT_READBACK_PASS=True
+FINAL_SUMMARY_SELF_READBACK_PASS=True
+SPARK_SQL_ANALYTICAL_LAYER_COMPLETE=True
+READY_FOR_STAGE_28=True

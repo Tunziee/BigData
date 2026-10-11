@@ -1,0 +1,68 @@
+STAGE 11 — FINAL MAIN K-MEANS CLUSTER PROFILING & BUSINESS SEGMENT INTERPRETATION
+========================================================================================================================
+CURRENT_STAGE: Stage 11
+AUTHORITY: MAIN_KMEANS_FINAL_CLUSTER_PROFILE
+Stage 10 authority audit: True; blockers=[]
+Prediction validation: {'row_count': 1362281, 'distinct_customer_id': 1362281, 'duplicate_customer_id': 0, 'prediction_null': 0, 'invalid_prediction': 0, 'distinct_predictions': 4, 'prediction_values': [0, 1, 2, 3], 'pass': True}
+
+GLOBAL_RFM_STATISTICS
+Quantile method: approxQuantile; relativeError=0.001
+Recency: {'count': 1362281, 'mean': 236.148437069885, 'std': 221.11879131008746, 'min': 1.0, 'max': 734.0, 'p01': 2.0, 'p05': 8.0, 'p25': 49.0, 'median': 152.0, 'p75': 400.0, 'p95': 674.0, 'p99': 725.0}
+Frequency: {'count': 1362281, 'mean': 6.6654229193536425, 'std': 9.707005074461001, 'min': 1.0, 'max': 427.0, 'p01': 1.0, 'p05': 1.0, 'p25': 1.0, 'median': 3.0, 'p75': 8.0, 'p95': 25.0, 'p99': 45.0}
+Monetary: {'count': 1362281, 'mean': 0.6493858271904174, 'std': 1.1975819653583566, 'min': 0.0007627118644067797, 'max': 57.676406779661086, 'p01': 0.013542372881355931, 'p05': 0.0274406779661017, 'p25': 0.08806779661016949, 'median': 0.24559322033898304, 'p75': 0.7001016949152542, 'p95': 2.558627118644068, 'p99': 5.5818135593220335}
+
+CLUSTER_PROFILE_TABLE
+Cluster | Segment | Count | RatioPct | RecencyMean | RecencyMedian | RecencyStd | FrequencyMean | FrequencyMedian | FrequencyStd | MonetaryMean | MonetaryMedian | MonetaryStd
+0 | Mainstream Occasional Customers | 729944 | 53.582484 | 125.081835 | 99.000000 | 93.511649 | 4.392326 | 3.000000 | 3.427322 | 0.365558 | 0.260034 | 0.337367
+1 | Active Loyal Customers | 198035 | 14.537015 | 52.933375 | 32.000000 | 61.683818 | 19.791709 | 18.000000 | 7.821824 | 1.936426 | 1.701864 | 0.970178
+2 | Lapsed Customers | 409493 | 30.059364 | 535.461124 | 535.000000 | 121.014667 | 1.803064 | 1.000000 | 1.520862 | 0.167604 | 0.099966 | 0.209512
+3 | Active High-Value Customers | 24809 | 1.821137 | 26.101455 | 14.000000 | 40.712139 | 49.023903 | 45.000000 | 24.290210 | 6.678893 | 5.891017 | 3.374594
+
+CENTROID_MEAN_CONSISTENCY
+{'cluster_id': 0, 'actual_mean_rfm': [125.08183504488015, 4.392325986651031, 0.36555754077351416], 'inverse_centroid_rfm': [125.08151254402787, 4.392383577484173, 0.3655620960842205], 'absolute_difference': [0.0003225008522775852, 5.759083314238467e-05, 4.555310706366722e-06], 'tolerance': 0.001, 'pass': True}
+{'cluster_id': 1, 'actual_mean_rfm': [52.93337541343702, 19.791708536369832, 1.936426468014353], 'inverse_centroid_rfm': [52.93274251377872, 19.7918850679208, 1.936449339297162], 'absolute_difference': [0.0006328996582993796, 0.00017653155096652995, 2.287128280897832e-05], 'tolerance': 0.001, 'pass': True}
+{'cluster_id': 2, 'actual_mean_rfm': [535.4611238775755, 1.8030637886361915, 0.16760376169174154], 'inverse_centroid_rfm': [535.4611238775719, 1.8030637886399346, 0.16760376169176283], 'absolute_difference': [3.524291969370097e-12, 3.743005905221253e-12, 2.1288526497187377e-14], 'tolerance': 0.001, 'pass': True}
+{'cluster_id': 3, 'actual_mean_rfm': [26.101455117094602, 49.02390261598613, 6.678893052070354], 'inverse_centroid_rfm': [26.101455117094474, 49.02390261598602, 6.6788930520703484], 'absolute_difference': [1.2789769243681803e-13, 1.1368683772161603e-13, 5.329070518200751e-15], 'tolerance': 0.001, 'pass': True}
+CENTROID_MEAN_CONSISTENCY_PASS: True
+
+CLUSTER_0_ANALYSIS
+Largest mainstream group with moderate recency and lower repeat-date frequency and monetary value relative to the global baseline.
+Mean/median and quantile review: Recency: mean=125.0818, median=99.0000, no configured skew flag; Frequency: mean=4.3923, median=3.0000, no configured skew flag; Monetary: mean=0.3656, median=0.2600, no configured skew flag
+Relative profile: {'Recency': {'mean_to_global_mean_ratio': 0.5296746258280923, 'centroid_z': -0.5022952769767058, 'direction': 'LOW', 'semantic_note': 'Lower Recency indicates more recent activity.'}, 'Frequency': {'mean_to_global_mean_ratio': 0.6589718371654296, 'centroid_z': -0.23416484532905074, 'direction': 'NEAR_AVERAGE', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}, 'Monetary': {'mean_to_global_mean_ratio': 0.5629281167947677, 'centroid_z': -0.2369973323882814, 'direction': 'NEAR_AVERAGE', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}}
+Business strategy: ['low-cost automated engagement', 'cross-sell and repeat-purchase nudges', 'maintain broad retention coverage']
+
+CLUSTER_1_ANALYSIS
+More active than cluster 0: Frequency mean is 4.51x, Monetary mean is 5.30x, and Recency mean is 57.68% lower.
+Mean/median and quantile review: Recency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Frequency: mean=19.7917, median=18.0000, no configured skew flag; Monetary: mean=1.9364, median=1.7019, no configured skew flag
+Relative profile: {'Recency': {'mean_to_global_mean_ratio': 0.2241529779753405, 'centroid_z': -0.8285849134331155, 'direction': 'LOW', 'semantic_note': 'Lower Recency indicates more recent activity.'}, 'Frequency': {'mean_to_global_mean_ratio': 2.969310241200579, 'centroid_z': 1.3522669502978524, 'direction': 'VERY_HIGH', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}, 'Monetary': {'mean_to_global_mean_ratio': 2.9819352177615985, 'centroid_z': 1.0747185155895054, 'direction': 'VERY_HIGH', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}}
+Business strategy: ['retention and loyalty rewards', 'personalized cross-sell', 'protect repeat-purchase continuity']
+
+CLUSTER_2_ANALYSIS
+Long-inactive/lapsed pattern supported by high Recency across the central distribution and low Frequency/Monetary; no confirmed churn claim is made.
+Mean/median and quantile review: Recency: mean=535.4611, median=535.0000, no configured skew flag; Frequency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Monetary: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2
+Relative profile: {'Recency': {'mean_to_global_mean_ratio': 2.267476890897706, 'centroid_z': 1.3536284502747034, 'direction': 'VERY_HIGH', 'semantic_note': 'Lower Recency indicates more recent activity.'}, 'Frequency': {'mean_to_global_mean_ratio': 0.2705100352148454, 'centroid_z': -0.5009123919700538, 'direction': 'LOW', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}, 'Monetary': {'mean_to_global_mean_ratio': 0.2580958109555348, 'centroid_z': -0.40229569201515, 'direction': 'LOW', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}}
+Business strategy: ['reactivation reminders', 'targeted win-back offers', 'low-cost automated campaigns before higher-cost outreach']
+
+CLUSTER_3_ANALYSIS
+Small but coherent high-activity/high-value niche: its Frequency and Monetary lower quartiles exceed cluster 0 upper quartiles.
+Mean/median and quantile review: Recency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Frequency: mean=49.0239, median=45.0000, no configured skew flag; Monetary: mean=6.6789, median=5.8910, no configured skew flag
+Relative profile: {'Recency': {'mean_to_global_mean_ratio': 0.11052986604933668, 'centroid_z': -0.9499282295651995, 'direction': 'LOW', 'semantic_note': 'Lower Recency indicates more recent activity.'}, 'Frequency': {'mean_to_global_mean_ratio': 7.35495754870121, 'centroid_z': 4.363702230678436, 'direction': 'VERY_HIGH', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}, 'Monetary': {'mean_to_global_mean_ratio': 10.284938125254037, 'centroid_z': 5.034734489405618, 'direction': 'VERY_HIGH', 'semantic_note': 'Higher values indicate more observed purchase dates/spend.'}}
+Business strategy: ['high-touch retention', 'loyalty rewards and VIP-care style service', 'personalized high-value cross-sell']
+
+FINAL_SEGMENT_NAMES
+Cluster 0: Khách hàng mua sắm cơ bản / Mainstream Occasional Customers
+Cluster 1: Khách hàng hoạt động trung thành / Active Loyal Customers
+Cluster 2: Khách hàng lâu chưa quay lại / Lapsed Customers
+Cluster 3: Khách hàng hoạt động giá trị cao / Active High-Value Customers
+
+BUSINESS_STRATEGY_TABLE
+Cluster | SegmentName | CustomerCount | RatioPct | RecencyProfile | FrequencyProfile | MonetaryProfile | BehaviorSummary | SuggestedStrategy
+0 | Mainstream Occasional Customers | 729944 | 53.582484 | LOW | NEAR_AVERAGE | NEAR_AVERAGE | Largest mainstream group with moderate recency and lower repeat-date frequency and monetary value relative to the global baseline. | low-cost automated engagement; cross-sell and repeat-purchase nudges; maintain broad retention coverage
+1 | Active Loyal Customers | 198035 | 14.537015 | LOW | VERY_HIGH | VERY_HIGH | More active than cluster 0: Frequency mean is 4.51x, Monetary mean is 5.30x, and Recency mean is 57.68% lower. | retention and loyalty rewards; personalized cross-sell; protect repeat-purchase continuity
+2 | Lapsed Customers | 409493 | 30.059364 | VERY_HIGH | LOW | LOW | Long-inactive/lapsed pattern supported by high Recency across the central distribution and low Frequency/Monetary; no confirmed churn claim is made. | reactivation reminders; targeted win-back offers; low-cost automated campaigns before higher-cost outreach
+3 | Active High-Value Customers | 24809 | 1.821137 | LOW | VERY_HIGH | VERY_HIGH | Small but coherent high-activity/high-value niche: its Frequency and Monetary lower quartiles exceed cluster 0 upper quartiles. | high-touch retention; loyalty rewards and VIP-care style service; personalized high-value cross-sell
+
+WARNINGS: []
+BLOCKERS: []
+MAIN_MODEL_BRANCH_COMPLETE: True
+READY_FOR_IMPROVED_MODEL_STAGE: True

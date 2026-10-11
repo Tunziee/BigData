@@ -1,0 +1,39 @@
+{
+  "stage": 30,
+  "authority": "BIGDATA_PROJECT_FINAL_LOCK_V1",
+  "stage29_authority": "FINAL_VISUALIZATION_LAYER_V1",
+  "authority_chain_pass": true,
+  "data_fact_audit_pass": true,
+  "rfm_semantic_audit_pass": true,
+  "model_semantic_audit_pass": true,
+  "quality_result_audit_pass": true,
+  "runtime_audit_pass": true,
+  "spark_system_audit_pass": true,
+  "spark_sql_audit_pass": true,
+  "fp_growth_audit_pass": true,
+  "visualization_audit_pass": true,
+  "report_numeric_audit_pass": true,
+  "report_terminology_audit_pass": true,
+  "member_identity_audit_pass": true,
+  "claim_evidence_matrix_complete": true,
+  "reproducibility_checklist_pass": true,
+  "final_report_created": true,
+  "submission_package_complete": true,
+  "models_modified": false,
+  "historical_authorities_modified": false,
+  "new_experiments_executed": false,
+  "current_run_clean_namespace": true,
+  "artifact_readback_pass": true,
+  "final_summary_self_readback_pass": true,
+  "project_complete": true,
+  "ready_for_submission": true,
+  "report_source_used": "D:\\Doan_bigdata\\Bao_cao_BigData_Chuong_1_2_RFM_KMeans_Sparknew.docx",
+  "report_info": {
+    "paragraph_count": 417,
+    "table_count": 14
+  },
+  "warnings": [
+    "TOC/page fields may require refresh in Word after opening; rendered pages were checked by the external Stage30 QA command."
+  ],
+  "blockers": []
+}

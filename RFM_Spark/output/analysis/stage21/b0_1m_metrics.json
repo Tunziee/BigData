@@ -1,0 +1,79 @@
+{
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "cohort_count": 1000000,
+  "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "cluster_distribution": {
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 535416,
+        "ratio": 0.535416,
+        "ratio_pct": 53.5416
+      },
+      {
+        "cluster_id": 1,
+        "count": 145205,
+        "ratio": 0.145205,
+        "ratio_pct": 14.5205
+      },
+      {
+        "cluster_id": 2,
+        "count": 301081,
+        "ratio": 0.301081,
+        "ratio_pct": 30.1081
+      },
+      {
+        "cluster_id": 3,
+        "count": 18298,
+        "ratio": 0.018298,
+        "ratio_pct": 1.8297999999999999
+      }
+    ],
+    "cluster_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "counts": [
+      535416,
+      145205,
+      301081,
+      18298
+    ],
+    "sum": 1000000,
+    "cluster_count": 4,
+    "min_ratio_pct": 1.8297999999999999,
+    "max_ratio_pct": 53.5416,
+    "cluster_size_cv": 0.771334870068766,
+    "entropy_natural_log": 1.0492892645987302,
+    "normalized_entropy": 0.7569022092473077,
+    "pass": true
+  },
+  "silhouette_rfm3d": 0.6858111002170737,
+  "sse_rfm3d": 769136.5781161708,
+  "sse_per_customer_rfm3d": 0.7691365781161709,
+  "centroids_from_1m_assignments": {
+    "0": [
+      -0.5019069445963883,
+      -0.2344454620914055,
+      -0.2372350407696556
+    ],
+    "1": [
+      -0.828344997204535,
+      1.3506034796681965,
+      1.0735604496212856
+    ],
+    "2": [
+      1.353422746831634,
+      -0.5009644855917433,
+      -0.40237837476756394
+    ],
+    "3": [
+      -0.949188844772624,
+      4.351877072995889,
+      5.003677013420883
+    ]
+  },
+  "metrics_valid": true
+}

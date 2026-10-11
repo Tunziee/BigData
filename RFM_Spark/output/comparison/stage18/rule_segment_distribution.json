@@ -1,0 +1,46 @@
+{
+  "segments": [
+    {
+      "segment_id": 0,
+      "count": 267989,
+      "ratio_pct": 26.798899999999996,
+      "name_vi": "RFM rất thấp",
+      "name_en": "Very Low RFM",
+      "score_range": "3-5"
+    },
+    {
+      "segment_id": 1,
+      "count": 159627,
+      "ratio_pct": 15.9627,
+      "name_vi": "RFM thấp",
+      "name_en": "Low RFM",
+      "score_range": "6-7"
+    },
+    {
+      "segment_id": 2,
+      "count": 199853,
+      "ratio_pct": 19.9853,
+      "name_vi": "RFM trung bình",
+      "name_en": "Medium RFM",
+      "score_range": "8-10"
+    },
+    {
+      "segment_id": 3,
+      "count": 142542,
+      "ratio_pct": 14.2542,
+      "name_vi": "RFM cao",
+      "name_en": "High RFM",
+      "score_range": "11-12"
+    },
+    {
+      "segment_id": 4,
+      "count": 229989,
+      "ratio_pct": 22.9989,
+      "name_vi": "RFM rất cao",
+      "name_en": "Very High RFM",
+      "score_range": "13-15"
+    }
+  ],
+  "missing_segment_ids": [],
+  "pass": true
+}

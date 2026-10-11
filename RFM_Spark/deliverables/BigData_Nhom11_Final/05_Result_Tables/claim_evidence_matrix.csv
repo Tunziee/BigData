@@ -1,0 +1,8 @@
+﻿ClaimID,Claim,EvidenceStage,Authority,Artifact,Metric,Status,Caveat
+C01,M2 improves the intended eRFM objective,22,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,output/comparison/stage22/primary_three_model_comparison_matrix.csv,silhouette eRFM5D 0.481807; SSE/customer 1.347449,SUPPORTED,M2 changes representation and K
+C02,M1 is stronger in RFM3D,22,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,output/comparison/stage22/primary_three_model_comparison_matrix.csv,silhouette RFM3D 0.685845,SUPPORTED,Not universal model winner
+C03,Parquet reduces storage,24,CSV_PARQUET_IO_BENCHMARK_V1,output/benchmark/stage24/csv_vs_parquet_benchmark_summary.csv,77.8052% reduction,SUPPORTED,Measured setup
+C04,Cache benefit is workload dependent,25,CACHE_NO_CACHE_BENCHMARK_V1,output/benchmark/stage25/cache_vs_no_cache_summary.csv,Q1/Q2 slower; Q3 mildly faster,SUPPORTED,No-cache is no explicit persistence
+C05,Q3 has much larger shuffle boundary,26,SPARK_EXECUTION_EVIDENCE_V1,output/analysis/stage26/stage_task_metrics.csv,"327,776,023 bytes vs 504 bytes",SUPPORTED,Not direct speed comparison
+C06,FP-Growth selected 0.0002 by predefined protocol,28,FP_GROWTH_ASSOCIATION_RULES_V2,output/fpgrowth/stage28_v2/threshold_sensitivity.csv,Highest predefined support meeting rule gate,SUPPORTED,"Derived from current ladder, not hard-coded"
+C07,Strongest rules include Swimwear,28,FP_GROWTH_ASSOCIATION_RULES_V2,output/fpgrowth/stage28_v2/enriched_top_rules.csv,Swimwear appears in strong rules,SUPPORTED,"Co-occurrence, not causality"

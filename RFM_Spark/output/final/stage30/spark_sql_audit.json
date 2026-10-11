@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "authority": "SPARK_SQL_ANALYTICAL_LAYER_V1",
+  "q1_q7_pass": true,
+  "rfm_sql_stage5_semantic_equivalence": true,
+  "m2_membership_authority_match": true
+}

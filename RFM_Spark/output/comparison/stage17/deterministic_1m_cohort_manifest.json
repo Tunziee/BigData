@@ -1,0 +1,23 @@
+{
+  "stage": 17,
+  "authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "source_customer_count": 1362281,
+  "cohort_customer_count": 1000000,
+  "selection_method": "SHA256_ORDER_TOP_N",
+  "selection_salt": "BIGDATA_NHOM11_STAGE17_COMPARISON_1M_V1",
+  "ordering": [
+    "selection_hash ASC",
+    "customer_id ASC"
+  ],
+  "selection_depends_only_on_customer_id": true,
+  "model_aware_sampling": false,
+  "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "fingerprint_algorithm": "SHA-256",
+  "fingerprint_order": "customer_id ASC",
+  "fingerprint_row_separator": "LF",
+  "selection_hash_distinct_count": 1000000,
+  "selection_hash_collision_groups": 0,
+  "source_alignment_pass": true,
+  "deterministic_rerun_pass": true,
+  "cohort_validation_pass": true
+}

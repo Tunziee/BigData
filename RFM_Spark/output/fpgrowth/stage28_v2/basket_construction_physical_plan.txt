@@ -1,0 +1,37 @@
+== Physical Plan ==
+AdaptiveSparkPlan (5)
++- ObjectHashAggregate (4)
+   +- Exchange (3)
+      +- ObjectHashAggregate (2)
+         +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [3]: [t_dat#0, customer_id#1, article_id#2]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,article_id:string>
+
+(2) ObjectHashAggregate
+Input [3]: [t_dat#0, customer_id#1, article_id#2]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [partial_collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [buf#290]
+Results [3]: [customer_id#1, t_dat#0, buf#291]
+
+(3) Exchange
+Input [3]: [customer_id#1, t_dat#0, buf#291]
+Arguments: hashpartitioning(customer_id#1, t_dat#0, 64), ENSURE_REQUIREMENTS, [plan_id=477]
+
+(4) ObjectHashAggregate
+Input [3]: [customer_id#1, t_dat#0, buf#291]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [collect_set(article_id#2)#288]
+Results [4]: [sha2(cast(concat_ws(||, customer_id#1, cast(t_dat#0 as string)) as binary), 256) AS basket_proxy_id#289, customer_id#1, t_dat#0, sort_array(collect_set(article_id#2)#288, true) AS items#284]
+
+(5) AdaptiveSparkPlan
+Output [4]: [basket_proxy_id#289, customer_id#1, t_dat#0, items#284]
+Arguments: isFinalPlan=false
+
+

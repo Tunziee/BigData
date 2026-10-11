@@ -1,0 +1,13 @@
+stage=30
+authority=BIGDATA_PROJECT_FINAL_LOCK_V1
+authority_chain_pass=True
+report_numeric_audit_pass=True
+report_terminology_audit_pass=True
+member_identity_audit_pass=True
+final_report_created=True
+submission_package_complete=True
+artifact_readback_pass=True
+final_summary_self_readback_pass=True
+project_complete=True
+ready_for_submission=True
+blockers=[]

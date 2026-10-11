@@ -1,0 +1,148 @@
+{
+  "sources": {
+    "main_rfm_scaled": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaled",
+      "source": "main_rfm_scaled",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "vector_quality": {
+        "column": "features",
+        "dimension": 3,
+        "null_vector": 0,
+        "wrong_dimension": 0,
+        "nan_total": 0,
+        "infinity_total": 0,
+        "pass": true
+      },
+      "pass": true
+    },
+    "main_kmeans_predictions": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\main_kmeans_predictions",
+      "source": "main_kmeans_predictions",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "prediction_null": 0,
+      "invalid_prediction": 0,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "prediction_pass": true,
+      "pass": true
+    },
+    "improved_erfm_scaled": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\improved_erfm_scaled",
+      "source": "improved_erfm_scaled",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "vector_quality": {
+        "column": "features_improved",
+        "dimension": 5,
+        "null_vector": 0,
+        "wrong_dimension": 0,
+        "nan_total": 0,
+        "infinity_total": 0,
+        "pass": true
+      },
+      "pass": true
+    },
+    "enhanced_kmeans_predictions": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\enhanced_kmeans_predictions",
+      "source": "enhanced_kmeans_predictions",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "prediction_null": 0,
+      "invalid_prediction": 0,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "prediction_pass": true,
+      "pass": true
+    }
+  },
+  "anti_join_counts": {
+    "main_rfm_scaled_minus_main_kmeans_predictions": 0,
+    "main_kmeans_predictions_minus_main_rfm_scaled": 0,
+    "main_rfm_scaled_minus_improved_erfm_scaled": 0,
+    "improved_erfm_scaled_minus_main_rfm_scaled": 0,
+    "main_rfm_scaled_minus_enhanced_kmeans_predictions": 0,
+    "enhanced_kmeans_predictions_minus_main_rfm_scaled": 0,
+    "main_kmeans_predictions_minus_improved_erfm_scaled": 0,
+    "improved_erfm_scaled_minus_main_kmeans_predictions": 0,
+    "main_kmeans_predictions_minus_enhanced_kmeans_predictions": 0,
+    "enhanced_kmeans_predictions_minus_main_kmeans_predictions": 0,
+    "improved_erfm_scaled_minus_enhanced_kmeans_predictions": 0,
+    "enhanced_kmeans_predictions_minus_improved_erfm_scaled": 0
+  },
+  "raw_feature_consistency_main_vs_enhanced": {
+    "Recency": {
+      "mismatch_count": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "pass": true
+    },
+    "Frequency": {
+      "mismatch_count": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "pass": true
+    },
+    "Monetary": {
+      "mismatch_count": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "pass": true
+    }
+  },
+  "main_prediction_validation": {
+    "source": "main_kmeans_predictions",
+    "row_count": 1362281,
+    "distinct_customer_id": 1362281,
+    "duplicate_customer_id": 0,
+    "prediction_null": 0,
+    "invalid_prediction": 0,
+    "prediction_values": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "prediction_pass": true,
+    "pass": true
+  },
+  "enhanced_prediction_validation": {
+    "source": "enhanced_kmeans_predictions",
+    "row_count": 1362281,
+    "distinct_customer_id": 1362281,
+    "duplicate_customer_id": 0,
+    "prediction_null": 0,
+    "invalid_prediction": 0,
+    "prediction_values": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "prediction_pass": true,
+    "pass": true
+  },
+  "pass": true,
+  "authority_metadata": {
+    "stage7": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage7\\main_rfm_pipeline_summary.json",
+    "stage10": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage10\\final_model_summary.json",
+    "stage12": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage12\\transformation_summary.json",
+    "stage15": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage15\\final_enhanced_model_summary.json",
+    "stage16": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage16\\final_enhanced_cluster_profile_summary.json"
+  }
+}

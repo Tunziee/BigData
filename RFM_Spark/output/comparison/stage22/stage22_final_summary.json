@@ -1,0 +1,196 @@
+{
+  "stage": 22,
+  "authority": "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "cohort_count": 1000000,
+  "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "models": {
+    "B0": {
+      "model_name": "Basic K-Means Baseline",
+      "k": 4,
+      "training_feature_space": "RFM3D",
+      "initMode": "random",
+      "role": "technical_baseline"
+    },
+    "M1": {
+      "model_name": "Project Main K-Means",
+      "k": 4,
+      "training_feature_space": "RFM3D",
+      "initMode": "k-means||",
+      "role": "project_main"
+    },
+    "M2": {
+      "model_name": "Enhanced K-Means",
+      "k": 5,
+      "training_feature_space": "eRFM5D",
+      "initMode": "k-means||",
+      "role": "enhanced_model"
+    }
+  },
+  "b0_to_m1_analysis": {
+    "full_data_context": {
+      "b0_full_silhouette": 0.6858938338250193,
+      "m1_full_silhouette": 0.6859294450224572,
+      "b0_full_wcss": 1051831.1830063448,
+      "m1_full_wcss": 1051831.216267805,
+      "b0_numIter": 63,
+      "m1_numIter": 35
+    },
+    "locked_1m": {
+      "b0_silhouette_rfm3d": 0.6858111002170737,
+      "m1_silhouette_rfm3d": 0.6858449879433209,
+      "b0_sse_per_customer_rfm3d": 0.7691365781161709,
+      "m1_sse_per_customer_rfm3d": 0.7691390463586639,
+      "b0_min_ratio_pct": 1.8297999999999999,
+      "m1_min_ratio_pct": 1.8284000000000002,
+      "b0_max_ratio_pct": 53.5416,
+      "m1_max_ratio_pct": 53.549,
+      "b0_entropy": 0.7569022092473077,
+      "m1_entropy": 0.7568000383535228,
+      "b0_cv": 0.771334870068766,
+      "m1_cv": 0.7715116240057567
+    },
+    "silhouette_delta_b0_minus_m1": -3.3887726247239236e-05,
+    "sse_per_customer_delta_b0_minus_m1": -2.468242493058881e-06,
+    "balance_delta_b0_minus_m1": {
+      "min_ratio_pp": 0.0013999999999996238,
+      "max_ratio_pp": -0.0073999999999969646,
+      "cv": -0.0001767539369906812,
+      "normalized_entropy": 0.00010217089378483646
+    },
+    "ARI": 0.9996501516955725,
+    "NMI": 0.9988393925332469,
+    "cluster_membership_mismatch_count_after_optimal_alignment": 130,
+    "cluster_membership_mismatch_ratio_after_optimal_alignment": 0.00013,
+    "initialization_difference_only": true
+  },
+  "m1_to_m2_enhancement_analysis": {
+    "ERFM5D": {
+      "m1_silhouette": 0.3565725452534894,
+      "m2_silhouette": 0.481806967562302,
+      "silhouette_absolute_improvement": 0.1252344223088126,
+      "silhouette_relative_improvement_pct": 35.121723188133494,
+      "m1_sse_per_customer": 2.2571084854038976,
+      "m2_sse_per_customer": 1.3474493014326931,
+      "sse_per_customer_absolute_change": -0.9096591839712045,
+      "sse_per_customer_reduction_pct": 40.30196996970776,
+      "entropy_change": 0.21947212673954763,
+      "cv_reduction_pct": 64.55297351284483,
+      "min_cluster_ratio_change_pp": 10.8266,
+      "max_cluster_ratio_change_pp": -26.658099999999997,
+      "below_5pct_change": -1,
+      "raw_distinctness_min_change": -0.08787611244950155,
+      "raw_distinctness_mean_change": -4.392819366408844,
+      "m1_training_dimensions": 3,
+      "m2_training_dimensions": 5
+    },
+    "RFM3D_tradeoff": {
+      "m1_silhouette": 0.6858449879433209,
+      "m2_silhouette": 0.21521780350092465,
+      "silhouette_change": -0.47062718444239626,
+      "m1_sse_per_customer": 0.7691390463586639,
+      "m2_sse_per_customer": 1.1620407871199123,
+      "sse_per_customer_change": 0.3929017407612484
+    },
+    "behavioral_feature_evidence": {
+      "AvgBasketSize": {
+        "global_iqr": 2.095238095238095,
+        "m2_segment_median_range": 4.0
+      },
+      "ProductVariety": {
+        "global_iqr": 21.0,
+        "m2_segment_median_range": 66.0
+      }
+    },
+    "enhancement_supported": true
+  },
+  "m2_enhancement_supported": true,
+  "criterion_findings": {
+    "BEST_RFM3D_SILHOUETTE": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "metric": "Silhouette_RFM3D",
+      "value": 0.6858449879433209
+    },
+    "BEST_ERFM5D_SILHOUETTE": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "metric": "Silhouette_ERFM5D",
+      "value": 0.481806967562302
+    },
+    "LOWEST_RFM3D_SSE_PER_CUSTOMER": {
+      "model_id": "B0",
+      "model_name": "Basic K-Means Baseline",
+      "metric": "SSEPerCustomer_RFM3D",
+      "value": 0.7691365781161709
+    },
+    "LOWEST_ERFM5D_SSE_PER_CUSTOMER": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "metric": "SSEPerCustomer_ERFM5D",
+      "value": 1.3474493014326931
+    },
+    "BEST_BALANCE_ENTROPY": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "metric": "NormalizedEntropy",
+      "value": 0.9762721650930705
+    },
+    "LOWEST_CLUSTER_SIZE_CV": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "metric": "ClusterSizeCV",
+      "value": 0.2734779297128015
+    },
+    "BEST_RAW_DISTINCTNESS_MIN": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "metric": "RawDistinctnessMin",
+      "value": 1.3377777133377713
+    },
+    "BEST_RAW_DISTINCTNESS_MEAN": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "metric": "RawDistinctnessMean",
+      "value": 7.535123114603716
+    },
+    "weighted_score_used": false,
+    "B0_TO_M1_FINDING": "QUALITY_SIMILAR_CONVERGENCE_IMPROVED",
+    "M1_TO_M2_FINDING": "M2_IMPROVES_ENHANCED_MULTIDIMENSIONAL_BEHAVIORAL_SEGMENTATION"
+  },
+  "models_retrained": false,
+  "classification_accuracy_used": false,
+  "weighted_winner_score_used": false,
+  "runtime_quality_combined_score_used": false,
+  "rule_based_primary_model_used": false,
+  "gmm_executed": false,
+  "stage19_auxiliary_preserved": true,
+  "primary_quality_comparison_complete": true,
+  "ready_for_stage23": true,
+  "warnings": [
+    "Stage 22 is quality-only; no runtime comparison, retraining, K sweep, rule-based model, or GMM was executed.",
+    "Cluster IDs are arbitrary; B0/M1 raw mismatch uses optimal label alignment."
+  ],
+  "blockers": [],
+  "artifact_readback": {
+    "output\\comparison\\stage22\\comparison_dataset_validation.json": true,
+    "output\\comparison\\stage22\\common_space_silhouette.json": true,
+    "output\\comparison\\stage22\\common_space_sse.json": true,
+    "output\\comparison\\stage22\\cluster_balance_metrics.json": true,
+    "output\\comparison\\stage22\\partition_agreement.json": true,
+    "output\\comparison\\stage22\\contingency_tables.json": true,
+    "output\\comparison\\stage22\\b0_m1_label_alignment.json": true,
+    "output\\comparison\\stage22\\raw_profiles_1m.json": true,
+    "output\\comparison\\stage22\\raw_profiles_1m.csv": true,
+    "output\\comparison\\stage22\\raw_profile_distinctness.json": true,
+    "output\\comparison\\stage22\\b0_to_m1_analysis.json": true,
+    "output\\comparison\\stage22\\m1_to_m2_enhancement_analysis.json": true,
+    "output\\comparison\\stage22\\criterion_findings.json": true,
+    "output\\comparison\\stage22\\primary_three_model_comparison_matrix.csv": true,
+    "output\\comparison\\stage22\\reproducibility_check.json": true,
+    "output\\comparison\\stage22\\stage22_final_summary.json": true,
+    "reports\\stage22_primary_b0_m1_m2_quality_comparison.txt": true,
+    "reports\\stage22_run.log": true
+  },
+  "artifact_readback_pass": true
+}

@@ -1,0 +1,98 @@
+{
+  "NO_CACHE_Q2": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage25\\physical_plan_no_cache_q2.txt",
+    "source_operator": "Scan parquet",
+    "in_memory_table_scan_present": false,
+    "in_memory_relation_present": false,
+    "scan_parquet_present": true,
+    "shuffle_exchange_present": true,
+    "read_schema_lines": [
+      "ReadSchema: struct<t_dat:date,price:double>"
+    ],
+    "pushed_filter_lines": [],
+    "evidence_lines": [
+      "+- Exchange (5)",
+      "+- Scan parquet  (1)",
+      "(1) Scan parquet",
+      "ReadSchema: struct<t_dat:date,price:double>",
+      "(5) Exchange"
+    ],
+    "plan_line_count": 37,
+    "plan_captured_without_inference": true
+  },
+  "CACHE_Q2": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage25\\physical_plan_cache_q2.txt",
+    "source_operator": "InMemoryTableScan",
+    "in_memory_table_scan_present": true,
+    "in_memory_relation_present": true,
+    "scan_parquet_present": true,
+    "shuffle_exchange_present": true,
+    "read_schema_lines": [
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>"
+    ],
+    "pushed_filter_lines": [],
+    "evidence_lines": [
+      "+- Exchange (9)",
+      "+- InMemoryTableScan (1)",
+      "+- InMemoryRelation (2)",
+      "+- Scan parquet  (3)",
+      "(1) InMemoryTableScan",
+      "(2) InMemoryRelation",
+      "(3) Scan parquet",
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>",
+      "(9) Exchange"
+    ],
+    "plan_line_count": 51,
+    "plan_captured_without_inference": true
+  },
+  "NO_CACHE_Q3": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage25\\physical_plan_no_cache_q3.txt",
+    "source_operator": "Scan parquet",
+    "in_memory_table_scan_present": false,
+    "in_memory_relation_present": false,
+    "scan_parquet_present": true,
+    "shuffle_exchange_present": true,
+    "read_schema_lines": [
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>"
+    ],
+    "pushed_filter_lines": [],
+    "evidence_lines": [
+      "+- Exchange (7)",
+      "+- Exchange (4)",
+      "+- Scan parquet  (1)",
+      "(1) Scan parquet",
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>",
+      "(4) Exchange",
+      "(7) Exchange"
+    ],
+    "plan_line_count": 51,
+    "plan_captured_without_inference": true
+  },
+  "CACHE_Q3": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage25\\physical_plan_cache_q3.txt",
+    "source_operator": "InMemoryTableScan",
+    "in_memory_table_scan_present": true,
+    "in_memory_relation_present": true,
+    "scan_parquet_present": true,
+    "shuffle_exchange_present": true,
+    "read_schema_lines": [
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>"
+    ],
+    "pushed_filter_lines": [],
+    "evidence_lines": [
+      "+- Exchange (10)",
+      "+- Exchange (7)",
+      "+- InMemoryTableScan (1)",
+      "+- InMemoryRelation (2)",
+      "+- Scan parquet  (3)",
+      "(1) InMemoryTableScan",
+      "(2) InMemoryRelation",
+      "(3) Scan parquet",
+      "ReadSchema: struct<t_dat:date,customer_id:string,price:double>",
+      "(7) Exchange",
+      "(10) Exchange"
+    ],
+    "plan_line_count": 61,
+    "plan_captured_without_inference": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "thresholds": {
+    "original": {
+      "Recency": [
+        35.0,
+        96.0,
+        232.0,
+        460.0
+      ],
+      "Frequency": [
+        1.0,
+        2.0,
+        4.0,
+        10.0
+      ],
+      "Monetary": [
+        0.06859322033898305,
+        0.1642881355932203,
+        0.36584745762711857,
+        0.8910847457627119
+      ]
+    },
+    "recomputed": {
+      "Recency": [
+        35.0,
+        96.0,
+        232.0,
+        460.0
+      ],
+      "Frequency": [
+        1.0,
+        2.0,
+        4.0,
+        10.0
+      ],
+      "Monetary": [
+        0.06859322033898305,
+        0.1642881355932203,
+        0.36584745762711857,
+        0.8910847457627119
+      ]
+    },
+    "absolute_differences": {
+      "Recency": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Frequency": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Monetary": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "pass": true
+  },
+  "r_score_mismatch_count": 0,
+  "f_score_mismatch_count": 0,
+  "m_score_mismatch_count": 0,
+  "rfm_total_score_mismatch_count": 0,
+  "rule_segment_id_mismatch_count": 0,
+  "pass": true
+}

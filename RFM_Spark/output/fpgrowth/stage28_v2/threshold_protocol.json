@@ -1,0 +1,23 @@
+{
+  "selection_protocol": "HIGHEST_PREDEFINED_SUPPORT_MEETING_RULE_GATE",
+  "support_ladder": [
+    0.0005,
+    0.0002,
+    0.0001,
+    5e-05
+  ],
+  "minConfidence": 0.2,
+  "numPartitions": 64,
+  "safety_limit_records": 2000000,
+  "basket_count": 9080179,
+  "minimum_support_basket_counts": {
+    "0.0005": 4541,
+    "0.0002": 1817,
+    "0.0001": 909,
+    "5e-05": 455
+  },
+  "basket_storage_level": "Disk Memory Serialized 1x Replicated",
+  "materialization_count": 1,
+  "materialization_seconds_context_only": 45.08894270000019,
+  "selection_rule": "First threshold in descending ladder with itemset_size >= 2, at least 10 rules, valid metrics, and completed fit."
+}

@@ -1,0 +1,62 @@
+{
+  "tolerance": 1e-08,
+  "absolute_differences": {
+    "silhouette": {
+      "B0": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      },
+      "M1": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      },
+      "M2": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      }
+    },
+    "sse": {
+      "B0": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      },
+      "M1": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      },
+      "M2": {
+        "RFM3D": 0.0,
+        "ERFM5D": 0.0
+      }
+    },
+    "normalized_entropy": {
+      "B0": 0.0,
+      "M1": 0.0,
+      "M2": 0.0
+    },
+    "ari": {
+      "B0_vs_M1": 0.0,
+      "B0_vs_M2": 0.0,
+      "M1_vs_M2": 0.0
+    },
+    "nmi": {
+      "B0_vs_M1": 0.0,
+      "B0_vs_M2": 0.0,
+      "M1_vs_M2": 0.0
+    },
+    "alignment_mismatch": 0,
+    "alignment_mapping_equal": true,
+    "m1_m2_silhouette_delta": 0.0
+  },
+  "independent_metric_counts": {
+    "silhouette": 6,
+    "sse": 6,
+    "normalized_entropy": 3,
+    "ari": 3,
+    "nmi": 3,
+    "b0_m1_alignment": 1,
+    "m1_m2_deltas": 1
+  },
+  "max_scalar_difference": 0.0,
+  "pass": true
+}

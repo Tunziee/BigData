@@ -1,0 +1,36 @@
+{
+  "runtime_basis": "Track B median of 3 measured fresh-fit trials",
+  "fit_runtime_sec": {
+    "B0": 16.099473600000238,
+    "M1": 16.382895400000052
+  },
+  "fit_speedup": {
+    "definition": "B0 median fit runtime / M1 median fit runtime",
+    "B0_divided_by_M1": 0.9827001398055796,
+    "M1_speedup_factor_vs_B0": 0.9827001398055796,
+    "M1_runtime_reduction_pct_vs_B0": -1.7604414097105034
+  },
+  "iteration_reduction": {
+    "B0_median_numIter": 58,
+    "M1_median_numIter": 57,
+    "absolute_reduction_B0_minus_M1": 1,
+    "percent_reduction_vs_B0": 1.7241379310344827
+  },
+  "assignment_runtime_sec": {
+    "B0": 0.5314469000004465,
+    "M1": 0.5341504999996687,
+    "B0_divided_by_M1": 0.9949385051605795
+  },
+  "total_runtime_sec": {
+    "B0": 16.630921100000705,
+    "M1": 16.912093099999765,
+    "B0_divided_by_M1": 0.98337450022676
+  },
+  "quality_context_from_stage22": {
+    "ARI": 0.9996501516955725,
+    "NMI": 0.9988393925332469,
+    "mismatch_ratio": 0.00013,
+    "silhouette_delta_b0_minus_m1": -3.3887726247239236e-05
+  },
+  "no_quality_score_used": true
+}

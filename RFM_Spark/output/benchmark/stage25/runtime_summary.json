@@ -1,0 +1,95 @@
+{
+  "Q1": {
+    "NO_CACHE": {
+      "min_sec": 0.1022570000000087,
+      "max_sec": 0.10571630000004006,
+      "mean_sec": 0.10418663333333218,
+      "median_sec": 0.1045865999999478,
+      "population_std_sec": 0.0014402937485936554,
+      "trial_times_sec": [
+        0.1045865999999478,
+        0.1022570000000087,
+        0.10571630000004006
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 0.34532290000015564,
+      "max_sec": 0.37044269999978496,
+      "mean_sec": 0.35828636666671326,
+      "median_sec": 0.35909350000019913,
+      "population_std_sec": 0.010270984573670379,
+      "trial_times_sec": [
+        0.35909350000019913,
+        0.37044269999978496,
+        0.34532290000015564
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 0.29125172134803273,
+    "cache_runtime_reduction_pct": -243.34561024106182,
+    "result_equality_pass": true
+  },
+  "Q2": {
+    "NO_CACHE": {
+      "min_sec": 0.30773709999994026,
+      "max_sec": 0.36398529999996754,
+      "mean_sec": 0.332390966666632,
+      "median_sec": 0.3254504999999881,
+      "population_std_sec": 0.023481802301269568,
+      "trial_times_sec": [
+        0.36398529999996754,
+        0.30773709999994026,
+        0.3254504999999881
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 0.44168749999971624,
+      "max_sec": 0.4832038999998076,
+      "mean_sec": 0.4572065999999116,
+      "median_sec": 0.44672840000021097,
+      "population_std_sec": 0.018497700283498158,
+      "trial_times_sec": [
+        0.4832038999998076,
+        0.44672840000021097,
+        0.44168749999971624
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 0.7285198344225136,
+    "cache_runtime_reduction_pct": -37.264622423449126,
+    "result_equality_pass": true
+  },
+  "Q3": {
+    "NO_CACHE": {
+      "min_sec": 6.753804599999967,
+      "max_sec": 7.654679100000067,
+      "mean_sec": 7.26732053333338,
+      "median_sec": 7.393477900000107,
+      "population_std_sec": 0.3784446036615485,
+      "trial_times_sec": [
+        6.753804599999967,
+        7.393477900000107,
+        7.654679100000067
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 6.681392499999674,
+      "max_sec": 7.6031124000001,
+      "mean_sec": 7.143523099999887,
+      "median_sec": 7.1460643999998865,
+      "population_std_sec": 0.37629486414111135,
+      "trial_times_sec": [
+        7.6031124000001,
+        6.681392499999674,
+        7.1460643999998865
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 1.0346223440136117,
+    "cache_runtime_reduction_pct": 3.34637505307505,
+    "result_equality_pass": true
+  }
+}

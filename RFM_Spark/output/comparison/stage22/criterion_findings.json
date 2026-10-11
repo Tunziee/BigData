@@ -1,0 +1,53 @@
+{
+  "BEST_RFM3D_SILHOUETTE": {
+    "model_id": "M1",
+    "model_name": "Project Main K-Means",
+    "metric": "Silhouette_RFM3D",
+    "value": 0.6858449879433209
+  },
+  "BEST_ERFM5D_SILHOUETTE": {
+    "model_id": "M2",
+    "model_name": "Enhanced K-Means",
+    "metric": "Silhouette_ERFM5D",
+    "value": 0.481806967562302
+  },
+  "LOWEST_RFM3D_SSE_PER_CUSTOMER": {
+    "model_id": "B0",
+    "model_name": "Basic K-Means Baseline",
+    "metric": "SSEPerCustomer_RFM3D",
+    "value": 0.7691365781161709
+  },
+  "LOWEST_ERFM5D_SSE_PER_CUSTOMER": {
+    "model_id": "M2",
+    "model_name": "Enhanced K-Means",
+    "metric": "SSEPerCustomer_ERFM5D",
+    "value": 1.3474493014326931
+  },
+  "BEST_BALANCE_ENTROPY": {
+    "model_id": "M2",
+    "model_name": "Enhanced K-Means",
+    "metric": "NormalizedEntropy",
+    "value": 0.9762721650930705
+  },
+  "LOWEST_CLUSTER_SIZE_CV": {
+    "model_id": "M2",
+    "model_name": "Enhanced K-Means",
+    "metric": "ClusterSizeCV",
+    "value": 0.2734779297128015
+  },
+  "BEST_RAW_DISTINCTNESS_MIN": {
+    "model_id": "M1",
+    "model_name": "Project Main K-Means",
+    "metric": "RawDistinctnessMin",
+    "value": 1.3377777133377713
+  },
+  "BEST_RAW_DISTINCTNESS_MEAN": {
+    "model_id": "M1",
+    "model_name": "Project Main K-Means",
+    "metric": "RawDistinctnessMean",
+    "value": 7.535123114603716
+  },
+  "weighted_score_used": false,
+  "B0_TO_M1_FINDING": "QUALITY_SIMILAR_CONVERGENCE_IMPROVED",
+  "M1_TO_M2_FINDING": "M2_IMPROVES_ENHANCED_MULTIDIMENSIONAL_BEHAVIORAL_SEGMENTATION"
+}

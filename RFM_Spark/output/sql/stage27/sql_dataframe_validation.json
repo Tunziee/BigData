@@ -1,0 +1,36 @@
+{
+  "Q1": {
+    "dataframe_rows": 31788324,
+    "dataframe_customers": 1362281,
+    "dataframe_min_date": "2018-09-20",
+    "dataframe_max_date": "2020-09-22",
+    "monetary_difference": 1.789303496479988e-07,
+    "monetary_tolerance": 0.008846459740508008,
+    "pass": true
+  },
+  "Q2": {
+    "dataframe_monthly_rows": 31788324,
+    "dataframe_monthly_sum": 884645.9740487677,
+    "monetary_difference": 2.0330771803855896e-06,
+    "monetary_tolerance": 0.008846459740508008,
+    "pass": true
+  },
+  "Q6": {
+    "dataframe_cluster_counts": {
+      "0": 210248,
+      "2": 269066,
+      "1": 172774,
+      "3": 343639,
+      "4": 366554
+    },
+    "sql_cluster_counts": {
+      "0": 210248,
+      "1": 172774,
+      "2": 269066,
+      "3": 343639,
+      "4": 366554
+    },
+    "pass": true
+  },
+  "pass": true
+}

@@ -1,0 +1,38 @@
+{
+  "rule_based_rfm": {
+    "trial_count": 3,
+    "thresholds_match": true,
+    "segment_counts_match": true,
+    "pass": true
+  },
+  "K1": {
+    "model_id": "K1",
+    "trial_count": 3,
+    "numIter_equal": true,
+    "trainingCost_absolute_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_trainingCost_difference": 0.0,
+    "cluster_sizes_equal": true,
+    "max_center_difference": 0.0,
+    "tolerance": 1e-08,
+    "pass": true
+  },
+  "K2": {
+    "model_id": "K2",
+    "trial_count": 3,
+    "numIter_equal": true,
+    "trainingCost_absolute_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_trainingCost_difference": 0.0,
+    "cluster_sizes_equal": true,
+    "max_center_difference": 0.0,
+    "tolerance": 1e-08,
+    "pass": true
+  }
+}

@@ -1,0 +1,95 @@
+== Physical Plan ==
+AdaptiveSparkPlan (14)
++- HashAggregate (13)
+   +- Exchange (12)
+      +- HashAggregate (11)
+         +- InMemoryTableScan (1)
+               +- InMemoryRelation (2)
+                     +- AdaptiveSparkPlan (10)
+                        +- == Final Plan ==
+                           ResultQueryStage (8)
+                           +- ObjectHashAggregate (7)
+                              +- ShuffleQueryStage (6), Statistics(sizeInBytes=1762.5 MiB, rowCount=9.08E+6)
+                                 +- Exchange (5)
+                                    +- ObjectHashAggregate (4)
+                                       +- Scan parquet  (3)
+                        +- == Initial Plan ==
+                           ObjectHashAggregate (9)
+                           +- Exchange (5)
+                              +- ObjectHashAggregate (4)
+                                 +- Scan parquet  (3)
+
+
+(1) InMemoryTableScan
+Output [1]: [items#284]
+Arguments: [items#284]
+
+(2) InMemoryRelation
+Arguments: [basket_proxy_id#289, customer_id#5, t_dat#6, items#284], StorageLevel(disk, memory, 1 replicas)
+
+(3) Scan parquet 
+Output [3]: [t_dat#0, customer_id#1, article_id#2]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,article_id:string>
+
+(4) ObjectHashAggregate
+Input [3]: [t_dat#0, customer_id#1, article_id#2]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [partial_collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [buf#1688]
+Results [3]: [customer_id#1, t_dat#0, buf#1689]
+
+(5) Exchange
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Arguments: hashpartitioning(customer_id#1, t_dat#0, 64), ENSURE_REQUIREMENTS, [plan_id=1478]
+
+(6) ShuffleQueryStage
+Output [3]: [customer_id#1, t_dat#0, buf#1689]
+Arguments: 0
+
+(7) ObjectHashAggregate
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [collect_set(article_id#2)#288]
+Results [4]: [sha2(cast(concat_ws(||, customer_id#1, cast(t_dat#0 as string)) as binary), 256) AS basket_proxy_id#289, customer_id#1, t_dat#0, sort_array(collect_set(article_id#2)#288, true) AS items#284]
+
+(8) ResultQueryStage
+Output [4]: [basket_proxy_id#289, customer_id#1, t_dat#0, items#284]
+Arguments: 1
+
+(9) ObjectHashAggregate
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [collect_set(article_id#2)#288]
+Results [4]: [sha2(cast(concat_ws(||, customer_id#1, cast(t_dat#0 as string)) as binary), 256) AS basket_proxy_id#289, customer_id#1, t_dat#0, sort_array(collect_set(article_id#2)#288, true) AS items#284]
+
+(10) AdaptiveSparkPlan
+Output [4]: [basket_proxy_id#289, customer_id#1, t_dat#0, items#284]
+Arguments: isFinalPlan=true
+
+(11) HashAggregate
+Input [1]: [items#284]
+Keys: []
+Functions [15]: [partial_sum(CASE WHEN array_contains(items#284, 0733935001) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0733936001) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (array_contains(items#284, 0733935001) AND array_contains(items#284, 0733936001)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0699075005) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0699077006) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (array_contains(items#284, 0699075005) AND array_contains(items#284, 0699077006)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0742916003) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0742912003) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (array_contains(items#284, 0742916003) AND array_contains(items#284, 0742912003)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0699077002) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0699075002) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (array_contains(items#284, 0699077002) AND array_contains(items#284, 0699075002)) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0854619003) THEN 1 ELSE 0 END), partial_sum(CASE WHEN array_contains(items#284, 0850176003) THEN 1 ELSE 0 END), partial_sum(CASE WHEN (array_contains(items#284, 0854619003) AND array_contains(items#284, 0850176003)) THEN 1 ELSE 0 END)]
+Aggregate Attributes [15]: [sum#2930L, sum#2931L, sum#2932L, sum#2933L, sum#2934L, sum#2935L, sum#2936L, sum#2937L, sum#2938L, sum#2939L, sum#2940L, sum#2941L, sum#2942L, sum#2943L, sum#2944L]
+Results [15]: [sum#2945L, sum#2946L, sum#2947L, sum#2948L, sum#2949L, sum#2950L, sum#2951L, sum#2952L, sum#2953L, sum#2954L, sum#2955L, sum#2956L, sum#2957L, sum#2958L, sum#2959L]
+
+(12) Exchange
+Input [15]: [sum#2945L, sum#2946L, sum#2947L, sum#2948L, sum#2949L, sum#2950L, sum#2951L, sum#2952L, sum#2953L, sum#2954L, sum#2955L, sum#2956L, sum#2957L, sum#2958L, sum#2959L]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=2683]
+
+(13) HashAggregate
+Input [15]: [sum#2945L, sum#2946L, sum#2947L, sum#2948L, sum#2949L, sum#2950L, sum#2951L, sum#2952L, sum#2953L, sum#2954L, sum#2955L, sum#2956L, sum#2957L, sum#2958L, sum#2959L]
+Keys: []
+Functions [15]: [sum(CASE WHEN array_contains(items#284, 0733935001) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0733936001) THEN 1 ELSE 0 END), sum(CASE WHEN (array_contains(items#284, 0733935001) AND array_contains(items#284, 0733936001)) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0699075005) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0699077006) THEN 1 ELSE 0 END), sum(CASE WHEN (array_contains(items#284, 0699075005) AND array_contains(items#284, 0699077006)) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0742916003) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0742912003) THEN 1 ELSE 0 END), sum(CASE WHEN (array_contains(items#284, 0742916003) AND array_contains(items#284, 0742912003)) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0699077002) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0699075002) THEN 1 ELSE 0 END), sum(CASE WHEN (array_contains(items#284, 0699077002) AND array_contains(items#284, 0699075002)) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0854619003) THEN 1 ELSE 0 END), sum(CASE WHEN array_contains(items#284, 0850176003) THEN 1 ELSE 0 END), sum(CASE WHEN (array_contains(items#284, 0854619003) AND array_contains(items#284, 0850176003)) THEN 1 ELSE 0 END)]
+Aggregate Attributes [15]: [sum(CASE WHEN array_contains(items#284, 0733935001) THEN 1 ELSE 0 END)#2840L, sum(CASE WHEN array_contains(items#284, 0733936001) THEN 1 ELSE 0 END)#2841L, sum(CASE WHEN (array_contains(items#284, 0733935001) AND array_contains(items#284, 0733936001)) THEN 1 ELSE 0 END)#2842L, sum(CASE WHEN array_contains(items#284, 0699075005) THEN 1 ELSE 0 END)#2846L, sum(CASE WHEN array_contains(items#284, 0699077006) THEN 1 ELSE 0 END)#2847L, sum(CASE WHEN (array_contains(items#284, 0699075005) AND array_contains(items#284, 0699077006)) THEN 1 ELSE 0 END)#2848L, sum(CASE WHEN array_contains(items#284, 0742916003) THEN 1 ELSE 0 END)#2852L, sum(CASE WHEN array_contains(items#284, 0742912003) THEN 1 ELSE 0 END)#2853L, sum(CASE WHEN (array_contains(items#284, 0742916003) AND array_contains(items#284, 0742912003)) THEN 1 ELSE 0 END)#2854L, sum(CASE WHEN array_contains(items#284, 0699077002) THEN 1 ELSE 0 END)#2858L, sum(CASE WHEN array_contains(items#284, 0699075002) THEN 1 ELSE 0 END)#2859L, sum(CASE WHEN (array_contains(items#284, 0699077002) AND array_contains(items#284, 0699075002)) THEN 1 ELSE 0 END)#2860L, sum(CASE WHEN array_contains(items#284, 0854619003) THEN 1 ELSE 0 END)#2864L, sum(CASE WHEN array_contains(items#284, 0850176003) THEN 1 ELSE 0 END)#2865L, sum(CASE WHEN (array_contains(items#284, 0854619003) AND array_contains(items#284, 0850176003)) THEN 1 ELSE 0 END)#2866L]
+Results [30]: [sum(CASE WHEN array_contains(items#284, 0733935001) THEN 1 ELSE 0 END)#2840L AS a_0#2806L, sum(CASE WHEN array_contains(items#284, 0733936001) THEN 1 ELSE 0 END)#2841L AS b_0#2807L, sum(CASE WHEN (array_contains(items#284, 0733935001) AND array_contains(items#284, 0733936001)) THEN 1 ELSE 0 END)#2842L AS ab_0#2808L, sum(CASE WHEN array_contains(items#284, 0733936001) THEN 1 ELSE 0 END)#2841L AS a_1#2809L, sum(CASE WHEN array_contains(items#284, 0733935001) THEN 1 ELSE 0 END)#2840L AS b_1#2810L, sum(CASE WHEN (array_contains(items#284, 0733935001) AND array_contains(items#284, 0733936001)) THEN 1 ELSE 0 END)#2842L AS ab_1#2811L, sum(CASE WHEN array_contains(items#284, 0699075005) THEN 1 ELSE 0 END)#2846L AS a_2#2812L, sum(CASE WHEN array_contains(items#284, 0699077006) THEN 1 ELSE 0 END)#2847L AS b_2#2813L, sum(CASE WHEN (array_contains(items#284, 0699075005) AND array_contains(items#284, 0699077006)) THEN 1 ELSE 0 END)#2848L AS ab_2#2814L, sum(CASE WHEN array_contains(items#284, 0699077006) THEN 1 ELSE 0 END)#2847L AS a_3#2815L, sum(CASE WHEN array_contains(items#284, 0699075005) THEN 1 ELSE 0 END)#2846L AS b_3#2816L, sum(CASE WHEN (array_contains(items#284, 0699075005) AND array_contains(items#284, 0699077006)) THEN 1 ELSE 0 END)#2848L AS ab_3#2817L, sum(CASE WHEN array_contains(items#284, 0742916003) THEN 1 ELSE 0 END)#2852L AS a_4#2818L, sum(CASE WHEN array_contains(items#284, 0742912003) THEN 1 ELSE 0 END)#2853L AS b_4#2819L, sum(CASE WHEN (array_contains(items#284, 0742916003) AND array_contains(items#284, 0742912003)) THEN 1 ELSE 0 END)#2854L AS ab_4#2820L, sum(CASE WHEN array_contains(items#284, 0742912003) THEN 1 ELSE 0 END)#2853L AS a_5#2821L, sum(CASE WHEN array_contains(items#284, 0742916003) THEN 1 ELSE 0 END)#2852L AS b_5#2822L, sum(CASE WHEN (array_contains(items#284, 0742916003) AND array_contains(items#284, 0742912003)) THEN 1 ELSE 0 END)#2854L AS ab_5#2823L, sum(CASE WHEN array_contains(items#284, 0699077002) THEN 1 ELSE 0 END)#2858L AS a_6#2824L, sum(CASE WHEN array_contains(items#284, 0699075002) THEN 1 ELSE 0 END)#2859L AS b_6#2825L, sum(CASE WHEN (array_contains(items#284, 0699077002) AND array_contains(items#284, 0699075002)) THEN 1 ELSE 0 END)#2860L AS ab_6#2826L, sum(CASE WHEN array_contains(items#284, 0699075002) THEN 1 ELSE 0 END)#2859L AS a_7#2827L, sum(CASE WHEN array_contains(items#284, 0699077002) THEN 1 ELSE 0 END)#2858L AS b_7#2828L, sum(CASE WHEN (array_contains(items#284, 0699077002) AND array_contains(items#284, 0699075002)) THEN 1 ELSE 0 END)#2860L AS ab_7#2829L, sum(CASE WHEN array_contains(items#284, 0854619003) THEN 1 ELSE 0 END)#2864L AS a_8#2830L, sum(CASE WHEN array_contains(items#284, 0850176003) THEN 1 ELSE 0 END)#2865L AS b_8#2831L, sum(CASE WHEN (array_contains(items#284, 0854619003) AND array_contains(items#284, 0850176003)) THEN 1 ELSE 0 END)#2866L AS ab_8#2832L, sum(CASE WHEN array_contains(items#284, 0850176003) THEN 1 ELSE 0 END)#2865L AS a_9#2833L, sum(CASE WHEN array_contains(items#284, 0854619003) THEN 1 ELSE 0 END)#2864L AS b_9#2834L, sum(CASE WHEN (array_contains(items#284, 0854619003) AND array_contains(items#284, 0850176003)) THEN 1 ELSE 0 END)#2866L AS ab_9#2835L]
+
+(14) AdaptiveSparkPlan
+Output [30]: [a_0#2806L, b_0#2807L, ab_0#2808L, a_1#2809L, b_1#2810L, ab_1#2811L, a_2#2812L, b_2#2813L, ab_2#2814L, a_3#2815L, b_3#2816L, ab_3#2817L, a_4#2818L, b_4#2819L, ab_4#2820L, a_5#2821L, b_5#2822L, ab_5#2823L, a_6#2824L, b_6#2825L, ab_6#2826L, a_7#2827L, b_7#2828L, ab_7#2829L, a_8#2830L, b_8#2831L, ab_8#2832L, a_9#2833L, b_9#2834L, ab_9#2835L]
+Arguments: isFinalPlan=false
+
+

@@ -1,0 +1,191 @@
+{
+  "stage": 21,
+  "authority": "BASIC_KMEANS_BASELINE_V1",
+  "model_id": "B0",
+  "model_role": "technical_baseline",
+  "primary_experiment_line": [
+    "B0_BASIC_KMEANS",
+    "M1_PROJECT_MAIN_KMEANS",
+    "M2_ENHANCED_KMEANS"
+  ],
+  "full_training_count": 1362281,
+  "comparison_cohort_count": 1000000,
+  "b0_metrics": {
+    "model_id": "B0",
+    "model_name": "Basic K-Means Baseline",
+    "training_population": 1362281,
+    "fit_runtime_sec": 69.45048130000032,
+    "numIter": 63,
+    "trainingCost_WCSS": 1051831.1830063448,
+    "silhouette_rfm3d": 0.6858938338250193,
+    "cluster_distribution": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 729838,
+          "ratio": 0.5357470301648485,
+          "ratio_pct": 53.57470301648485
+        },
+        {
+          "cluster_id": 1,
+          "count": 198152,
+          "ratio": 0.1454560402736293,
+          "ratio_pct": 14.545604027362929
+        },
+        {
+          "cluster_id": 2,
+          "count": 409466,
+          "ratio": 0.3005738170025127,
+          "ratio_pct": 30.057381700251266
+        },
+        {
+          "cluster_id": 3,
+          "count": 24825,
+          "ratio": 0.018223112559009484,
+          "ratio_pct": 1.8223112559009484
+        }
+      ],
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "counts": [
+        729838,
+        198152,
+        409466,
+        24825
+      ],
+      "sum": 1362281,
+      "cluster_count": 4,
+      "pass": true
+    },
+    "centers_scaled": [
+      [
+        -0.5022099481074281,
+        -0.23432743626812622,
+        -0.2371199726052654
+      ],
+      [
+        -0.8285287828245815,
+        1.3515578306738283,
+        1.0740676488712229
+      ],
+      [
+        1.3536885608628986,
+        -0.5009212775160162,
+        -0.4023012363759112
+      ],
+      [
+        -0.9499083233150328,
+        4.362862321912866,
+        5.0332321428427145
+      ]
+    ],
+    "configuration": {
+      "k": 4,
+      "seed": 42,
+      "featuresCol": "features",
+      "predictionCol": "prediction",
+      "distanceMeasure": "euclidean",
+      "initMode": "random",
+      "maxIter": 100,
+      "tol": 0.0001
+    },
+    "metrics_valid": true
+  },
+  "m1_reference_metrics": {
+    "model_id": "M1",
+    "model_name": "Project Main K-Means",
+    "authority": "MAIN_KMEANS_FINAL",
+    "training_population": 1362281,
+    "initMode": "k-means||",
+    "fit_runtime_sec": 9.565288900001178,
+    "numIter": 35,
+    "trainingCost_WCSS": 1051831.216267805,
+    "silhouette_rfm3d": 0.6859294450224572,
+    "cluster_distribution": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "cluster_count_sum": 1362281,
+      "num_produced_clusters": 4,
+      "pass": true
+    },
+    "centers_scaled": [
+      [
+        -0.5022952769767058,
+        -0.23416484532905074,
+        -0.2369973323882814
+      ],
+      [
+        -0.8285849134331155,
+        1.3522669502978524,
+        1.0747185155895054
+      ],
+      [
+        1.3536284502747034,
+        -0.5009123919700538,
+        -0.40229569201515
+      ],
+      [
+        -0.9499282295651995,
+        4.363702230678436,
+        5.034734489405618
+      ]
+    ]
+  },
+  "controlled_difference": "initMode random vs k-means||",
+  "seed_sensitivity_complete": true,
+  "primary_reproducibility_pass": true,
+  "b0_prediction_sha256": "98e75c0b34cff5ffade7e8b62cd3176b2983062c414b2cf62be14f3f0819bf09",
+  "customer_universe_match_pass": true,
+  "model_readback_pass": true,
+  "prediction_readback_pass": true,
+  "final_model_authorities_modified": false,
+  "stage20_auxiliary_benchmark_preserved": true,
+  "gmm_executed": false,
+  "erfm5d_training_used": false,
+  "warnings": [
+    "B0 is a technical baseline; no assumption is made that random initialization must underperform M1.",
+    "Frequency means distinct purchase dates, not invoices or order IDs."
+  ],
+  "blockers": [],
+  "ready_for_stage22": true,
+  "artifact_readback": {
+    "output\\analysis\\stage21\\b0_configuration.json": true,
+    "output\\analysis\\stage21\\b0_full_data_metrics.json": true,
+    "output\\analysis\\stage21\\b0_vs_m1_controlled_check.json": true,
+    "output\\analysis\\stage21\\random_seed_sensitivity.json": true,
+    "output\\analysis\\stage21\\b0_reproducibility.json": true,
+    "output\\analysis\\stage21\\b0_1m_metrics.json": true,
+    "output\\analysis\\stage21\\b0_prediction_manifest.json": true,
+    "output\\analysis\\stage21\\stage21_final_summary.json": true,
+    "output\\models\\basic_kmeans_baseline": true,
+    "output\\final\\basic_kmeans_baseline_predictions": true,
+    "output\\comparison\\stage21\\basic_kmeans_predictions_1m": true,
+    "reports\\stage21_basic_kmeans_baseline.txt": true,
+    "reports\\stage21_run.log": true
+  },
+  "artifact_readback_pass": true
+}

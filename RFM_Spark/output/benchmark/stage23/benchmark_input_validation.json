@@ -1,0 +1,50 @@
+{
+  "row_count": 1000000,
+  "distinct_customer_id": 1000000,
+  "duplicate_customer_id": 0,
+  "b0_source_row_count": 1000000,
+  "b0_source_distinct_customer_id": 1000000,
+  "b0_source_duplicate_customer_id": 0,
+  "label_checks": {
+    "B0": {
+      "column": "b0_prediction",
+      "null": 0,
+      "invalid": 0
+    },
+    "M1": {
+      "column": "main_prediction",
+      "null": 0,
+      "invalid": 0
+    },
+    "M2": {
+      "column": "enhanced_prediction",
+      "null": 0,
+      "invalid": 0
+    }
+  },
+  "vector_checks": {
+    "RFM3D": {
+      "column": "eval_rfm3d_scaled",
+      "dimension": 3,
+      "null": 0,
+      "wrong_dimension": 0,
+      "nan": 0,
+      "infinity": 0,
+      "pass": true
+    },
+    "ERFM5D": {
+      "column": "eval_erfm5d_scaled",
+      "dimension": 5,
+      "null": 0,
+      "wrong_dimension": 0,
+      "nan": 0,
+      "infinity": 0,
+      "pass": true
+    }
+  },
+  "same_universe_after_join": true,
+  "pass": true,
+  "joined_row_count": 1000000,
+  "cohort_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\comparison\\stage17\\comparison_cohort_1m",
+  "b0_predictions_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\comparison\\stage21\\basic_kmeans_predictions_1m"
+}

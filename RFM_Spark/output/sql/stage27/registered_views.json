@@ -1,0 +1,78 @@
+{
+  "transactions_clean": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions",
+    "columns": [
+      "t_dat",
+      "customer_id",
+      "article_id",
+      "price"
+    ]
+  },
+  "customers_clean": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\customers",
+    "columns": [
+      "customer_id",
+      "FN",
+      "Active",
+      "club_member_status",
+      "fashion_news_frequency",
+      "age",
+      "postal_code"
+    ]
+  },
+  "articles_clean": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\articles",
+    "columns": [
+      "article_id",
+      "product_code",
+      "prod_name",
+      "product_type_no",
+      "product_type_name",
+      "product_group_name",
+      "graphical_appearance_no",
+      "graphical_appearance_name",
+      "colour_group_code",
+      "colour_group_name",
+      "perceived_colour_value_id",
+      "perceived_colour_value_name",
+      "perceived_colour_master_id",
+      "perceived_colour_master_name",
+      "department_no",
+      "department_name",
+      "index_code",
+      "index_name",
+      "index_group_no",
+      "index_group_name",
+      "section_no",
+      "section_name",
+      "garment_group_no",
+      "garment_group_name",
+      "detail_desc"
+    ]
+  },
+  "rfm_customer": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\features\\customer_features",
+    "columns": [
+      "customer_id",
+      "last_purchase_date",
+      "Recency",
+      "Frequency",
+      "Monetary",
+      "TotalItems",
+      "AvgBasketSize",
+      "ProductVariety"
+    ]
+  },
+  "m2_predictions": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\enhanced_kmeans_predictions",
+    "columns": [
+      "customer_id",
+      "prediction"
+    ]
+  },
+  "selected_schema_columns": {
+    "age_column": "age",
+    "product_group_column": "product_group_name",
+    "product_name_column": "prod_name"
+  }
+}

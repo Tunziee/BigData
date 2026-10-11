@@ -1,0 +1,173 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/05 21:49:29 INFO SparkContext: Running Spark version 4.2.0
+26/10/05 21:49:29 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/05 21:49:29 INFO SparkContext: Java version 17.0.19+10
+26/10/05 21:49:29 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/05 21:49:29 INFO ResourceUtils: ==============================================================
+26/10/05 21:49:29 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/05 21:49:29 INFO ResourceUtils: ==============================================================
+26/10/05 21:49:29 INFO SparkContext: Submitted application: RFM-eRFM-Feature-Engineering
+26/10/05 21:49:29 INFO SecurityManager: Changing view acls to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing modify acls to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing view acls groups to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing modify acls groups to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: VuongNguyen groups with view permissions: EMPTY; users with modify permissions: VuongNguyen; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/05 21:49:29 INFO Utils: Successfully started service 'sparkDriver' on port 64612.
+26/10/05 21:49:29 INFO SparkEnv: Registering MapOutputTracker
+26/10/05 21:49:29 INFO SparkEnv: Registering BlockManagerMaster
+26/10/05 21:49:29 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/05 21:49:29 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/05 21:49:29 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/05 21:49:29 INFO DiskBlockManager: Created local directory at D:\BigData\spark_tmp\blockmgr-82cfacfa-ca5e-464d-9771-5fc405a82b3d
+26/10/05 21:49:29 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/05 21:49:29 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/05 21:49:29 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/05 21:49:29 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/05 21:49:29 INFO ResourceProfile: Limiting resource is cpu
+26/10/05 21:49:29 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/05 21:49:29 INFO SecurityManager: Changing view acls to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing modify acls to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing view acls groups to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: Changing modify acls groups to: VuongNguyen
+26/10/05 21:49:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: VuongNguyen groups with view permissions: EMPTY; users with modify permissions: VuongNguyen; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/05 21:49:29 INFO Executor: Starting executor ID driver on host 192.168.0.185
+26/10/05 21:49:29 INFO Executor: Running Spark version 4.2.0
+26/10/05 21:49:29 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/05 21:49:29 INFO Executor: Java version 17.0.19+10
+26/10/05 21:49:30 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/05 21:49:30 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@341616d1 for default.
+26/10/05 21:49:30 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 64614.
+26/10/05 21:49:30 INFO NettyBlockTransferService: Server created on 192.168.0.185:64614
+26/10/05 21:49:30 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/05 21:49:30 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.0.185, 64614, None)
+26/10/05 21:49:30 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.0.185:64614 with 3.4 GiB RAM, BlockManagerId(driver, 192.168.0.185, 64614, None)
+26/10/05 21:49:30 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.0.185, 64614, None)
+26/10/05 21:49:30 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.0.185, 64614, None)
+
+
+==========================================================================================
+1. LOAD TRANSACTIONS
+==========================================================================================
+root
+ |-- t_dat: date (nullable = true)
+ |-- customer_id: string (nullable = true)
+ |-- article_id: string (nullable = true)
+ |-- price: double (nullable = true)
+
+
+
+==========================================================================================
+2. ANALYSIS DATE
+==========================================================================================
+Min transaction date : 2018-09-20
+Max transaction date : 2020-09-22
+Analysis date        : 2020-09-23
+
+
+==========================================================================================
+3. CORE CUSTOMER AGGREGATION
+==========================================================================================
+
+
+==========================================================================================
+4. BUILD FREQUENCY
+==========================================================================================
+
+
+==========================================================================================
+5. BUILD PRODUCT VARIETY
+==========================================================================================
+
+
+==========================================================================================
+6. JOIN FEATURES
+==========================================================================================
+
+
+==========================================================================================
+7. SAVE CUSTOMER FEATURES
+==========================================================================================
+Customer features saved.
+Customer count: 1362281
+
+
+==========================================================================================
+8. SAMPLE FEATURES
+==========================================================================================
++----------------------------------------------------------------+------------------+-------+---------+--------------------+----------+------------------+--------------+
+|customer_id                                                     |last_purchase_date|Recency|Frequency|Monetary            |TotalItems|AvgBasketSize     |ProductVariety|
++----------------------------------------------------------------+------------------+-------+---------+--------------------+----------+------------------+--------------+
+|000097d91384a0c14893c09ed047a963c4fc6a5c021044eec603b323e8c82d1d|2018-11-03        |690    |1        |0.22249152542372877 |15        |15.0              |15            |
+|0000f1c71aafe5963c3d195cf273f7bfd50bbf17761c9199e53dbb81641becd7|2020-07-30        |55     |27       |3.906067796610169   |136       |5.037037037037037 |109           |
+|000362878a3904e1fe4927bbfcdb10c64a9d85b12a593a7d9c965efcc9187cbf|2019-06-24        |457    |1        |0.05755932203389831 |4         |4.0               |4             |
+|00036ffb474cd9818bd0d9045fd5863b0167aabae75e613722443c7b3264730d|2019-11-05        |323    |9        |0.9060169491525423  |25        |2.7777777777777777|22            |
+|00048f2f68760664d2d0fa1e7fbfe083f05287f342484c29a13661772507ee6b|2018-09-29        |725    |1        |0.08132203389830507 |2         |2.0               |2             |
+|00094498d157be626982cfe34d6c0f1d5ea31b785aa32d552ac3bff16e14f985|2020-04-04        |172    |1        |0.016932203389830508|1         |1.0               |1             |
+|000a2672b25f5d1618fcc3a79f22b16c9994e5d865be6a37b44fafd6d4c6df0f|2018-12-03        |660    |1        |0.06776271186440677 |2         |2.0               |2             |
+|000bbedd07956b96cd828fcdd5b81f58b7b5341496c9de28dd8106978ebf7ecf|2019-07-01        |450    |6        |0.3793559322033898  |18        |3.0               |12            |
+|000dc0de369cbd9c2882b5ff19f2990614eadb266d0d5cdc2b1550b1199b4682|2019-11-30        |298    |1        |0.16944067796610168 |3         |3.0               |3             |
+|000df6cf5f902e6bb2a45b94d96c82c62324fe04bea329334219946c27c87e03|2020-06-21        |94     |14       |0.6119661016949152  |24        |1.7142857142857142|23            |
+|000e390c61c1b958716199919f017b9af6ac23d3f526e1d0ecb61ddaea4239cb|2019-03-21        |552    |2        |0.17277966101694914 |6         |3.0               |6             |
+|00117ea7d4a1eb30023b93aca4922c55934354a62484ebcd7e191bacf31f7120|2018-11-05        |688    |2        |0.033864406779661016|2         |1.0               |2             |
+|001196f2a9c835b764eb29533afb1e8f6e64a3d3c5b35a2a992fe95087e07297|2019-11-30        |298    |7        |0.3268305084745763  |17        |2.4285714285714284|17            |
+|00146865a0a8961fe6df0be427cd97a0779fc08056799989fd24efbd09ee1bc7|2020-09-12        |11     |1        |0.0457457627118644  |1         |1.0               |1             |
+|0015bcfb4f899d9209301dbd37ce54f53651b0f179c88cd91c50de1807355a91|2018-09-29        |725    |1        |0.1625762711864407  |13        |13.0              |12            |
+|0016640d72ad1bcfe8dc30d8be1da4426d172fc2d8818904e0ff7b95314b21b6|2020-09-01        |22     |42       |2.7327627118644067  |87        |2.0714285714285716|78            |
+|001a43734ae012099426f7dab426c6529419aa05b93a8dce0a5300f8e18d9178|2020-07-12        |73     |2        |0.10838983050847456 |5         |2.5               |4             |
+|001b9ee636090fa2beb0965d7d9b646f221c64369786175c5763ad1a36548c88|2018-10-16        |708    |1        |0.08132203389830508 |3         |3.0               |3             |
+|001c84f1b530f7d55b464e219cde77c71bf96f2c0acda7a5c616a8d1766f8a30|2019-09-15        |374    |1        |0.013542372881355931|1         |1.0               |1             |
+|001d31f668e32e936357836e47178cdeb7ef8731400520a854db923f8bab0d9b|2018-12-07        |656    |1        |0.03657627118644068 |2         |2.0               |2             |
++----------------------------------------------------------------+------------------+-------+---------+--------------------+----------+------------------+--------------+
+only showing top 20 rows
+
+
+==========================================================================================
+9. VALIDATE FEATURES
+==========================================================================================
++------------+--------------+-------------+---------------+--------------------+---------------+-----------------+----------------+------------------+-----------------------+
+|null_recency|null_frequency|null_monetary|null_avg_basket|null_product_variety|invalid_recency|invalid_frequency|invalid_monetary|invalid_avg_basket|invalid_product_variety|
++------------+--------------+-------------+---------------+--------------------+---------------+-----------------+----------------+------------------+-----------------------+
+|0           |0             |0            |0              |0                   |0              |0                |0               |0                 |0                      |
++------------+--------------+-------------+---------------+--------------------+---------------+-----------------+----------------+------------------+-----------------------+
+
+
+
+==========================================================================================
+10. FEATURE SUMMARY
+==========================================================================================
++-------+------------------+------------------+--------------------+------------------+------------------+
+|summary|Recency           |Frequency         |Monetary            |AvgBasketSize     |ProductVariety    |
++-------+------------------+------------------+--------------------+------------------+------------------+
+|count  |1362281           |1362281           |1362281             |1362281           |1362281           |
+|mean   |236.148437069885  |6.6654229193536425|0.6493858271904174  |3.5048642151364247|20.04464497412795 |
+|stddev |221.11879131008746|9.707005074461001 |1.1975819653583566  |2.8403040575453624|31.980251265698243|
+|min    |1                 |1                 |7.627118644067797E-4|1.0               |1                 |
+|25%    |49                |1                 |0.08808474576271186 |2.0               |3                 |
+|50%    |152               |3                 |0.24559322033898304 |2.8333333333333335|8                 |
+|75%    |400               |8                 |0.7011864406779661  |4.111111111111111 |24                |
+|max    |734               |427               |57.676406779661086  |181.0             |1346              |
++-------+------------------+------------------+--------------------+------------------+------------------+
+
+
+
+==========================================================================================
+11. BUILD RFM
+==========================================================================================
+RFM saved.
+
+
+==========================================================================================
+12. BUILD eRFM
+==========================================================================================
+eRFM saved.
+
+
+==========================================================================================
+BUILD RFM/eRFM HOAN TAT
+==========================================================================================
+Analysis Date : 2020-09-23
+Customer Count: 1362281
+Customer Features: D:\BigData\RFM_Spark\output\features\customer_features
+RFM: D:\BigData\RFM_Spark\output\features\rfm
+eRFM: D:\BigData\RFM_Spark\output\features\erfm

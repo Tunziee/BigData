@@ -1,0 +1,97 @@
+{
+  "Q1": {
+    "query_id": 8,
+    "query_name": "DATASET_KPI_OVERVIEW",
+    "sql_file": "sql/stage27/01_dataset_kpi_overview.sql",
+    "input_views": [
+      "transactions_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q1_dataset_kpi.json",
+    "output_row_count": 1,
+    "validation_pass": true,
+    "physical_plan_artifact": null,
+    "runtime_sec_context_only": null
+  },
+  "Q2": {
+    "query_id": 11,
+    "query_name": "MONTHLY_PURCHASE_TREND",
+    "sql_file": "sql/stage27/02_monthly_purchase_trend.sql",
+    "input_views": [
+      "transactions_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q2_monthly_purchase_trend.parquet",
+    "output_row_count": 25,
+    "validation_pass": true,
+    "physical_plan_artifact": null,
+    "runtime_sec_context_only": null
+  },
+  "Q3": {
+    "query_id": 16,
+    "query_name": "CUSTOMER_RFM_SQL_RECONSTRUCTION",
+    "sql_file": "sql/stage27/03_customer_rfm_sql.sql",
+    "input_views": [
+      "transactions_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q3_customer_rfm_sql.parquet",
+    "output_row_count": 1362281,
+    "validation_pass": true,
+    "physical_plan_artifact": "output/sql/stage27/q3_rfm_physical_plan.txt",
+    "runtime_sec_context_only": null
+  },
+  "Q4": {
+    "query_id": 19,
+    "query_name": "PRODUCT_PERFORMANCE",
+    "sql_file": "sql/stage27/04_product_performance.sql",
+    "input_views": [
+      "transactions_clean",
+      "articles_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q4_product_performance.parquet",
+    "output_row_count": 19,
+    "validation_pass": true,
+    "physical_plan_artifact": "output/sql/stage27/q4_product_join_physical_plan.txt",
+    "runtime_sec_context_only": null
+  },
+  "Q5": {
+    "query_id": 22,
+    "query_name": "CUSTOMER_AGE_BAND_ANALYSIS",
+    "sql_file": "sql/stage27/05_customer_age_band_analysis.sql",
+    "input_views": [
+      "transactions_clean",
+      "customers_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q5_age_band_analysis.parquet",
+    "output_row_count": 6,
+    "validation_pass": true,
+    "physical_plan_artifact": null,
+    "runtime_sec_context_only": null
+  },
+  "Q6": {
+    "query_id": 27,
+    "query_name": "FINAL_M2_SEGMENT_ANALYTICS",
+    "sql_file": "sql/stage27/06_m2_segment_analytics.sql",
+    "input_views": [
+      "m2_predictions",
+      "rfm_customer"
+    ],
+    "output_artifact": "output/sql/stage27/q6_m2_segment_analytics.parquet",
+    "output_row_count": 5,
+    "validation_pass": true,
+    "physical_plan_artifact": "output/sql/stage27/q6_m2_segment_join_physical_plan.txt",
+    "runtime_sec_context_only": null
+  },
+  "Q7": {
+    "query_id": 29,
+    "query_name": "TOP_ARTICLES_BY_PRODUCT_GROUP",
+    "sql_file": "sql/stage27/07_top_articles_by_product_group.sql",
+    "input_views": [
+      "transactions_clean",
+      "articles_clean"
+    ],
+    "output_artifact": "output/sql/stage27/q7_top_articles_by_product_group.parquet",
+    "output_row_count": 90,
+    "validation_pass": true,
+    "physical_plan_artifact": "output/sql/stage27/q7_window_physical_plan.txt",
+    "runtime_sec_context_only": null
+  }
+}

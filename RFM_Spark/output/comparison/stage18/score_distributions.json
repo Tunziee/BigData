@@ -1,0 +1,150 @@
+{
+  "r_score": [
+    {
+      "value": 1,
+      "count": 199997,
+      "ratio_pct": 19.9997
+    },
+    {
+      "value": 2,
+      "count": 199507,
+      "ratio_pct": 19.950699999999998
+    },
+    {
+      "value": 3,
+      "count": 198931,
+      "ratio_pct": 19.8931
+    },
+    {
+      "value": 4,
+      "count": 201477,
+      "ratio_pct": 20.1477
+    },
+    {
+      "value": 5,
+      "count": 200088,
+      "ratio_pct": 20.008799999999997
+    }
+  ],
+  "f_score": [
+    {
+      "value": 1,
+      "count": 329158,
+      "ratio_pct": 32.9158
+    },
+    {
+      "value": 2,
+      "count": 134467,
+      "ratio_pct": 13.4467
+    },
+    {
+      "value": 3,
+      "count": 144649,
+      "ratio_pct": 14.4649
+    },
+    {
+      "value": 4,
+      "count": 197419,
+      "ratio_pct": 19.7419
+    },
+    {
+      "value": 5,
+      "count": 194307,
+      "ratio_pct": 19.4307
+    }
+  ],
+  "m_score": [
+    {
+      "value": 1,
+      "count": 200360,
+      "ratio_pct": 20.036
+    },
+    {
+      "value": 2,
+      "count": 199704,
+      "ratio_pct": 19.970399999999998
+    },
+    {
+      "value": 3,
+      "count": 199940,
+      "ratio_pct": 19.994
+    },
+    {
+      "value": 4,
+      "count": 199996,
+      "ratio_pct": 19.9996
+    },
+    {
+      "value": 5,
+      "count": 200000,
+      "ratio_pct": 20.0
+    }
+  ],
+  "rfm_total_score": [
+    {
+      "value": 3,
+      "count": 75421,
+      "ratio_pct": 7.5421000000000005
+    },
+    {
+      "value": 4,
+      "count": 97468,
+      "ratio_pct": 9.7468
+    },
+    {
+      "value": 5,
+      "count": 95100,
+      "ratio_pct": 9.51
+    },
+    {
+      "value": 6,
+      "count": 83504,
+      "ratio_pct": 8.350399999999999
+    },
+    {
+      "value": 7,
+      "count": 76123,
+      "ratio_pct": 7.612299999999999
+    },
+    {
+      "value": 8,
+      "count": 67807,
+      "ratio_pct": 6.7807
+    },
+    {
+      "value": 9,
+      "count": 65466,
+      "ratio_pct": 6.5466
+    },
+    {
+      "value": 10,
+      "count": 66580,
+      "ratio_pct": 6.658
+    },
+    {
+      "value": 11,
+      "count": 70050,
+      "ratio_pct": 7.005
+    },
+    {
+      "value": 12,
+      "count": 72492,
+      "ratio_pct": 7.2492
+    },
+    {
+      "value": 13,
+      "count": 71946,
+      "ratio_pct": 7.194599999999999
+    },
+    {
+      "value": 14,
+      "count": 74393,
+      "ratio_pct": 7.4393
+    },
+    {
+      "value": 15,
+      "count": 83650,
+      "ratio_pct": 8.365
+    }
+  ]
+}

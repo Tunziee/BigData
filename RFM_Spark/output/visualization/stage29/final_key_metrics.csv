@@ -1,0 +1,17 @@
+﻿metric,value,source
+dataset_transaction_rows,31788324.0,Stage 27 q1_dataset_kpi.json
+customer_count,1362281.0,Stage 16 final profile summary
+distinct_articles,104547.0,Stage 27 q1_dataset_kpi.json
+m1_selected_k,4.0,Stage 9 optimal_k_selection.json
+m2_selected_k,5.0,Stage 16 final profile summary
+m1_rfm3d_silhouette,0.6858449879433209,Stage 22 common_space_silhouette.json
+m2_erfm5d_silhouette,0.481806967562302,Stage 22 common_space_silhouette.json
+m2_min_cluster_share,0.12655,Stage 22 cluster_balance_metrics.json
+m2_max_cluster_share,0.268909,Stage 22 cluster_balance_metrics.json
+parquet_storage_reduction_pct,77.80519590163235,Stage 24 storage_size_comparison.json
+csv_parquet_q1_runtime_ratio,17.456301159817137,Stage 24 runtime_summary.json
+q3_cache_break_even_executions,39.0,Stage 25 cache_vs_no_cache_summary.csv
+stage26_q3_shuffle_bytes,327776023.0,Stage 26 shuffle_metrics.json
+fp_growth_selected_minSupport,0.0002,Stage 28 V2 final summary
+fp_growth_frequent_itemset_count,2655.0,Stage 28 V2 final summary
+fp_growth_association_rule_count,104.0,Stage 28 V2 final summary

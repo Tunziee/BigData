@@ -1,0 +1,67 @@
+{
+  "stage": 7,
+  "name": "Main RFM ML preprocessing pipeline",
+  "input": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\features\\rfm",
+    "row_count": 1362281,
+    "distinct_customers": 1362281
+  },
+  "features": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "vector_assembler": {
+    "input_cols": [
+      "Recency",
+      "Frequency",
+      "Monetary"
+    ],
+    "output_col": "features_raw",
+    "handle_invalid": "error"
+  },
+  "standard_scaler": {
+    "input_col": "features_raw",
+    "output_col": "features",
+    "withMean": true,
+    "withStd": true,
+    "mean": [
+      236.14843706988268,
+      6.665422919353644,
+      0.6493858271904663
+    ],
+    "std": [
+      221.11879131008746,
+      9.707005074461001,
+      1.1975819653583568
+    ]
+  },
+  "output": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaled",
+    "row_count": 1362281,
+    "distinct_customers": 1362281,
+    "vector_dimension": 3
+  },
+  "validation": {
+    "no_row_loss": true,
+    "no_duplicate_customer": true,
+    "null_free": true,
+    "nan_free": true,
+    "infinity_free": true,
+    "standardization_pass": true,
+    "readback_pass": true
+  },
+  "scaled_feature_statistics": {
+    "mean": [
+      1.0426654636553477e-14,
+      -7.16404808127848e-16,
+      -5.123114306734284e-15
+    ],
+    "std": [
+      1.0000000000000004,
+      0.9999999999999986,
+      0.9999999999999958
+    ]
+  },
+  "ready_for_stage8": true
+}

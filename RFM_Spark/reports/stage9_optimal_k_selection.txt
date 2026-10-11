@@ -1,0 +1,77 @@
+STAGE 9 — MAIN K-MEANS OPTIMAL-K SELECTION
+===================================================================================================================
+SOURCE_STAGE7_SCALER: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\ml\main_rfm_scaler_metadata\scaler_metadata.json
+SOURCE_STAGE8: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\analysis\stage8\kmeans_k_sweep.json
+NO_RETRAINING: True
+NO_FINAL_MODEL_TRAINED: True
+
+VERIFIED_AUTHORITIES
+True; blockers=[]
+Feature order: ['Recency', 'Frequency', 'Monetary']; withMean=True; withStd=True; mean/std length=3.
+
+SILHOUETTE_RANKING
+rank=1; K=2; silhouette=0.757275738856; difference_from_best=0.000000000000
+rank=2; K=4; silhouette=0.685929445022; difference_from_best=0.071346293833
+rank=3; K=3; silhouette=0.665097927289; difference_from_best=0.092177811567
+rank=4; K=5; silhouette=0.657094207242; difference_from_best=0.100181531614
+rank=5; K=6; silhouette=0.611620517707; difference_from_best=0.145655221149
+rank=6; K=8; silhouette=0.603979345510; difference_from_best=0.153296393346
+rank=7; K=7; silhouette=0.593943636751; difference_from_best=0.163332102105
+
+WCSS_REDUCTION_TABLE
+K=2->3; previous=2514082.497202; current=1483537.595409; absolute_reduction=1030544.901794; reduction_pct=40.990894%
+K=3->4; previous=1483537.595409; current=1051831.216268; absolute_reduction=431706.379141; reduction_pct=29.099794%
+K=4->5; previous=1051831.216268; current=856603.969853; absolute_reduction=195227.246415; reduction_pct=18.560701%
+K=5->6; previous=856603.969853; current=717569.193904; absolute_reduction=139034.775949; reduction_pct=16.230928%
+K=6->7; previous=717569.193904; current=689225.224918; absolute_reduction=28343.968985; reduction_pct=3.949998%
+K=7->8; previous=689225.224918; current=560331.822488; absolute_reduction=128893.402431; reduction_pct=18.701202%
+
+ELBOW_ANALYSIS
+Method: normalized maximum distance to the line connecting the first and last WCSS points
+Supporting elbow K: 4; distance=0.293519717582
+Supporting evidence only; it was not used as a single-metric decision rule.
+
+CLUSTER_BALANCE_ANALYSIS
+K=2; min=173036; max=1189245; min_ratio=12.701932%; max_ratio=87.298068%; max/min=6.872818; below0.5=0; below1=0; below2=0; below5=0; flags=[{'cluster_id': 0, 'count': 1189245, 'ratio_pct': 87.29806846017819, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 173036, 'ratio_pct': 12.701931539821814, 'flag': 'NONE'}]
+K=3; min=102738; max=813355; min_ratio=7.541616%; max_ratio=59.705376%; max/min=7.916788; below0.5=0; below1=0; below2=0; below5=0; flags=[{'cluster_id': 0, 'count': 446188, 'ratio_pct': 32.75300763939305, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 102738, 'ratio_pct': 7.541615863393823, 'flag': 'NONE'}, {'cluster_id': 2, 'count': 813355, 'ratio_pct': 59.70537649721312, 'flag': 'NONE'}]
+K=4; min=24809; max=729944; min_ratio=1.821137%; max_ratio=53.582484%; max/min=29.422548; below0.5=0; below1=0; below2=1; below5=1; flags=[{'cluster_id': 0, 'count': 729944, 'ratio_pct': 53.582484083680235, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 198035, 'ratio_pct': 14.537015490930285, 'flag': 'NONE'}, {'cluster_id': 2, 'count': 409493, 'ratio_pct': 30.059363670197264, 'flag': 'NONE'}, {'cluster_id': 3, 'count': 24809, 'ratio_pct': 1.8211367551922109, 'flag': 'MINOR'}]
+K=5; min=8857; max=647864; min_ratio=0.650160%; max_ratio=47.557295%; max/min=73.147115; below0.5=0; below1=1; below2=1; below5=2; flags=[{'cluster_id': 0, 'count': 398072, 'ratio_pct': 29.220990383041386, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 8857, 'ratio_pct': 0.6501595485806526, 'flag': 'SMALL'}, {'cluster_id': 2, 'count': 242341, 'ratio_pct': 17.78935476601377, 'flag': 'NONE'}, {'cluster_id': 3, 'count': 65147, 'ratio_pct': 4.7821998545087245, 'flag': 'NONE'}, {'cluster_id': 4, 'count': 647864, 'ratio_pct': 47.55729544785547, 'flag': 'NONE'}]
+K=6; min=7933; max=514023; min_ratio=0.582332%; max_ratio=37.732524%; max/min=64.795538; below0.5=0; below1=1; below2=1; below5=2; flags=[{'cluster_id': 0, 'count': 216485, 'ratio_pct': 15.891361620693528, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 58260, 'ratio_pct': 4.27665070569141, 'flag': 'NONE'}, {'cluster_id': 2, 'count': 306627, 'ratio_pct': 22.50835180113354, 'flag': 'NONE'}, {'cluster_id': 3, 'count': 258953, 'ratio_pct': 19.008780126860756, 'flag': 'NONE'}, {'cluster_id': 4, 'count': 7933, 'ratio_pct': 0.5823321326510463, 'flag': 'SMALL'}, {'cluster_id': 5, 'count': 514023, 'ratio_pct': 37.732523612969715, 'flag': 'NONE'}]
+K=7; min=3825; max=551149; min_ratio=0.280779%; max_ratio=40.457806%; max/min=144.091242; below0.5=1; below1=1; below2=3; below5=3; flags=[{'cluster_id': 0, 'count': 269585, 'ratio_pct': 19.789235847817007, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 113334, 'ratio_pct': 8.319428957755411, 'flag': 'NONE'}, {'cluster_id': 2, 'count': 21788, 'ratio_pct': 1.5993763401236605, 'flag': 'MINOR'}, {'cluster_id': 3, 'count': 385451, 'ratio_pct': 28.294529542730174, 'flag': 'NONE'}, {'cluster_id': 4, 'count': 3825, 'ratio_pct': 0.28077907568262345, 'flag': 'VERY_SMALL'}, {'cluster_id': 5, 'count': 551149, 'ratio_pct': 40.457805695007124, 'flag': 'NONE'}, {'cluster_id': 6, 'count': 17149, 'ratio_pct': 1.2588445408840025, 'flag': 'MINOR'}]
+K=8; min=3252; max=451208; min_ratio=0.238717%; max_ratio=33.121507%; max/min=138.747847; below0.5=1; below1=1; below2=3; below5=3; flags=[{'cluster_id': 0, 'count': 229461, 'ratio_pct': 16.84388169547986, 'flag': 'NONE'}, {'cluster_id': 1, 'count': 3252, 'ratio_pct': 0.23871726905095206, 'flag': 'VERY_SMALL'}, {'cluster_id': 2, 'count': 94589, 'ratio_pct': 6.943427971174816, 'flag': 'NONE'}, {'cluster_id': 3, 'count': 254237, 'ratio_pct': 18.6625960429603, 'flag': 'NONE'}, {'cluster_id': 4, 'count': 15856, 'ratio_pct': 1.1639302023591316, 'flag': 'MINOR'}, {'cluster_id': 5, 'count': 451208, 'ratio_pct': 33.12150723675952, 'flag': 'NONE'}, {'cluster_id': 6, 'count': 16816, 'ratio_pct': 1.234400244883398, 'flag': 'MINOR'}, {'cluster_id': 7, 'count': 296862, 'ratio_pct': 21.79153933733202, 'flag': 'NONE'}]
+
+CONVERGENCE_ANALYSIS
+{'maxIter': 100, 'by_k': {'2': {'num_iter': 33, 'convergence_flag': 'NORMAL'}, '3': {'num_iter': 27, 'convergence_flag': 'NORMAL'}, '4': {'num_iter': 35, 'convergence_flag': 'NORMAL'}, '5': {'num_iter': 61, 'convergence_flag': 'NORMAL'}, '6': {'num_iter': 65, 'convergence_flag': 'NORMAL'}, '7': {'num_iter': 100, 'convergence_flag': 'LIMIT_REACHED'}, '8': {'num_iter': 73, 'convergence_flag': 'NORMAL'}}, 'convergence_warning_k7': True, 'note': 'K=7 reached the configured iteration limit and requires caution; no automatic rerun was performed.'}
+K=7 reached maxIter=100; this is a caution flag, not evidence of normal convergence.
+
+INVERSE_CENTER_VALIDATION
+{'pass': True, 'formula': 'original_value = scaled_center * scaler_std + scaler_mean', 'feature_order': ['Recency', 'Frequency', 'Monetary'], 'negative_values_found': False, 'all_values_finite': True, 'all_dimensions_three': True}
+Inverse centers use original_value = scaled_center * std + mean; no negative reconstructed RFM values occurred.
+
+CANDIDATE_K_VALUES
+[3, 4]
+
+DECISION_TABLE
+K | Silhouette | Rank | WCSS | ReductionPctFromPrevious | MinRatioPct | MaxRatioPct | Below1Pct | Below2Pct | NumIter | Convergence | Elbow | Status
+2 | 0.757275738856 | 1 | 2514082.497202 | N/A | 12.701932 | 87.298068 | 0 | 0 | 33 | NORMAL | PRE_ELBOW | REJECTED
+3 | 0.665097927289 | 3 | 1483537.595409 | 40.990894409409336 | 7.541616 | 59.705376 | 0 | 0 | 27 | NORMAL | ADJACENT_TO_GEOMETRIC_ELBOW | CANDIDATE
+4 | 0.685929445022 | 2 | 1051831.216268 | 29.099793660562423 | 1.821137 | 53.582484 | 0 | 1 | 35 | NORMAL | PRIMARY_GEOMETRIC_ELBOW | SELECTED
+5 | 0.657094207242 | 4 | 856603.969853 | 18.56070093716947 | 0.650160 | 47.557295 | 1 | 1 | 61 | NORMAL | ADJACENT_TO_GEOMETRIC_ELBOW | REJECTED
+6 | 0.611620517707 | 5 | 717569.193904 | 16.23092827515599 | 0.582332 | 37.732524 | 1 | 1 | 65 | NORMAL | POST_ELBOW | REJECTED
+7 | 0.593943636751 | 7 | 689225.224918 | 3.94999802475286 | 0.280779 | 40.457806 | 1 | 3 | 100 | LIMIT_REACHED | POST_ELBOW | REJECTED
+8 | 0.603979345510 | 6 | 560331.822488 | 18.701202128216156 | 0.238717 | 33.121507 | 1 | 3 | 73 | NORMAL | POST_ELBOW | REJECTED
+
+SELECTED_K: 4
+SELECTION_REASON: K=4 is selected because it is the maximum-distance interior point of the objective normalized WCSS elbow diagnostic, has the second-best silhouette (0.6859294450), improves on K=3 silhouette, produces four distinct directional RFM centroid vectors with a magnitude-level split in the high-Frequency/high-Monetary pattern, and has no cluster below 1% (the smallest cluster is 1.8211367552%, a minor but inspectable segment). K=2 has the best silhouette but is highly imbalanced at 87.2980684602% / 12.7019315398% and is too coarse for the requested segmentation granularity. K=3 remains the closest balance-oriented candidate, but its silhouette and elbow evidence are both weaker than K=4. K>=5 are post-elbow solutions with lower silhouette and increasing small-cluster fragmentation; K=7 additionally reached maxIter=100. No weighted score was used.
+
+REJECTED_ALTERNATIVES
+K=2: Rejected despite silhouette rank 1 because the two clusters are strongly imbalanced (87.2980684602% / 12.7019315398%) and provide only two broad groups; K=4 is the geometric elbow and has a competitive silhouette.
+K=3: Not selected; retained as a candidate because it is balanced with no sub-5% cluster, but K=4 has higher silhouette and the primary geometric elbow evidence.
+K=5: Rejected as post-elbow; silhouette falls below K=4 and a 0.6501595486% SMALL cluster appears.
+K=6: Rejected as post-elbow; silhouette falls to 0.6116205177% and a 0.5823321327% SMALL cluster appears.
+K=7: Rejected because silhouette is lowest, a 0.2807790757% VERY_SMALL cluster appears, and num_iter=100 reached the configured limit; convergence requires caution.
+K=8: Rejected as a more fragmented post-elbow solution; a 0.2387172691% VERY_SMALL cluster appears and silhouette remains below K=4 despite the WCSS reduction from K=7.
+
+WARNINGS: K=7 convergence limit; K>=5 tiny-cluster diagnostics; selected K=4 was not retrained.
+BLOCKERS: []
+READY_FOR_STAGE_10: True

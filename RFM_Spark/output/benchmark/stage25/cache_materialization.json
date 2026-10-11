@@ -1,0 +1,16 @@
+{
+  "storage_level_requested": "MEMORY_AND_DISK",
+  "storage_level_observed": {
+    "string": "Disk Memory Serialized 1x Replicated",
+    "useDisk": true,
+    "useMemory": true,
+    "useOffHeap": false,
+    "deserialized": false,
+    "replication": 1,
+    "is_cached_property": true
+  },
+  "materialized_row_count": 31788324,
+  "cache_materialization_sec": 9.530394299999898,
+  "materialization_includes": "persist registration plus first full count()",
+  "pass": true
+}

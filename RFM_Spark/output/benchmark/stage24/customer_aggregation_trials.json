@@ -1,0 +1,163 @@
+{
+  "query_id": "Q3",
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "format": "CSV",
+      "runtime_sec": 34.692546499999935,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.974051063,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 9.24308619999988,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    }
+  ],
+  "measured_order": [
+    [
+      "CSV",
+      "PARQUET"
+    ],
+    [
+      "PARQUET",
+      "CSV"
+    ],
+    [
+      "CSV",
+      "PARQUET"
+    ]
+  ],
+  "trials": [
+    {
+      "format": "CSV",
+      "runtime_sec": 29.210809199999858,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.974051063,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 1,
+      "order_index": 1,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 7.428095799999937,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 1,
+      "order_index": 2,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 9.196170100000018,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 2,
+      "order_index": 1,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 30.51882599999999,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.974051063,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 2,
+      "order_index": 2,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 30.046022700000094,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.974051063,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 3,
+      "order_index": 1,
+      "trial": 3
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 7.419256999999789,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "query": "select customer_id,t_dat,price groupBy customer_id; count, sum(price), max(t_dat); scalar aggregate",
+      "pass": true,
+      "round": 3,
+      "order_index": 2,
+      "trial": 3
+    }
+  ],
+  "summary_by_format": {
+    "CSV": {
+      "min_sec": 29.210809199999858,
+      "max_sec": 30.51882599999999,
+      "mean_sec": 29.92521929999998,
+      "median_sec": 30.046022700000094,
+      "population_std_sec": 0.5407846665475006,
+      "trial_times_sec": [
+        29.210809199999858,
+        30.51882599999999,
+        30.046022700000094
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 7.419256999999789,
+      "max_sec": 9.196170100000018,
+      "mean_sec": 8.014507633333247,
+      "median_sec": 7.428095799999937,
+      "population_std_sec": 0.8355693348223141,
+      "trial_times_sec": [
+        7.428095799999937,
+        9.196170100000018,
+        7.419256999999789
+      ],
+      "all_finite": true
+    }
+  }
+}

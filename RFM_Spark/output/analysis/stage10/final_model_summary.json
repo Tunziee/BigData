@@ -1,0 +1,263 @@
+{
+  "stage": 10,
+  "authority": "MAIN_KMEANS_FINAL",
+  "model": "Main RFM K-Means",
+  "selected_k": 4,
+  "source_authorities": {
+    "stage7": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaler_metadata\\scaler_metadata.json",
+    "stage8": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage8\\kmeans_k_sweep.json",
+    "stage9": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage9\\optimal_k_selection.json"
+  },
+  "input_validation": {
+    "row_count": 1362281,
+    "distinct_customer_id": 1362281,
+    "null_customer_id": 0,
+    "duplicate_customer_id": 0,
+    "features_quality": {
+      "null_vector": 0,
+      "wrong_dimension": 0,
+      "nan_0": 0,
+      "infinity_0": 0,
+      "nan_1": 0,
+      "infinity_1": 0,
+      "nan_2": 0,
+      "infinity_2": 0,
+      "nan_total": 0,
+      "infinity_total": 0,
+      "pass": true
+    },
+    "features_raw_quality": {
+      "null_vector": 0,
+      "wrong_dimension": 0,
+      "nan_0": 0,
+      "infinity_0": 0,
+      "nan_1": 0,
+      "infinity_1": 0,
+      "nan_2": 0,
+      "infinity_2": 0,
+      "nan_total": 0,
+      "infinity_total": 0,
+      "pass": true
+    },
+    "pass": true,
+    "cache_materialization": {
+      "storage_level": "MEMORY_AND_DISK",
+      "materialized_row_count": 1362281,
+      "materialization_runtime_sec": 3.3602995999990526,
+      "materialized_before_timed_fit": true
+    }
+  },
+  "configuration": {
+    "k": 4,
+    "seed": 42,
+    "featuresCol": "features",
+    "predictionCol": "prediction",
+    "distanceMeasure": "euclidean",
+    "initMode": "k-means||",
+    "maxIter": 100,
+    "tol": 0.0001
+  },
+  "spark_configuration": {
+    "master": "local[4]",
+    "version": "4.2.0",
+    "shuffle_partitions": 64,
+    "adaptive_enabled": true,
+    "cache_policy": "MEMORY_AND_DISK"
+  },
+  "cache_materialization": {
+    "storage_level": "MEMORY_AND_DISK",
+    "materialized_row_count": 1362281,
+    "materialization_runtime_sec": 3.3602995999990526,
+    "materialized_before_timed_fit": true
+  },
+  "training": {
+    "fit_runtime_sec": 9.565288900001178,
+    "num_iter": 35,
+    "wcss": 1051831.216267805,
+    "silhouette": 0.6859294450224572
+  },
+  "cluster_distribution": {
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 729944,
+        "ratio_pct": 53.582484083680235
+      },
+      {
+        "cluster_id": 1,
+        "count": 198035,
+        "ratio_pct": 14.537015490930285
+      },
+      {
+        "cluster_id": 2,
+        "count": 409493,
+        "ratio_pct": 30.059363670197264
+      },
+      {
+        "cluster_id": 3,
+        "count": 24809,
+        "ratio_pct": 1.8211367551922109
+      }
+    ],
+    "cluster_count_sum": 1362281,
+    "num_produced_clusters": 4,
+    "pass": true
+  },
+  "centers_scaled": [
+    [
+      -0.5022952769767058,
+      -0.23416484532905074,
+      -0.2369973323882814
+    ],
+    [
+      -0.8285849134331155,
+      1.3522669502978524,
+      1.0747185155895054
+    ],
+    [
+      1.3536284502747034,
+      -0.5009123919700538,
+      -0.40229569201515
+    ],
+    [
+      -0.9499282295651995,
+      4.363702230678436,
+      5.034734489405618
+    ]
+  ],
+  "centers_original": [
+    [
+      125.08151254402787,
+      4.392383577484173,
+      0.3655620960842205
+    ],
+    [
+      52.93274251377872,
+      19.7918850679208,
+      1.936449339297162
+    ],
+    [
+      535.4611238775719,
+      1.8030637886399346,
+      0.16760376169176283
+    ],
+    [
+      26.101455117094474,
+      49.02390261598602,
+      6.6788930520703484
+    ]
+  ],
+  "centers_validation": {
+    "pass": true,
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary"
+    ],
+    "formula": "original = scaled * std + mean",
+    "negative_values": false
+  },
+  "reproducibility": {
+    "tolerance": 1e-08,
+    "silhouette": {
+      "final": 0.6859294450224572,
+      "reference": 0.6859294450224572,
+      "absolute_difference": 0.0,
+      "allowed_difference": 1e-08,
+      "pass": true
+    },
+    "wcss": {
+      "final": 1051831.216267805,
+      "reference": 1051831.216267805,
+      "absolute_difference": 0.0,
+      "allowed_difference": 0.010518312162678052,
+      "pass": true
+    },
+    "num_iter": {
+      "final": 35,
+      "reference": 35,
+      "pass": true
+    },
+    "cluster_sizes": {
+      "final": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "reference": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "pass": true
+    },
+    "centers_scaled": {
+      "pass": true,
+      "max_absolute_difference": 0.0,
+      "allowed_difference": 5.034734489405618e-08
+    },
+    "pass": true
+  },
+  "model_save_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\models\\main_kmeans_final",
+  "model_readback": {
+    "load_pass": true,
+    "k": 4,
+    "center_count": 4,
+    "center_dimension": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "centers_valid": true,
+    "prediction_mismatch_count": 0,
+    "prediction_equality_pass": true,
+    "pass": true
+  },
+  "prediction_save_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\main_kmeans_predictions",
+  "prediction_readback": {
+    "row_count": 1362281,
+    "distinct_customer_id": 1362281,
+    "duplicate_customer_id": 0,
+    "prediction_null": 0,
+    "invalid_prediction": 0,
+    "distinct_predictions": 4,
+    "cluster_count_sum": 1362281,
+    "pass": true
+  },
+  "ready_for_stage11": true
+}

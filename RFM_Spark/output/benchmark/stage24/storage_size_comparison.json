@@ -1,0 +1,120 @@
+{
+  "csv_bytes": 3488002253,
+  "parquet_bytes": 774155267,
+  "parquet_to_csv_ratio": 0.22194804098367651,
+  "storage_reduction_pct": 77.80519590163235,
+  "csv_files": [
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\data\\transactions_train.csv",
+      "bytes": 3488002253
+    }
+  ],
+  "parquet_data_files": [
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 29344793
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 30760225
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 32604162
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 30894454
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 29555490
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 30083600
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 28811688
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 27928500
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 28166176
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 27226760
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 27139077
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 27389596
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 28740402
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 30981485
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 31018739
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 32952706
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 33838586
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 31342799
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 31554078
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 27171255
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 26446554
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 28638069
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 28594273
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 30160627
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 31028435
+    },
+    {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "bytes": 31782738
+    }
+  ],
+  "metadata_excluded": true,
+  "size_measurement": "CSV sums .csv files; Parquet recursively sums .parquet data files only."
+}

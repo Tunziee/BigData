@@ -1,0 +1,18 @@
+{
+  "stage": 28,
+  "version": 2,
+  "authority": "FP_GROWTH_ASSOCIATION_RULES_V2",
+  "spark_version": "4.2.0",
+  "python_version": "3.12.10",
+  "java_version": "21.0.8",
+  "os": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 8,
+  "ram_bytes": 16934494208,
+  "master": "local[4]",
+  "spark_application_id": "local-1791300973174",
+  "spark_ui_url": "http://Tay-Nguyen:4040",
+  "spark_sql_shuffle_partitions": 64,
+  "spark_sql_adaptive_enabled": true,
+  "fp_growth_num_partitions": 64,
+  "event_log_enabled": "false"
+}

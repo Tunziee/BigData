@@ -1,0 +1,88 @@
+{
+  "stage": 26,
+  "authority": "SPARK_EXECUTION_EVIDENCE_V1",
+  "stage25_authority": "CACHE_NO_CACHE_BENCHMARK_V1",
+  "source_row_count": 31788324,
+  "spark_application_id": "local-1791292254665",
+  "spark_ui_available": true,
+  "spark_ui_url": "http://Tay-Nguyen:4040",
+  "rest_api_available": true,
+  "q2": {
+    "result_validation_pass": true,
+    "job_ids": [
+      11,
+      10
+    ],
+    "stage_ids": [
+      16,
+      17,
+      18
+    ],
+    "stage_count": 3,
+    "task_count": 17,
+    "shuffle_read_bytes": 504,
+    "shuffle_write_bytes": 504
+  },
+  "q3": {
+    "result_validation_pass": true,
+    "job_ids": [
+      14,
+      13,
+      12
+    ],
+    "stage_ids": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "stage_count": 6,
+    "task_count": 37,
+    "shuffle_read_bytes": 327776023,
+    "shuffle_write_bytes": 327776023
+  },
+  "q3_shuffle_confirmed": true,
+  "physical_plan_evidence_complete": true,
+  "job_stage_mapping_complete": true,
+  "models_modified": false,
+  "stage24_modified": false,
+  "stage25_modified": false,
+  "execution_evidence_complete": true,
+  "ready_for_stage27": true,
+  "event_log_limitation": "Stage 25 proved Windows event logging unavailable because HADOOP_HOME/hadoop.home.dir and winutils.exe are unavailable; Stage 26 uses live UI REST API and StatusTracker.",
+  "warnings": [],
+  "blockers": [],
+  "artifact_readback": {
+    "output\\analysis\\stage26\\environment.json": true,
+    "output\\analysis\\stage26\\source_validation.json": true,
+    "output\\analysis\\stage26\\q2_result.json": true,
+    "output\\analysis\\stage26\\q3_result.json": true,
+    "output\\analysis\\stage26\\q2_physical_plan_before.txt": true,
+    "output\\analysis\\stage26\\q2_physical_plan_after.txt": true,
+    "output\\analysis\\stage26\\q3_physical_plan_before.txt": true,
+    "output\\analysis\\stage26\\q3_physical_plan_after.txt": true,
+    "output\\analysis\\stage26\\q2_executed_plan.txt": true,
+    "output\\analysis\\stage26\\q3_executed_plan.txt": true,
+    "output\\analysis\\stage26\\q2_rdd_lineage.txt": true,
+    "output\\analysis\\stage26\\q3_rdd_lineage.txt": true,
+    "output\\analysis\\stage26\\spark_ui_jobs_raw.json": true,
+    "output\\analysis\\stage26\\spark_ui_stages_raw.json": true,
+    "output\\analysis\\stage26\\spark_ui_executors_raw.json": true,
+    "output\\analysis\\stage26\\spark_ui_environment_raw.json": true,
+    "output\\analysis\\stage26\\spark_ui_sql_raw.json": true,
+    "output\\analysis\\stage26\\workload_job_stage_mapping.json": true,
+    "output\\analysis\\stage26\\stage_task_metrics.json": true,
+    "output\\analysis\\stage26\\stage_task_metrics.csv": true,
+    "output\\analysis\\stage26\\shuffle_metrics.json": true,
+    "output\\analysis\\stage26\\q2_q3_execution_structure_comparison.json": true,
+    "output\\analysis\\stage26\\execution_graph_summary.json": true,
+    "output\\analysis\\stage26\\spark_ui_evidence_manifest.json": true,
+    "reports\\stage26_spark_execution_evidence.txt": true,
+    "reports\\stage26_run.log": true
+  },
+  "artifact_readback_pass": true,
+  "final_summary_self_readback_pass": true,
+  "current_run_clean_namespace": true
+}

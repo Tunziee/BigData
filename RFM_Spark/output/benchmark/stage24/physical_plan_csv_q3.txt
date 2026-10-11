@@ -1,0 +1,58 @@
+== Physical Plan ==
+AdaptiveSparkPlan (8)
++- HashAggregate (7)
+   +- Exchange (6)
+      +- HashAggregate (5)
+         +- HashAggregate (4)
+            +- Exchange (3)
+               +- HashAggregate (2)
+                  +- Scan csv  (1)
+
+
+(1) Scan csv 
+Output [3]: [t_dat#1020, customer_id#1021, price#1023]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/data/transactions_train.csv]
+ReadSchema: struct<t_dat:date,customer_id:string,price:double>
+
+(2) HashAggregate
+Input [3]: [t_dat#1020, customer_id#1021, price#1023]
+Keys [1]: [customer_id#1021]
+Functions [3]: [partial_count(1), partial_sum(price#1023), partial_max(t_dat#1020)]
+Aggregate Attributes [3]: [count#1055L, sum#1056, max#1057]
+Results [4]: [customer_id#1021, count#1058L, sum#1059, max#1060]
+
+(3) Exchange
+Input [4]: [customer_id#1021, count#1058L, sum#1059, max#1060]
+Arguments: hashpartitioning(customer_id#1021, 64), ENSURE_REQUIREMENTS, [plan_id=1647]
+
+(4) HashAggregate
+Input [4]: [customer_id#1021, count#1058L, sum#1059, max#1060]
+Keys [1]: [customer_id#1021]
+Functions [3]: [count(1), sum(price#1023), max(t_dat#1020)]
+Aggregate Attributes [3]: [count(1)#1032L, sum(price#1023)#1033, max(t_dat#1020)#1034]
+Results [3]: [count(1)#1032L AS transaction_row_count#1026L, sum(price#1023)#1033 AS customer_sum_price#1027, max(t_dat#1020)#1034 AS customer_max_t_dat#1028]
+
+(5) HashAggregate
+Input [3]: [transaction_row_count#1026L, customer_sum_price#1027, customer_max_t_dat#1028]
+Keys: []
+Functions [4]: [partial_count(1), partial_sum(transaction_row_count#1026L), partial_sum(customer_sum_price#1027), partial_max(customer_max_t_dat#1028)]
+Aggregate Attributes [4]: [count#1047L, sum#1048L, sum#1049, max#1050]
+Results [4]: [count#1051L, sum#1052L, sum#1053, max#1054]
+
+(6) Exchange
+Input [4]: [count#1051L, sum#1052L, sum#1053, max#1054]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=1651]
+
+(7) HashAggregate
+Input [4]: [count#1051L, sum#1052L, sum#1053, max#1054]
+Keys: []
+Functions [4]: [count(1), sum(transaction_row_count#1026L), sum(customer_sum_price#1027), max(customer_max_t_dat#1028)]
+Aggregate Attributes [4]: [count(1)#1043L, sum(transaction_row_count#1026L)#1044L, sum(customer_sum_price#1027)#1045, max(customer_max_t_dat#1028)#1046]
+Results [4]: [count(1)#1043L AS grouped_customer_count#1035L, sum(transaction_row_count#1026L)#1044L AS sum_grouped_transaction_rows#1036L, sum(customer_sum_price#1027)#1045 AS sum_grouped_monetary#1037, max(customer_max_t_dat#1028)#1046 AS max_customer_max_t_dat#1038]
+
+(8) AdaptiveSparkPlan
+Output [4]: [grouped_customer_count#1035L, sum_grouped_transaction_rows#1036L, sum_grouped_monetary#1037, max_customer_max_t_dat#1038]
+Arguments: isFinalPlan=false
+
+

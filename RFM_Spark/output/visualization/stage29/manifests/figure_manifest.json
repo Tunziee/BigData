@@ -1,0 +1,585 @@
+[
+  {
+    "figure_id": "fig01_rfm_erfm_distributions",
+    "title": "RFM/eRFM quantile profiles",
+    "png_path": "figures/fig01_rfm_erfm_distributions.png",
+    "svg_path": "figures/fig01_rfm_erfm_distributions.svg",
+    "source_stage": "Stages 5/6/12",
+    "source_authority": [
+      "IMPROVED_ERFM_FEATURE_SPACE"
+    ],
+    "source_artifacts": [
+      "output/analysis/rfm_distribution/summary.json",
+      "output/analysis/erfm_distribution/summary.json",
+      "output/analysis/stage12/transformation_summary.json"
+    ],
+    "source_data_csv": "data/fig01_rfm_erfm_distributions.csv",
+    "chart_type": "quantile profile",
+    "scientific_interpretation": "Displays locked RFM/eRFM quantile ranges and medians.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig02_skewness_transformation",
+    "title": "Skewness transformation",
+    "png_path": "figures/fig02_skewness_transformation.png",
+    "svg_path": "figures/fig02_skewness_transformation.svg",
+    "source_stage": "Stage 12",
+    "source_authority": [
+      "IMPROVED_ERFM_FEATURE_SPACE"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage12/skewness_comparison.json",
+      "output/analysis/stage12/transformation_summary.json"
+    ],
+    "source_data_csv": "data/fig02_skewness_transformation.csv",
+    "chart_type": "grouped bar",
+    "scientific_interpretation": "Shows raw versus log1p skewness evidence.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig03a_main_silhouette_by_k",
+    "title": "Main RFM K-Means Silhouette",
+    "png_path": "figures/fig03a_main_silhouette_by_k.png",
+    "svg_path": "figures/fig03a_main_silhouette_by_k.svg",
+    "source_stage": "Stage 8",
+    "source_authority": [],
+    "source_artifacts": [
+      "output/analysis/stage8/kmeans_k_sweep.csv"
+    ],
+    "source_data_csv": "data/fig03a_main_silhouette_by_k.csv",
+    "chart_type": "line chart",
+    "scientific_interpretation": "Shows the locked main-model K sweep.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig03b_main_wcss_by_k",
+    "title": "Main RFM K-Means WCSS / training cost",
+    "png_path": "figures/fig03b_main_wcss_by_k.png",
+    "svg_path": "figures/fig03b_main_wcss_by_k.svg",
+    "source_stage": "Stage 8",
+    "source_authority": [],
+    "source_artifacts": [
+      "output/analysis/stage8/kmeans_k_sweep.csv"
+    ],
+    "source_data_csv": "data/fig03b_main_wcss_by_k.csv",
+    "chart_type": "line chart",
+    "scientific_interpretation": "Shows the locked main-model K sweep.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig04a_enhanced_silhouette_by_k",
+    "title": "Enhanced eRFM K-Means Silhouette",
+    "png_path": "figures/fig04a_enhanced_silhouette_by_k.png",
+    "svg_path": "figures/fig04a_enhanced_silhouette_by_k.svg",
+    "source_stage": "Stage 13",
+    "source_authority": [
+      "ENHANCED_KMEANS_K_SWEEP"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage13/enhanced_kmeans_k_sweep.csv"
+    ],
+    "source_data_csv": "data/fig04a_enhanced_silhouette_by_k.csv",
+    "chart_type": "line chart",
+    "scientific_interpretation": "Shows the locked enhanced-model K sweep.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig04b_enhanced_wcss_by_k",
+    "title": "Enhanced eRFM K-Means WCSS / training cost",
+    "png_path": "figures/fig04b_enhanced_wcss_by_k.png",
+    "svg_path": "figures/fig04b_enhanced_wcss_by_k.svg",
+    "source_stage": "Stage 13",
+    "source_authority": [
+      "ENHANCED_KMEANS_K_SWEEP"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage13/enhanced_kmeans_k_sweep.csv"
+    ],
+    "source_data_csv": "data/fig04b_enhanced_wcss_by_k.csv",
+    "chart_type": "line chart",
+    "scientific_interpretation": "Shows the locked enhanced-model K sweep.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig05_primary_model_quality_comparison",
+    "title": "B0/M1/M2 quality comparison",
+    "png_path": "figures/fig05_primary_model_quality_comparison.png",
+    "svg_path": "figures/fig05_primary_model_quality_comparison.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig05_primary_model_quality_comparison.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig06_common_space_sse_per_customer",
+    "title": "Common-space SSE",
+    "png_path": "figures/fig06_common_space_sse_per_customer.png",
+    "svg_path": "figures/fig06_common_space_sse_per_customer.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig06_common_space_sse_per_customer.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig07a_cluster_entropy",
+    "title": "Cluster entropy",
+    "png_path": "figures/fig07a_cluster_entropy.png",
+    "svg_path": "figures/fig07a_cluster_entropy.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig07a_cluster_entropy.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig07b_cluster_cv",
+    "title": "Cluster coefficient of variation",
+    "png_path": "figures/fig07b_cluster_cv.png",
+    "svg_path": "figures/fig07b_cluster_cv.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig07b_cluster_cv.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig07c_cluster_share_range",
+    "title": "Cluster share range",
+    "png_path": "figures/fig07c_cluster_share_range.png",
+    "svg_path": "figures/fig07c_cluster_share_range.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig07c_cluster_share_range.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig08_m2_segment_distribution",
+    "title": "M2 segment distribution",
+    "png_path": "figures/fig08_m2_segment_distribution.png",
+    "svg_path": "figures/fig08_m2_segment_distribution.svg",
+    "source_stage": "Stages 16/27",
+    "source_authority": [
+      "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage16/cluster_profiles.csv",
+      "output/sql/stage27/q6_m2_segment_analytics.csv"
+    ],
+    "source_data_csv": "data/fig08_m2_segment_distribution.csv",
+    "chart_type": "segment profile chart",
+    "scientific_interpretation": "Profiles the locked M2 segments without changing membership semantics.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig09_m2_segment_profile_heatmap",
+    "title": "M2 profile heatmap",
+    "png_path": "figures/fig09_m2_segment_profile_heatmap.png",
+    "svg_path": "figures/fig09_m2_segment_profile_heatmap.svg",
+    "source_stage": "Stages 16/27",
+    "source_authority": [
+      "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage16/cluster_profiles.csv",
+      "output/sql/stage27/q6_m2_segment_analytics.csv"
+    ],
+    "source_data_csv": "data/m2_segment_visual_normalized_medians.csv",
+    "chart_type": "segment profile chart",
+    "scientific_interpretation": "Profiles the locked M2 segments without changing membership semantics.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig10_m2_segment_radar",
+    "title": "M2 radar profiles",
+    "png_path": "figures/fig10_m2_segment_radar.png",
+    "svg_path": "figures/fig10_m2_segment_radar.svg",
+    "source_stage": "Stages 16/27",
+    "source_authority": [
+      "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage16/cluster_profiles.csv",
+      "output/sql/stage27/q6_m2_segment_analytics.csv"
+    ],
+    "source_data_csv": "data/m2_segment_visual_normalized_medians.csv",
+    "chart_type": "segment profile chart",
+    "scientific_interpretation": "Profiles the locked M2 segments without changing membership semantics.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig11_b0_m1_agreement",
+    "title": "B0/M1 agreement",
+    "png_path": "figures/fig11_b0_m1_agreement.png",
+    "svg_path": "figures/fig11_b0_m1_agreement.svg",
+    "source_stage": "Stage 22",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1"
+    ],
+    "source_artifacts": [
+      "output/comparison/stage22/primary_three_model_comparison_matrix.csv",
+      "output/comparison/stage22/common_space_silhouette.json",
+      "output/comparison/stage22/common_space_sse.json",
+      "output/comparison/stage22/cluster_balance_metrics.json",
+      "output/comparison/stage22/b0_m1_label_alignment.json"
+    ],
+    "source_data_csv": "data/fig11_b0_m1_agreement.csv",
+    "chart_type": "comparison chart",
+    "scientific_interpretation": "Compares locked model quality, common-space SSE, balance, or agreement.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig12_model_runtime_benchmark",
+    "title": "Model runtime benchmark",
+    "png_path": "figures/fig12_model_runtime_benchmark.png",
+    "svg_path": "figures/fig12_model_runtime_benchmark.svg",
+    "source_stage": "Stage 23",
+    "source_authority": [
+      "PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1"
+    ],
+    "source_artifacts": [
+      "output/benchmark/stage23/track_b_build_assign_summary.csv"
+    ],
+    "source_data_csv": "data/fig12_model_runtime_benchmark.csv",
+    "chart_type": "grouped bar chart",
+    "scientific_interpretation": "Shows fit, assignment, and total runtime medians for the controlled cohort.",
+    "warnings": [
+      "Runtime is cohort- and machine-specific."
+    ],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig13_csv_parquet_storage",
+    "title": "Storage comparison",
+    "png_path": "figures/fig13_csv_parquet_storage.png",
+    "svg_path": "figures/fig13_csv_parquet_storage.svg",
+    "source_stage": "Stage 24",
+    "source_authority": [
+      "CSV_PARQUET_IO_BENCHMARK_V1"
+    ],
+    "source_artifacts": [
+      "output/benchmark/stage24/storage_size_comparison.json",
+      "output/benchmark/stage24/csv_vs_parquet_benchmark_summary.csv"
+    ],
+    "source_data_csv": "data/fig13_csv_parquet_storage.csv",
+    "chart_type": "bar chart",
+    "scientific_interpretation": "Shows locked CSV/Parquet storage or runtime evidence.",
+    "warnings": [
+      "This is a controlled repeated-read benchmark."
+    ],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig14_csv_parquet_runtime",
+    "title": "CSV/Parquet runtime",
+    "png_path": "figures/fig14_csv_parquet_runtime.png",
+    "svg_path": "figures/fig14_csv_parquet_runtime.svg",
+    "source_stage": "Stage 24",
+    "source_authority": [
+      "CSV_PARQUET_IO_BENCHMARK_V1"
+    ],
+    "source_artifacts": [
+      "output/benchmark/stage24/storage_size_comparison.json",
+      "output/benchmark/stage24/csv_vs_parquet_benchmark_summary.csv"
+    ],
+    "source_data_csv": "data/fig14_csv_parquet_runtime.csv",
+    "chart_type": "bar chart",
+    "scientific_interpretation": "Shows locked CSV/Parquet storage or runtime evidence.",
+    "warnings": [
+      "This is a controlled repeated-read benchmark."
+    ],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig15_cache_vs_no_cache",
+    "title": "Cache/no-cache runtime",
+    "png_path": "figures/fig15_cache_vs_no_cache.png",
+    "svg_path": "figures/fig15_cache_vs_no_cache.svg",
+    "source_stage": "Stage 25",
+    "source_authority": [
+      "CACHE_NO_CACHE_BENCHMARK_V1"
+    ],
+    "source_artifacts": [
+      "output/benchmark/stage25/cache_vs_no_cache_summary.csv"
+    ],
+    "source_data_csv": "data/fig15_cache_vs_no_cache.csv",
+    "chart_type": "grouped bar chart",
+    "scientific_interpretation": "Shows locked cache versus no-cache runtime medians.",
+    "warnings": [
+      "Cache behavior is workload-specific."
+    ],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig16_spark_shuffle_q2_vs_q3",
+    "title": "Spark shuffle evidence",
+    "png_path": "figures/fig16_spark_shuffle_q2_vs_q3.png",
+    "svg_path": "figures/fig16_spark_shuffle_q2_vs_q3.svg",
+    "source_stage": "Stage 26",
+    "source_authority": [
+      "SPARK_EXECUTION_EVIDENCE_V1"
+    ],
+    "source_artifacts": [
+      "output/analysis/stage26/shuffle_metrics.json"
+    ],
+    "source_data_csv": "data/fig16_spark_shuffle_q2_vs_q3.csv",
+    "chart_type": "bar chart",
+    "scientific_interpretation": "Shows the locked Q2/Q3 shuffle-read contrast.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig17_monthly_monetary_trend",
+    "title": "Monthly monetary trend",
+    "png_path": "figures/fig17_monthly_monetary_trend.png",
+    "svg_path": "figures/fig17_monthly_monetary_trend.svg",
+    "source_stage": "Stage 27",
+    "source_authority": [
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/sql/stage27/q2_monthly_purchase_trend.csv",
+      "output/sql/stage27/q4_top20_product_groups.csv",
+      "output/sql/stage27/q5_age_band_analysis.csv"
+    ],
+    "source_data_csv": "data/fig17_monthly_monetary_trend.csv",
+    "chart_type": "SQL analytical chart",
+    "scientific_interpretation": "Visualizes locked Spark SQL analytical outputs.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig18_top_product_groups",
+    "title": "Top product groups",
+    "png_path": "figures/fig18_top_product_groups.png",
+    "svg_path": "figures/fig18_top_product_groups.svg",
+    "source_stage": "Stage 27",
+    "source_authority": [
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/sql/stage27/q2_monthly_purchase_trend.csv",
+      "output/sql/stage27/q4_top20_product_groups.csv",
+      "output/sql/stage27/q5_age_band_analysis.csv"
+    ],
+    "source_data_csv": "data/fig18_top_product_groups.csv",
+    "chart_type": "SQL analytical chart",
+    "scientific_interpretation": "Visualizes locked Spark SQL analytical outputs.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig19_age_band_monetary",
+    "title": "Age-band monetary",
+    "png_path": "figures/fig19_age_band_monetary.png",
+    "svg_path": "figures/fig19_age_band_monetary.svg",
+    "source_stage": "Stage 27",
+    "source_authority": [
+      "SPARK_SQL_ANALYTICAL_LAYER_V1"
+    ],
+    "source_artifacts": [
+      "output/sql/stage27/q2_monthly_purchase_trend.csv",
+      "output/sql/stage27/q4_top20_product_groups.csv",
+      "output/sql/stage27/q5_age_band_analysis.csv"
+    ],
+    "source_data_csv": "data/fig19_age_band_monetary.csv",
+    "chart_type": "SQL analytical chart",
+    "scientific_interpretation": "Visualizes locked Spark SQL analytical outputs.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig20_fp_growth_threshold_sensitivity",
+    "title": "FP-Growth threshold sensitivity",
+    "png_path": "figures/fig20_fp_growth_threshold_sensitivity.png",
+    "svg_path": "figures/fig20_fp_growth_threshold_sensitivity.svg",
+    "source_stage": "Stages 28 V1/V2",
+    "source_authority": [
+      "FP_GROWTH_ASSOCIATION_RULES_V1",
+      "FP_GROWTH_ASSOCIATION_RULES_V2"
+    ],
+    "source_artifacts": [
+      "output/fpgrowth/stage28/frequent_itemset_summary.json",
+      "output/fpgrowth/stage28_v2/threshold_sensitivity.csv"
+    ],
+    "source_data_csv": "data/fig20_fp_growth_threshold_sensitivity.csv",
+    "chart_type": "threshold sensitivity bar chart",
+    "scientific_interpretation": "Shows the preserved V1 negative point and V2 threshold protocol.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig21_top_fp_growth_rules_by_lift",
+    "title": "Top FP-Growth rules by lift",
+    "png_path": "figures/fig21_top_fp_growth_rules_by_lift.png",
+    "svg_path": "figures/fig21_top_fp_growth_rules_by_lift.svg",
+    "source_stage": "Stage 28 V2",
+    "source_authority": [
+      "FP_GROWTH_ASSOCIATION_RULES_V2"
+    ],
+    "source_artifacts": [
+      "output/fpgrowth/stage28_v2/selected_association_rules.parquet",
+      "output/fpgrowth/stage28_v2/enriched_top_rules.json"
+    ],
+    "source_data_csv": "data/fig21_top_fp_growth_rules_by_lift.csv",
+    "chart_type": "association-rule chart",
+    "scientific_interpretation": "Visualizes locked FP-Growth rule support, confidence, or lift.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig22_top_fp_growth_rules_by_confidence",
+    "title": "Top FP-Growth rules by confidence",
+    "png_path": "figures/fig22_top_fp_growth_rules_by_confidence.png",
+    "svg_path": "figures/fig22_top_fp_growth_rules_by_confidence.svg",
+    "source_stage": "Stage 28 V2",
+    "source_authority": [
+      "FP_GROWTH_ASSOCIATION_RULES_V2"
+    ],
+    "source_artifacts": [
+      "output/fpgrowth/stage28_v2/selected_association_rules.parquet",
+      "output/fpgrowth/stage28_v2/enriched_top_rules.json"
+    ],
+    "source_data_csv": "data/fig22_top_fp_growth_rules_by_confidence.csv",
+    "chart_type": "association-rule chart",
+    "scientific_interpretation": "Visualizes locked FP-Growth rule support, confidence, or lift.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig23_fp_growth_support_confidence",
+    "title": "FP-Growth support/confidence",
+    "png_path": "figures/fig23_fp_growth_support_confidence.png",
+    "svg_path": "figures/fig23_fp_growth_support_confidence.svg",
+    "source_stage": "Stage 28 V2",
+    "source_authority": [
+      "FP_GROWTH_ASSOCIATION_RULES_V2"
+    ],
+    "source_artifacts": [
+      "output/fpgrowth/stage28_v2/selected_association_rules.parquet",
+      "output/fpgrowth/stage28_v2/enriched_top_rules.json"
+    ],
+    "source_data_csv": "data/fig23_fp_growth_support_confidence.csv",
+    "chart_type": "association-rule chart",
+    "scientific_interpretation": "Visualizes locked FP-Growth rule support, confidence, or lift.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  },
+  {
+    "figure_id": "fig24_project_analytics_story",
+    "title": "Project analytics story",
+    "png_path": "figures/fig24_project_analytics_story.png",
+    "svg_path": "figures/fig24_project_analytics_story.svg",
+    "source_stage": "Stages 5/6/12/16/27/28",
+    "source_authority": [
+      "IMPROVED_ERFM_FEATURE_SPACE",
+      "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+      "SPARK_SQL_ANALYTICAL_LAYER_V1",
+      "FP_GROWTH_ASSOCIATION_RULES_V2"
+    ],
+    "source_artifacts": [],
+    "source_data_csv": "data/fig24_project_analytics_story.csv",
+    "chart_type": "story diagram",
+    "scientific_interpretation": "Connects the locked project analytical layers.",
+    "warnings": [],
+    "readback_required": true,
+    "report_ready": true
+  }
+]

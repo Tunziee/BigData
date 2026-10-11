@@ -1,0 +1,1622 @@
+[
+  {
+    "antecedent": [
+      "0733935001"
+    ],
+    "consequent": [
+      "0733936001"
+    ],
+    "support": 0.0002537394912589278,
+    "confidence": 0.8121254846669017,
+    "lift": 2819.9788800142346,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0733935001",
+        "prod_name": "Pretty Please Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0733936001",
+        "prod_name": "Pretty Please Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0733936001"
+    ],
+    "consequent": [
+      "0733935001"
+    ],
+    "support": 0.0002537394912589278,
+    "confidence": 0.8810707456978968,
+    "lift": 2819.978880014234,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0733936001",
+        "prod_name": "Pretty Please Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0733935001",
+        "prod_name": "Pretty Please Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0699075005"
+    ],
+    "consequent": [
+      "0699077006"
+    ],
+    "support": 0.0002678361296622016,
+    "confidence": 0.7837576538833387,
+    "lift": 2656.461287749444,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0699075005",
+        "prod_name": "Sweet and Bitter Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0699077006",
+        "prod_name": "Sweet & Bitter Mid Tie Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0699077006"
+    ],
+    "consequent": [
+      "0699075005"
+    ],
+    "support": 0.0002678361296622016,
+    "confidence": 0.9078014184397163,
+    "lift": 2656.4612877494437,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0699077006",
+        "prod_name": "Sweet & Bitter Mid Tie Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0699075005",
+        "prod_name": "Sweet and Bitter Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0742916003"
+    ],
+    "consequent": [
+      "0742912003"
+    ],
+    "support": 0.0002905229070924703,
+    "confidence": 0.9031153714481343,
+    "lift": 2590.1608434619548,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0742916003",
+        "prod_name": "C Antibes Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0742912003",
+        "prod_name": "C Antibes Triangle",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0742912003"
+    ],
+    "consequent": [
+      "0742916003"
+    ],
+    "support": 0.0002905229070924703,
+    "confidence": 0.8332280480101074,
+    "lift": 2590.1608434619543,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0742912003",
+        "prod_name": "C Antibes Triangle",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0742916003",
+        "prod_name": "C Antibes Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0699077002"
+    ],
+    "consequent": [
+      "0699075002"
+    ],
+    "support": 0.00023909220291802618,
+    "confidence": 0.849706457925636,
+    "lift": 2587.3530299868357,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0699077002",
+        "prod_name": "Sweet & Bitter Mid Tie Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0699075002",
+        "prod_name": "Sweet and Bitter Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0699075002"
+    ],
+    "consequent": [
+      "0699077002"
+    ],
+    "support": 0.00023909220291802618,
+    "confidence": 0.7280348759221998,
+    "lift": 2587.3530299868357,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0699075002",
+        "prod_name": "Sweet and Bitter Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0699077002",
+        "prod_name": "Sweet & Bitter Mid Tie Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0854619003"
+    ],
+    "consequent": [
+      "0850176003"
+    ],
+    "support": 0.0002584750807225276,
+    "confidence": 0.8203425375742748,
+    "lift": 2390.518961004057,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0854619003",
+        "prod_name": "Baby Love Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0850176003",
+        "prod_name": "Baby Love Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0850176003"
+    ],
+    "consequent": [
+      "0854619003"
+    ],
+    "support": 0.0002584750807225276,
+    "confidence": 0.753209242618742,
+    "lift": 2390.5189610040566,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0850176003",
+        "prod_name": "Baby Love Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0854619003",
+        "prod_name": "Baby Love Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0712924008"
+    ],
+    "consequent": [
+      "0590928019"
+    ],
+    "support": 0.0002951483665685445,
+    "confidence": 0.9103260869565217,
+    "lift": 2380.738426824534,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0712924008",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0590928019",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0590928019"
+    ],
+    "consequent": [
+      "0712924008"
+    ],
+    "support": 0.0002951483665685445,
+    "confidence": 0.771889400921659,
+    "lift": 2380.738426824534,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0590928019",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0712924008",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0712924003"
+    ],
+    "consequent": [
+      "0590928013"
+    ],
+    "support": 0.0002534091012963511,
+    "confidence": 0.8306859205776174,
+    "lift": 2269.1867784670726,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0712924003",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0590928013",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0590928013"
+    ],
+    "consequent": [
+      "0712924003"
+    ],
+    "support": 0.0002534091012963511,
+    "confidence": 0.6922382671480144,
+    "lift": 2269.186778467072,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0590928013",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0712924003",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0590928022"
+    ],
+    "consequent": [
+      "0599580049"
+    ],
+    "support": 0.0002817125080904242,
+    "confidence": 0.6594483114204692,
+    "lift": 2115.121409023527,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0590928022",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0599580049",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0599580049"
+    ],
+    "consequent": [
+      "0590928022"
+    ],
+    "support": 0.0002817125080904242,
+    "confidence": 0.9035676439420699,
+    "lift": 2115.1214090235267,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0599580049",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0590928022",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0823165001"
+    ],
+    "consequent": [
+      "0823118001"
+    ],
+    "support": 0.00027411353895115945,
+    "confidence": 0.8338358458961475,
+    "lift": 2054.6482326603623,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0823165001",
+        "prod_name": "Ginger Highwaist",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0823118001",
+        "prod_name": "Ginger Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0823118001"
+    ],
+    "consequent": [
+      "0823165001"
+    ],
+    "support": 0.00027411353895115945,
+    "confidence": 0.6754409769335142,
+    "lift": 2054.648232660362,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0823118001",
+        "prod_name": "Ginger Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0823165001",
+        "prod_name": "Ginger Highwaist",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0590928023"
+    ],
+    "consequent": [
+      "0712924014"
+    ],
+    "support": 0.00026618417984931793,
+    "confidence": 0.594149459193707,
+    "lift": 2022.1077369685365,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0590928023",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0712924014",
+        "prod_name": "New Girl Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0712924014"
+    ],
+    "consequent": [
+      "0590928023"
+    ],
+    "support": 0.00026618417984931793,
+    "confidence": 0.9059220389805097,
+    "lift": 2022.1077369685363,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0712924014",
+        "prod_name": "New Girl Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0590928023",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0758049001"
+    ],
+    "consequent": [
+      "0758050001"
+    ],
+    "support": 0.0003463588107679375,
+    "confidence": 0.8433896486993833,
+    "lift": 2017.9522995882785,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0758049001",
+        "prod_name": "LS Olivia Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0758050001",
+        "prod_name": "LS Olivia Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0758050001"
+    ],
+    "consequent": [
+      "0758049001"
+    ],
+    "support": 0.0003463588107679375,
+    "confidence": 0.8287220026350461,
+    "lift": 2017.9522995882785,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0758050001",
+        "prod_name": "LS Olivia Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0758049001",
+        "prod_name": "LS Olivia Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0832330003"
+    ],
+    "consequent": [
+      "0832331003"
+    ],
+    "support": 0.00020990775622374845,
+    "confidence": 0.6604296604296604,
+    "lift": 1948.2844488663204,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0832330003",
+        "prod_name": "Wowcha Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0832331003",
+        "prod_name": "Wowcha HR Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0832331003"
+    ],
+    "consequent": [
+      "0832330003"
+    ],
+    "support": 0.00020990775622374845,
+    "confidence": 0.6192332683560754,
+    "lift": 1948.2844488663204,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0832331003",
+        "prod_name": "Wowcha HR Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0832330003",
+        "prod_name": "Wowcha Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0590928011"
+    ],
+    "consequent": [
+      "0712924001"
+    ],
+    "support": 0.000318936443874069,
+    "confidence": 0.67981220657277,
+    "lift": 1821.9647349662716,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0590928011",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0712924001",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0712924001"
+    ],
+    "consequent": [
+      "0590928011"
+    ],
+    "support": 0.000318936443874069,
+    "confidence": 0.8547815820543093,
+    "lift": 1821.9647349662714,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0712924001",
+        "prod_name": "New Girl Wide Side Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0590928011",
+        "prod_name": "New Girl Push Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0833499002"
+    ],
+    "consequent": [
+      "0833530002"
+    ],
+    "support": 0.00023821116301782157,
+    "confidence": 0.7047898338220919,
+    "lift": 1797.6454630575417,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0833499002",
+        "prod_name": "Surfs Up Push Triangle",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0833530002",
+        "prod_name": "Surfs Up Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0833530002"
+    ],
+    "consequent": [
+      "0833499002"
+    ],
+    "support": 0.00023821116301782157,
+    "confidence": 0.6075842696629213,
+    "lift": 1797.6454630575417,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0833530002",
+        "prod_name": "Surfs Up Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0833499002",
+        "prod_name": "Surfs Up Push Triangle",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0758060001"
+    ],
+    "consequent": [
+      "0758064001"
+    ],
+    "support": 0.00032972918265157546,
+    "confidence": 0.7975492807671817,
+    "lift": 1789.0045036282775,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0758060001",
+        "prod_name": "LS Reggipetto Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0758064001",
+        "prod_name": "LS Reggipetto Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0758064001"
+    ],
+    "consequent": [
+      "0758060001"
+    ],
+    "support": 0.00032972918265157546,
+    "confidence": 0.7396245059288538,
+    "lift": 1789.0045036282775,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0758064001",
+        "prod_name": "LS Reggipetto Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0758060001",
+        "prod_name": "LS Reggipetto Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0709297002"
+    ],
+    "consequent": [
+      "0709300002"
+    ],
+    "support": 0.0002232334847143432,
+    "confidence": 0.5662011173184358,
+    "lift": 1669.7653443492684,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0709297002",
+        "prod_name": "Breadwinner Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0709300002",
+        "prod_name": "Breadwinner Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0709300002"
+    ],
+    "consequent": [
+      "0709297002"
+    ],
+    "support": 0.0002232334847143432,
+    "confidence": 0.6583306268268918,
+    "lift": 1669.7653443492682,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0709300002",
+        "prod_name": "Breadwinner Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0709297002",
+        "prod_name": "Breadwinner Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0721990004"
+    ],
+    "consequent": [
+      "0723349001"
+    ],
+    "support": 0.0002752148388264152,
+    "confidence": 0.6665777540677514,
+    "lift": 1657.3508555183903,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0721990004",
+        "prod_name": "This Is Sally Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0723349001",
+        "prod_name": "This is Sally Push Up Bra",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0723349001"
+    ],
+    "consequent": [
+      "0721990004"
+    ],
+    "support": 0.0002752148388264152,
+    "confidence": 0.6842825848849945,
+    "lift": 1657.35085551839,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0723349001",
+        "prod_name": "This is Sally Push Up Bra",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0721990004",
+        "prod_name": "This Is Sally Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0799421004"
+    ],
+    "consequent": [
+      "0799417004"
+    ],
+    "support": 0.00021343191582456688,
+    "confidence": 0.6092423766111286,
+    "lift": 1601.6299461535787,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0799421004",
+        "prod_name": "Buckle Roo Cheeky V-Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0799417004",
+        "prod_name": "Buckle Roo Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0799417004"
+    ],
+    "consequent": [
+      "0799421004"
+    ],
+    "support": 0.00021343191582456688,
+    "confidence": 0.5610885929357267,
+    "lift": 1601.6299461535787,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0799417004",
+        "prod_name": "Buckle Roo Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0799421004",
+        "prod_name": "Buckle Roo Cheeky V-Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0599580028"
+    ],
+    "consequent": [
+      "0559630013"
+    ],
+    "support": 0.0002925052468679307,
+    "confidence": 0.687904687904688,
+    "lift": 1554.9658205411256,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0599580028",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0559630013",
+        "prod_name": "Timeless Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0559630013"
+    ],
+    "consequent": [
+      "0599580028"
+    ],
+    "support": 0.0002925052468679307,
+    "confidence": 0.6611899427433408,
+    "lift": 1554.9658205411254,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0559630013",
+        "prod_name": "Timeless Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0599580028",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0860949002"
+    ],
+    "consequent": [
+      "0739590032"
+    ],
+    "support": 0.00021629529550023187,
+    "confidence": 0.7006778451658937,
+    "lift": 1331.020973941548,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0860949002",
+        "prod_name": "Tiger Bandeau",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0739590032",
+        "prod_name": "Timeless Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0739590032"
+    ],
+    "consequent": [
+      "0860949002"
+    ],
+    "support": 0.00021629529550023187,
+    "confidence": 0.4108786610878661,
+    "lift": 1331.020973941548,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0739590032",
+        "prod_name": "Timeless Cheeky Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0860949002",
+        "prod_name": "Tiger Bandeau",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0688537021"
+    ],
+    "consequent": [
+      "0684209027"
+    ],
+    "support": 0.0003941552253540376,
+    "confidence": 0.7853851217906518,
+    "lift": 1254.4305171144974,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0688537021",
+        "prod_name": "Simple as that Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684209027",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684209027"
+    ],
+    "consequent": [
+      "0688537021"
+    ],
+    "support": 0.0003941552253540376,
+    "confidence": 0.6295514511873351,
+    "lift": 1254.4305171144974,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684209027",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0688537021",
+        "prod_name": "Simple as that Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684340002"
+    ],
+    "consequent": [
+      "0684341002"
+    ],
+    "support": 0.0003251037231755013,
+    "confidence": 0.6195173137460651,
+    "lift": 1218.9226657450558,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684340002",
+        "prod_name": "Love Affair Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684341002",
+        "prod_name": "Love Affair High Rise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684341002"
+    ],
+    "consequent": [
+      "0684340002"
+    ],
+    "support": 0.0003251037231755013,
+    "confidence": 0.6396533044420368,
+    "lift": 1218.9226657450556,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684341002",
+        "prod_name": "Love Affair High Rise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684340002",
+        "prod_name": "Love Affair Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0688537012"
+    ],
+    "consequent": [
+      "0684209014"
+    ],
+    "support": 0.0002449290922568817,
+    "confidence": 0.5604838709677419,
+    "lift": 1082.828484042553,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0688537012",
+        "prod_name": "Simple as that Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684209014",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684209014"
+    ],
+    "consequent": [
+      "0688537012"
+    ],
+    "support": 0.0002449290922568817,
+    "confidence": 0.47319148936170213,
+    "lift": 1082.828484042553,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684209014",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0688537012",
+        "prod_name": "Simple as that Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0692930003"
+    ],
+    "consequent": [
+      "0689109003"
+    ],
+    "support": 0.000507919502467958,
+    "confidence": 0.7682825254039647,
+    "lift": 1021.2476728502485,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0692930003",
+        "prod_name": "The Low Line Highwaist",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0689109003",
+        "prod_name": "Timeless Sports Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0689109003"
+    ],
+    "consequent": [
+      "0692930003"
+    ],
+    "support": 0.000507919502467958,
+    "confidence": 0.6751573708095447,
+    "lift": 1021.2476728502484,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0689109003",
+        "prod_name": "Timeless Sports Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0692930003",
+        "prod_name": "The Low Line Highwaist",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684209006"
+    ],
+    "consequent": [
+      "0599580014"
+    ],
+    "support": 0.00025869534069757874,
+    "confidence": 0.6270688734650294,
+    "lift": 982.5535144764136,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684209006",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0599580014",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0599580014"
+    ],
+    "consequent": [
+      "0684209006"
+    ],
+    "support": 0.00025869534069757874,
+    "confidence": 0.40534943917169974,
+    "lift": 982.5535144764136,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0599580014",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684209006",
+        "prod_name": "Simple as That Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0687034009"
+    ],
+    "consequent": [
+      "0736573002"
+    ],
+    "support": 0.00020219865709695812,
+    "confidence": 0.4602657307595889,
+    "lift": 977.1557687310902,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0687034009",
+        "prod_name": "Desert Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0736573002",
+        "prod_name": "Desert Highline Braz. Cheeky",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0736573002"
+    ],
+    "consequent": [
+      "0687034009"
+    ],
+    "support": 0.00020219865709695812,
+    "confidence": 0.4292728548047697,
+    "lift": 977.1557687310902,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0736573002",
+        "prod_name": "Desert Highline Braz. Cheeky",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0687034009",
+        "prod_name": "Desert Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0589599047"
+    ],
+    "consequent": [
+      "0727029001"
+    ],
+    "support": 0.0003417333512918633,
+    "confidence": 0.5859138972809668,
+    "lift": 975.8259475236229,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0589599047",
+        "prod_name": "Shake it in Balconette",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0727029001",
+        "prod_name": "S Timeless High Wide Side Brie",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0727029001"
+    ],
+    "consequent": [
+      "0589599047"
+    ],
+    "support": 0.0003417333512918633,
+    "confidence": 0.5691489361702128,
+    "lift": 975.8259475236227,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0727029001",
+        "prod_name": "S Timeless High Wide Side Brie",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0589599047",
+        "prod_name": "Shake it in Balconette",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0727948001"
+    ],
+    "consequent": [
+      "0629758005"
+    ],
+    "support": 0.00021893841520084572,
+    "confidence": 0.5601577909270217,
+    "lift": 966.6159273777904,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0727948001",
+        "prod_name": "Granny Push Up Bra",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0629758005",
+        "prod_name": "Granny Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0629758005"
+    ],
+    "consequent": [
+      "0727948001"
+    ],
+    "support": 0.00021893841520084572,
+    "confidence": 0.37780311668567085,
+    "lift": 966.6159273777904,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0629758005",
+        "prod_name": "Granny Tie Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0727948001",
+        "prod_name": "Granny Push Up Bra",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0559630026"
+    ],
+    "consequent": [
+      "0599580055"
+    ],
+    "support": 0.0003445967309675283,
+    "confidence": 0.7814685314685315,
+    "lift": 914.1811580264621,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0559630026",
+        "prod_name": "Timeless Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0599580055",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0599580055"
+    ],
+    "consequent": [
+      "0559630026"
+    ],
+    "support": 0.0003445967309675283,
+    "confidence": 0.40311775315640297,
+    "lift": 914.1811580264621,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0599580055",
+        "prod_name": "Timeless Midrise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0559630026",
+        "prod_name": "Timeless Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684341001"
+    ],
+    "consequent": [
+      "0684340001"
+    ],
+    "support": 0.00037179883788634565,
+    "confidence": 0.5398145187080269,
+    "lift": 807.115504144201,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684341001",
+        "prod_name": "Love Affair High Rise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684340001",
+        "prod_name": "Love Affair Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  {
+    "antecedent": [
+      "0684340001"
+    ],
+    "consequent": [
+      "0684341001"
+    ],
+    "support": 0.00037179883788634565,
+    "confidence": 0.555903178000988,
+    "lift": 807.1155041442009,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0684340001",
+        "prod_name": "Love Affair Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0684341001",
+        "prod_name": "Love Affair High Rise Brief",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  }
+]

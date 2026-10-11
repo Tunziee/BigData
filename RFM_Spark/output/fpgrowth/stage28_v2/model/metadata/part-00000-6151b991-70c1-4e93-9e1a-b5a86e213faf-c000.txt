@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.fpm.FPGrowthModel","timestamp":1791301843596,"sparkVersion":"4.2.0","uid":"FPGrowth_cee304ec9a70","paramMap":{"itemsCol":"items","minConfidence":0.2,"minSupport":2.0E-4,"numPartitions":64},"defaultParamMap":{"itemsCol":"items","minConfidence":0.8,"minSupport":0.3,"predictionCol":"prediction"},"numTrainingRecords":9080179}

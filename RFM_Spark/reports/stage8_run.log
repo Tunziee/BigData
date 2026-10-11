@@ -1,0 +1,67 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+26/10/06 00:48:17 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 00:48:19 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 00:48:19 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 00:48:19 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 00:48:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 00:48:19 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 00:48:19 INFO ResourceUtils: ==============================================================
+26/10/06 00:48:19 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 00:48:19 INFO ResourceUtils: ==============================================================
+26/10/06 00:48:19 INFO SparkContext: Submitted application: Stage8-Main-KMeans-K-Sweep
+26/10/06 00:48:19 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 00:48:19 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 00:48:19 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 00:48:19 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 00:48:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 00:48:20 INFO Utils: Successfully started service 'sparkDriver' on port 53064.
+26/10/06 00:48:20 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 00:48:20 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 00:48:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 00:48:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 00:48:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 00:48:20 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-9e7b0bb4-f9e0-4bf7-881d-7ddc3edd8716
+26/10/06 00:48:20 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 00:48:20 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 00:48:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 00:48:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 00:48:20 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 00:48:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 00:48:20 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 00:48:20 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 00:48:20 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 00:48:20 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 00:48:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 00:48:20 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 00:48:20 INFO Executor: Running Spark version 4.2.0
+26/10/06 00:48:20 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 00:48:20 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 00:48:20 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 00:48:20 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7979394d for default.
+26/10/06 00:48:20 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53066.
+26/10/06 00:48:20 INFO NettyBlockTransferService: Server created on Tay-Nguyen:53066
+26/10/06 00:48:20 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 00:48:20 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 53066, None)
+26/10/06 00:48:20 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:53066 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 53066, None)
+26/10/06 00:48:20 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 53066, None)
+26/10/06 00:48:20 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 53066, None)
+Windows Hadoop NativeIO fallback: enabled
+Input validation: {'row_count': 1362281, 'distinct_customers': 1362281, 'null_customer_id': 0, 'duplicate_customer_id': 0, 'features_raw_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'features_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'pass': True}
+START K=2
+netlib-blas: JNI_OnLoad: dlopen(libopenblas.dll) failed: LoadLibrary failed
+K=2 status=PASS silhouette=0.7572757388559014 wcss=2514082.497202137 fit_runtime_sec=6.775042099998245 clusters=2
+START K=3
+K=3 status=PASS silhouette=0.6650979272890235 wcss=1483537.5954085677 fit_runtime_sec=4.621737999999823 clusters=3
+START K=4
+K=4 status=PASS silhouette=0.6859294450224572 wcss=1051831.216267805 fit_runtime_sec=5.304559199999858 clusters=4
+START K=5
+K=5 status=PASS silhouette=0.6570942072422772 wcss=856603.9698525455 fit_runtime_sec=7.388908299999457 clusters=5
+START K=6
+K=6 status=PASS silhouette=0.6116205177066648 wcss=717569.19390364 fit_runtime_sec=8.488186999999016 clusters=6
+START K=7
+K=7 status=PASS silhouette=0.5939436367506115 wcss=689225.2249182112 fit_runtime_sec=11.131029099999068 clusters=7
+START K=8
+K=8 status=PASS silhouette=0.6039793455099449 wcss=560331.8224876041 fit_runtime_sec=9.545705499998803 clusters=8
+Stage 8 report written: D:\Doan_bigdata\BigData\BigData\RFM_Spark\reports\stage8_main_kmeans_k_sweep.txt
+READY_FOR_STAGE_9=True

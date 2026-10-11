@@ -1,0 +1,40 @@
+{
+  "ERFM5D": {
+    "m1_silhouette": 0.3565725452534894,
+    "m2_silhouette": 0.481806967562302,
+    "silhouette_absolute_improvement": 0.1252344223088126,
+    "silhouette_relative_improvement_pct": 35.121723188133494,
+    "m1_sse_per_customer": 2.2571084854038976,
+    "m2_sse_per_customer": 1.3474493014326931,
+    "sse_per_customer_absolute_change": -0.9096591839712045,
+    "sse_per_customer_reduction_pct": 40.30196996970776,
+    "entropy_change": 0.21947212673954763,
+    "cv_reduction_pct": 64.55297351284483,
+    "min_cluster_ratio_change_pp": 10.8266,
+    "max_cluster_ratio_change_pp": -26.658099999999997,
+    "below_5pct_change": -1,
+    "raw_distinctness_min_change": -0.08787611244950155,
+    "raw_distinctness_mean_change": -4.392819366408844,
+    "m1_training_dimensions": 3,
+    "m2_training_dimensions": 5
+  },
+  "RFM3D_tradeoff": {
+    "m1_silhouette": 0.6858449879433209,
+    "m2_silhouette": 0.21521780350092465,
+    "silhouette_change": -0.47062718444239626,
+    "m1_sse_per_customer": 0.7691390463586639,
+    "m2_sse_per_customer": 1.1620407871199123,
+    "sse_per_customer_change": 0.3929017407612484
+  },
+  "behavioral_feature_evidence": {
+    "AvgBasketSize": {
+      "global_iqr": 2.095238095238095,
+      "m2_segment_median_range": 4.0
+    },
+    "ProductVariety": {
+      "global_iqr": 21.0,
+      "m2_segment_median_range": 66.0
+    }
+  },
+  "enhancement_supported": true
+}

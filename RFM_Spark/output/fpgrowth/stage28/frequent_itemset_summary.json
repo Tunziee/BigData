@@ -1,0 +1,12 @@
+{
+  "frequent_itemset_count": 68,
+  "maximum_itemset_size": 1,
+  "count_by_itemset_size": [
+    {
+      "itemset_size": 1,
+      "count": 68
+    }
+  ],
+  "invalid_itemset_metric_count": 0,
+  "pass": true
+}

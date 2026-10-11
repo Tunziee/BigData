@@ -1,0 +1,392 @@
+{
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "model_id": "B0",
+      "pass": true,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "expected_counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "pass": true
+      }
+    },
+    {
+      "model_id": "M1",
+      "pass": true,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "expected_counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "pass": true
+      }
+    },
+    {
+      "model_id": "M2",
+      "pass": true,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "expected_counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "pass": true
+      }
+    }
+  ],
+  "measured_order": [
+    [
+      "B0",
+      "M1",
+      "M2"
+    ],
+    [
+      "M1",
+      "M2",
+      "B0"
+    ],
+    [
+      "M2",
+      "B0",
+      "M1"
+    ]
+  ],
+  "trials": [
+    {
+      "model_id": "B0",
+      "duration_sec": 0.5669668999998976,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "expected_counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 1,
+      "order_index": 1
+    },
+    {
+      "model_id": "M1",
+      "duration_sec": 0.5155108999997537,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "expected_counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 1,
+      "order_index": 2
+    },
+    {
+      "model_id": "M2",
+      "duration_sec": 0.5631928999991942,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "expected_counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 1,
+      "order_index": 3
+    },
+    {
+      "model_id": "M1",
+      "duration_sec": 0.49631439999939175,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "expected_counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 2,
+      "order_index": 1
+    },
+    {
+      "model_id": "M2",
+      "duration_sec": 0.45437049999964074,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "expected_counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 2,
+      "order_index": 2
+    },
+    {
+      "model_id": "B0",
+      "duration_sec": 0.4910343000001376,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "expected_counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 2,
+      "order_index": 3
+    },
+    {
+      "model_id": "M2",
+      "duration_sec": 0.5619201000008616,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "expected_counts": [
+          154437,
+          126550,
+          197817,
+          252287,
+          268909
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 3,
+      "order_index": 1
+    },
+    {
+      "model_id": "B0",
+      "duration_sec": 0.46324509999976726,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "expected_counts": [
+          535416,
+          145205,
+          301081,
+          18298
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 3,
+      "order_index": 2
+    },
+    {
+      "model_id": "M1",
+      "duration_sec": 0.47759060000043974,
+      "distribution": {
+        "cluster_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "expected_counts": [
+          535490,
+          145123,
+          301103,
+          18284
+        ],
+        "pass": true
+      },
+      "timed_section": "transform + groupBy(prediction).count().collect()",
+      "pass": true,
+      "track": "A",
+      "round": 3,
+      "order_index": 3
+    }
+  ],
+  "model_load_sec": {
+    "B0": 0.3046462000002066,
+    "M1": 0.19527019999986805,
+    "M2": 0.16413039999952161
+  },
+  "locked_prediction_equality": {
+    "B0": true,
+    "M1": true,
+    "M2": true
+  }
+}

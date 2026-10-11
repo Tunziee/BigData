@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "authority": "FP_GROWTH_ASSOCIATION_RULES_V2",
+  "v1_negative": {
+    "minSupport": 0.001,
+    "rules": 0
+  },
+  "selected_protocol": "HIGHEST_PREDEFINED_SUPPORT_MEETING_RULE_GATE",
+  "selected_minSupport": 0.0002,
+  "frequent_itemsets": 2655,
+  "pair_or_larger_itemsets": 63,
+  "rules": 104,
+  "basket_semantics": "customer_id + t_dat"
+}

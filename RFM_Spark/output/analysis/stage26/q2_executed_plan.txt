@@ -1,0 +1,18 @@
+AdaptiveSparkPlan isFinalPlan=true
++- == Final Plan ==
+   ResultQueryStage 2
+   +- *(2) HashAggregate(keys=[], functions=[count(1), sum(price#3)], output=[filtered_rows#65L, sum_price#66])
+      +- ShuffleQueryStage 0
+         +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=341]
+            +- *(1) HashAggregate(keys=[], functions=[partial_count(1), partial_sum(price#3)], output=[count#74L, sum#75])
+               +- *(1) Project [price#3]
+                  +- *(1) Filter (isnotnull(t_dat#0) AND (t_dat#0 >= 2020-01-01))
+                     +- *(1) ColumnarToRow
+                        +- FileScan parquet [t_dat#0,price#3] Batched: true, DataFilters: [isnotnull(t_dat#0), (t_dat#0 >= 2020-01-01)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transacti..., PartitionFilters: [], PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)], ReadSchema: struct<t_dat:date,price:double>
++- == Initial Plan ==
+   HashAggregate(keys=[], functions=[count(1), sum(price#3)], output=[filtered_rows#65L, sum_price#66])
+   +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=320]
+      +- HashAggregate(keys=[], functions=[partial_count(1), partial_sum(price#3)], output=[count#74L, sum#75])
+         +- Project [price#3]
+            +- Filter (isnotnull(t_dat#0) AND (t_dat#0 >= 2020-01-01))
+               +- FileScan parquet [t_dat#0,price#3] Batched: true, DataFilters: [isnotnull(t_dat#0), (t_dat#0 >= 2020-01-01)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transacti..., PartitionFilters: [], PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)], ReadSchema: struct<t_dat:date,price:double>

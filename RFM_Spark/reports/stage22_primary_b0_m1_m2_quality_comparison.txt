@@ -1,0 +1,23 @@
+STAGE 22 — PRIMARY FORMAL B0/M1/M2 QUALITY COMPARISON
+
+AUTHORITY: PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1
+COHORT: 1000000 / ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5
+B0_TO_M1_FINDING: QUALITY_SIMILAR_CONVERGENCE_IMPROVED
+M1_TO_M2_FINDING: M2_IMPROVES_ENHANCED_MULTIDIMENSIONAL_BEHAVIORAL_SEGMENTATION
+M2_ENHANCEMENT_SUPPORTED: True
+
+COMPARISON MATRIX:
+{'ModelID': 'B0', 'ModelName': 'Basic K-Means Baseline', 'TrainingFeatureSpace': 'RFM3D', 'K': 4, 'InitMode': 'random', 'Silhouette_RFM3D': 0.6858111002170737, 'Silhouette_ERFM5D': 0.3566311380934453, 'SSEPerCustomer_RFM3D': 0.7691365781161709, 'SSEPerCustomer_ERFM5D': 2.256750010050375, 'MinClusterRatioPct': 1.8297999999999999, 'MaxClusterRatioPct': 53.5416, 'ClusterSizeCV': 0.771334870068766, 'NormalizedEntropy': 0.7569022092473077, 'RawDistinctnessMin': 1.3351121608796839, 'RawDistinctnessMean': 7.534388225997819, 'ModelRole': 'technical_baseline'}
+{'ModelID': 'M1', 'ModelName': 'Project Main K-Means', 'TrainingFeatureSpace': 'RFM3D', 'K': 4, 'InitMode': 'k-means||', 'Silhouette_RFM3D': 0.6858449879433209, 'Silhouette_ERFM5D': 0.3565725452534894, 'SSEPerCustomer_RFM3D': 0.7691390463586639, 'SSEPerCustomer_ERFM5D': 2.2571084854038976, 'MinClusterRatioPct': 1.8284000000000002, 'MaxClusterRatioPct': 53.549, 'ClusterSizeCV': 0.7715116240057567, 'NormalizedEntropy': 0.7568000383535228, 'RawDistinctnessMin': 1.3377777133377713, 'RawDistinctnessMean': 7.535123114603716, 'ModelRole': 'project_main'}
+{'ModelID': 'M2', 'ModelName': 'Enhanced K-Means', 'TrainingFeatureSpace': 'eRFM5D', 'K': 5, 'InitMode': 'k-means||', 'Silhouette_RFM3D': 0.21521780350092465, 'Silhouette_ERFM5D': 0.481806967562302, 'SSEPerCustomer_RFM3D': 1.1620407871199123, 'SSEPerCustomer_ERFM5D': 1.3474493014326931, 'MinClusterRatioPct': 12.655, 'MaxClusterRatioPct': 26.890900000000002, 'ClusterSizeCV': 0.2734779297128015, 'NormalizedEntropy': 0.9762721650930705, 'RawDistinctnessMin': 1.2499016008882697, 'RawDistinctnessMean': 3.1423037481948723, 'ModelRole': 'enhanced_model'}
+
+B0/M1 ALIGNMENT:
+{'mapping_b0_to_m1': {'0': 0, '1': 1, '2': 2, '3': 3}, 'matched_customers': 999870, 'mismatched_customers': 130, 'mismatch_ratio': 0.00013, 'ARI': 0.9996501516955725, 'NMI': 0.9988393925332469, 'contingency_table': [[535396, 0, 20, 0], [94, 145109, 2, 0], [0, 0, 301081, 0], [0, 14, 0, 18284]], 'mapping_is_comparison_only': True, 'saved_b0_ids_unchanged': True}
+
+REPRODUCIBILITY:
+{'tolerance': 1e-08, 'absolute_differences': {'silhouette': {'B0': {'RFM3D': 0.0, 'ERFM5D': 0.0}, 'M1': {'RFM3D': 0.0, 'ERFM5D': 0.0}, 'M2': {'RFM3D': 0.0, 'ERFM5D': 0.0}}, 'sse': {'B0': {'RFM3D': 0.0, 'ERFM5D': 0.0}, 'M1': {'RFM3D': 0.0, 'ERFM5D': 0.0}, 'M2': {'RFM3D': 0.0, 'ERFM5D': 0.0}}, 'normalized_entropy': {'B0': 0.0, 'M1': 0.0, 'M2': 0.0}, 'ari': {'B0_vs_M1': 0.0, 'B0_vs_M2': 0.0, 'M1_vs_M2': 0.0}, 'nmi': {'B0_vs_M1': 0.0, 'B0_vs_M2': 0.0, 'M1_vs_M2': 0.0}, 'alignment_mismatch': 0, 'alignment_mapping_equal': True, 'm1_m2_silhouette_delta': 0.0}, 'independent_metric_counts': {'silhouette': 6, 'sse': 6, 'normalized_entropy': 3, 'ari': 3, 'nmi': 3, 'b0_m1_alignment': 1, 'm1_m2_deltas': 1}, 'max_scalar_difference': 0.0, 'pass': True}
+
+NO RUNTIME COMPARISON; NO RETRAINING; NO RULE-BASED PRIMARY MODEL; NO GMM.
+
+PRIMARY_QUALITY_COMPARISON_COMPLETE: True
+READY_FOR_STAGE_23: True

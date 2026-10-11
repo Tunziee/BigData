@@ -1,0 +1,415 @@
+{
+  "stage": 11,
+  "authority": "MAIN_KMEANS_FINAL_CLUSTER_PROFILE",
+  "source": {
+    "predictions": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\main_kmeans_predictions",
+    "final_model_summary": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage10\\final_model_summary.json",
+    "final_model_metadata": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\models\\main_kmeans_final_metadata.json"
+  },
+  "global_statistics": {
+    "Recency": {
+      "count": 1362281,
+      "mean": 236.148437069885,
+      "std": 221.11879131008746,
+      "min": 1.0,
+      "max": 734.0,
+      "p01": 2.0,
+      "p05": 8.0,
+      "p25": 49.0,
+      "median": 152.0,
+      "p75": 400.0,
+      "p95": 674.0,
+      "p99": 725.0
+    },
+    "Frequency": {
+      "count": 1362281,
+      "mean": 6.6654229193536425,
+      "std": 9.707005074461001,
+      "min": 1.0,
+      "max": 427.0,
+      "p01": 1.0,
+      "p05": 1.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 8.0,
+      "p95": 25.0,
+      "p99": 45.0
+    },
+    "Monetary": {
+      "count": 1362281,
+      "mean": 0.6493858271904174,
+      "std": 1.1975819653583566,
+      "min": 0.0007627118644067797,
+      "max": 57.676406779661086,
+      "p01": 0.013542372881355931,
+      "p05": 0.0274406779661017,
+      "p25": 0.08806779661016949,
+      "median": 0.24559322033898304,
+      "p75": 0.7001016949152542,
+      "p95": 2.558627118644068,
+      "p99": 5.5818135593220335
+    }
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "count": 729944,
+      "ratio_pct": 53.582484083680235,
+      "rfm": {
+        "Recency": {
+          "count": 729944,
+          "mean": 125.08183504488015,
+          "std": 93.5116485089059,
+          "min": 1.0,
+          "max": 379.0,
+          "p01": 2.0,
+          "p05": 9.0,
+          "p25": 46.0,
+          "median": 99.0,
+          "p75": 196.0,
+          "p95": 299.0,
+          "p99": 324.0
+        },
+        "Frequency": {
+          "count": 729944,
+          "mean": 4.392325986651031,
+          "std": 3.427321891850638,
+          "min": 1.0,
+          "max": 19.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "p25": 1.0,
+          "median": 3.0,
+          "p75": 7.0,
+          "p95": 11.0,
+          "p99": 14.0
+        },
+        "Monetary": {
+          "count": 729944,
+          "mean": 0.36555754077351416,
+          "std": 0.33736692056920914,
+          "min": 0.0007627118644067797,
+          "max": 2.8623728813559346,
+          "p01": 0.01523728813559322,
+          "p05": 0.03201694915254238,
+          "p25": 0.10364406779661016,
+          "median": 0.2600338983050847,
+          "p75": 0.5295084745762713,
+          "p95": 1.045864406779661,
+          "p99": 1.4771694915254237
+        }
+      },
+      "centroid_original": [
+        125.08151254402787,
+        4.392383577484173,
+        0.3655620960842205
+      ],
+      "centroid_scaled": [
+        -0.5022952769767058,
+        -0.23416484532905074,
+        -0.2369973323882814
+      ],
+      "relative_profile": {
+        "Recency": {
+          "mean_to_global_mean_ratio": 0.5296746258280923,
+          "centroid_z": -0.5022952769767058,
+          "direction": "LOW",
+          "semantic_note": "Lower Recency indicates more recent activity."
+        },
+        "Frequency": {
+          "mean_to_global_mean_ratio": 0.6589718371654296,
+          "centroid_z": -0.23416484532905074,
+          "direction": "NEAR_AVERAGE",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        },
+        "Monetary": {
+          "mean_to_global_mean_ratio": 0.5629281167947677,
+          "centroid_z": -0.2369973323882814,
+          "direction": "NEAR_AVERAGE",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        }
+      },
+      "distribution_review": "Recency: mean=125.0818, median=99.0000, no configured skew flag; Frequency: mean=4.3923, median=3.0000, no configured skew flag; Monetary: mean=0.3656, median=0.2600, no configured skew flag",
+      "segment_name_vi": "Khách hàng mua sắm cơ bản",
+      "segment_name_en": "Mainstream Occasional Customers",
+      "evidence": "Largest cluster with moderate Recency and lower Frequency/Monetary than the global baseline.",
+      "reason": "The distribution represents the broad mainstream customer base with relatively limited repeat-date frequency and spend per customer.",
+      "business_strategy": [
+        "low-cost automated engagement",
+        "cross-sell and repeat-purchase nudges",
+        "maintain broad retention coverage"
+      ],
+      "behavior_summary": "Largest mainstream group with moderate recency and lower repeat-date frequency and monetary value relative to the global baseline."
+    },
+    {
+      "cluster_id": 1,
+      "count": 198035,
+      "ratio_pct": 14.537015490930285,
+      "rfm": {
+        "Recency": {
+          "count": 198035,
+          "mean": 52.93337541343702,
+          "std": 61.68381844100505,
+          "min": 1.0,
+          "max": 676.0,
+          "p01": 1.0,
+          "p05": 3.0,
+          "p25": 14.0,
+          "median": 32.0,
+          "p75": 69.0,
+          "p95": 178.0,
+          "p99": 300.0
+        },
+        "Frequency": {
+          "count": 198035,
+          "mean": 19.791708536369832,
+          "std": 7.821824244596007,
+          "min": 1.0,
+          "max": 64.0,
+          "p01": 7.0,
+          "p05": 10.0,
+          "p25": 14.0,
+          "median": 18.0,
+          "p75": 24.0,
+          "p95": 35.0,
+          "p99": 44.0
+        },
+        "Monetary": {
+          "count": 198035,
+          "mean": 1.936426468014353,
+          "std": 0.9701776275832782,
+          "min": 0.24827118644067797,
+          "max": 7.125661016949148,
+          "p01": 0.6007796610169491,
+          "p05": 0.7858305084745763,
+          "p25": 1.2100677966101694,
+          "median": 1.7018644067796609,
+          "p75": 2.4393559322033895,
+          "p95": 3.8886610169491527,
+          "p99": 4.853372881355932
+        }
+      },
+      "centroid_original": [
+        52.93274251377872,
+        19.7918850679208,
+        1.936449339297162
+      ],
+      "centroid_scaled": [
+        -0.8285849134331155,
+        1.3522669502978524,
+        1.0747185155895054
+      ],
+      "relative_profile": {
+        "Recency": {
+          "mean_to_global_mean_ratio": 0.2241529779753405,
+          "centroid_z": -0.8285849134331155,
+          "direction": "LOW",
+          "semantic_note": "Lower Recency indicates more recent activity."
+        },
+        "Frequency": {
+          "mean_to_global_mean_ratio": 2.969310241200579,
+          "centroid_z": 1.3522669502978524,
+          "direction": "VERY_HIGH",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        },
+        "Monetary": {
+          "mean_to_global_mean_ratio": 2.9819352177615985,
+          "centroid_z": 1.0747185155895054,
+          "direction": "VERY_HIGH",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        }
+      },
+      "distribution_review": "Recency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Frequency: mean=19.7917, median=18.0000, no configured skew flag; Monetary: mean=1.9364, median=1.7019, no configured skew flag",
+      "segment_name_vi": "Khách hàng hoạt động trung thành",
+      "segment_name_en": "Active Loyal Customers",
+      "evidence": "Lower Recency and substantially higher Frequency and Monetary than the global baseline and cluster 0.",
+      "reason": "Repeated purchase dates and higher observed spend support an active, engaged customer profile without asserting unmeasured loyalty causes.",
+      "business_strategy": [
+        "retention and loyalty rewards",
+        "personalized cross-sell",
+        "protect repeat-purchase continuity"
+      ],
+      "behavior_summary": "More active than cluster 0: Frequency mean is 4.51x, Monetary mean is 5.30x, and Recency mean is 57.68% lower."
+    },
+    {
+      "cluster_id": 2,
+      "count": 409493,
+      "ratio_pct": 30.059363670197264,
+      "rfm": {
+        "Recency": {
+          "count": 409493,
+          "mean": 535.4611238775755,
+          "std": 121.01466683486474,
+          "min": 320.0,
+          "max": 734.0,
+          "p01": 328.0,
+          "p05": 348.0,
+          "p25": 433.0,
+          "median": 535.0,
+          "p75": 646.0,
+          "p95": 720.0,
+          "p99": 730.0
+        },
+        "Frequency": {
+          "count": 409493,
+          "mean": 1.8030637886361915,
+          "std": 1.5208624732836413,
+          "min": 1.0,
+          "max": 23.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 2.0,
+          "p95": 5.0,
+          "p99": 8.0
+        },
+        "Monetary": {
+          "count": 409493,
+          "mean": 0.16760376169174154,
+          "std": 0.20951190189980812,
+          "min": 0.000847457627118644,
+          "max": 4.49957627118644,
+          "p01": 0.010152542372881357,
+          "p05": 0.020322033898305086,
+          "p25": 0.050813559322033894,
+          "median": 0.09996610169491525,
+          "p75": 0.2016101694915254,
+          "p95": 0.542135593220339,
+          "p99": 1.0331355932203388
+        }
+      },
+      "centroid_original": [
+        535.4611238775719,
+        1.8030637886399346,
+        0.16760376169176283
+      ],
+      "centroid_scaled": [
+        1.3536284502747034,
+        -0.5009123919700538,
+        -0.40229569201515
+      ],
+      "relative_profile": {
+        "Recency": {
+          "mean_to_global_mean_ratio": 2.267476890897706,
+          "centroid_z": 1.3536284502747034,
+          "direction": "VERY_HIGH",
+          "semantic_note": "Lower Recency indicates more recent activity."
+        },
+        "Frequency": {
+          "mean_to_global_mean_ratio": 0.2705100352148454,
+          "centroid_z": -0.5009123919700538,
+          "direction": "LOW",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        },
+        "Monetary": {
+          "mean_to_global_mean_ratio": 0.2580958109555348,
+          "centroid_z": -0.40229569201515,
+          "direction": "LOW",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        }
+      },
+      "distribution_review": "Recency: mean=535.4611, median=535.0000, no configured skew flag; Frequency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Monetary: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2",
+      "segment_name_vi": "Khách hàng lâu chưa quay lại",
+      "segment_name_en": "Lapsed Customers",
+      "evidence": "Very high Recency with low Frequency and low Monetary; the distribution is checked against the long-inactivity quantiles.",
+      "reason": "The measured gap since last purchase is large, so reactivation language is appropriate; confirmed churn is not claimed.",
+      "business_strategy": [
+        "reactivation reminders",
+        "targeted win-back offers",
+        "low-cost automated campaigns before higher-cost outreach"
+      ],
+      "behavior_summary": "Long-inactive/lapsed pattern supported by high Recency across the central distribution and low Frequency/Monetary; no confirmed churn claim is made."
+    },
+    {
+      "cluster_id": 3,
+      "count": 24809,
+      "ratio_pct": 1.8211367551922109,
+      "rfm": {
+        "Recency": {
+          "count": 24809,
+          "mean": 26.101455117094602,
+          "std": 40.71213945291816,
+          "min": 1.0,
+          "max": 609.0,
+          "p01": 1.0,
+          "p05": 1.0,
+          "p25": 6.0,
+          "median": 14.0,
+          "p75": 29.0,
+          "p95": 88.0,
+          "p99": 212.0
+        },
+        "Frequency": {
+          "count": 24809,
+          "mean": 49.02390261598613,
+          "std": 24.29021002124185,
+          "min": 1.0,
+          "max": 427.0,
+          "p01": 15.0,
+          "p05": 21.0,
+          "p25": 34.0,
+          "median": 45.0,
+          "p75": 58.0,
+          "p95": 91.0,
+          "p99": 133.0
+        },
+        "Monetary": {
+          "count": 24809,
+          "mean": 6.678893052070354,
+          "std": 3.374594025186719,
+          "min": 1.043135593220339,
+          "max": 57.676406779661086,
+          "p01": 2.5433389830508473,
+          "p05": 3.2511694915254234,
+          "p25": 4.639016949152542,
+          "median": 5.891016949152541,
+          "p75": 7.695864406779663,
+          "p95": 12.63494915254237,
+          "p99": 19.11269491525423
+        }
+      },
+      "centroid_original": [
+        26.101455117094474,
+        49.02390261598602,
+        6.6788930520703484
+      ],
+      "centroid_scaled": [
+        -0.9499282295651995,
+        4.363702230678436,
+        5.034734489405618
+      ],
+      "relative_profile": {
+        "Recency": {
+          "mean_to_global_mean_ratio": 0.11052986604933668,
+          "centroid_z": -0.9499282295651995,
+          "direction": "LOW",
+          "semantic_note": "Lower Recency indicates more recent activity."
+        },
+        "Frequency": {
+          "mean_to_global_mean_ratio": 7.35495754870121,
+          "centroid_z": 4.363702230678436,
+          "direction": "VERY_HIGH",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        },
+        "Monetary": {
+          "mean_to_global_mean_ratio": 10.284938125254037,
+          "centroid_z": 5.034734489405618,
+          "direction": "VERY_HIGH",
+          "semantic_note": "Higher values indicate more observed purchase dates/spend."
+        }
+      },
+      "distribution_review": "Recency: MEAN_MEDIAN_RATIO>=1.5, P95_P75_RATIO>=2; Frequency: mean=49.0239, median=45.0000, no configured skew flag; Monetary: mean=6.6789, median=5.8910, no configured skew flag",
+      "segment_name_vi": "Khách hàng hoạt động giá trị cao",
+      "segment_name_en": "Active High-Value Customers",
+      "evidence": "Very low Recency with very high Frequency and Monetary; median and interquartile values are checked to confirm coherence.",
+      "reason": "The small cluster is a measured high-activity/high-spend niche rather than a label based only on a few extreme centroid values.",
+      "business_strategy": [
+        "high-touch retention",
+        "loyalty rewards and VIP-care style service",
+        "personalized high-value cross-sell"
+      ],
+      "behavior_summary": "Small but coherent high-activity/high-value niche: its Frequency and Monetary lower quartiles exceed cluster 0 upper quartiles."
+    }
+  ]
+}

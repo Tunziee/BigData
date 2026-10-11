@@ -1,0 +1,19 @@
+{
+  "authority": "FINAL_VISUALIZATION_LAYER_V1",
+  "stage28_selected_support_matches_source": true,
+  "stage28_rule_count_matches_source": true,
+  "m2_segment_counts_sum_to_customer_count": true,
+  "stage22_m2_silhouette_matches_common_space": true,
+  "stage24_storage_values_match_summary": true,
+  "stage26_shuffle_values_match_summary": true,
+  "all_source_values_finite": true,
+  "fig09_uses_locked_segment_medians": true,
+  "fig09_uses_minmax_visual_normalization": true,
+  "fig09_fig10_normalized_source_equal": true,
+  "fig23_rule_count": 104,
+  "fig23_rule_count_matches_stage28": true,
+  "fig12_contains_fit_assignment_total": true,
+  "final_key_metrics_complete": true,
+  "visual_value_consistency_pass": true,
+  "figure_manifest_schema_complete": true
+}

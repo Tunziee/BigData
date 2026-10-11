@@ -1,0 +1,357 @@
+{
+  "stage": 12,
+  "authority": "IMPROVED_ERFM_FEATURE_SPACE",
+  "source": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\features\\erfm",
+  "row_count": 1362281,
+  "raw_features": [
+    "Recency",
+    "Frequency",
+    "Monetary",
+    "AvgBasketSize",
+    "ProductVariety"
+  ],
+  "transformations": {
+    "Recency": "identity",
+    "Frequency": "log1p",
+    "Monetary": "log1p",
+    "AvgBasketSize": "log1p",
+    "ProductVariety": "log1p"
+  },
+  "feature_order": [
+    "Recency_improved",
+    "Frequency_log1p",
+    "Monetary_log1p",
+    "AvgBasketSize_log1p",
+    "ProductVariety_log1p"
+  ],
+  "semantic_notes": {
+    "Frequency": "Number of distinct purchase dates per customer, not invoice/order count.",
+    "AvgBasketSize": "TotalItems / Frequency; proxy for average item count per distinct purchase date.",
+    "ProductVariety": "Number of distinct article_id values purchased by customer.",
+    "Recency": "Days from last purchase date to analysis date; retained raw by Stage 6 authority.",
+    "Monetary": "SUM(price)."
+  },
+  "raw_vs_transformed_skewness": {
+    "Recency": {
+      "raw_feature": "Recency",
+      "transformed_feature": "Recency_improved",
+      "stage6_raw_skewness": 0.8015830865771745,
+      "stage6_log1p_skewness": null,
+      "stage12_raw_skewness": 0.8015830865771745,
+      "stage12_transformed_skewness": 0.8015830865771745,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": null,
+      "comparison_pass": true
+    },
+    "Frequency": {
+      "raw_feature": "Frequency",
+      "transformed_feature": "Frequency_log1p",
+      "stage6_raw_skewness": 4.495758096759159,
+      "stage6_log1p_skewness": 0.7588150322222211,
+      "stage12_raw_skewness": 4.495758096759159,
+      "stage12_transformed_skewness": 0.7588150322222211,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "Monetary": {
+      "raw_feature": "Monetary",
+      "transformed_feature": "Monetary_log1p",
+      "stage6_raw_skewness": 6.2768705460869745,
+      "stage6_log1p_skewness": 1.9173401092541524,
+      "stage12_raw_skewness": 6.2768705460869745,
+      "stage12_transformed_skewness": 1.9173401092541524,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "AvgBasketSize": {
+      "raw_feature": "AvgBasketSize",
+      "transformed_feature": "AvgBasketSize_log1p",
+      "stage6_raw_skewness": 4.836153897327308,
+      "stage6_log1p_skewness": 0.7363221792873056,
+      "stage12_raw_skewness": 4.836153897327308,
+      "stage12_transformed_skewness": 0.7363221792873056,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "ProductVariety": {
+      "raw_feature": "ProductVariety",
+      "transformed_feature": "ProductVariety_log1p",
+      "stage6_raw_skewness": 4.576968021286257,
+      "stage6_log1p_skewness": 0.38241385432646763,
+      "stage12_raw_skewness": 4.576968021286257,
+      "stage12_transformed_skewness": 0.38241385432646763,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    }
+  },
+  "scaler": {
+    "inputCol": "features_improved_raw",
+    "outputCol": "features_improved",
+    "withMean": true,
+    "withStd": true,
+    "means": [
+      236.14843706988268,
+      1.5812679755644925,
+      0.3811274797090152,
+      1.3787935858747895,
+      2.3441300240256266
+    ],
+    "stds": [
+      221.11879131008746,
+      0.881702881204303,
+      0.4212379271817521,
+      0.47230346512205973,
+      1.1542837254387077
+    ],
+    "dimension": 5
+  },
+  "validation": {
+    "input": {
+      "identity": {
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "null_customer_id": 0,
+        "duplicate_customer_id": 0,
+        "pass": true
+      },
+      "scalar_quality": {
+        "by_feature": {
+          "Recency": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "Frequency": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "Monetary": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "ProductVariety": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "positivity": {
+        "by_feature": {
+          "Recency": {
+            "non_positive": 0,
+            "min": 1.0,
+            "pass": true
+          },
+          "Frequency": {
+            "non_positive": 0,
+            "min": 1.0,
+            "pass": true
+          },
+          "Monetary": {
+            "non_positive": 0,
+            "min": 0.0007627118644067797,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "non_positive": 0,
+            "min": 1.0,
+            "pass": true
+          },
+          "ProductVariety": {
+            "non_positive": 0,
+            "min": 1.0,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "pass": true
+    },
+    "transformation": {
+      "max_abs_errors": {
+        "recency_max_abs_error": 0.0,
+        "frequency_max_abs_error": 0.0,
+        "monetary_max_abs_error": 0.0,
+        "avg_basket_size_max_abs_error": 0.0,
+        "product_variety_max_abs_error": 0.0
+      },
+      "tolerance": 1e-10,
+      "pass": true
+    },
+    "raw_vector": {
+      "by_vector": {
+        "features_improved_raw": {
+          "null_vector": 0,
+          "wrong_dimension": 0,
+          "nan_total": 0,
+          "infinity_total": 0,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "scaled_vector": {
+      "by_vector": {
+        "features_improved_raw": {
+          "null_vector": 0,
+          "wrong_dimension": 0,
+          "nan_total": 0,
+          "infinity_total": 0,
+          "pass": true
+        },
+        "features_improved": {
+          "null_vector": 0,
+          "wrong_dimension": 0,
+          "nan_total": 0,
+          "infinity_total": 0,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "standardization": {
+      "vector_col": "features_improved",
+      "dimension": 5,
+      "means": [
+        1.0426654636553477e-14,
+        9.414407898806756e-15,
+        3.4959419671831416e-15,
+        2.126064480441012e-14,
+        -1.4952723209867218e-14
+      ],
+      "stds": [
+        1.0000000000000004,
+        0.9999999999999979,
+        0.9999999999999969,
+        1.000000000000005,
+        1.0000000000000036
+      ],
+      "mean_tolerance": 1e-06,
+      "std_tolerance": 1e-06,
+      "pass": true
+    },
+    "readback": {
+      "schema_columns": [
+        "customer_id",
+        "Recency",
+        "Frequency",
+        "Monetary",
+        "AvgBasketSize",
+        "ProductVariety",
+        "Recency_improved",
+        "Frequency_log1p",
+        "Monetary_log1p",
+        "AvgBasketSize_log1p",
+        "ProductVariety_log1p",
+        "features_improved_raw",
+        "features_improved"
+      ],
+      "identity": {
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "null_customer_id": 0,
+        "duplicate_customer_id": 0,
+        "pass": true
+      },
+      "transformed_scalar_quality": {
+        "by_feature": {
+          "Recency_improved": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "Frequency_log1p": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "Monetary_log1p": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "AvgBasketSize_log1p": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          },
+          "ProductVariety_log1p": {
+            "null": 0,
+            "nan": 0,
+            "infinity": 0,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "vector_quality": {
+        "by_vector": {
+          "features_improved_raw": {
+            "null_vector": 0,
+            "wrong_dimension": 0,
+            "nan_total": 0,
+            "infinity_total": 0,
+            "pass": true
+          },
+          "features_improved": {
+            "null_vector": 0,
+            "wrong_dimension": 0,
+            "nan_total": 0,
+            "infinity_total": 0,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "standardization": {
+        "vector_col": "features_improved",
+        "dimension": 5,
+        "means": [
+          1.0426654636553477e-14,
+          9.414407898806756e-15,
+          3.4959419671831416e-15,
+          2.126064480441012e-14,
+          -1.4952723209867218e-14
+        ],
+        "stds": [
+          1.0000000000000004,
+          0.9999999999999979,
+          0.9999999999999969,
+          1.000000000000005,
+          1.0000000000000036
+        ],
+        "mean_tolerance": 1e-06,
+        "std_tolerance": 1e-06,
+        "pass": true
+      },
+      "pass": true
+    },
+    "pass": true
+  },
+  "source_stage6_evidence": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\erfm_distribution\\summary.json",
+  "source_stage11_gate": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage11\\final_cluster_profile_summary.json",
+  "scaler_fit_runtime_sec": 1.2114996000000247,
+  "ready_for_stage13": true
+}

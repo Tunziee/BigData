@@ -1,0 +1,63 @@
+{
+  "queries": {
+    "Q1": {
+      "query_id": "Q1",
+      "comparisons": {
+        "row_count": {
+          "no_cache": 31788324,
+          "cache": 31788324,
+          "equal": true
+        }
+      },
+      "pass": true
+    },
+    "Q2": {
+      "query_id": "Q2",
+      "comparisons": {
+        "filtered_row_count": {
+          "no_cache": 10980132,
+          "cache": 10980132,
+          "equal": true
+        },
+        "filtered_sum_price": {
+          "no_cache": 298167.1367814389,
+          "cache": 298167.1367814389,
+          "absolute_difference": 0.0,
+          "tolerance": 0.002981671367814389,
+          "equal_within_tolerance": true
+        }
+      },
+      "pass": true
+    },
+    "Q3": {
+      "query_id": "Q3",
+      "comparisons": {
+        "grouped_customer_count": {
+          "no_cache": 1362281,
+          "cache": 1362281,
+          "equal": true
+        },
+        "sum_grouped_transaction_rows": {
+          "no_cache": 31788324,
+          "cache": 31788324,
+          "equal": true
+        },
+        "max_customer_max_t_dat": {
+          "no_cache": "2020-09-22",
+          "cache": "2020-09-22",
+          "equal": true
+        },
+        "sum_grouped_monetary": {
+          "no_cache": 884645.9740506222,
+          "cache": 884645.9740506222,
+          "absolute_difference": 0.0,
+          "tolerance": 0.008846459740506222,
+          "equal_within_tolerance": true
+        }
+      },
+      "pass": true
+    }
+  },
+  "pass": true,
+  "price_sum_tolerance_definition": "absolute difference <= 1e-08 * max(1, abs(NO_CACHE sum))"
+}

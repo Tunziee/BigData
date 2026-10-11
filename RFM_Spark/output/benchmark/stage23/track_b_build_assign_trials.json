@@ -1,0 +1,628 @@
+{
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "model_id": "B0",
+      "pass": true,
+      "numIter": 58,
+      "trainingCost": 769067.7968670968,
+      "cluster_sizes": [
+        533256,
+        146821,
+        19206,
+        300717
+      ]
+    },
+    {
+      "model_id": "M1",
+      "pass": true,
+      "numIter": 57,
+      "trainingCost": 769067.7968670968,
+      "cluster_sizes": [
+        300717,
+        19206,
+        146821,
+        533256
+      ]
+    },
+    {
+      "model_id": "M2",
+      "pass": true,
+      "numIter": 32,
+      "trainingCost": 1347447.9633641602,
+      "cluster_sizes": [
+        126282,
+        252456,
+        154445,
+        197744,
+        269073
+      ]
+    }
+  ],
+  "measured_order": [
+    [
+      "B0",
+      "M1",
+      "M2"
+    ],
+    [
+      "M1",
+      "M2",
+      "B0"
+    ],
+    [
+      "M2",
+      "B0",
+      "M1"
+    ]
+  ],
+  "trials": [
+    {
+      "model_id": "B0",
+      "fit_only_sec": 15.617225800000597,
+      "assign_after_fit_sec": 0.5589345999997022,
+      "total_fit_plus_assign_sec": 16.176161100000172,
+      "numIter": 58,
+      "trainingCost": 769067.7968670968,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        533256,
+        146821,
+        19206,
+        300717
+      ],
+      "centers": [
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "random",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 1,
+      "order_index": 1
+    },
+    {
+      "model_id": "M1",
+      "fit_only_sec": 16.12442959999953,
+      "assign_after_fit_sec": 0.5341504999996687,
+      "total_fit_plus_assign_sec": 16.65858070000013,
+      "numIter": 57,
+      "trainingCost": 769067.7968670969,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        300717,
+        19206,
+        146821,
+        533256
+      ],
+      "centers": [
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 1,
+      "order_index": 2
+    },
+    {
+      "model_id": "M2",
+      "fit_only_sec": 12.728319900000315,
+      "assign_after_fit_sec": 0.5377789000003759,
+      "total_fit_plus_assign_sec": 13.266099400000712,
+      "numIter": 32,
+      "trainingCost": 1347447.9633641602,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "cluster_sizes": [
+        126282,
+        252456,
+        154445,
+        197744,
+        269073
+      ],
+      "centers": [
+        [
+          -0.823905195371489,
+          1.6858260754964787,
+          2.119957548545732,
+          0.6499862831564036,
+          1.709428125075125
+        ],
+        [
+          -0.3571475465711704,
+          -0.6091067095339708,
+          -0.6478476390825908,
+          -0.6459021028365618,
+          -0.7957328563287355
+        ],
+        [
+          0.4413887500195702,
+          -0.6286598074464477,
+          -0.22608168000341397,
+          1.4099906209845428,
+          0.019233721506584082
+        ],
+        [
+          1.500391764823508,
+          -0.8212166587752642,
+          -0.7048270464544093,
+          -0.599548402283272,
+          -0.9614681681983293
+        ],
+        [
+          -0.6300889307155644,
+          0.7418414110171205,
+          0.2578397195654345,
+          -0.0684448976581693,
+          0.6374366369024045
+        ]
+      ],
+      "configuration": {
+        "k": 5,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_erfm5d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 1,
+      "order_index": 3
+    },
+    {
+      "model_id": "M1",
+      "fit_only_sec": 16.382895400000052,
+      "assign_after_fit_sec": 0.5291966000004322,
+      "total_fit_plus_assign_sec": 16.912093099999765,
+      "numIter": 57,
+      "trainingCost": 769067.7968670968,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        300717,
+        19206,
+        146821,
+        533256
+      ],
+      "centers": [
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 2,
+      "order_index": 1
+    },
+    {
+      "model_id": "M2",
+      "fit_only_sec": 13.587507300000652,
+      "assign_after_fit_sec": 0.6189056999992317,
+      "total_fit_plus_assign_sec": 14.206414000000223,
+      "numIter": 32,
+      "trainingCost": 1347447.9633641604,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "cluster_sizes": [
+        126282,
+        252456,
+        154445,
+        197744,
+        269073
+      ],
+      "centers": [
+        [
+          -0.823905195371489,
+          1.6858260754964787,
+          2.119957548545732,
+          0.6499862831564036,
+          1.709428125075125
+        ],
+        [
+          -0.3571475465711704,
+          -0.6091067095339708,
+          -0.6478476390825908,
+          -0.6459021028365618,
+          -0.7957328563287355
+        ],
+        [
+          0.4413887500195702,
+          -0.6286598074464477,
+          -0.22608168000341397,
+          1.4099906209845428,
+          0.019233721506584082
+        ],
+        [
+          1.500391764823508,
+          -0.8212166587752642,
+          -0.7048270464544093,
+          -0.599548402283272,
+          -0.9614681681983293
+        ],
+        [
+          -0.6300889307155644,
+          0.7418414110171205,
+          0.2578397195654345,
+          -0.0684448976581693,
+          0.6374366369024045
+        ]
+      ],
+      "configuration": {
+        "k": 5,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_erfm5d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 2,
+      "order_index": 2
+    },
+    {
+      "model_id": "B0",
+      "fit_only_sec": 16.099473600000238,
+      "assign_after_fit_sec": 0.5314469000004465,
+      "total_fit_plus_assign_sec": 16.630921100000705,
+      "numIter": 58,
+      "trainingCost": 769067.7968670968,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        533256,
+        146821,
+        19206,
+        300717
+      ],
+      "centers": [
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "random",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 2,
+      "order_index": 3
+    },
+    {
+      "model_id": "M2",
+      "fit_only_sec": 12.85987969999951,
+      "assign_after_fit_sec": 0.6014592000001358,
+      "total_fit_plus_assign_sec": 13.461339999999836,
+      "numIter": 32,
+      "trainingCost": 1347447.9633641602,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "cluster_sizes": [
+        126282,
+        252456,
+        154445,
+        197744,
+        269073
+      ],
+      "centers": [
+        [
+          -0.823905195371489,
+          1.6858260754964787,
+          2.119957548545732,
+          0.6499862831564036,
+          1.709428125075125
+        ],
+        [
+          -0.3571475465711704,
+          -0.6091067095339708,
+          -0.6478476390825908,
+          -0.6459021028365618,
+          -0.7957328563287355
+        ],
+        [
+          0.4413887500195702,
+          -0.6286598074464477,
+          -0.22608168000341397,
+          1.4099906209845428,
+          0.019233721506584082
+        ],
+        [
+          1.500391764823508,
+          -0.8212166587752642,
+          -0.7048270464544093,
+          -0.599548402283272,
+          -0.9614681681983293
+        ],
+        [
+          -0.6300889307155644,
+          0.7418414110171205,
+          0.2578397195654345,
+          -0.0684448976581693,
+          0.6374366369024045
+        ]
+      ],
+      "configuration": {
+        "k": 5,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_erfm5d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 3,
+      "order_index": 1
+    },
+    {
+      "model_id": "B0",
+      "fit_only_sec": 17.05467200000021,
+      "assign_after_fit_sec": 0.4894242000000304,
+      "total_fit_plus_assign_sec": 17.544096599999648,
+      "numIter": 58,
+      "trainingCost": 769067.7968670968,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        533256,
+        146821,
+        19206,
+        300717
+      ],
+      "centers": [
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "random",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 3,
+      "order_index": 2
+    },
+    {
+      "model_id": "M1",
+      "fit_only_sec": 19.500995200000034,
+      "assign_after_fit_sec": 0.706935600000179,
+      "total_fit_plus_assign_sec": 20.20793169999979,
+      "numIter": 57,
+      "trainingCost": 769067.7968670968,
+      "cluster_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cluster_sizes": [
+        300717,
+        19206,
+        146821,
+        533256
+      ],
+      "centers": [
+        [
+          1.354565933996055,
+          -0.5009980130963094,
+          -0.40240646178880163
+        ],
+        [
+          -0.9478670452499417,
+          4.284000169304138,
+          4.906543440556703
+        ],
+        [
+          -0.8267769450949085,
+          1.3276233194790479,
+          1.0495893598508148
+        ],
+        [
+          -0.5000130374391902,
+          -0.2384523607478706,
+          -0.24013222811767362
+        ]
+      ],
+      "configuration": {
+        "k": 4,
+        "seed": 42,
+        "featuresCol": "benchmark_features",
+        "predictionCol": "benchmark_prediction",
+        "distanceMeasure": "euclidean",
+        "initMode": "k-means||",
+        "maxIter": 100,
+        "tol": 0.0001,
+        "source_feature": "eval_rfm3d_scaled"
+      },
+      "pass": true,
+      "track": "B",
+      "round": 3,
+      "order_index": 3
+    }
+  ],
+  "final_models_saved": false,
+  "final_model_paths_modified": false
+}

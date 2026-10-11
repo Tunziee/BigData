@@ -1,0 +1,148 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 1:>                                                        (0 + 12) / 26][Stage 1:>                                                        (0 + 13) / 26][Stage 1:========>                                                (4 + 12) / 26][Stage 1:=============>                                           (6 + 12) / 26][Stage 1:=================>                                       (8 + 12) / 26][Stage 1:=====================>                                  (10 + 12) / 26][Stage 1:=========================>                              (12 + 12) / 26][Stage 1:============================>                           (13 + 12) / 26][Stage 1:==============================>                         (14 + 12) / 26][Stage 1:================================>                       (15 + 11) / 26][Stage 1:=====================================>                   (17 + 9) / 26][Stage 1:===========================================>             (20 + 6) / 26][Stage 1:==================================================>      (23 + 3) / 26][Stage 1:====================================================>    (24 + 2) / 26][Stage 1:======================================================>  (25 + 1) / 26][Stage 3:>                                                        (0 + 12) / 13][Stage 3:======================>                                   (5 + 8) / 13]                                                                                [Stage 8:>                                                        (0 + 12) / 12][Stage 8:====>                                                    (1 + 11) / 12][Stage 8:=================================>                        (7 + 5) / 12]                                                                                [Stage 14:>                                                       (0 + 12) / 12][Stage 14:===================================================>    (11 + 1) / 12]                                                                                [Stage 21:>                                                         (0 + 9) / 9]                                                                                [Stage 27:>               (0 + 12) / 12][Stage 28:>                (0 + 0) / 26][Stage 27:=======>         (5 + 7) / 12][Stage 28:>                (0 + 5) / 26][Stage 27:============>    (9 + 3) / 12][Stage 28:>                (0 + 9) / 26][Stage 28:>                                                       (0 + 12) / 26][Stage 28:==>                                                     (1 + 12) / 26][Stage 28:====>                                                   (2 + 12) / 26][Stage 28:==========>                                             (5 + 12) / 26][Stage 28:===============>                                        (7 + 12) / 26][Stage 28:=======================>                               (11 + 12) / 26][Stage 28:=========================>                             (12 + 12) / 26][Stage 28:=============================>                         (14 + 12) / 26][Stage 28:===============================>                       (15 + 11) / 26][Stage 28:======================================>                 (18 + 8) / 26][Stage 28:========================================>               (19 + 7) / 26][Stage 28:=================================================>      (23 + 3) / 26][Stage 28:===================================================>    (24 + 2) / 26][Stage 28:=====================================================>  (25 + 1) / 26][Stage 31:>                                                       (0 + 12) / 13][Stage 31:=================>                                       (4 + 9) / 13][Stage 31:===================================================>    (12 + 1) / 13]                                                                                [Stage 36:>                                                         (0 + 9) / 9]                                                                                [Stage 39:>                                                       (0 + 12) / 26][Stage 39:====>                                                   (2 + 12) / 26][Stage 39:=================>                                      (8 + 12) / 26][Stage 39:=====================>                                 (10 + 12) / 26][Stage 39:=========================>                             (12 + 12) / 26][Stage 39:===========================>                           (13 + 12) / 26][Stage 39:=================================>                     (16 + 10) / 26][Stage 39:===========================================>            (20 + 6) / 26][Stage 39:=================================================>      (23 + 3) / 26][Stage 39:===================================================>    (24 + 2) / 26]                                                                                [Stage 42:>                                                       (0 + 12) / 26][Stage 42:==>                                                     (1 + 12) / 26][Stage 42:============>                                           (6 + 12) / 26][Stage 42:=================>                                      (8 + 12) / 26][Stage 42:=======================>                               (11 + 12) / 26][Stage 42:=========================>                             (12 + 12) / 26][Stage 42:===========================>                           (13 + 12) / 26][Stage 42:=============================>                         (14 + 12) / 26][Stage 42:===============================>                       (15 + 11) / 26][Stage 42:====================================>                   (17 + 9) / 26][Stage 42:========================================>               (19 + 7) / 26][Stage 42:===============================================>        (22 + 4) / 26][Stage 42:===================================================>    (24 + 2) / 26]                                                                                [Stage 43:>                                                       (0 + 12) / 12][Stage 43:====>                                                   (1 + 11) / 12][Stage 43:===================================================>    (11 + 1) / 12]                                                                                
+
+================================================================================
+1. CLEAN TRANSACTIONS
+================================================================================
+
+Schema sau cleaning:
+root
+ |-- t_dat: date (nullable = true)
+ |-- customer_id: string (nullable = true)
+ |-- article_id: string (nullable = true)
+ |-- price: double (nullable = true)
+ |-- sales_channel_id: integer (nullable = true)
+
+
+Thong ke transactions sau cleaning:
++----------+----------------+---------------+----------+----------+--------------------+------------------+-------------------+
+|total_rows|unique_customers|unique_articles|min_date  |max_date  |min_price           |max_price         |avg_price          |
++----------+----------------+---------------+----------+----------+--------------------+------------------+-------------------+
+|31788324  |1362281         |104547         |2018-09-20|2020-09-22|1.694915254237288E-5|0.5915254237288136|0.02782927385692688|
++----------+----------------+---------------+----------+----------+--------------------+------------------+-------------------+
+
+
+
+================================================================================
+2. CLEAN CUSTOMERS
+================================================================================
+
+Schema customers sau cleaning:
+root
+ |-- customer_id: string (nullable = true)
+ |-- FN: string (nullable = true)
+ |-- Active: string (nullable = true)
+ |-- club_member_status: string (nullable = true)
+ |-- fashion_news_frequency: string (nullable = true)
+ |-- age: double (nullable = true)
+ |-- postal_code: string (nullable = true)
+
+
+Thong ke customers sau cleaning:
++----------+----------------+-------+-------+---------------+
+|total_rows|unique_customers|min_age|max_age|avg_age        |
++----------+----------------+-------+-------+---------------+
+|1371980   |1371980         |16.0   |99.0   |36.386964565794|
++----------+----------------+-------+-------+---------------+
+
+
+Club Member Status:
++------------------+-------+
+|club_member_status|count  |
++------------------+-------+
+|ACTIVE            |1272491|
+|PRE-CREATE        |92960  |
+|UNKNOWN           |6062   |
+|LEFT CLUB         |467    |
++------------------+-------+
+
+
+Fashion News Frequency:
++----------------------+------+
+|fashion_news_frequency|count |
++----------------------+------+
+|NONE                  |877713|
+|REGULARLY             |477416|
+|UNKNOWN               |16009 |
+|MONTHLY               |842   |
++----------------------+------+
+
+
+
+================================================================================
+3. CLEAN ARTICLES
+================================================================================
+
+Schema articles sau cleaning:
+root
+ |-- article_id: string (nullable = true)
+ |-- product_code: string (nullable = true)
+ |-- prod_name: string (nullable = true)
+ |-- product_type_no: string (nullable = true)
+ |-- product_type_name: string (nullable = true)
+ |-- product_group_name: string (nullable = true)
+ |-- graphical_appearance_no: string (nullable = true)
+ |-- graphical_appearance_name: string (nullable = true)
+ |-- colour_group_code: string (nullable = true)
+ |-- colour_group_name: string (nullable = true)
+ |-- perceived_colour_value_id: string (nullable = true)
+ |-- perceived_colour_value_name: string (nullable = true)
+ |-- perceived_colour_master_id: string (nullable = true)
+ |-- perceived_colour_master_name: string (nullable = true)
+ |-- department_no: string (nullable = true)
+ |-- department_name: string (nullable = true)
+ |-- index_code: string (nullable = true)
+ |-- index_name: string (nullable = true)
+ |-- index_group_no: string (nullable = true)
+ |-- index_group_name: string (nullable = true)
+ |-- section_no: string (nullable = true)
+ |-- section_name: string (nullable = true)
+ |-- garment_group_no: string (nullable = true)
+ |-- garment_group_name: string (nullable = true)
+ |-- detail_desc: string (nullable = true)
+
+
+Thong ke articles sau cleaning:
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+|total_rows|unique_articles|product_types|product_groups|sections|garment_groups|colour_groups|
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+|105542    |105542         |131          |19            |56      |21            |50           |
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+
+
+
+================================================================================
+4. VALIDATE CUSTOMER REFERENCES
+================================================================================
+So customer co transaction nhung khong co trong customers.csv: 0
+
+
+================================================================================
+5. VALIDATE ARTICLE REFERENCES
+================================================================================
+So article co transaction nhung khong co trong articles.csv: 0
+
+
+================================================================================
+6. SAVE CLEAN DATA AS PARQUET
+================================================================================
+Dang luu transactions...
+Transactions saved.
+Dang luu customers...
+Customers saved.
+Dang luu articles...
+Articles saved.
+
+
+================================================================================
+DATA CLEANING HOAN TAT
+================================================================================
+Transactions: D:\BigData\RFM_Spark\output\clean\transactions
+Customers: D:\BigData\RFM_Spark\output\clean\customers
+Articles: D:\BigData\RFM_Spark\output\clean\articles
+SUCCESS: The process with PID 13708 (child process of PID 22440) has been terminated.
+SUCCESS: The process with PID 22440 (child process of PID 12652) has been terminated.
+SUCCESS: The process with PID 12652 (child process of PID 19880) has been terminated.

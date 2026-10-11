@@ -1,0 +1,5 @@
+﻿stage,metric,value,note
+RFM/eRFM,Customer profiles,1362281,Stage 5/6/12 locked feature evidence
+M2,Segments,5,Stage 15/16 locked enhanced model
+Spark SQL,Transaction rows,31788324,Stage 27 analytical layer
+FP-Growth,Association rules,104,Stage 28 V2 selected configuration

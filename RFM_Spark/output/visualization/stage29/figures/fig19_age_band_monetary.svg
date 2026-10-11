@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="679" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="150" y1="553.75" x2="1330" y2="553.75" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="542.75" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">97311.9</text>
+<line x1="150" y1="417.5" x2="1330" y2="417.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="406.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">194624</text>
+<line x1="150" y1="281.25" x2="1330" y2="281.25" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="270.25" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">291936</text>
+<line x1="150" y1="145" x2="1330" y2="145" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="134" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">389248</text>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="145" x2="150" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="248.333" y1="690" x2="248.333" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="248.333" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">AGE_25_34</text>
+<line x1="445" y1="690" x2="445" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="445" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">AGE_35_44</text>
+<line x1="641.667" y1="690" x2="641.667" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="641.667" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">AGE_45_54</text>
+<line x1="838.333" y1="690" x2="838.333" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="838.333" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">AGE_55_PLUS</text>
+<line x1="1035" y1="690" x2="1035" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1035" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">UNDER_25</text>
+<line x1="1231.67" y1="690" x2="1231.67" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1231.67" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">UNKNOWN</text>
+<text x="66" y="417.5" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 417.5)">Monetary sum</text>
+<rect x="184.417" y="235.833" width="127.833" height="454.167" fill="#275DAD"/>
+<text x="248.333" y="207.833" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">324373</text>
+<rect x="381.083" y="532.181" width="127.833" height="157.819" fill="#D97706"/>
+<text x="445" y="504.181" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">112717</text>
+<rect x="577.75" y="446.973" width="127.833" height="243.027" fill="#168A6A"/>
+<text x="641.667" y="418.973" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">173573</text>
+<rect x="774.417" y="548.089" width="127.833" height="141.911" fill="#8B5CF6"/>
+<text x="838.333" y="520.089" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">101355</text>
+<rect x="971.083" y="453.624" width="127.833" height="236.376" fill="#C2415A"/>
+<text x="1035" y="425.624" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">168823</text>
+<rect x="1167.75" y="684.673" width="127.833" height="5.32681" fill="#596273"/>
+<text x="1231.67" y="656.673" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">3804</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Monetary by age band</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Stage 27 SQL output; total monetary sum</text>
+</svg>

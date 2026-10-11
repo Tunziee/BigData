@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "authority": "PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1",
+  "spark_application_id": "local-1791272756303",
+  "cohort_count": 1000000,
+  "caveat": "Controlled local runtime; machine/JVM/Spark/cache/cohort dependent."
+}

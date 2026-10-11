@@ -1,0 +1,58 @@
+{
+  "stage": 18,
+  "authority": "RULE_BASED_RFM_BASELINE_V1",
+  "method_authority": "RULE_BASED_RFM_QUINTILE_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "inputs_used_for_labels": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "semantic_locks": {
+    "Recency": "days since last purchase date; lower is better",
+    "Frequency": "number of distinct purchase dates; higher is better",
+    "Monetary": "SUM(price); higher is better"
+  },
+  "scoring_rules": {
+    "Recency": "R<=P20:5, R<=P40:4, R<=P60:3, R<=P80:2, else:1",
+    "Frequency": "F<=P20:1, F<=P40:2, F<=P60:3, F<=P80:4, else:5",
+    "Monetary": "M<=P20:1, M<=P40:2, M<=P60:3, M<=P80:4, else:5"
+  },
+  "total_score_formula": "r_score + f_score + m_score",
+  "total_score_range": [
+    3,
+    15
+  ],
+  "bands": {
+    "0": {
+      "name_vi": "RFM rất thấp",
+      "name_en": "Very Low RFM",
+      "score_range": "3-5"
+    },
+    "1": {
+      "name_vi": "RFM thấp",
+      "name_en": "Low RFM",
+      "score_range": "6-7"
+    },
+    "2": {
+      "name_vi": "RFM trung bình",
+      "name_en": "Medium RFM",
+      "score_range": "8-10"
+    },
+    "3": {
+      "name_vi": "RFM cao",
+      "name_en": "High RFM",
+      "score_range": "11-12"
+    },
+    "4": {
+      "name_vi": "RFM rất cao",
+      "name_en": "Very High RFM",
+      "score_range": "13-15"
+    }
+  },
+  "weighted": false,
+  "ml_training": false,
+  "optimization": false,
+  "depends_on_kmeans_labels": false,
+  "methodology_note": "Project-owned deterministic baseline V1; not the only valid RFM rule system, not ground truth, and defined before Stage 19 comparison."
+}

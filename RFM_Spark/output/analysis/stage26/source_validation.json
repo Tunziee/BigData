@@ -1,0 +1,13 @@
+{
+  "rows": 31788324,
+  "distinct_customers": 1362281,
+  "min_date": "2018-09-20",
+  "max_date": "2020-09-22",
+  "sum_price": 884645.9740506219,
+  "null_customer_id": 0,
+  "null_t_dat": 0,
+  "null_price": 0,
+  "expected_rows": 31788324,
+  "expected_distinct_customers": 1362281,
+  "pass": true
+}

@@ -1,0 +1,219 @@
+{
+  "main": {
+    "full_data": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "total": 1362281,
+      "cluster_count": 4,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "pass": true
+    },
+    "cohort_1m": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 535490,
+          "ratio_pct": 53.549
+        },
+        {
+          "cluster_id": 1,
+          "count": 145123,
+          "ratio_pct": 14.5123
+        },
+        {
+          "cluster_id": 2,
+          "count": 301103,
+          "ratio_pct": 30.110300000000002
+        },
+        {
+          "cluster_id": 3,
+          "count": 18284,
+          "ratio_pct": 1.8284000000000002
+        }
+      ],
+      "total": 1000000,
+      "cluster_count": 4,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "pass": true
+    },
+    "ratio_difference": [
+      {
+        "cluster_id": 0,
+        "full_ratio_pct": 53.582484083680235,
+        "cohort_ratio_pct": 53.549,
+        "difference_pp": -0.0334840836802357,
+        "absolute_difference_pp": 0.0334840836802357
+      },
+      {
+        "cluster_id": 1,
+        "full_ratio_pct": 14.537015490930285,
+        "cohort_ratio_pct": 14.5123,
+        "difference_pp": -0.024715490930285355,
+        "absolute_difference_pp": 0.024715490930285355
+      },
+      {
+        "cluster_id": 2,
+        "full_ratio_pct": 30.059363670197264,
+        "cohort_ratio_pct": 30.110300000000002,
+        "difference_pp": 0.0509363298027381,
+        "absolute_difference_pp": 0.0509363298027381
+      },
+      {
+        "cluster_id": 3,
+        "full_ratio_pct": 1.8211367551922109,
+        "cohort_ratio_pct": 1.8284000000000002,
+        "difference_pp": 0.007263244807789393,
+        "absolute_difference_pp": 0.007263244807789393
+      }
+    ],
+    "descriptive_only": true
+  },
+  "enhanced": {
+    "full_data": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657
+        }
+      ],
+      "total": 1362281,
+      "cluster_count": 5,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pass": true
+    },
+    "cohort_1m": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 154437,
+          "ratio_pct": 15.4437
+        },
+        {
+          "cluster_id": 1,
+          "count": 126550,
+          "ratio_pct": 12.655
+        },
+        {
+          "cluster_id": 2,
+          "count": 197817,
+          "ratio_pct": 19.7817
+        },
+        {
+          "cluster_id": 3,
+          "count": 252287,
+          "ratio_pct": 25.2287
+        },
+        {
+          "cluster_id": 4,
+          "count": 268909,
+          "ratio_pct": 26.890900000000002
+        }
+      ],
+      "total": 1000000,
+      "cluster_count": 5,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pass": true
+    },
+    "ratio_difference": [
+      {
+        "cluster_id": 0,
+        "full_ratio_pct": 15.433526563168684,
+        "cohort_ratio_pct": 15.4437,
+        "difference_pp": 0.010173436831315996,
+        "absolute_difference_pp": 0.010173436831315996
+      },
+      {
+        "cluster_id": 1,
+        "full_ratio_pct": 12.682699090716232,
+        "cohort_ratio_pct": 12.655,
+        "difference_pp": -0.027699090716232888,
+        "absolute_difference_pp": 0.027699090716232888
+      },
+      {
+        "cluster_id": 2,
+        "full_ratio_pct": 19.751137981077324,
+        "cohort_ratio_pct": 19.7817,
+        "difference_pp": 0.030562018922676515,
+        "absolute_difference_pp": 0.030562018922676515
+      },
+      {
+        "cluster_id": 3,
+        "full_ratio_pct": 25.225265565621193,
+        "cohort_ratio_pct": 25.2287,
+        "difference_pp": 0.003434434378807083,
+        "absolute_difference_pp": 0.003434434378807083
+      },
+      {
+        "cluster_id": 4,
+        "full_ratio_pct": 26.90737079941657,
+        "cohort_ratio_pct": 26.890900000000002,
+        "difference_pp": -0.016470799416566706,
+        "absolute_difference_pp": 0.016470799416566706
+      }
+    ],
+    "descriptive_only": true
+  }
+}

@@ -1,0 +1,185 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED
+26/10/06 17:44:23 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 17:44:25 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 17:44:25 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 17:44:25 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 17:44:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 17:44:25 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 17:44:25 INFO ResourceUtils: ==============================================================
+26/10/06 17:44:25 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 17:44:25 INFO ResourceUtils: ==============================================================
+26/10/06 17:44:25 INFO SparkContext: Submitted application: Stage25-Controlled-Cache-vs-No-Cache-Benchmark
+26/10/06 17:44:25 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 17:44:25 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 17:44:25 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 17:44:25 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 17:44:25 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 17:44:25 INFO Utils: Successfully started service 'sparkDriver' on port 62296.
+26/10/06 17:44:25 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 17:44:25 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 17:44:25 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 17:44:25 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 17:44:25 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 17:44:25 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-e00a1e2b-371b-4c96-b072-762e33ff25af
+26/10/06 17:44:25 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 17:44:26 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 17:44:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 17:44:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 17:44:26 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 17:44:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 17:44:26 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 17:44:26 INFO Executor: Running Spark version 4.2.0
+26/10/06 17:44:26 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 17:44:26 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 17:44:26 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 17:44:26 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@b0d6bd9 for default.
+26/10/06 17:44:26 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 62297.
+26/10/06 17:44:26 INFO NettyBlockTransferService: Server created on Tay-Nguyen:62297
+26/10/06 17:44:26 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 17:44:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 62297, None)
+26/10/06 17:44:26 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:62297 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 62297, None)
+26/10/06 17:44:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 62297, None)
+26/10/06 17:44:26 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 62297, None)
+26/10/06 17:44:26 ERROR SparkContext: Error initializing SparkContext.
+java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)
+	at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)
+	at org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)
+	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)
+	at org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)
+	at org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)
+	at org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)
+	at org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:663)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:238)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+	at org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)
+	at org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)
+	at org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)
+	at org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)
+	at org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.Option.fold(Option.scala:263)
+	at org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)
+	at org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)
+	at org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)
+	at org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)
+	at org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)
+	at org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)
+	at org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)
+	at org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.
+	at org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)
+	... 27 more
+26/10/06 17:44:26 INFO SparkContext: SparkContext is stopping with exitCode 0 from JavaSparkContext at <unknown>:0.
+26/10/06 17:44:26 INFO SparkUI: Stopped Spark web UI at http://Tay-Nguyen:4040
+26/10/06 17:44:26 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/10/06 17:44:26 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/10/06 17:44:26 INFO MemoryStore: MemoryStore cleared
+26/10/06 17:44:26 INFO BlockManager: BlockManager stopped
+26/10/06 17:44:26 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/10/06 17:44:26 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/10/06 17:44:26 INFO SparkContext: Successfully stopped SparkContext (Uptime: 1298 ms)
+26/10/06 17:44:26 WARN SparkContext: Another SparkContext is being constructed (or threw an exception in its constructor). This may indicate an error, since only one SparkContext should be running in this JVM (see SPARK-2243). The other SparkContext was created at:
+org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+py4j.Gateway.invoke(Gateway.java:238)
+py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+java.base/java.lang.Thread.run(Unknown Source)
+26/10/06 17:44:26 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 17:44:26 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 17:44:26 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 17:44:26 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 17:44:26 INFO ResourceUtils: ==============================================================
+26/10/06 17:44:26 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 17:44:26 INFO ResourceUtils: ==============================================================
+26/10/06 17:44:26 INFO SparkContext: Submitted application: Stage25-Controlled-Cache-vs-No-Cache-Benchmark
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 17:44:26 INFO Utils: Successfully started service 'sparkDriver' on port 62298.
+26/10/06 17:44:26 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 17:44:26 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 17:44:26 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 17:44:26 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 17:44:26 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 17:44:26 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-33499ee1-2e1f-43e1-899b-5a70c2d99eaa
+26/10/06 17:44:26 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 17:44:26 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 17:44:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 17:44:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 17:44:26 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 17:44:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 17:44:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 17:44:26 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 17:44:26 INFO Executor: Running Spark version 4.2.0
+26/10/06 17:44:26 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 17:44:26 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 17:44:26 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 17:44:26 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@250c15b8 for default.
+26/10/06 17:44:26 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 62299.
+26/10/06 17:44:26 INFO NettyBlockTransferService: Server created on Tay-Nguyen:62299
+26/10/06 17:44:26 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 17:44:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 62299, None)
+26/10/06 17:44:26 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:62299 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 62299, None)
+26/10/06 17:44:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 62299, None)
+26/10/06 17:44:26 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 62299, None)
+STAGE24_GATE_PASS=True
+SOURCE_VALIDATION_PASS=True
+CACHE_MATERIALIZATION_PASS=True
+QUERY_RESULT_EQUALITY_PASS=True
+SPARK_APPLICATION_ID=local-1791283466755
+PRIMARY_FINDING=CACHE_QUERY_DEPENDENT
+BENCHMARK_COMPLETE=True
+READY_FOR_STAGE_26=True

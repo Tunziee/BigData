@@ -1,0 +1,78 @@
+{
+  "stage": 10,
+  "reference": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage8\\kmeans_k_sweep.json",
+  "selected_k": 4,
+  "tolerance": 1e-08,
+  "silhouette": {
+    "final": 0.6859294450224572,
+    "reference": 0.6859294450224572,
+    "absolute_difference": 0.0,
+    "allowed_difference": 1e-08,
+    "pass": true
+  },
+  "wcss": {
+    "final": 1051831.216267805,
+    "reference": 1051831.216267805,
+    "absolute_difference": 0.0,
+    "allowed_difference": 0.010518312162678052,
+    "pass": true
+  },
+  "num_iter": {
+    "final": 35,
+    "reference": 35,
+    "pass": true
+  },
+  "cluster_sizes": {
+    "final": [
+      {
+        "cluster_id": 0,
+        "count": 729944,
+        "ratio_pct": 53.582484083680235
+      },
+      {
+        "cluster_id": 1,
+        "count": 198035,
+        "ratio_pct": 14.537015490930285
+      },
+      {
+        "cluster_id": 2,
+        "count": 409493,
+        "ratio_pct": 30.059363670197264
+      },
+      {
+        "cluster_id": 3,
+        "count": 24809,
+        "ratio_pct": 1.8211367551922109
+      }
+    ],
+    "reference": [
+      {
+        "cluster_id": 0,
+        "count": 729944,
+        "ratio_pct": 53.582484083680235
+      },
+      {
+        "cluster_id": 1,
+        "count": 198035,
+        "ratio_pct": 14.537015490930285
+      },
+      {
+        "cluster_id": 2,
+        "count": 409493,
+        "ratio_pct": 30.059363670197264
+      },
+      {
+        "cluster_id": 3,
+        "count": 24809,
+        "ratio_pct": 1.8211367551922109
+      }
+    ],
+    "pass": true
+  },
+  "centers_scaled": {
+    "pass": true,
+    "max_absolute_difference": 0.0,
+    "allowed_difference": 5.034734489405618e-08
+  },
+  "pass": true
+}

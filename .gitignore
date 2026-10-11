@@ -1,0 +1,23 @@
+﻿spark_tmp/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.idea/
+.vscode/
+spark-warehouse/
+.DS_Store
+
+# Large datasets
+RFM_Spark/data/customers.csv
+RFM_Spark/data/transactions_train.csv
+
+# Large Spark output
+RFM_Spark/output/comparison/stage17/comparison_customer_ids_1m/
+
+# Web dependencies
+node_modules/
+dist/
+build/

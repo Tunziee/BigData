@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="160" y1="680" x2="1320" y2="680" stroke="#D7DEE9" stroke-width="1"/>
+<text x="144" y="669" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="160" y1="415" x2="1320" y2="415" stroke="#D7DEE9" stroke-width="1"/>
+<text x="144" y="404" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.5</text>
+<line x1="160" y1="150" x2="1320" y2="150" stroke="#D7DEE9" stroke-width="1"/>
+<text x="144" y="139" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">1</text>
+<line x1="160" y1="680" x2="1320" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="160" y1="150" x2="160" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="272.258" y1="680" x2="272.258" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="272.258" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">0.00020</text>
+<line x1="1207.74" y1="680" x2="1207.74" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="1207.74" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">0.00077</text>
+<text x="740" y="735" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle">Support</text>
+<text x="76" y="415" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 76.0 415.0)">Confidence</text>
+<circle cx="433.686" cy="515.173" r="15.2821" fill="#275DAD"/>
+<circle cx="507.311" cy="265.822" r="18.6382" fill="#D97706"/>
+<circle cx="552.212" cy="385.371" r="18.3894" fill="#168A6A"/>
+<circle cx="365.516" cy="347.653" r="18.7823" fill="#8B5CF6"/>
+<circle cx="272.258" cy="452.485" r="18.7713" fill="#C2415A"/>
+<circle cx="502.584" cy="369.466" r="18.7686" fill="#596273"/>
+<circle cx="435.322" cy="432.649" r="17.6297" fill="#275DAD"/>
+<circle cx="377.877" cy="199.861" r="20.2248" fill="#D97706"/>
+<circle cx="392.239" cy="565.366" r="15.4869" fill="#168A6A"/>
+<circle cx="390.966" cy="322.016" r="20.2567" fill="#8B5CF6"/>
+<circle cx="721.821" cy="472.196" r="15.0476" fill="#C2415A"/>
+<circle cx="357.335" cy="213.033" r="20.8897" fill="#596273"/>
+<circle cx="390.966" cy="238.067" r="20.2567" fill="#275DAD"/>
+<circle cx="272.803" cy="572.929" r="15.8445" fill="#D97706"/>
+<circle cx="403.509" cy="330.492" r="20.3147" fill="#168A6A"/>
+<circle cx="333.157" cy="229.656" r="20.7176" fill="#8B5CF6"/>
+<circle cx="295.527" cy="462.234" r="19.3889" fill="#C2415A"/>
+<circle cx="306.98" cy="331.085" r="19.8421" fill="#596273"/>
+<circle cx="476.407" cy="559.771" r="15.4787" fill="#275DAD"/>
+<circle cx="435.322" cy="491.419" r="17.6297" fill="#D97706"/>
+<circle cx="333.157" cy="294.142" r="20.7176" fill="#168A6A"/>
+<circle cx="283.347" cy="489.654" r="17.3133" fill="#8B5CF6"/>
+<circle cx="521.127" cy="461.158" r="18.3394" fill="#C2415A"/>
+<circle cx="507.311" cy="466.348" r="18.6382" fill="#596273"/>
+<circle cx="395.692" cy="459.057" r="17.3662" fill="#275DAD"/>
+<circle cx="392.239" cy="553.154" r="15.4869" fill="#D97706"/>
+<circle cx="510.219" cy="233.003" r="20.2207" fill="#168A6A"/>
+<circle cx="776.903" cy="322.167" r="18.8595" fill="#8B5CF6"/>
+<circle cx="477.316" cy="515.935" r="16.1511" fill="#C2415A"/>
+<circle cx="272.803" cy="560.247" r="15.8445" fill="#596273"/>
+<circle cx="306.98" cy="379.913" r="19.8421" fill="#275DAD"/>
+<circle cx="365.152" cy="245.218" r="20.5594" fill="#D97706"/>
+<circle cx="275.167" cy="572.373" r="16.0341" fill="#168A6A"/>
+<circle cx="845.983" cy="537.617" r="14.1836" fill="#8B5CF6"/>
+<circle cx="521.127" cy="323.366" r="18.3394" fill="#C2415A"/>
+<circle cx="1207.74" cy="299.764" r="17.8011" fill="#596273"/>
+<circle cx="589.116" cy="263.746" r="19.2705" fill="#275DAD"/>
+<circle cx="686.009" cy="532.197" r="15.6571" fill="#D97706"/>
+<circle cx="482.769" cy="257.299" r="19.9799" fill="#168A6A"/>
+<circle cx="418.052" cy="201.349" r="20.7197" fill="#8B5CF6"/>
+<circle cx="476.407" cy="537.209" r="15.4787" fill="#C2415A"/>
+<circle cx="342.792" cy="429.209" r="18.9765" fill="#596273"/>
+<circle cx="655.287" cy="425.984" r="16.143" fill="#275DAD"/>
+<circle cx="464.954" cy="319.7" r="20.0164" fill="#D97706"/>
+<circle cx="290.8" cy="382.623" r="19.7588" fill="#168A6A"/>
+<circle cx="322.432" cy="435.278" r="18.2511" fill="#8B5CF6"/>
+<circle cx="331.703" cy="357.98" r="19.9896" fill="#C2415A"/>
+<circle cx="776.903" cy="272.81" r="18.8595" fill="#596273"/>
+<circle cx="418.052" cy="238.389" r="20.7197" fill="#275DAD"/>
+<circle cx="299.89" cy="383.116" r="18.7497" fill="#D97706"/>
+<circle cx="537.124" cy="457.074" r="17.6287" fill="#168A6A"/>
+<circle cx="395.692" cy="509.742" r="17.3662" fill="#8B5CF6"/>
+<circle cx="383.149" cy="568.253" r="13.3077" fill="#C2415A"/>
+<circle cx="357.335" cy="249.573" r="20.8897" fill="#596273"/>
+<circle cx="482.769" cy="287.999" r="19.9799" fill="#275DAD"/>
+<circle cx="392.784" cy="326.714" r="19.8272" fill="#D97706"/>
+<circle cx="272.258" cy="436.059" r="18.7713" fill="#168A6A"/>
+<circle cx="403.509" cy="201.109" r="20.3147" fill="#8B5CF6"/>
+<circle cx="589.116" cy="346.338" r="19.2705" fill="#C2415A"/>
+<circle cx="655.287" cy="554.268" r="16.143" fill="#596273"/>
+<circle cx="299.89" cy="479.764" r="18.7497" fill="#275DAD"/>
+<circle cx="421.325" cy="329.569" r="19.6997" fill="#D97706"/>
+<circle cx="392.784" cy="317.33" r="19.8272" fill="#168A6A"/>
+<circle cx="758.906" cy="381.648" r="18.2222" fill="#8B5CF6"/>
+<circle cx="552.212" cy="393.898" r="18.3894" fill="#C2415A"/>
+<circle cx="1207.74" cy="338.503" r="17.8011" fill="#596273"/>
+<circle cx="290.8" cy="357.102" r="19.7588" fill="#275DAD"/>
+<circle cx="331.703" cy="306.461" r="19.9896" fill="#D97706"/>
+<circle cx="347.337" cy="549.33" r="16.0455" fill="#168A6A"/>
+<circle cx="356.79" cy="313.114" r="20.4552" fill="#8B5CF6"/>
+<circle cx="284.983" cy="351.806" r="20.1504" fill="#C2415A"/>
+<circle cx="395.329" cy="523.583" r="17.5191" fill="#596273"/>
+<circle cx="502.584" cy="378.351" r="18.7686" fill="#275DAD"/>
+<circle cx="377.877" cy="365.101" r="20.2248" fill="#D97706"/>
+<circle cx="283.347" cy="534.835" r="17.3133" fill="#168A6A"/>
+<circle cx="537.124" cy="428.009" r="17.6287" fill="#8B5CF6"/>
+<circle cx="365.516" cy="465.165" r="18.7823" fill="#C2415A"/>
+<circle cx="322.25" cy="556.794" r="14.6966" fill="#596273"/>
+<circle cx="322.432" cy="478.929" r="18.2511" fill="#275DAD"/>
+<circle cx="758.906" cy="332.644" r="18.2222" fill="#D97706"/>
+<circle cx="368.242" cy="479.597" r="17.2439" fill="#168A6A"/>
+<circle cx="425.688" cy="197.527" r="20.5512" fill="#8B5CF6"/>
+<circle cx="421.325" cy="315.411" r="19.6997" fill="#C2415A"/>
+<circle cx="444.23" cy="566.711" r="14.7752" fill="#596273"/>
+<circle cx="380.604" cy="198.865" r="20.7703" fill="#275DAD"/>
+<circle cx="425.688" cy="270.899" r="20.5512" fill="#D97706"/>
+<circle cx="342.792" cy="382.944" r="18.9765" fill="#168A6A"/>
+<circle cx="284.983" cy="329.972" r="20.1504" fill="#8B5CF6"/>
+<circle cx="686.009" cy="503.448" r="15.6571" fill="#C2415A"/>
+<circle cx="464.954" cy="226.966" r="20.0164" fill="#596273"/>
+<circle cx="356.79" cy="239.736" r="20.4552" fill="#275DAD"/>
+<circle cx="554.394" cy="346.981" r="18.0755" fill="#D97706"/>
+<circle cx="365.152" cy="280.799" r="20.5594" fill="#168A6A"/>
+<circle cx="275.167" cy="548.034" r="16.0341" fill="#8B5CF6"/>
+<circle cx="395.329" cy="420.575" r="17.5191" fill="#C2415A"/>
+<circle cx="475.134" cy="351.656" r="19.2131" fill="#596273"/>
+<circle cx="554.394" cy="462.926" r="18.0755" fill="#275DAD"/>
+<circle cx="510.219" cy="240.777" r="20.2207" fill="#D97706"/>
+<circle cx="295.527" cy="308.641" r="19.3889" fill="#168A6A"/>
+<circle cx="477.316" cy="533.075" r="16.1511" fill="#8B5CF6"/>
+<circle cx="475.134" cy="340.984" r="19.2131" fill="#C2415A"/>
+<circle cx="347.337" cy="547.249" r="16.0455" fill="#596273"/>
+<circle cx="368.242" cy="514.05" r="17.2439" fill="#275DAD"/>
+<circle cx="380.604" cy="264.608" r="20.7703" fill="#D97706"/>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">FP-Growth support vs confidence</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">All 104 Stage 28 V2 selected rules; marker size is proportional to lift</text>
+</svg>

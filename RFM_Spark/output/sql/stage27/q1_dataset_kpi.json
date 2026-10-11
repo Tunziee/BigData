@@ -1,0 +1,19 @@
+{
+  "transaction_item_rows": 31788324,
+  "distinct_customers": 1362281,
+  "distinct_articles": 104547,
+  "distinct_purchase_dates": 734,
+  "min_purchase_date": "2018-09-20",
+  "max_purchase_date": "2020-09-22",
+  "monetary_sum": 884645.9740655132,
+  "average_price_per_item_row": 0.027829273857455122,
+  "minimum_price": 1.694915254237288e-05,
+  "maximum_price": 0.5915254237288136,
+  "transaction_item_rows_pass": true,
+  "distinct_customers_pass": true,
+  "date_range_pass": true,
+  "monetary_difference": 1.4712451957166195e-05,
+  "monetary_tolerance": 0.008846459740508008,
+  "monetary_sum_pass": true,
+  "validation_pass": true
+}

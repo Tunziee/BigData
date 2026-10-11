@@ -1,0 +1,8 @@
+{
+  "steady_state_no_cache_cycle_sec": 7.823515000000043,
+  "steady_state_cache_cycle_sec": 7.951886300000297,
+  "cache_materialization_sec": 9.530394299999898,
+  "combined_cycle_saved_time_sec": -0.12837130000025354,
+  "combined_break_even_cycles": null,
+  "interpretation": "NO_BREAK_EVEN_OBSERVED"
+}

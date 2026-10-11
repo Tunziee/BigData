@@ -1,0 +1,60 @@
+26/10/06 00:05:59 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 00:06:02 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 00:06:02 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 00:06:02 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 00:06:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 00:06:02 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 00:06:02 INFO ResourceUtils: ==============================================================
+26/10/06 00:06:02 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 00:06:02 INFO ResourceUtils: ==============================================================
+26/10/06 00:06:02 INFO SparkContext: Submitted application: Stage6-RFM-Distribution-Analysis
+26/10/06 00:06:02 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 00:06:02 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 00:06:02 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 00:06:02 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 00:06:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 00:06:02 INFO Utils: Successfully started service 'sparkDriver' on port 61647.
+26/10/06 00:06:02 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 00:06:02 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 00:06:02 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 00:06:02 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 00:06:02 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 00:06:02 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-00d6207c-8330-4019-bfca-5313ee91cb2d
+26/10/06 00:06:02 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 00:06:03 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 00:06:03 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 00:06:03 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 00:06:03 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 00:06:03 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 00:06:03 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 00:06:03 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 00:06:03 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 00:06:03 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 00:06:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 00:06:03 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 00:06:03 INFO Executor: Running Spark version 4.2.0
+26/10/06 00:06:03 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 00:06:03 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 00:06:03 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 00:06:03 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3f42702e for default.
+26/10/06 00:06:03 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 61648.
+26/10/06 00:06:03 INFO NettyBlockTransferService: Server created on Tay-Nguyen:61648
+26/10/06 00:06:03 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 00:06:03 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 61648, None)
+26/10/06 00:06:03 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:61648 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 61648, None)
+26/10/06 00:06:03 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 61648, None)
+26/10/06 00:06:03 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 61648, None)
+Windows Hadoop NativeIO fallback: enabled
+Loading rfm: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\features\rfm
+rfm.Recency: count=1362281, skewness=0.8015830865771745, iqr_outlier_ratio=0.0%
+rfm.Frequency: count=1362281, skewness=4.495758096759159, iqr_outlier_ratio=8.629423738567887%
+rfm.Monetary: count=1362281, skewness=6.2768705460869745, iqr_outlier_ratio=10.03999908976195%
+Loading erfm: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\features\erfm
+erfm.Recency: count=1362281, skewness=0.8015830865771745, iqr_outlier_ratio=0.0%
+erfm.Frequency: count=1362281, skewness=4.495758096759159, iqr_outlier_ratio=8.629423738567887%
+erfm.Monetary: count=1362281, skewness=6.2768705460869745, iqr_outlier_ratio=10.03999908976195%
+erfm.AvgBasketSize: count=1362281, skewness=4.836153897327308, iqr_outlier_ratio=7.27177432556132%
+erfm.ProductVariety: count=1362281, skewness=4.576968021286257, iqr_outlier_ratio=8.974800353231089%
+Report written: D:\Doan_bigdata\BigData\BigData\RFM_Spark\reports\rfm_distribution_analysis.txt
+Stage 6 completed successfully.

@@ -1,0 +1,94 @@
+{
+  "expected_population": {
+    "row_count": 31788324,
+    "min_t_dat": "2018-09-20",
+    "max_t_dat": "2020-09-22"
+  },
+  "price_sum_tolerance_definition": "absolute difference <= 1e-08 * max(1, abs(CSV sum))",
+  "csv": {
+    "row_count": 31788324,
+    "distinct_customer_id": 1362281,
+    "min_t_dat": "2018-09-20",
+    "max_t_dat": "2020-09-22",
+    "sum_price": 884645.9740510515,
+    "min_price": 1.694915254237288e-05,
+    "max_price": 0.5915254237288136,
+    "null_customer_id": 0,
+    "null_article_id": 0,
+    "null_t_dat": 0,
+    "null_price": 0
+  },
+  "parquet": {
+    "row_count": 31788324,
+    "distinct_customer_id": 1362281,
+    "min_t_dat": "2018-09-20",
+    "max_t_dat": "2020-09-22",
+    "sum_price": 884645.9740508008,
+    "min_price": 1.694915254237288e-05,
+    "max_price": 0.5915254237288136,
+    "null_customer_id": 0,
+    "null_article_id": 0,
+    "null_t_dat": 0,
+    "null_price": 0
+  },
+  "field_comparison": {
+    "row_count": {
+      "csv": 31788324,
+      "parquet": 31788324,
+      "equal": true
+    },
+    "distinct_customer_id": {
+      "csv": 1362281,
+      "parquet": 1362281,
+      "equal": true
+    },
+    "min_t_dat": {
+      "csv": "2018-09-20",
+      "parquet": "2018-09-20",
+      "equal": true
+    },
+    "max_t_dat": {
+      "csv": "2020-09-22",
+      "parquet": "2020-09-22",
+      "equal": true
+    },
+    "min_price": {
+      "csv": 1.694915254237288e-05,
+      "parquet": 1.694915254237288e-05,
+      "equal": true
+    },
+    "max_price": {
+      "csv": 0.5915254237288136,
+      "parquet": 0.5915254237288136,
+      "equal": true
+    },
+    "null_customer_id": {
+      "csv": 0,
+      "parquet": 0,
+      "equal": true
+    },
+    "null_article_id": {
+      "csv": 0,
+      "parquet": 0,
+      "equal": true
+    },
+    "null_t_dat": {
+      "csv": 0,
+      "parquet": 0,
+      "equal": true
+    },
+    "null_price": {
+      "csv": 0,
+      "parquet": 0,
+      "equal": true
+    },
+    "sum_price": {
+      "csv": 884645.9740510515,
+      "parquet": 884645.9740508008,
+      "absolute_difference": 2.507586032152176e-07,
+      "tolerance": 0.008846459740510515,
+      "equal_within_tolerance": true
+    }
+  },
+  "pass": true
+}

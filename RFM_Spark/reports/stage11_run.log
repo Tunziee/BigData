@@ -1,0 +1,58 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+26/10/06 01:27:18 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+AUTHORITY_AUDIT_PASS=True
+AUTHORITY_BLOCKERS=[]
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 01:27:20 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 01:27:20 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 01:27:20 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 01:27:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 01:27:20 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 01:27:20 INFO ResourceUtils: ==============================================================
+26/10/06 01:27:20 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 01:27:20 INFO ResourceUtils: ==============================================================
+26/10/06 01:27:20 INFO SparkContext: Submitted application: Stage11-Final-Cluster-Profiling
+26/10/06 01:27:20 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 01:27:20 INFO Utils: Successfully started service 'sparkDriver' on port 63138.
+26/10/06 01:27:20 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 01:27:20 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 01:27:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 01:27:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 01:27:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 01:27:20 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-92f5ebdc-4ba9-4b2e-8538-cb58f6ba9d64
+26/10/06 01:27:20 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 01:27:20 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 01:27:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 01:27:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 01:27:20 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 01:27:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 01:27:20 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 01:27:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 01:27:21 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 01:27:21 INFO Executor: Running Spark version 4.2.0
+26/10/06 01:27:21 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 01:27:21 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 01:27:21 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 01:27:21 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@377922c4 for default.
+26/10/06 01:27:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63139.
+26/10/06 01:27:21 INFO NettyBlockTransferService: Server created on Tay-Nguyen:63139
+26/10/06 01:27:21 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 01:27:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 63139, None)
+26/10/06 01:27:21 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:63139 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 63139, None)
+26/10/06 01:27:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 63139, None)
+26/10/06 01:27:21 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 63139, None)
+Windows Hadoop NativeIO fallback: enabled
+INPUT_VALIDATION={'row_count': 1362281, 'distinct_customer_id': 1362281, 'duplicate_customer_id': 0, 'prediction_null': 0, 'invalid_prediction': 0, 'distinct_predictions': 4, 'prediction_values': [0, 1, 2, 3], 'pass': True}
+CENTROID_CHECK cluster=0 actual=[125.08183504488015, 4.392325986651031, 0.36555754077351416] inverse=[125.08151254402787, 4.392383577484173, 0.3655620960842205] diff=[0.0003225008522775852, 5.759083314238467e-05, 4.555310706366722e-06] tolerance=0.001 pass=True
+CENTROID_CHECK cluster=1 actual=[52.93337541343702, 19.791708536369832, 1.936426468014353] inverse=[52.93274251377872, 19.7918850679208, 1.936449339297162] diff=[0.0006328996582993796, 0.00017653155096652995, 2.287128280897832e-05] tolerance=0.001 pass=True
+CENTROID_CHECK cluster=2 actual=[535.4611238775755, 1.8030637886361915, 0.16760376169174154] inverse=[535.4611238775719, 1.8030637886399346, 0.16760376169176283] diff=[3.524291969370097e-12, 3.743005905221253e-12, 2.1288526497187377e-14] tolerance=0.001 pass=True
+CENTROID_CHECK cluster=3 actual=[26.101455117094602, 49.02390261598613, 6.678893052070354] inverse=[26.101455117094474, 49.02390261598602, 6.6788930520703484] diff=[1.2789769243681803e-13, 1.1368683772161603e-13, 5.329070518200751e-15] tolerance=0.001 pass=True
+CENTROID_MEAN_CONSISTENCY_PASS=True
+READY_FOR_IMPROVED_MODEL_STAGE=True

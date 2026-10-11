@@ -1,0 +1,11 @@
+﻿final_table_no,table_topic,source_stage,evidence
+Bảng 3.1,Dataset overview,Stage 27,KPI dataset
+Bảng 3.2,RFM definitions,Stage 7/12,RFM/eRFM semantic contract
+Bảng 3.3,B0/M1/M2 configs,Stage 21/22,Model configuration
+Bảng 4.1,Authority groups,Stage 7-29,Pipeline audit
+Bảng 4.2,Stage 23 runtime,Stage 23,Track B medians
+Bảng 4.3,Stage 24 CSV/Parquet and Stage 25 cache,Stage 24/25,System benchmark
+Bảng 5.1,Stage 22 quality,Stage 22,Silhouette and SSE/customer
+Bảng 5.2,M2 profiles,Stage 16,Cluster distribution
+Bảng 5.3,Stage 28 threshold and selected rules,Stage 28 V2,FP-Growth
+Bảng 5.4,Limitations,Stage 30,Interpretation boundaries

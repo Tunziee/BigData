@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "authority": "SPARK_EXECUTION_EVIDENCE_V1",
+  "q3_shuffle_confirmed": true,
+  "local4_definition": "local process with four execution threads/cores."
+}

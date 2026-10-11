@@ -1,0 +1,20 @@
+{
+  "stage": 27,
+  "authority": "SPARK_SQL_ANALYTICAL_LAYER_V1",
+  "spark_version": "4.2.0",
+  "python_version": "3.12.10",
+  "java_version": "21.0.8",
+  "os": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 8,
+  "ram_bytes": 16934494208,
+  "master": "local[4]",
+  "spark_application_id": "local-1791296339145",
+  "spark_ui_url": "http://Tay-Nguyen:4040",
+  "rest_base_url": "http://Tay-Nguyen:4040/api/v1/applications/local-1791296339145",
+  "spark_sql_shuffle_partitions": 64,
+  "spark_sql_adaptive_enabled": true,
+  "spark_sql_parquet_vectorized_reader": false,
+  "spark_sql_parquet_columnar_reader_batch_size": 512,
+  "analysis_date": "2020-09-23",
+  "event_log_enabled": "false"
+}

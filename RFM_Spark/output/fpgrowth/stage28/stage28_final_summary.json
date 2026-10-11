@@ -1,0 +1,16 @@
+{
+  "stage": 28,
+  "authority": "FP_GROWTH_ASSOCIATION_RULES_V1",
+  "stage27_authority": "SPARK_SQL_ANALYTICAL_LAYER_V1",
+  "models_modified": false,
+  "stage27_modified": false,
+  "current_run_clean_namespace": true,
+  "fp_growth_analysis_complete": false,
+  "ready_for_stage29": false,
+  "artifact_readback_pass": false,
+  "final_summary_self_readback_pass": false,
+  "warnings": [],
+  "blockers": [
+    "RuntimeError: FP-Growth produced no association rules"
+  ]
+}

@@ -1,0 +1,1854 @@
+{
+  "stage": 16,
+  "authority": "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+  "final_model_authority": "ENHANCED_KMEANS_FINAL",
+  "selected_k": 5,
+  "customer_count": 1362281,
+  "cluster_count": 5,
+  "segment_mapping": {
+    "0": {
+      "name_vi": "Khách hàng mua ít nhưng giỏ lớn",
+      "name_en": "Infrequent Large-Basket Customers",
+      "evidence_supported": true
+    },
+    "1": {
+      "name_vi": "Khách hàng hoạt động giá trị cao",
+      "name_en": "Active High-Value Customers",
+      "evidence_supported": true
+    },
+    "2": {
+      "name_vi": "Khách hàng lâu chưa quay lại",
+      "name_en": "Lapsed Customers",
+      "evidence_supported": true
+    },
+    "3": {
+      "name_vi": "Khách hàng ít tương tác",
+      "name_en": "Low-Engagement Customers",
+      "evidence_supported": true
+    },
+    "4": {
+      "name_vi": "Khách hàng hoạt động thường xuyên",
+      "name_en": "Active Regular Customers",
+      "evidence_supported": true
+    }
+  },
+  "cluster_distribution": [
+    {
+      "cluster_id": 0,
+      "count": 210248,
+      "ratio_pct": 15.433526563168684
+    },
+    {
+      "cluster_id": 1,
+      "count": 172774,
+      "ratio_pct": 12.682699090716232
+    },
+    {
+      "cluster_id": 2,
+      "count": 269066,
+      "ratio_pct": 19.751137981077324
+    },
+    {
+      "cluster_id": 3,
+      "count": 343639,
+      "ratio_pct": 25.225265565621193
+    },
+    {
+      "cluster_id": 4,
+      "count": 366554,
+      "ratio_pct": 26.90737079941657
+    }
+  ],
+  "input_validation": {
+    "row_count": 1362281,
+    "distinct_customer_id": 1362281,
+    "duplicate_customer_id": 0,
+    "prediction_null_count": 0,
+    "prediction_values": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cluster_count": 5,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 210248,
+        "ratio_pct": 15.433526563168684
+      },
+      {
+        "cluster_id": 1,
+        "count": 172774,
+        "ratio_pct": 12.682699090716232
+      },
+      {
+        "cluster_id": 2,
+        "count": 269066,
+        "ratio_pct": 19.751137981077324
+      },
+      {
+        "cluster_id": 3,
+        "count": 343639,
+        "ratio_pct": 25.225265565621193
+      },
+      {
+        "cluster_id": 4,
+        "count": 366554,
+        "ratio_pct": 26.90737079941657
+      }
+    ],
+    "expected_stage15_cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 210248
+      },
+      {
+        "cluster_id": 1,
+        "count": 172774
+      },
+      {
+        "cluster_id": 2,
+        "count": 269066
+      },
+      {
+        "cluster_id": 3,
+        "count": 343639
+      },
+      {
+        "cluster_id": 4,
+        "count": 366554
+      }
+    ],
+    "pass": true
+  },
+  "global_erfm_statistics": {
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary",
+      "AvgBasketSize",
+      "ProductVariety"
+    ],
+    "statistics": {
+      "Recency": {
+        "count": 1362281,
+        "mean": 236.148437069885,
+        "std": 221.11879131008746,
+        "min": 1.0,
+        "max": 734.0,
+        "quantile_relative_error": 0.001,
+        "p01": 2.0,
+        "p05": 8.0,
+        "p25": 49.0,
+        "p50": 152.0,
+        "p75": 400.0,
+        "p95": 674.0,
+        "p99": 725.0
+      },
+      "Frequency": {
+        "count": 1362281,
+        "mean": 6.6654229193536425,
+        "std": 9.707005074461001,
+        "min": 1.0,
+        "max": 427.0,
+        "quantile_relative_error": 0.001,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 8.0,
+        "p95": 25.0,
+        "p99": 45.0
+      },
+      "Monetary": {
+        "count": 1362281,
+        "mean": 0.6493858271904174,
+        "std": 1.1975819653583566,
+        "min": 0.0007627118644067797,
+        "max": 57.676406779661086,
+        "quantile_relative_error": 0.001,
+        "p01": 0.013542372881355931,
+        "p05": 0.0274406779661017,
+        "p25": 0.08806779661016949,
+        "p50": 0.24559322033898304,
+        "p75": 0.7001016949152542,
+        "p95": 2.558627118644068,
+        "p99": 5.5818135593220335
+      },
+      "AvgBasketSize": {
+        "count": 1362281,
+        "mean": 3.5048642151364247,
+        "std": 2.8403040575453624,
+        "min": 1.0,
+        "max": 181.0,
+        "quantile_relative_error": 0.001,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 2.0,
+        "p50": 2.8333333333333335,
+        "p75": 4.111111111111111,
+        "p95": 8.375,
+        "p99": 14.0
+      },
+      "ProductVariety": {
+        "count": 1362281,
+        "mean": 20.04464497412795,
+        "std": 31.980251265698243,
+        "min": 1.0,
+        "max": 1346.0,
+        "quantile_relative_error": 0.001,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 3.0,
+        "p50": 8.0,
+        "p75": 24.0,
+        "p95": 78.0,
+        "p99": 151.0
+      }
+    }
+  },
+  "cluster_profiles": {
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary",
+      "AvgBasketSize",
+      "ProductVariety"
+    ],
+    "cluster_count": 5,
+    "clusters": {
+      "0": {
+        "cluster_id": 0,
+        "count": 210248,
+        "ratio_pct": 15.433526563168684,
+        "raw_features": {
+          "Recency": {
+            "count": 210248,
+            "mean": 333.10277862334004,
+            "std": 203.36509642855123,
+            "min": 1.0,
+            "max": 734.0,
+            "quantile_relative_error": 0.001,
+            "p01": 8.0,
+            "p05": 36.0,
+            "p25": 152.0,
+            "p50": 328.0,
+            "p75": 487.0,
+            "p95": 683.0,
+            "p99": 725.0
+          },
+          "Frequency": {
+            "count": 210248,
+            "mean": 1.9970225638293824,
+            "std": 1.212076653753814,
+            "min": 1.0,
+            "max": 10.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.0,
+            "p50": 2.0,
+            "p75": 3.0,
+            "p95": 4.0,
+            "p99": 6.0
+          },
+          "Monetary": {
+            "count": 210248,
+            "mean": 0.35722646580728784,
+            "std": 0.29510809086555806,
+            "min": 0.00676271186440678,
+            "max": 7.813898305084755,
+            "quantile_relative_error": 0.001,
+            "p01": 0.05579661016949153,
+            "p05": 0.08686440677966101,
+            "p25": 0.16464406779661017,
+            "p50": 0.2676101694915254,
+            "p75": 0.44383050847457617,
+            "p95": 0.9487118644067796,
+            "p99": 1.434305084745763
+          },
+          "AvgBasketSize": {
+            "count": 210248,
+            "mean": 7.368863745113108,
+            "std": 4.233897572745373,
+            "min": 2.75,
+            "max": 181.0,
+            "quantile_relative_error": 0.001,
+            "p01": 3.3333333333333335,
+            "p05": 4.0,
+            "p25": 5.0,
+            "p50": 6.0,
+            "p75": 8.2,
+            "p95": 14.5,
+            "p99": 23.0
+          },
+          "ProductVariety": {
+            "count": 210248,
+            "mean": 11.54721566911457,
+            "std": 8.145772478952571,
+            "min": 1.0,
+            "max": 128.0,
+            "quantile_relative_error": 0.001,
+            "p01": 2.0,
+            "p05": 4.0,
+            "p25": 6.0,
+            "p50": 9.0,
+            "p75": 14.0,
+            "p95": 28.0,
+            "p99": 41.0
+          }
+        }
+      },
+      "1": {
+        "cluster_id": 1,
+        "count": 172774,
+        "ratio_pct": 12.682699090716232,
+        "raw_features": {
+          "Recency": {
+            "count": 172774,
+            "mean": 53.902010719205435,
+            "std": 68.68702134466601,
+            "min": 1.0,
+            "max": 695.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 2.0,
+            "p25": 12.0,
+            "p50": 29.0,
+            "p75": 68.0,
+            "p95": 197.0,
+            "p99": 334.0
+          },
+          "Frequency": {
+            "count": 172774,
+            "mean": 24.07674187088335,
+            "std": 16.140077833770093,
+            "min": 1.0,
+            "max": 427.0,
+            "quantile_relative_error": 0.001,
+            "p01": 5.0,
+            "p05": 8.0,
+            "p25": 14.0,
+            "p50": 20.0,
+            "p75": 29.0,
+            "p95": 52.0,
+            "p99": 82.0
+          },
+          "Monetary": {
+            "count": 172774,
+            "mean": 2.9133534566465213,
+            "std": 2.165841059788042,
+            "min": 0.7728644067796611,
+            "max": 57.676406779661086,
+            "quantile_relative_error": 0.001,
+            "p01": 1.175915254237288,
+            "p05": 1.3226101694915253,
+            "p25": 1.6682542372881355,
+            "p50": 2.213135593220339,
+            "p75": 3.3255932203389826,
+            "p95": 6.7854406779661005,
+            "p99": 11.21557627118644
+          },
+          "AvgBasketSize": {
+            "count": 172774,
+            "mean": 4.875730807887345,
+            "std": 2.810055656968439,
+            "min": 1.0363636363636364,
+            "max": 161.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.6571428571428573,
+            "p05": 2.0689655172413794,
+            "p25": 3.0,
+            "p50": 4.142857142857143,
+            "p75": 5.9,
+            "p95": 10.0,
+            "p99": 14.5
+          },
+          "ProductVariety": {
+            "count": 172774,
+            "mean": 83.5391378332388,
+            "std": 51.08191710192732,
+            "min": 7.0,
+            "max": 1346.0,
+            "quantile_relative_error": 0.001,
+            "p01": 31.0,
+            "p05": 39.0,
+            "p25": 53.0,
+            "p50": 68.0,
+            "p75": 96.0,
+            "p95": 178.0,
+            "p99": 276.0
+          }
+        }
+      },
+      "2": {
+        "cluster_id": 2,
+        "count": 269066,
+        "ratio_pct": 19.751137981077324,
+        "raw_features": {
+          "Recency": {
+            "count": 269066,
+            "mean": 568.063887670683,
+            "std": 108.85990489883258,
+            "min": 338.0,
+            "max": 734.0,
+            "quantile_relative_error": 0.001,
+            "p01": 356.0,
+            "p05": 385.0,
+            "p25": 473.0,
+            "p50": 579.0,
+            "p75": 667.0,
+            "p95": 724.0,
+            "p99": 730.0
+          },
+          "Frequency": {
+            "count": 269066,
+            "mean": 1.4775854251373268,
+            "std": 0.9503640668628657,
+            "min": 1.0,
+            "max": 13.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.0,
+            "p50": 1.0,
+            "p75": 2.0,
+            "p95": 3.0,
+            "p99": 5.0
+          },
+          "Monetary": {
+            "count": 269066,
+            "mean": 0.09047617382516669,
+            "std": 0.07884698418849488,
+            "min": 0.000847457627118644,
+            "max": 1.813491525423729,
+            "quantile_relative_error": 0.001,
+            "p01": 0.008457627118644067,
+            "p05": 0.016932203389830508,
+            "p25": 0.03894915254237288,
+            "p50": 0.06776271186440677,
+            "p75": 0.11522033898305084,
+            "p95": 0.24222033898305084,
+            "p99": 0.37610169491525425
+          },
+          "AvgBasketSize": {
+            "count": 269066,
+            "mean": 2.1633301107076117,
+            "std": 1.0768339539977954,
+            "min": 1.0,
+            "max": 7.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.0,
+            "p50": 2.0,
+            "p75": 3.0,
+            "p95": 4.0,
+            "p99": 5.0
+          },
+          "ProductVariety": {
+            "count": 269066,
+            "mean": 2.888176135223328,
+            "std": 2.1715419717307354,
+            "min": 1.0,
+            "max": 25.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.0,
+            "p50": 2.0,
+            "p75": 4.0,
+            "p95": 7.0,
+            "p99": 11.0
+          }
+        }
+      },
+      "3": {
+        "cluster_id": 3,
+        "count": 343639,
+        "ratio_pct": 25.225265565621193,
+        "raw_features": {
+          "Recency": {
+            "count": 343639,
+            "mean": 157.18148405739745,
+            "std": 104.68858998686912,
+            "min": 1.0,
+            "max": 418.0,
+            "quantile_relative_error": 0.001,
+            "p01": 3.0,
+            "p05": 12.0,
+            "p25": 67.0,
+            "p50": 145.0,
+            "p75": 244.0,
+            "p95": 334.0,
+            "p99": 364.0
+          },
+          "Frequency": {
+            "count": 343639,
+            "mean": 2.0571646408003748,
+            "std": 1.2651828007893595,
+            "min": 1.0,
+            "max": 10.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.0,
+            "p50": 2.0,
+            "p75": 3.0,
+            "p95": 5.0,
+            "p99": 6.0
+          },
+          "Monetary": {
+            "count": 343639,
+            "mean": 0.11732698691832902,
+            "std": 0.0862002207838109,
+            "min": 0.0007627118644067797,
+            "max": 1.4846949152542372,
+            "quantile_relative_error": 0.001,
+            "p01": 0.011847457627118646,
+            "p05": 0.022016949152542376,
+            "p25": 0.050813559322033894,
+            "p50": 0.09488135593220337,
+            "p75": 0.1643050847457627,
+            "p95": 0.27952542372881356,
+            "p99": 0.38020338983050844
+          },
+          "AvgBasketSize": {
+            "count": 343639,
+            "mean": 2.0486663318283957,
+            "std": 0.8902359952811215,
+            "min": 1.0,
+            "max": 6.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 1.25,
+            "p50": 2.0,
+            "p75": 2.6666666666666665,
+            "p95": 4.0,
+            "p99": 4.0
+          },
+          "ProductVariety": {
+            "count": 343639,
+            "mean": 3.7338369626264774,
+            "std": 2.4086048278154317,
+            "min": 1.0,
+            "max": 12.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 1.0,
+            "p25": 2.0,
+            "p50": 3.0,
+            "p75": 5.0,
+            "p95": 8.0,
+            "p99": 9.0
+          }
+        }
+      },
+      "4": {
+        "cluster_id": 4,
+        "count": 366554,
+        "ratio_pct": 26.90737079941657,
+        "raw_features": {
+          "Recency": {
+            "count": 366554,
+            "mean": 96.82912749553954,
+            "std": 98.08760467736808,
+            "min": 1.0,
+            "max": 689.0,
+            "quantile_relative_error": 0.001,
+            "p01": 1.0,
+            "p05": 5.0,
+            "p25": 27.0,
+            "p50": 64.0,
+            "p75": 125.0,
+            "p95": 306.0,
+            "p99": 427.0
+          },
+          "Frequency": {
+            "count": 366554,
+            "mean": 9.264621310911899,
+            "std": 4.752111438879184,
+            "min": 2.0,
+            "max": 49.0,
+            "quantile_relative_error": 0.001,
+            "p01": 3.0,
+            "p05": 4.0,
+            "p25": 6.0,
+            "p50": 8.0,
+            "p75": 12.0,
+            "p95": 19.0,
+            "p99": 24.0
+          },
+          "Monetary": {
+            "count": 366554,
+            "mean": 0.6589094739249459,
+            "std": 0.3130504775534991,
+            "min": 0.049745762711864414,
+            "max": 2.7981525423728812,
+            "quantile_relative_error": 0.001,
+            "p01": 0.18966101694915252,
+            "p05": 0.2517118644067796,
+            "p25": 0.40315254237288134,
+            "p50": 0.599593220338983,
+            "p75": 0.8752033898305084,
+            "p95": 1.2355254237288136,
+            "p99": 1.4322542372881355
+          },
+          "AvgBasketSize": {
+            "count": 366554,
+            "mean": 2.992304870237259,
+            "std": 1.1672735098898452,
+            "min": 1.0,
+            "max": 10.444444444444445,
+            "quantile_relative_error": 0.001,
+            "p01": 1.2857142857142858,
+            "p05": 1.5555555555555556,
+            "p25": 2.142857142857143,
+            "p50": 2.75,
+            "p75": 3.6,
+            "p95": 5.25,
+            "p99": 6.666666666666667
+          },
+          "ProductVariety": {
+            "count": 366554,
+            "mean": 22.875393530011948,
+            "std": 10.436719279923977,
+            "min": 3.0,
+            "max": 91.0,
+            "quantile_relative_error": 0.001,
+            "p01": 8.0,
+            "p05": 10.0,
+            "p25": 14.0,
+            "p50": 21.0,
+            "p75": 30.0,
+            "p95": 42.0,
+            "p99": 50.0
+          }
+        }
+      }
+    },
+    "semantic_lock": {
+      "Recency": "days from last purchase date to analysis date",
+      "Frequency": "number of distinct purchase dates",
+      "Monetary": "SUM(price)",
+      "AvgBasketSize": "TotalItems / Frequency where Frequency is distinct purchase dates",
+      "ProductVariety": "number of distinct article_id purchased"
+    }
+  },
+  "transformed_centroid_validation": {
+    "feature_order": [
+      "Recency",
+      "log1p(Frequency)",
+      "log1p(Monetary)",
+      "log1p(AvgBasketSize)",
+      "log1p(ProductVariety)"
+    ],
+    "preferred_tolerance": 0.001,
+    "fallback_tolerance": 0.01,
+    "fallback_used": true,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "features": [
+          {
+            "feature": "Recency",
+            "actual_transformed_mean": 333.10277862334004,
+            "stage15_transformed_center": 333.1063976523084,
+            "absolute_difference": 0.00361902896833044,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Frequency)",
+            "actual_transformed_mean": 1.0277420765561085,
+            "stage15_transformed_center": 1.0277404851345935,
+            "absolute_difference": 1.59142151501257e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Monetary)",
+            "actual_transformed_mean": 0.28648291882154864,
+            "stage15_transformed_center": 0.28648049916805807,
+            "absolute_difference": 2.4196534905707168e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(AvgBasketSize)",
+            "actual_transformed_mean": 2.04508928062465,
+            "stage15_transformed_center": 2.0450837252157887,
+            "absolute_difference": 5.555408861379618e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(ProductVariety)",
+            "actual_transformed_mean": 2.3674709758462353,
+            "stage15_transformed_center": 2.3674616440268252,
+            "absolute_difference": 9.331819410096642e-06,
+            "tolerance": 0.01,
+            "pass": true
+          }
+        ],
+        "max_absolute_difference": 0.00361902896833044,
+        "pass": true
+      },
+      {
+        "cluster_id": 1,
+        "features": [
+          {
+            "feature": "Recency",
+            "actual_transformed_mean": 53.902010719205435,
+            "stage15_transformed_center": 53.90213522102849,
+            "absolute_difference": 0.00012450182305201452,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Frequency)",
+            "actual_transformed_mean": 3.066677581603644,
+            "stage15_transformed_center": 3.0666870774481794,
+            "absolute_difference": 9.495844535578613e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Monetary)",
+            "actual_transformed_mean": 1.2725797397335779,
+            "stage15_transformed_center": 1.2725913763999444,
+            "absolute_difference": 1.1636666366499071e-05,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(AvgBasketSize)",
+            "actual_transformed_mean": 1.685113947906573,
+            "stage15_transformed_center": 1.6851196893558325,
+            "absolute_difference": 5.741449259355491e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(ProductVariety)",
+            "actual_transformed_mean": 4.315558558657566,
+            "stage15_transformed_center": 4.3155773191692575,
+            "absolute_difference": 1.876051169169557e-05,
+            "tolerance": 0.01,
+            "pass": true
+          }
+        ],
+        "max_absolute_difference": 0.00012450182305201452,
+        "pass": true
+      },
+      {
+        "cluster_id": 2,
+        "features": [
+          {
+            "feature": "Recency",
+            "actual_transformed_mean": 568.063887670683,
+            "stage15_transformed_center": 568.063152026456,
+            "absolute_difference": 0.00073564422700656,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Frequency)",
+            "actual_transformed_mean": 0.8569953158015864,
+            "stage15_transformed_center": 0.856991841682142,
+            "absolute_difference": 3.474119444346613e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Monetary)",
+            "actual_transformed_mean": 0.08425818502434956,
+            "stage15_transformed_center": 0.08425765487541348,
+            "absolute_difference": 5.301489360842737e-07,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(AvgBasketSize)",
+            "actual_transformed_mean": 1.0964169370994756,
+            "stage15_transformed_center": 1.0964116249572735,
+            "absolute_difference": 5.312142202118508e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(ProductVariety)",
+            "actual_transformed_mean": 1.2346439094736896,
+            "stage15_transformed_center": 1.234635179706178,
+            "absolute_difference": 8.729767511539421e-06,
+            "tolerance": 0.01,
+            "pass": true
+          }
+        ],
+        "max_absolute_difference": 0.00073564422700656,
+        "pass": true
+      },
+      {
+        "cluster_id": 3,
+        "features": [
+          {
+            "feature": "Recency",
+            "actual_transformed_mean": 157.18148405739745,
+            "stage15_transformed_center": 157.18089517839957,
+            "absolute_difference": 0.0005888789978882869,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Frequency)",
+            "actual_transformed_mean": 1.0435131490928389,
+            "stage15_transformed_center": 1.043519639768053,
+            "absolute_difference": 6.490675214188002e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Monetary)",
+            "actual_transformed_mean": 0.10813911205717076,
+            "stage15_transformed_center": 0.10814080765576994,
+            "absolute_difference": 1.6955985991801148e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(AvgBasketSize)",
+            "actual_transformed_mean": 1.0735311786920603,
+            "stage15_transformed_center": 1.0735333738883006,
+            "absolute_difference": 2.195196240339925e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(ProductVariety)",
+            "actual_transformed_mean": 1.4245108849287504,
+            "stage15_transformed_center": 1.4245200002341378,
+            "absolute_difference": 9.11530538738603e-06,
+            "tolerance": 0.01,
+            "pass": true
+          }
+        ],
+        "max_absolute_difference": 0.0005888789978882869,
+        "pass": true
+      },
+      {
+        "cluster_id": 4,
+        "features": [
+          {
+            "feature": "Recency",
+            "actual_transformed_mean": 96.82912749553954,
+            "stage15_transformed_center": 96.82781122719015,
+            "absolute_difference": 0.0013162683493845861,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Frequency)",
+            "actual_transformed_mean": 2.2344002077203755,
+            "stage15_transformed_center": 2.2344104945896044,
+            "absolute_difference": 1.0286869228881557e-05,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(Monetary)",
+            "actual_transformed_mean": 0.4890677563916397,
+            "stage15_transformed_center": 0.4890746732812561,
+            "absolute_difference": 6.9168896164040206e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(AvgBasketSize)",
+            "actual_transformed_mean": 1.3456920299271935,
+            "stage15_transformed_center": 1.3456978783663083,
+            "absolute_difference": 5.848439114775061e-06,
+            "tolerance": 0.01,
+            "pass": true
+          },
+          {
+            "feature": "log1p(ProductVariety)",
+            "actual_transformed_mean": 3.078054657659166,
+            "stage15_transformed_center": 3.0780718419808384,
+            "absolute_difference": 1.7184321672303327e-05,
+            "tolerance": 0.01,
+            "pass": true
+          }
+        ],
+        "max_absolute_difference": 0.0013162683493845861,
+        "pass": true
+      }
+    ],
+    "max_absolute_difference": 0.00361902896833044,
+    "pass": true
+  },
+  "transformed_centroid_validation_pass": true,
+  "raw_mean_vs_representative_center": {
+    "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means.",
+    "rows": [
+      {
+        "cluster_id": 0,
+        "feature": "Recency",
+        "actual_raw_arithmetic_mean": 333.10277862334004,
+        "representative_centroid_derived_raw_value": 333.1063976523084,
+        "absolute_difference": 0.00361902896833044,
+        "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+      },
+      {
+        "cluster_id": 0,
+        "feature": "Frequency",
+        "actual_raw_arithmetic_mean": 1.9970225638293824,
+        "representative_centroid_derived_raw_value": 1.7947439297153966,
+        "absolute_difference": 0.20227863411398572,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 0,
+        "feature": "Monetary",
+        "actual_raw_arithmetic_mean": 0.35722646580728784,
+        "representative_centroid_derived_raw_value": 0.3317321977552104,
+        "absolute_difference": 0.02549426805207744,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 0,
+        "feature": "AvgBasketSize",
+        "actual_raw_arithmetic_mean": 7.368863745113108,
+        "representative_centroid_derived_raw_value": 6.729805690467448,
+        "absolute_difference": 0.6390580546456599,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 0,
+        "feature": "ProductVariety",
+        "actual_raw_arithmetic_mean": 11.54721566911457,
+        "representative_centroid_derived_raw_value": 9.670272928360015,
+        "absolute_difference": 1.8769427407545543,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 1,
+        "feature": "Recency",
+        "actual_raw_arithmetic_mean": 53.902010719205435,
+        "representative_centroid_derived_raw_value": 53.90213522102849,
+        "absolute_difference": 0.00012450182305201452,
+        "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+      },
+      {
+        "cluster_id": 1,
+        "feature": "Frequency",
+        "actual_raw_arithmetic_mean": 24.07674187088335,
+        "representative_centroid_derived_raw_value": 20.470654105483096,
+        "absolute_difference": 3.606087765400254,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 1,
+        "feature": "Monetary",
+        "actual_raw_arithmetic_mean": 2.9133534566465213,
+        "representative_centroid_derived_raw_value": 2.5700920379583683,
+        "absolute_difference": 0.3432614186881531,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 1,
+        "feature": "AvgBasketSize",
+        "actual_raw_arithmetic_mean": 4.875730807887345,
+        "representative_centroid_derived_raw_value": 4.3930963899543904,
+        "absolute_difference": 0.4826344179329549,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 1,
+        "feature": "ProductVariety",
+        "actual_raw_arithmetic_mean": 83.5391378332388,
+        "representative_centroid_derived_raw_value": 73.8568272528723,
+        "absolute_difference": 9.68231058036649,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 2,
+        "feature": "Recency",
+        "actual_raw_arithmetic_mean": 568.063887670683,
+        "representative_centroid_derived_raw_value": 568.063152026456,
+        "absolute_difference": 0.00073564422700656,
+        "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+      },
+      {
+        "cluster_id": 2,
+        "feature": "Frequency",
+        "actual_raw_arithmetic_mean": 1.4775854251373268,
+        "representative_centroid_derived_raw_value": 1.356062613635444,
+        "absolute_difference": 0.12152281150188293,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 2,
+        "feature": "Monetary",
+        "actual_raw_arithmetic_mean": 0.09047617382516669,
+        "representative_centroid_derived_raw_value": 0.08790916280074218,
+        "absolute_difference": 0.002567011024424512,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 2,
+        "feature": "AvgBasketSize",
+        "actual_raw_arithmetic_mean": 2.1633301107076117,
+        "representative_centroid_derived_raw_value": 1.9934052679227543,
+        "absolute_difference": 0.16992484278485742,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 2,
+        "feature": "ProductVariety",
+        "actual_raw_arithmetic_mean": 2.888176135223328,
+        "representative_centroid_derived_raw_value": 2.437124359228619,
+        "absolute_difference": 0.451051775994709,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 3,
+        "feature": "Recency",
+        "actual_raw_arithmetic_mean": 157.18148405739745,
+        "representative_centroid_derived_raw_value": 157.18089517839957,
+        "absolute_difference": 0.0005888789978882869,
+        "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+      },
+      {
+        "cluster_id": 3,
+        "feature": "Frequency",
+        "actual_raw_arithmetic_mean": 2.0571646408003748,
+        "representative_centroid_derived_raw_value": 1.8391923836231272,
+        "absolute_difference": 0.21797225717724755,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 3,
+        "feature": "Monetary",
+        "actual_raw_arithmetic_mean": 0.11732698691832902,
+        "representative_centroid_derived_raw_value": 0.11420462288242827,
+        "absolute_difference": 0.003122364035900743,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 3,
+        "feature": "AvgBasketSize",
+        "actual_raw_arithmetic_mean": 2.0486663318283957,
+        "representative_centroid_derived_raw_value": 1.925698846094574,
+        "absolute_difference": 0.12296748573382166,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 3,
+        "feature": "ProductVariety",
+        "actual_raw_arithmetic_mean": 3.7338369626264774,
+        "representative_centroid_derived_raw_value": 3.155862550873124,
+        "absolute_difference": 0.5779744117533534,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 4,
+        "feature": "Recency",
+        "actual_raw_arithmetic_mean": 96.82912749553954,
+        "representative_centroid_derived_raw_value": 96.82781122719015,
+        "absolute_difference": 0.0013162683493845861,
+        "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+      },
+      {
+        "cluster_id": 4,
+        "feature": "Frequency",
+        "actual_raw_arithmetic_mean": 9.264621310911899,
+        "representative_centroid_derived_raw_value": 8.340973674286454,
+        "absolute_difference": 0.9236476366254447,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 4,
+        "feature": "Monetary",
+        "actual_raw_arithmetic_mean": 0.6589094739249459,
+        "representative_centroid_derived_raw_value": 0.6308064927468,
+        "absolute_difference": 0.028102981178145914,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 4,
+        "feature": "AvgBasketSize",
+        "actual_raw_arithmetic_mean": 2.992304870237259,
+        "representative_centroid_derived_raw_value": 2.840866062834033,
+        "absolute_difference": 0.1514388074032258,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      },
+      {
+        "cluster_id": 4,
+        "feature": "ProductVariety",
+        "actual_raw_arithmetic_mean": 22.875393530011948,
+        "representative_centroid_derived_raw_value": 20.716489178771237,
+        "absolute_difference": 2.158904351240711,
+        "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+      }
+    ]
+  },
+  "pairwise_cluster_distinctness": {
+    "method": "Euclidean distance between cluster median differences normalized by global raw-feature IQR; descriptive only.",
+    "global_iqr": {
+      "Recency": 351.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6120338983050847,
+      "AvgBasketSize": 2.1111111111111107,
+      "ProductVariety": 21.0
+    },
+    "pairs": [
+      {
+        "cluster_a": 0,
+        "cluster_b": 1,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 328.0,
+            "right_median": 29.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.8518518518518519
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 2.0,
+            "right_median": 20.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 2.5714285714285716
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.2676101694915254,
+            "right_median": 2.213135593220339,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 3.1787870396012186
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 6.0,
+            "right_median": 4.142857142857143,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 0.8796992481203008
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 9.0,
+            "right_median": 68.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 2.8095238095238093
+          }
+        ],
+        "normalized_median_distance": 5.109782610055333
+      },
+      {
+        "cluster_a": 0,
+        "cluster_b": 2,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 328.0,
+            "right_median": 579.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.7150997150997151
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 2.0,
+            "right_median": 1.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 0.14285714285714285
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.2676101694915254,
+            "right_median": 0.06776271186440677,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.32653004707837163
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 6.0,
+            "right_median": 2.0,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 1.8947368421052635
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 9.0,
+            "right_median": 2.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.3333333333333333
+          }
+        ],
+        "normalized_median_distance": 2.0831554069219465
+      },
+      {
+        "cluster_a": 0,
+        "cluster_b": 3,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 328.0,
+            "right_median": 145.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.5213675213675214
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 2.0,
+            "right_median": 2.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 0.0
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.2676101694915254,
+            "right_median": 0.09488135593220337,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.28222099141512047
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 6.0,
+            "right_median": 2.0,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 1.8947368421052635
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 9.0,
+            "right_median": 3.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.2857142857142857
+          }
+        ],
+        "normalized_median_distance": 2.005774946055638
+      },
+      {
+        "cluster_a": 0,
+        "cluster_b": 4,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 328.0,
+            "right_median": 64.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.7521367521367521
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 2.0,
+            "right_median": 8.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 0.8571428571428571
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.2676101694915254,
+            "right_median": 0.599593220338983,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.542425920797563
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 6.0,
+            "right_median": 2.75,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 1.5394736842105265
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 9.0,
+            "right_median": 21.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.5714285714285714
+          }
+        ],
+        "normalized_median_distance": 2.071506526091713
+      },
+      {
+        "cluster_a": 1,
+        "cluster_b": 2,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 29.0,
+            "right_median": 579.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 1.566951566951567
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 20.0,
+            "right_median": 1.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 2.7142857142857144
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 2.213135593220339,
+            "right_median": 0.06776271186440677,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 3.5053170866795904
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 4.142857142857143,
+            "right_median": 2.0,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 1.0150375939849627
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 68.0,
+            "right_median": 2.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 3.142857142857143
+          }
+        ],
+        "normalized_median_distance": 5.746110368564662
+      },
+      {
+        "cluster_a": 1,
+        "cluster_b": 3,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 29.0,
+            "right_median": 145.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.33048433048433046
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 20.0,
+            "right_median": 2.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 2.5714285714285716
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 2.213135593220339,
+            "right_median": 0.09488135593220337,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 3.4610080310163394
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 4.142857142857143,
+            "right_median": 2.0,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 1.0150375939849627
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 68.0,
+            "right_median": 3.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 3.0952380952380953
+          }
+        ],
+        "normalized_median_distance": 5.413948795918778
+      },
+      {
+        "cluster_a": 1,
+        "cluster_b": 4,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 29.0,
+            "right_median": 64.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.09971509971509972
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 20.0,
+            "right_median": 8.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 1.7142857142857142
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 2.213135593220339,
+            "right_median": 0.599593220338983,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 2.6363611188036553
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 4.142857142857143,
+            "right_median": 2.75,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 0.6597744360902259
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 68.0,
+            "right_median": 21.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 2.238095238095238
+          }
+        ],
+        "normalized_median_distance": 3.917076864366806
+      },
+      {
+        "cluster_a": 2,
+        "cluster_b": 3,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 579.0,
+            "right_median": 145.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 1.2364672364672364
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 1.0,
+            "right_median": 2.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 0.14285714285714285
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.06776271186440677,
+            "right_median": 0.09488135593220337,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.04430905566325116
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 2.0,
+            "right_median": 2.0,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 0.0
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 2.0,
+            "right_median": 3.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.047619047619047616
+          }
+        ],
+        "normalized_median_distance": 1.2463908922292979
+      },
+      {
+        "cluster_a": 2,
+        "cluster_b": 4,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 579.0,
+            "right_median": 64.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 1.4672364672364673
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 1.0,
+            "right_median": 8.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 1.0
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.06776271186440677,
+            "right_median": 0.599593220338983,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.8689559678759347
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 2.0,
+            "right_median": 2.75,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 0.3552631578947369
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 2.0,
+            "right_median": 21.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.9047619047619048
+          }
+        ],
+        "normalized_median_distance": 2.2028784216477955
+      },
+      {
+        "cluster_a": 3,
+        "cluster_b": 4,
+        "feature_differences": [
+          {
+            "feature": "Recency",
+            "left_median": 145.0,
+            "right_median": 64.0,
+            "global_iqr": 351.0,
+            "normalized_absolute_difference": 0.23076923076923078
+          },
+          {
+            "feature": "Frequency",
+            "left_median": 2.0,
+            "right_median": 8.0,
+            "global_iqr": 7.0,
+            "normalized_absolute_difference": 0.8571428571428571
+          },
+          {
+            "feature": "Monetary",
+            "left_median": 0.09488135593220337,
+            "right_median": 0.599593220338983,
+            "global_iqr": 0.6120338983050847,
+            "normalized_absolute_difference": 0.8246469122126835
+          },
+          {
+            "feature": "AvgBasketSize",
+            "left_median": 2.0,
+            "right_median": 2.75,
+            "global_iqr": 2.1111111111111107,
+            "normalized_absolute_difference": 0.3552631578947369
+          },
+          {
+            "feature": "ProductVariety",
+            "left_median": 3.0,
+            "right_median": 21.0,
+            "global_iqr": 21.0,
+            "normalized_absolute_difference": 0.8571428571428571
+          }
+        ],
+        "normalized_median_distance": 1.5260722899493055
+      }
+    ],
+    "closest_behavioral_pair": {
+      "cluster_a": 2,
+      "cluster_b": 3,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 579.0,
+          "right_median": 145.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 1.2364672364672364
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 1.0,
+          "right_median": 2.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 0.14285714285714285
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 0.06776271186440677,
+          "right_median": 0.09488135593220337,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 0.04430905566325116
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 2.0,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 0.0
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 2.0,
+          "right_median": 3.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 0.047619047619047616
+        }
+      ],
+      "normalized_median_distance": 1.2463908922292979
+    },
+    "farthest_behavioral_pair": {
+      "cluster_a": 1,
+      "cluster_b": 2,
+      "feature_differences": [
+        {
+          "feature": "Recency",
+          "left_median": 29.0,
+          "right_median": 579.0,
+          "global_iqr": 351.0,
+          "normalized_absolute_difference": 1.566951566951567
+        },
+        {
+          "feature": "Frequency",
+          "left_median": 20.0,
+          "right_median": 1.0,
+          "global_iqr": 7.0,
+          "normalized_absolute_difference": 2.7142857142857144
+        },
+        {
+          "feature": "Monetary",
+          "left_median": 2.213135593220339,
+          "right_median": 0.06776271186440677,
+          "global_iqr": 0.6120338983050847,
+          "normalized_absolute_difference": 3.5053170866795904
+        },
+        {
+          "feature": "AvgBasketSize",
+          "left_median": 4.142857142857143,
+          "right_median": 2.0,
+          "global_iqr": 2.1111111111111107,
+          "normalized_absolute_difference": 1.0150375939849627
+        },
+        {
+          "feature": "ProductVariety",
+          "left_median": 68.0,
+          "right_median": 2.0,
+          "global_iqr": 21.0,
+          "normalized_absolute_difference": 3.142857142857143
+        }
+      ],
+      "normalized_median_distance": 5.746110368564662
+    }
+  },
+  "stage14_profile_consistency": {
+    "available": true,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "count_pass": true,
+        "mean_checks": {
+          "Recency": {
+            "actual": 333.10277862334004,
+            "stage14": 333.10277862334004,
+            "absolute_difference": 0.0,
+            "allowed_difference": 3.3310277862334005e-06,
+            "pass": true
+          },
+          "Frequency": {
+            "actual": 1.9970225638293824,
+            "stage14": 1.9970225638293824,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1.9970225638293825e-08,
+            "pass": true
+          },
+          "Monetary": {
+            "actual": 0.35722646580728784,
+            "stage14": 0.35722646580728784,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1e-08,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "actual": 7.368863745113108,
+            "stage14": 7.368863745113108,
+            "absolute_difference": 0.0,
+            "allowed_difference": 7.368863745113108e-08,
+            "pass": true
+          },
+          "ProductVariety": {
+            "actual": 11.54721566911457,
+            "stage14": 11.54721566911457,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1.1547215669114569e-07,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "cluster_id": 1,
+        "count_pass": true,
+        "mean_checks": {
+          "Recency": {
+            "actual": 53.902010719205435,
+            "stage14": 53.902010719205435,
+            "absolute_difference": 0.0,
+            "allowed_difference": 5.390201071920544e-07,
+            "pass": true
+          },
+          "Frequency": {
+            "actual": 24.07674187088335,
+            "stage14": 24.07674187088335,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.407674187088335e-07,
+            "pass": true
+          },
+          "Monetary": {
+            "actual": 2.9133534566465213,
+            "stage14": 2.9133534566465213,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.9133534566465213e-08,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "actual": 4.875730807887345,
+            "stage14": 4.875730807887345,
+            "absolute_difference": 0.0,
+            "allowed_difference": 4.8757308078873455e-08,
+            "pass": true
+          },
+          "ProductVariety": {
+            "actual": 83.5391378332388,
+            "stage14": 83.5391378332388,
+            "absolute_difference": 0.0,
+            "allowed_difference": 8.353913783323879e-07,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "cluster_id": 2,
+        "count_pass": true,
+        "mean_checks": {
+          "Recency": {
+            "actual": 568.063887670683,
+            "stage14": 568.063887670683,
+            "absolute_difference": 0.0,
+            "allowed_difference": 5.680638876706831e-06,
+            "pass": true
+          },
+          "Frequency": {
+            "actual": 1.4775854251373268,
+            "stage14": 1.4775854251373268,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1.4775854251373269e-08,
+            "pass": true
+          },
+          "Monetary": {
+            "actual": 0.09047617382516669,
+            "stage14": 0.09047617382516669,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1e-08,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "actual": 2.1633301107076117,
+            "stage14": 2.1633301107076117,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.1633301107076117e-08,
+            "pass": true
+          },
+          "ProductVariety": {
+            "actual": 2.888176135223328,
+            "stage14": 2.888176135223328,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.888176135223328e-08,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "cluster_id": 3,
+        "count_pass": true,
+        "mean_checks": {
+          "Recency": {
+            "actual": 157.18148405739745,
+            "stage14": 157.18148405739745,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1.5718148405739745e-06,
+            "pass": true
+          },
+          "Frequency": {
+            "actual": 2.0571646408003748,
+            "stage14": 2.0571646408003748,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.0571646408003747e-08,
+            "pass": true
+          },
+          "Monetary": {
+            "actual": 0.11732698691832902,
+            "stage14": 0.11732698691832902,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1e-08,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "actual": 2.0486663318283957,
+            "stage14": 2.0486663318283957,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.0486663318283958e-08,
+            "pass": true
+          },
+          "ProductVariety": {
+            "actual": 3.7338369626264774,
+            "stage14": 3.7338369626264774,
+            "absolute_difference": 0.0,
+            "allowed_difference": 3.7338369626264776e-08,
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "cluster_id": 4,
+        "count_pass": true,
+        "mean_checks": {
+          "Recency": {
+            "actual": 96.82912749553954,
+            "stage14": 96.82912749553954,
+            "absolute_difference": 0.0,
+            "allowed_difference": 9.682912749553954e-07,
+            "pass": true
+          },
+          "Frequency": {
+            "actual": 9.264621310911899,
+            "stage14": 9.264621310911899,
+            "absolute_difference": 0.0,
+            "allowed_difference": 9.264621310911899e-08,
+            "pass": true
+          },
+          "Monetary": {
+            "actual": 0.6589094739249459,
+            "stage14": 0.6589094739249459,
+            "absolute_difference": 0.0,
+            "allowed_difference": 1e-08,
+            "pass": true
+          },
+          "AvgBasketSize": {
+            "actual": 2.992304870237259,
+            "stage14": 2.992304870237259,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.992304870237259e-08,
+            "pass": true
+          },
+          "ProductVariety": {
+            "actual": 22.875393530011948,
+            "stage14": 22.875393530011948,
+            "absolute_difference": 0.0,
+            "allowed_difference": 2.2875393530011948e-07,
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    ],
+    "quantiles_exact_required": false,
+    "pass": true
+  },
+  "profiling_validation_pass": true,
+  "enhanced_model_branch_complete": true,
+  "ready_for_gmm_stage": true,
+  "no_main_vs_enhanced_winner": true,
+  "no_gmm_executed": true,
+  "warnings": [
+    "Centroid validation used the allowed 1e-2 fallback tolerance: all finite differences remained below 1e-2, with maximum difference 0.003619028968; this is reported and is not treated as a material discrepancy."
+  ],
+  "blockers": [],
+  "artifact_readback": {
+    "output\\analysis\\stage16\\global_erfm_statistics.json": true,
+    "output\\analysis\\stage16\\cluster_profiles.json": true,
+    "output\\analysis\\stage16\\cluster_profiles.csv": true,
+    "output\\analysis\\stage16\\transformed_centroid_mean_validation.json": true,
+    "output\\analysis\\stage16\\raw_mean_vs_representative_center.json": true,
+    "output\\analysis\\stage16\\raw_mean_vs_representative_center.csv": true,
+    "output\\analysis\\stage16\\pairwise_cluster_distinctness.json": true,
+    "output\\analysis\\stage16\\segment_names.json": true,
+    "output\\analysis\\stage16\\business_strategy_table.csv": true,
+    "output\\analysis\\stage16\\final_enhanced_cluster_profile_summary.json": true,
+    "reports\\stage16_final_enhanced_cluster_profiling.txt": true,
+    "reports\\stage16_run.log": true
+  }
+}

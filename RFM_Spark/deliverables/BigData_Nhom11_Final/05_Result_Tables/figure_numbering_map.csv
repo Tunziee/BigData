@@ -1,0 +1,29 @@
+﻿final_figure_no,stage29_figure_id,caption_vi,source_stage,source_authority,report_section,include_main_report,appendix
+Hình 5.1,fig01,Phân phối RFM và eRFM,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.2,fig02,Tác động log1p,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.3,fig03a,Main silhouette theo K,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.4,fig03b,Main WCSS theo K,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.5,fig04a,Enhanced silhouette theo K,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.6,fig04b,Enhanced WCSS theo K,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.7,fig05,Primary model quality,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.8,fig06,Common-space SSE/customer,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.9,fig07a,Cluster entropy,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.10,fig07b,Cluster CV,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.11,fig07c,Cluster share range,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.12,fig08,M2 segment distribution,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.13,fig09,M2 profile heatmap,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.14,fig10,M2 profile radar,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.15,fig11,B0-M1 agreement,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.16,fig12,Runtime benchmark,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.17,fig13,CSV-Parquet storage,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.18,fig14,CSV-Parquet runtime,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.19,fig15,Cache versus no-cache,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.20,fig16,Spark shuffle Q2-Q3,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.21,fig17,Monthly Monetary trend,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.22,fig18,Top product groups,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.23,fig19,Age band Monetary,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.24,fig20,FP-Growth threshold sensitivity,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.25,fig21,Top rules by lift,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.26,fig22,Top rules by confidence,29,FINAL_VISUALIZATION_LAYER_V1,Phụ lục,FALSE,TRUE
+Hình 5.27,fig23,All FP-Growth rules,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE
+Hình 5.28,fig24,Project analytics story,29,FINAL_VISUALIZATION_LAYER_V1,Chương 5,TRUE,FALSE

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="680" x2="1330" y2="680" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="669" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.0</text>
+<line x1="150" y1="574" x2="1330" y2="574" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="563" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.2</text>
+<line x1="150" y1="468" x2="1330" y2="468" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="457" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.4</text>
+<line x1="150" y1="362" x2="1330" y2="362" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="351" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.6</text>
+<line x1="150" y1="256" x2="1330" y2="256" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="245" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0.8</text>
+<line x1="150" y1="150" x2="1330" y2="150" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="139" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">1.0</text>
+<line x1="150" y1="680" x2="1330" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="150" x2="150" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="346.667" y1="680" x2="346.667" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="346.667" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">B0</text>
+<line x1="740" y1="680" x2="740" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="740" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">M1</text>
+<line x1="1133.33" y1="680" x2="1133.33" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="1133.33" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">M2</text>
+<text x="66" y="415" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 415.0)">Score</text>
+<rect x="216.867" y="316.52" width="86.5333" height="363.48" fill="#275DAD"/>
+<text x="260.133" y="291.52" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.69</text>
+<rect x="303.4" y="490.985" width="86.5333" height="189.015" fill="#D97706"/>
+<text x="346.667" y="465.985" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.36</text>
+<rect x="389.933" y="278.842" width="86.5333" height="401.158" fill="#168A6A"/>
+<text x="433.2" y="253.842" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.76</text>
+<rect x="610.2" y="316.502" width="86.5333" height="363.498" fill="#275DAD"/>
+<text x="653.467" y="291.502" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.69</text>
+<rect x="696.733" y="491.017" width="86.5333" height="188.983" fill="#D97706"/>
+<text x="740" y="466.017" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.36</text>
+<rect x="783.267" y="278.896" width="86.5333" height="401.104" fill="#168A6A"/>
+<text x="826.533" y="253.896" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.76</text>
+<rect x="1003.53" y="565.935" width="86.5333" height="114.065" fill="#275DAD"/>
+<text x="1046.8" y="540.935" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.22</text>
+<rect x="1090.07" y="424.642" width="86.5333" height="255.358" fill="#D97706"/>
+<text x="1133.33" y="399.642" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.48</text>
+<rect x="1176.6" y="162.576" width="86.5333" height="517.424" fill="#168A6A"/>
+<text x="1219.87" y="137.576" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="13px" font-weight="400" text-anchor="middle">0.98</text>
+<text x="1320" y="168" fill="#275DAD" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">Silhouette RFM3D</text>
+<text x="1320" y="193" fill="#D97706" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">Silhouette eRFM5D</text>
+<text x="1320" y="218" fill="#168A6A" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">Entropy</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Primary model quality comparison</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Common 1M cohort; each metric is read from the locked Stage 22 comparison matrix</text>
+</svg>

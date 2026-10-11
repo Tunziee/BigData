@@ -1,0 +1,147 @@
+{
+  "query_id": "Q2",
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "format": "CSV",
+      "runtime_sec": 19.275716999999986,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367789283
+      },
+      "pass": true
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.5134861999999885,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    }
+  ],
+  "measured_order": [
+    [
+      "CSV",
+      "PARQUET"
+    ],
+    [
+      "PARQUET",
+      "CSV"
+    ],
+    [
+      "CSV",
+      "PARQUET"
+    ]
+  ],
+  "trials": [
+    {
+      "format": "CSV",
+      "runtime_sec": 17.686746099999937,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367789283
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 1,
+      "order_index": 1,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.315407900000082,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 1,
+      "order_index": 2,
+      "trial": 1
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.3100079000000733,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 2,
+      "order_index": 1,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 25.48547099999996,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367789283
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 2,
+      "order_index": 2,
+      "trial": 2
+    },
+    {
+      "format": "CSV",
+      "runtime_sec": 19.612704599999915,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367789283
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 3,
+      "order_index": 1,
+      "trial": 3
+    },
+    {
+      "format": "PARQUET",
+      "runtime_sec": 0.49283679999985,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "query": "select customer_id,t_dat,price where t_dat >= 2020-01-01; count and sum(price)",
+      "pass": true,
+      "round": 3,
+      "order_index": 2,
+      "trial": 3
+    }
+  ],
+  "summary_by_format": {
+    "CSV": {
+      "min_sec": 17.686746099999937,
+      "max_sec": 25.48547099999996,
+      "mean_sec": 20.92830723333327,
+      "median_sec": 19.612704599999915,
+      "population_std_sec": 3.3169398781703743,
+      "trial_times_sec": [
+        17.686746099999937,
+        25.48547099999996,
+        19.612704599999915
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 0.3100079000000733,
+      "max_sec": 0.49283679999985,
+      "mean_sec": 0.3727508666666684,
+      "median_sec": 0.315407900000082,
+      "population_std_sec": 0.08494219029581636,
+      "trial_times_sec": [
+        0.315407900000082,
+        0.3100079000000733,
+        0.49283679999985
+      ],
+      "all_finite": true
+    }
+  }
+}

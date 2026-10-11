@@ -1,0 +1,50 @@
+{
+  "Q2_FILTER_AGGREGATION": {
+    "job_ids": [
+      11,
+      10
+    ],
+    "stage_ids": [
+      16,
+      17,
+      18
+    ],
+    "shuffle_read_bytes": 504,
+    "shuffle_write_bytes": 504,
+    "shuffle_read_records": 8,
+    "shuffle_write_records": 8,
+    "stages_with_shuffle_read": [
+      18
+    ],
+    "stages_with_shuffle_write": [
+      16
+    ]
+  },
+  "Q3_CUSTOMER_AGGREGATION": {
+    "job_ids": [
+      14,
+      13,
+      12
+    ],
+    "stage_ids": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "shuffle_read_bytes": 327776023,
+    "shuffle_write_bytes": 327776023,
+    "shuffle_read_records": 4271402,
+    "shuffle_write_records": 4271402,
+    "stages_with_shuffle_read": [
+      21,
+      24
+    ],
+    "stages_with_shuffle_write": [
+      19,
+      21
+    ]
+  }
+}

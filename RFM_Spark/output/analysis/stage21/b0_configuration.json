@@ -1,0 +1,24 @@
+{
+  "stage": 21,
+  "authority": "BASIC_KMEANS_BASELINE_V1",
+  "model_id": "B0",
+  "model_name": "Basic K-Means Baseline",
+  "model_role": "technical_baseline",
+  "feature_authority": "Stage7 standardized RFM3D",
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "training_customer_count": 1362281,
+  "k": 4,
+  "seed": 42,
+  "featuresCol": "features",
+  "predictionCol": "prediction",
+  "distanceMeasure": "euclidean",
+  "initMode": "random",
+  "maxIter": 100,
+  "tol": 0.0001,
+  "controlled_reference": "MAIN_KMEANS_FINAL",
+  "controlled_difference": "initMode only"
+}

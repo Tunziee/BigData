@@ -1,0 +1,20 @@
+{
+  "stage": 13,
+  "authority": "ENHANCED_KMEANS_K_SWEEP",
+  "k": 2,
+  "feature_space": "standardized improved 5D",
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 853860,
+      "ratio_pct": 62.67869844767709
+    },
+    {
+      "cluster_id": 1,
+      "count": 508421,
+      "ratio_pct": 37.32130155232291
+    }
+  ],
+  "cluster_count_sum": 1362281,
+  "num_produced_clusters": 2
+}

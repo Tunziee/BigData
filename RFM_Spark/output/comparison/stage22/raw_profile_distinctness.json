@@ -1,0 +1,196 @@
+{
+  "B0": {
+    "model_id": "B0",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pair_count": 6,
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 3.8587008456626224
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 1.3351121608796839
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 12.895797048205907
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 4.569142010057848
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 9.099045772255906
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 13.448531518924947
+      }
+    ],
+    "minimum_distance": 1.3351121608796839,
+    "mean_distance": 7.534388225997819,
+    "median_distance": 6.834093891156877,
+    "maximum_distance": 13.448531518924947,
+    "closest_pair": {
+      "segment_a": 0,
+      "segment_b": 2,
+      "normalized_median_distance": 1.3351121608796839
+    },
+    "farthest_pair": {
+      "segment_a": 2,
+      "segment_b": 3,
+      "normalized_median_distance": 13.448531518924947
+    },
+    "normalization": "Raw median differences normalized by global 1M-cohort IQR per feature; Euclidean distance; zero IQR contributes zero."
+  },
+  "M1": {
+    "model_id": "M1",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pair_count": 6,
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 3.8594844388281677
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 1.3377777133377713
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 12.895777175190386
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 4.570790392893777
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 9.098061508400054
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 13.448847458972141
+      }
+    ],
+    "minimum_distance": 1.3377777133377713,
+    "mean_distance": 7.535123114603716,
+    "median_distance": 6.834425950646915,
+    "maximum_distance": 13.448847458972141,
+    "closest_pair": {
+      "segment_a": 0,
+      "segment_b": 2,
+      "normalized_median_distance": 1.3377777133377713
+    },
+    "farthest_pair": {
+      "segment_a": 2,
+      "segment_b": 3,
+      "normalized_median_distance": 13.448847458972141
+    },
+    "normalization": "Raw median differences normalized by global 1M-cohort IQR per feature; Euclidean distance; zero IQR contributes zero."
+  },
+  "M2": {
+    "model_id": "M2",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pair_count": 10,
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 5.12250174346058
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 2.0970594223152537
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 2.019828696439828
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 4,
+        "normalized_median_distance": 2.0817241708775835
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 5.760194565256537
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 5.427396278888163
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 4,
+        "normalized_median_distance": 3.9280492381803094
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 1.2499016008882697
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 4,
+        "normalized_median_distance": 2.2076112754071153
+      },
+      {
+        "segment_a": 3,
+        "segment_b": 4,
+        "normalized_median_distance": 1.5287704902350852
+      }
+    ],
+    "minimum_distance": 1.2499016008882697,
+    "mean_distance": 3.1423037481948723,
+    "median_distance": 2.1523353488611843,
+    "maximum_distance": 5.760194565256537,
+    "closest_pair": {
+      "segment_a": 2,
+      "segment_b": 3,
+      "normalized_median_distance": 1.2499016008882697
+    },
+    "farthest_pair": {
+      "segment_a": 1,
+      "segment_b": 2,
+      "normalized_median_distance": 5.760194565256537
+    },
+    "normalization": "Raw median differences normalized by global 1M-cohort IQR per feature; Euclidean distance; zero IQR contributes zero."
+  }
+}

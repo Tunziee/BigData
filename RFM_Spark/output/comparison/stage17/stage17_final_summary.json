@@ -1,0 +1,601 @@
+{
+  "stage": 17,
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "protocol_authority": "THREE_MODEL_COMPARISON_PROTOCOL_V1",
+  "source_customer_count": 1362281,
+  "cohort_count": 1000000,
+  "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "selection_salt": "BIGDATA_NHOM11_STAGE17_COMPARISON_1M_V1",
+  "source_alignment": {
+    "sources": {
+      "main_rfm_scaled": {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaled",
+        "source": "main_rfm_scaled",
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "duplicate_customer_id": 0,
+        "vector_quality": {
+          "column": "features",
+          "dimension": 3,
+          "null_vector": 0,
+          "wrong_dimension": 0,
+          "nan_total": 0,
+          "infinity_total": 0,
+          "pass": true
+        },
+        "pass": true
+      },
+      "main_kmeans_predictions": {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\main_kmeans_predictions",
+        "source": "main_kmeans_predictions",
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "duplicate_customer_id": 0,
+        "prediction_null": 0,
+        "invalid_prediction": 0,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "prediction_pass": true,
+        "pass": true
+      },
+      "improved_erfm_scaled": {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\improved_erfm_scaled",
+        "source": "improved_erfm_scaled",
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "duplicate_customer_id": 0,
+        "vector_quality": {
+          "column": "features_improved",
+          "dimension": 5,
+          "null_vector": 0,
+          "wrong_dimension": 0,
+          "nan_total": 0,
+          "infinity_total": 0,
+          "pass": true
+        },
+        "pass": true
+      },
+      "enhanced_kmeans_predictions": {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\enhanced_kmeans_predictions",
+        "source": "enhanced_kmeans_predictions",
+        "row_count": 1362281,
+        "distinct_customer_id": 1362281,
+        "duplicate_customer_id": 0,
+        "prediction_null": 0,
+        "invalid_prediction": 0,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "prediction_pass": true,
+        "pass": true
+      }
+    },
+    "anti_join_counts": {
+      "main_rfm_scaled_minus_main_kmeans_predictions": 0,
+      "main_kmeans_predictions_minus_main_rfm_scaled": 0,
+      "main_rfm_scaled_minus_improved_erfm_scaled": 0,
+      "improved_erfm_scaled_minus_main_rfm_scaled": 0,
+      "main_rfm_scaled_minus_enhanced_kmeans_predictions": 0,
+      "enhanced_kmeans_predictions_minus_main_rfm_scaled": 0,
+      "main_kmeans_predictions_minus_improved_erfm_scaled": 0,
+      "improved_erfm_scaled_minus_main_kmeans_predictions": 0,
+      "main_kmeans_predictions_minus_enhanced_kmeans_predictions": 0,
+      "enhanced_kmeans_predictions_minus_main_kmeans_predictions": 0,
+      "improved_erfm_scaled_minus_enhanced_kmeans_predictions": 0,
+      "enhanced_kmeans_predictions_minus_improved_erfm_scaled": 0
+    },
+    "raw_feature_consistency_main_vs_enhanced": {
+      "Recency": {
+        "mismatch_count": 0,
+        "max_absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      "Frequency": {
+        "mismatch_count": 0,
+        "max_absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      "Monetary": {
+        "mismatch_count": 0,
+        "max_absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "pass": true
+      }
+    },
+    "main_prediction_validation": {
+      "source": "main_kmeans_predictions",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "prediction_null": 0,
+      "invalid_prediction": 0,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "prediction_pass": true,
+      "pass": true
+    },
+    "enhanced_prediction_validation": {
+      "source": "enhanced_kmeans_predictions",
+      "row_count": 1362281,
+      "distinct_customer_id": 1362281,
+      "duplicate_customer_id": 0,
+      "prediction_null": 0,
+      "invalid_prediction": 0,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "prediction_pass": true,
+      "pass": true
+    },
+    "pass": true
+  },
+  "source_alignment_pass": true,
+  "deterministic_selection": {
+    "method": "SHA256_ORDER_TOP_N",
+    "ordering": [
+      "selection_hash ASC",
+      "customer_id ASC"
+    ],
+    "selection_depends_only_on_customer_id": true,
+    "model_aware_sampling": false,
+    "collision_groups": 0
+  },
+  "deterministic_rerun_validation": {
+    "recomputed_row_count": 1000000,
+    "saved_minus_recomputed": 0,
+    "recomputed_minus_saved": 0,
+    "pass": true
+  },
+  "cohort_validation": {
+    "row_count": 1000000,
+    "distinct_customer_id": 1000000,
+    "duplicate_customer_id": 0,
+    "missing_raw_feature_cells": 0,
+    "main_prediction": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 535490,
+          "ratio_pct": 53.549
+        },
+        {
+          "cluster_id": 1,
+          "count": 145123,
+          "ratio_pct": 14.5123
+        },
+        {
+          "cluster_id": 2,
+          "count": 301103,
+          "ratio_pct": 30.110300000000002
+        },
+        {
+          "cluster_id": 3,
+          "count": 18284,
+          "ratio_pct": 1.8284000000000002
+        }
+      ],
+      "total": 1000000,
+      "cluster_count": 4,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "pass": true
+    },
+    "enhanced_prediction": {
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 154437,
+          "ratio_pct": 15.4437
+        },
+        {
+          "cluster_id": 1,
+          "count": 126550,
+          "ratio_pct": 12.655
+        },
+        {
+          "cluster_id": 2,
+          "count": 197817,
+          "ratio_pct": 19.7817
+        },
+        {
+          "cluster_id": 3,
+          "count": 252287,
+          "ratio_pct": 25.2287
+        },
+        {
+          "cluster_id": 4,
+          "count": 268909,
+          "ratio_pct": 26.890900000000002
+        }
+      ],
+      "total": 1000000,
+      "cluster_count": 5,
+      "prediction_values": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pass": true
+    },
+    "eval_rfm3d_scaled": {
+      "column": "eval_rfm3d_scaled",
+      "dimension": 3,
+      "null_vector": 0,
+      "wrong_dimension": 0,
+      "nan_total": 0,
+      "infinity_total": 0,
+      "pass": true
+    },
+    "eval_erfm5d_scaled": {
+      "column": "eval_erfm5d_scaled",
+      "dimension": 5,
+      "null_vector": 0,
+      "wrong_dimension": 0,
+      "nan_total": 0,
+      "infinity_total": 0,
+      "pass": true
+    },
+    "pass": true
+  },
+  "cohort_readback": {
+    "columns_present": true,
+    "row_count": 1000000,
+    "distinct_customer_id": 1000000,
+    "duplicate_customer_id": 0,
+    "pass": true
+  },
+  "cohort_id_readback": {
+    "row_count": 1000000,
+    "distinct_customer_id": 1000000,
+    "duplicate_customer_id": 0,
+    "selection_hash_null": 0,
+    "pass": true
+  },
+  "cohort_distribution_sanity": {
+    "main": {
+      "full_data": {
+        "cluster_sizes": [
+          {
+            "cluster_id": 0,
+            "count": 729944,
+            "ratio_pct": 53.582484083680235
+          },
+          {
+            "cluster_id": 1,
+            "count": 198035,
+            "ratio_pct": 14.537015490930285
+          },
+          {
+            "cluster_id": 2,
+            "count": 409493,
+            "ratio_pct": 30.059363670197264
+          },
+          {
+            "cluster_id": 3,
+            "count": 24809,
+            "ratio_pct": 1.8211367551922109
+          }
+        ],
+        "total": 1362281,
+        "cluster_count": 4,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pass": true
+      },
+      "cohort_1m": {
+        "cluster_sizes": [
+          {
+            "cluster_id": 0,
+            "count": 535490,
+            "ratio_pct": 53.549
+          },
+          {
+            "cluster_id": 1,
+            "count": 145123,
+            "ratio_pct": 14.5123
+          },
+          {
+            "cluster_id": 2,
+            "count": 301103,
+            "ratio_pct": 30.110300000000002
+          },
+          {
+            "cluster_id": 3,
+            "count": 18284,
+            "ratio_pct": 1.8284000000000002
+          }
+        ],
+        "total": 1000000,
+        "cluster_count": 4,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pass": true
+      },
+      "ratio_difference": [
+        {
+          "cluster_id": 0,
+          "full_ratio_pct": 53.582484083680235,
+          "cohort_ratio_pct": 53.549,
+          "difference_pp": -0.0334840836802357,
+          "absolute_difference_pp": 0.0334840836802357
+        },
+        {
+          "cluster_id": 1,
+          "full_ratio_pct": 14.537015490930285,
+          "cohort_ratio_pct": 14.5123,
+          "difference_pp": -0.024715490930285355,
+          "absolute_difference_pp": 0.024715490930285355
+        },
+        {
+          "cluster_id": 2,
+          "full_ratio_pct": 30.059363670197264,
+          "cohort_ratio_pct": 30.110300000000002,
+          "difference_pp": 0.0509363298027381,
+          "absolute_difference_pp": 0.0509363298027381
+        },
+        {
+          "cluster_id": 3,
+          "full_ratio_pct": 1.8211367551922109,
+          "cohort_ratio_pct": 1.8284000000000002,
+          "difference_pp": 0.007263244807789393,
+          "absolute_difference_pp": 0.007263244807789393
+        }
+      ],
+      "descriptive_only": true
+    },
+    "enhanced": {
+      "full_data": {
+        "cluster_sizes": [
+          {
+            "cluster_id": 0,
+            "count": 210248,
+            "ratio_pct": 15.433526563168684
+          },
+          {
+            "cluster_id": 1,
+            "count": 172774,
+            "ratio_pct": 12.682699090716232
+          },
+          {
+            "cluster_id": 2,
+            "count": 269066,
+            "ratio_pct": 19.751137981077324
+          },
+          {
+            "cluster_id": 3,
+            "count": 343639,
+            "ratio_pct": 25.225265565621193
+          },
+          {
+            "cluster_id": 4,
+            "count": 366554,
+            "ratio_pct": 26.90737079941657
+          }
+        ],
+        "total": 1362281,
+        "cluster_count": 5,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pass": true
+      },
+      "cohort_1m": {
+        "cluster_sizes": [
+          {
+            "cluster_id": 0,
+            "count": 154437,
+            "ratio_pct": 15.4437
+          },
+          {
+            "cluster_id": 1,
+            "count": 126550,
+            "ratio_pct": 12.655
+          },
+          {
+            "cluster_id": 2,
+            "count": 197817,
+            "ratio_pct": 19.7817
+          },
+          {
+            "cluster_id": 3,
+            "count": 252287,
+            "ratio_pct": 25.2287
+          },
+          {
+            "cluster_id": 4,
+            "count": 268909,
+            "ratio_pct": 26.890900000000002
+          }
+        ],
+        "total": 1000000,
+        "cluster_count": 5,
+        "prediction_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "pass": true
+      },
+      "ratio_difference": [
+        {
+          "cluster_id": 0,
+          "full_ratio_pct": 15.433526563168684,
+          "cohort_ratio_pct": 15.4437,
+          "difference_pp": 0.010173436831315996,
+          "absolute_difference_pp": 0.010173436831315996
+        },
+        {
+          "cluster_id": 1,
+          "full_ratio_pct": 12.682699090716232,
+          "cohort_ratio_pct": 12.655,
+          "difference_pp": -0.027699090716232888,
+          "absolute_difference_pp": 0.027699090716232888
+        },
+        {
+          "cluster_id": 2,
+          "full_ratio_pct": 19.751137981077324,
+          "cohort_ratio_pct": 19.7817,
+          "difference_pp": 0.030562018922676515,
+          "absolute_difference_pp": 0.030562018922676515
+        },
+        {
+          "cluster_id": 3,
+          "full_ratio_pct": 25.225265565621193,
+          "cohort_ratio_pct": 25.2287,
+          "difference_pp": 0.003434434378807083,
+          "absolute_difference_pp": 0.003434434378807083
+        },
+        {
+          "cluster_id": 4,
+          "full_ratio_pct": 26.90737079941657,
+          "cohort_ratio_pct": 26.890900000000002,
+          "difference_pp": -0.016470799416566706,
+          "absolute_difference_pp": 0.016470799416566706
+        }
+      ],
+      "descriptive_only": true
+    }
+  },
+  "protocol_validation_pass": true,
+  "rule_based_definition_status": "PENDING_STAGE18_AUTHORITY",
+  "three_model_protocol": {
+    "stage": 17,
+    "authority": "THREE_MODEL_COMPARISON_PROTOCOL_V1",
+    "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+    "cohort_size": 1000000,
+    "models": [
+      {
+        "id": "R1",
+        "name": "Rule-based RFM",
+        "type": "deterministic business-rule segmentation",
+        "authority_status": "PENDING_STAGE18"
+      },
+      {
+        "id": "K1",
+        "name": "Main K-Means",
+        "authority": "MAIN_KMEANS_FINAL",
+        "k": 4,
+        "training_feature_space": "standardized raw RFM 3D",
+        "prediction_column": "main_prediction"
+      },
+      {
+        "id": "K2",
+        "name": "Enhanced K-Means",
+        "authority": "ENHANCED_KMEANS_FINAL",
+        "k": 5,
+        "training_feature_space": "standardized transformed eRFM 5D",
+        "prediction_column": "enhanced_prediction"
+      }
+    ],
+    "common_evaluation_spaces": {
+      "RFM_3D": {
+        "column": "eval_rfm3d_scaled",
+        "dimension": 3,
+        "feature_order": [
+          "Recency",
+          "Frequency",
+          "Monetary"
+        ],
+        "source_authority": "Stage 7 main_rfm_scaled"
+      },
+      "ERFM_5D": {
+        "column": "eval_erfm5d_scaled",
+        "dimension": 5,
+        "feature_order": [
+          "Recency_improved",
+          "Frequency_log1p",
+          "Monetary_log1p",
+          "AvgBasketSize_log1p",
+          "ProductVariety_log1p"
+        ],
+        "source_authority": "Stage 12 improved_erfm_scaled"
+      }
+    },
+    "quality_metrics": [
+      "silhouette_rfm3d",
+      "silhouette_erfm5d",
+      "cluster_balance",
+      "normalized_cluster_entropy",
+      "common_space_sse_per_customer",
+      "pairwise_partition_agreement",
+      "raw_profile_distinctness",
+      "business_interpretability"
+    ],
+    "agreement_metrics": [
+      "ARI",
+      "NMI"
+    ],
+    "native_metric_cross_space_comparison_allowed": false,
+    "rule_based_is_ground_truth": false,
+    "classification_accuracy_allowed": false,
+    "arbitrary_weighted_score_allowed": false,
+    "gmm_in_mandatory_comparison": false,
+    "runtime_track_separate": true,
+    "ready_for_stage18": true
+  },
+  "quality_track": {
+    "uses_locked_authoritative_assignments": true,
+    "evaluation_spaces": [
+      "RFM_3D",
+      "ERFM_5D"
+    ],
+    "formal_comparison_executed": false
+  },
+  "runtime_track": {
+    "separate_from_quality_track": true,
+    "controlled_1m_benchmark_executed": false
+  },
+  "warnings": [],
+  "blockers": [],
+  "ready_for_stage18": true,
+  "artifact_readback": {
+    "output\\comparison\\stage17\\deterministic_1m_cohort_manifest.json": true,
+    "output\\comparison\\stage17\\source_alignment_audit.json": true,
+    "output\\comparison\\stage17\\cohort_distribution_sanity.json": true,
+    "output\\comparison\\stage17\\three_model_comparison_protocol_v1.json": true,
+    "output\\comparison\\stage17\\stage17_final_summary.json": true,
+    "reports\\stage17_deterministic_1m_comparison_protocol.txt": true,
+    "reports\\stage17_run.log": true,
+    "output\\comparison\\stage17\\comparison_customer_ids_1m": true,
+    "output\\comparison\\stage17\\comparison_cohort_1m": true
+  },
+  "artifact_readback_pass": true
+}

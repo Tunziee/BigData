@@ -1,0 +1,35 @@
+{
+  "trials": [
+    {
+      "TrialOrder": 1,
+      "MinSupport": 0.0005,
+      "MinimumSupportBasketCount": 4541,
+      "FrequentItemsetCount": 380,
+      "SingletonItemsetCount": 376,
+      "PairOrLargerItemsetCount": 4,
+      "MaximumItemsetSize": 2,
+      "AssociationRuleCount": 5,
+      "SelectionGatePass": false,
+      "Selected": false,
+      "FailureReason": "ASSOCIATION_RULE_COUNT_BELOW_10",
+      "fit_status": "completed"
+    },
+    {
+      "TrialOrder": 2,
+      "MinSupport": 0.0002,
+      "MinimumSupportBasketCount": 1817,
+      "FrequentItemsetCount": 2655,
+      "SingletonItemsetCount": 2592,
+      "PairOrLargerItemsetCount": 63,
+      "MaximumItemsetSize": 2,
+      "AssociationRuleCount": 104,
+      "SelectionGatePass": true,
+      "Selected": true,
+      "FailureReason": "",
+      "fit_status": "completed"
+    }
+  ],
+  "safety_limit": 2000000,
+  "selection_stopped_on_first_pass": true,
+  "resource_safety_blocked": false
+}

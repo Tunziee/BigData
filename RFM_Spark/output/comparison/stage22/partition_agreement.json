@@ -1,0 +1,165 @@
+{
+  "B0_vs_M1": {
+    "left_model": "b0_prediction",
+    "right_model": "main_prediction",
+    "left_k": 4,
+    "right_k": 4,
+    "contingency_table": [
+      [
+        535396,
+        0,
+        20,
+        0
+      ],
+      [
+        94,
+        145109,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        301081,
+        0
+      ],
+      [
+        0,
+        14,
+        0,
+        18284
+      ]
+    ],
+    "row_sums": [
+      535416,
+      145205,
+      301081,
+      18298
+    ],
+    "column_sums": [
+      535490,
+      145123,
+      301103,
+      18284
+    ],
+    "adjusted_rand_index": 0.9996501516955725,
+    "mutual_information_natural_log": 1.048000714370093,
+    "entropy_left_natural_log": 1.0492892645987302,
+    "entropy_right_natural_log": 1.0491476256648056,
+    "normalized_mutual_information": 0.9988393925332469,
+    "nmi_definition": "2 * MI / (H_A + H_B), natural logarithm",
+    "ari_definition": "Manual adjusted Rand index from contingency pair counts"
+  },
+  "B0_vs_M2": {
+    "left_model": "b0_prediction",
+    "right_model": "enhanced_prediction",
+    "left_k": 4,
+    "right_k": 5,
+    "contingency_table": [
+      [
+        77434,
+        7282,
+        0,
+        234689,
+        216011
+      ],
+      [
+        28,
+        100585,
+        0,
+        0,
+        44592
+      ],
+      [
+        76974,
+        386,
+        197817,
+        17598,
+        8306
+      ],
+      [
+        1,
+        18297,
+        0,
+        0,
+        0
+      ]
+    ],
+    "row_sums": [
+      535416,
+      145205,
+      301081,
+      18298
+    ],
+    "column_sums": [
+      154437,
+      126550,
+      197817,
+      252287,
+      268909
+    ],
+    "adjusted_rand_index": 0.3615512050579117,
+    "mutual_information_natural_log": 0.6403183265974542,
+    "entropy_left_natural_log": 1.0492892645987302,
+    "entropy_right_natural_log": 1.5712494353549107,
+    "normalized_mutual_information": 0.4886921354061911,
+    "nmi_definition": "2 * MI / (H_A + H_B), natural logarithm",
+    "ari_definition": "Manual adjusted Rand index from contingency pair counts"
+  },
+  "M1_vs_M2": {
+    "left_model": "main_prediction",
+    "right_model": "enhanced_prediction",
+    "left_k": 4,
+    "right_k": 5,
+    "contingency_table": [
+      [
+        77430,
+        7307,
+        0,
+        234674,
+        216079
+      ],
+      [
+        28,
+        100573,
+        0,
+        0,
+        44522
+      ],
+      [
+        76978,
+        387,
+        197817,
+        17613,
+        8308
+      ],
+      [
+        1,
+        18283,
+        0,
+        0,
+        0
+      ]
+    ],
+    "row_sums": [
+      535490,
+      145123,
+      301103,
+      18284
+    ],
+    "column_sums": [
+      154437,
+      126550,
+      197817,
+      252287,
+      268909
+    ],
+    "adjusted_rand_index": 0.3615169302033522,
+    "mutual_information_natural_log": 0.6401945143166362,
+    "entropy_left_natural_log": 1.0491476256648056,
+    "entropy_right_natural_log": 1.5712494353549107,
+    "normalized_mutual_information": 0.4886240515530935,
+    "nmi_definition": "2 * MI / (H_A + H_B), natural logarithm",
+    "ari_definition": "Manual adjusted Rand index from contingency pair counts"
+  }
+}

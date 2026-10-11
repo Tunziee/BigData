@@ -1,0 +1,624 @@
+{
+  "stage23_gate": {
+    "summary_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage23\\stage23_final_summary.json",
+    "summary": {
+      "stage": 23,
+      "authority": "PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1",
+      "quality_authority": "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1",
+      "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+      "cohort_count": 1000000,
+      "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+      "authority_audit": {
+        "stage17": true,
+        "stage21": true,
+        "stage22": true,
+        "stage10": true,
+        "stage15": true
+      },
+      "input_validation_pass": true,
+      "cache_materialization": {
+        "storage_level": "MEMORY_AND_DISK",
+        "row_count": 1000000,
+        "input_read_runtime_sec": 1.8511876000002303,
+        "cache_materialization_runtime_sec": 5.6841545999996015
+      },
+      "track_a_assignment": {
+        "B0": {
+          "model_id": "B0",
+          "model_name": "Basic K-Means Baseline",
+          "k": 4,
+          "dimension": 3,
+          "training_space": "RFM3D",
+          "initMode": "random",
+          "min_sec": 0.46324509999976726,
+          "max_sec": 0.5669668999998976,
+          "mean_sec": 0.5070820999999341,
+          "median_sec": 0.4910343000001376,
+          "population_std_sec": 0.043838353546043526,
+          "trial_times_sec": [
+            0.5669668999998976,
+            0.4910343000001376,
+            0.46324509999976726
+          ],
+          "customers_per_second": 2036517.611905563,
+          "model_load_sec": 0.3046462000002066,
+          "prediction_mismatch_vs_locked": 0,
+          "assignment_only": true
+        },
+        "M1": {
+          "model_id": "M1",
+          "model_name": "Project Main K-Means",
+          "k": 4,
+          "dimension": 3,
+          "training_space": "RFM3D",
+          "initMode": "k-means||",
+          "min_sec": 0.47759060000043974,
+          "max_sec": 0.5155108999997537,
+          "mean_sec": 0.49647196666652843,
+          "median_sec": 0.49631439999939175,
+          "population_std_sec": 0.01548129857710991,
+          "trial_times_sec": [
+            0.5155108999997537,
+            0.49631439999939175,
+            0.47759060000043974
+          ],
+          "customers_per_second": 2014851.8761519422,
+          "model_load_sec": 0.19527019999986805,
+          "prediction_mismatch_vs_locked": 0,
+          "assignment_only": true
+        },
+        "M2": {
+          "model_id": "M2",
+          "model_name": "Enhanced K-Means",
+          "k": 5,
+          "dimension": 5,
+          "training_space": "ERFM5D",
+          "initMode": "k-means||",
+          "min_sec": 0.45437049999964074,
+          "max_sec": 0.5631928999991942,
+          "mean_sec": 0.5264944999998988,
+          "median_sec": 0.5619201000008616,
+          "population_std_sec": 0.0510020165417464,
+          "trial_times_sec": [
+            0.5631928999991942,
+            0.45437049999964074,
+            0.5619201000008616
+          ],
+          "customers_per_second": 1779612.4395594085,
+          "model_load_sec": 0.16413039999952161,
+          "prediction_mismatch_vs_locked": 0,
+          "assignment_only": true
+        }
+      },
+      "track_b_build_assign": {
+        "B0": {
+          "model_id": "B0",
+          "model_name": "Basic K-Means Baseline",
+          "k": 4,
+          "dimension": 3,
+          "training_space": "RFM3D",
+          "initMode": "random",
+          "fit_only": {
+            "min_sec": 15.617225800000597,
+            "max_sec": 17.05467200000021,
+            "mean_sec": 16.257123800000347,
+            "median_sec": 16.099473600000238,
+            "population_std_sec": 0.5973291017205328,
+            "trial_times_sec": [
+              15.617225800000597,
+              16.099473600000238,
+              17.05467200000021
+            ]
+          },
+          "assign_after_fit": {
+            "min_sec": 0.4894242000000304,
+            "max_sec": 0.5589345999997022,
+            "mean_sec": 0.5266019000000597,
+            "median_sec": 0.5314469000004465,
+            "population_std_sec": 0.028583555246346384,
+            "trial_times_sec": [
+              0.5589345999997022,
+              0.5314469000004465,
+              0.4894242000000304
+            ]
+          },
+          "total_fit_plus_assign": {
+            "min_sec": 16.176161100000172,
+            "max_sec": 17.544096599999648,
+            "mean_sec": 16.783726266666843,
+            "median_sec": 16.630921100000705,
+            "population_std_sec": 0.5688139398547374,
+            "trial_times_sec": [
+              16.176161100000172,
+              16.630921100000705,
+              17.544096599999648
+            ]
+          },
+          "median_fit_only_sec": 16.099473600000238,
+          "median_assign_after_fit_sec": 0.5314469000004465,
+          "median_total_fit_plus_assign_sec": 16.630921100000705,
+          "customers_per_second_total": 60128.96062623721,
+          "median_numIter": 58,
+          "median_trainingCost": 769067.7968670968,
+          "representative_centers": [
+            [
+              -0.5000130374391902,
+              -0.2384523607478706,
+              -0.24013222811767362
+            ],
+            [
+              -0.8267769450949085,
+              1.3276233194790479,
+              1.0495893598508148
+            ],
+            [
+              -0.9478670452499417,
+              4.284000169304138,
+              4.906543440556703
+            ],
+            [
+              1.354565933996055,
+              -0.5009980130963094,
+              -0.40240646178880163
+            ]
+          ],
+          "determinism_pass": true
+        },
+        "M1": {
+          "model_id": "M1",
+          "model_name": "Project Main K-Means",
+          "k": 4,
+          "dimension": 3,
+          "training_space": "RFM3D",
+          "initMode": "k-means||",
+          "fit_only": {
+            "min_sec": 16.12442959999953,
+            "max_sec": 19.500995200000034,
+            "mean_sec": 17.336106733333207,
+            "median_sec": 16.382895400000052,
+            "population_std_sec": 1.5344396799858826,
+            "trial_times_sec": [
+              16.12442959999953,
+              16.382895400000052,
+              19.500995200000034
+            ]
+          },
+          "assign_after_fit": {
+            "min_sec": 0.5291966000004322,
+            "max_sec": 0.706935600000179,
+            "mean_sec": 0.5900942333334266,
+            "median_sec": 0.5341504999996687,
+            "population_std_sec": 0.08264407220007357,
+            "trial_times_sec": [
+              0.5341504999996687,
+              0.5291966000004322,
+              0.706935600000179
+            ]
+          },
+          "total_fit_plus_assign": {
+            "min_sec": 16.65858070000013,
+            "max_sec": 20.20793169999979,
+            "mean_sec": 17.926201833333227,
+            "median_sec": 16.912093099999765,
+            "population_std_sec": 1.6167427176408429,
+            "trial_times_sec": [
+              16.65858070000013,
+              16.912093099999765,
+              20.20793169999979
+            ]
+          },
+          "median_fit_only_sec": 16.382895400000052,
+          "median_assign_after_fit_sec": 0.5341504999996687,
+          "median_total_fit_plus_assign_sec": 16.912093099999765,
+          "customers_per_second_total": 59129.286604980545,
+          "median_numIter": 57,
+          "median_trainingCost": 769067.7968670968,
+          "representative_centers": [
+            [
+              1.354565933996055,
+              -0.5009980130963094,
+              -0.40240646178880163
+            ],
+            [
+              -0.9478670452499417,
+              4.284000169304138,
+              4.906543440556703
+            ],
+            [
+              -0.8267769450949085,
+              1.3276233194790479,
+              1.0495893598508148
+            ],
+            [
+              -0.5000130374391902,
+              -0.2384523607478706,
+              -0.24013222811767362
+            ]
+          ],
+          "determinism_pass": true
+        },
+        "M2": {
+          "model_id": "M2",
+          "model_name": "Enhanced K-Means",
+          "k": 5,
+          "dimension": 5,
+          "training_space": "ERFM5D",
+          "initMode": "k-means||",
+          "fit_only": {
+            "min_sec": 12.728319900000315,
+            "max_sec": 13.587507300000652,
+            "mean_sec": 13.058568966666826,
+            "median_sec": 12.85987969999951,
+            "population_std_sec": 0.3778525423110905,
+            "trial_times_sec": [
+              12.728319900000315,
+              13.587507300000652,
+              12.85987969999951
+            ]
+          },
+          "assign_after_fit": {
+            "min_sec": 0.5377789000003759,
+            "max_sec": 0.6189056999992317,
+            "mean_sec": 0.5860479333332478,
+            "median_sec": 0.6014592000001358,
+            "population_std_sec": 0.03486660077803244,
+            "trial_times_sec": [
+              0.5377789000003759,
+              0.6189056999992317,
+              0.6014592000001358
+            ]
+          },
+          "total_fit_plus_assign": {
+            "min_sec": 13.266099400000712,
+            "max_sec": 14.206414000000223,
+            "mean_sec": 13.644617800000256,
+            "median_sec": 13.461339999999836,
+            "population_std_sec": 0.40516741455255706,
+            "trial_times_sec": [
+              13.266099400000712,
+              14.206414000000223,
+              13.461339999999836
+            ]
+          },
+          "median_fit_only_sec": 12.85987969999951,
+          "median_assign_after_fit_sec": 0.6014592000001358,
+          "median_total_fit_plus_assign_sec": 13.461339999999836,
+          "customers_per_second_total": 74286.80948553504,
+          "median_numIter": 32,
+          "median_trainingCost": 1347447.9633641602,
+          "representative_centers": [
+            [
+              -0.823905195371489,
+              1.6858260754964787,
+              2.119957548545732,
+              0.6499862831564036,
+              1.709428125075125
+            ],
+            [
+              -0.3571475465711704,
+              -0.6091067095339708,
+              -0.6478476390825908,
+              -0.6459021028365618,
+              -0.7957328563287355
+            ],
+            [
+              0.4413887500195702,
+              -0.6286598074464477,
+              -0.22608168000341397,
+              1.4099906209845428,
+              0.019233721506584082
+            ],
+            [
+              1.500391764823508,
+              -0.8212166587752642,
+              -0.7048270464544093,
+              -0.599548402283272,
+              -0.9614681681983293
+            ],
+            [
+              -0.6300889307155644,
+              0.7418414110171205,
+              0.2578397195654345,
+              -0.0684448976581693,
+              0.6374366369024045
+            ]
+          ],
+          "determinism_pass": true
+        }
+      },
+      "track_a_locked_prediction_equality": {
+        "B0": true,
+        "M1": true,
+        "M2": true
+      },
+      "track_b_determinism_pass": true,
+      "b0_m1_initialization_analysis": {
+        "runtime_basis": "Track B median of 3 measured fresh-fit trials",
+        "fit_runtime_sec": {
+          "B0": 16.099473600000238,
+          "M1": 16.382895400000052
+        },
+        "fit_speedup": {
+          "definition": "B0 median fit runtime / M1 median fit runtime",
+          "B0_divided_by_M1": 0.9827001398055796,
+          "M1_speedup_factor_vs_B0": 0.9827001398055796,
+          "M1_runtime_reduction_pct_vs_B0": -1.7604414097105034
+        },
+        "iteration_reduction": {
+          "B0_median_numIter": 58,
+          "M1_median_numIter": 57,
+          "absolute_reduction_B0_minus_M1": 1,
+          "percent_reduction_vs_B0": 1.7241379310344827
+        },
+        "assignment_runtime_sec": {
+          "B0": 0.5314469000004465,
+          "M1": 0.5341504999996687,
+          "B0_divided_by_M1": 0.9949385051605795
+        },
+        "total_runtime_sec": {
+          "B0": 16.630921100000705,
+          "M1": 16.912093099999765,
+          "B0_divided_by_M1": 0.98337450022676
+        },
+        "quality_context_from_stage22": {
+          "ARI": 0.9996501516955725,
+          "NMI": 0.9988393925332469,
+          "mismatch_ratio": 0.00013,
+          "silhouette_delta_b0_minus_m1": -3.3887726247239236e-05
+        },
+        "no_quality_score_used": true
+      },
+      "m1_m2_runtime_tradeoff": {
+        "runtime_basis": "Track B median of 3 measured fresh-fit trials",
+        "feature_dimension": {
+          "M1": 3,
+          "M2": 5
+        },
+        "cluster_count": {
+          "M1": 4,
+          "M2": 5
+        },
+        "fit": {
+          "M1_sec": 16.382895400000052,
+          "M2_sec": 12.85987969999951,
+          "M2_divided_by_M1": 0.7849576882484075,
+          "M2_overhead_pct_vs_M1": -21.504231175159248
+        },
+        "assignment_after_fit": {
+          "M1_sec": 0.5341504999996687,
+          "M2_sec": 0.6014592000001358,
+          "M2_divided_by_M1": 1.1260107404196174,
+          "M2_overhead_pct_vs_M1": 12.601074041961734
+        },
+        "total_fit_plus_assign": {
+          "M1_sec": 16.912093099999765,
+          "M2_sec": 13.461339999999836,
+          "M2_divided_by_M1": 0.7959594309470791,
+          "M2_overhead_pct_vs_M1": -20.40405690529209
+        },
+        "quality_context_from_stage22": {
+          "silhouette_relative_improvement_pct": 35.121723188133494,
+          "sse_per_customer_reduction_pct": 40.30196996970776,
+          "entropy_change": 0.21947212673954763,
+          "cv_reduction_pct": 64.55297351284483
+        },
+        "no_weighted_runtime_quality_score_used": true
+      },
+      "runtime_ratios": {
+        "track_a_assignment": [
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M1",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+            "ratio": 0.9893613806102329
+          },
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+            "ratio": 0.8738507485305913
+          },
+          {
+            "numerator_model": "M1",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+            "ratio": 0.8832472801713817
+          }
+        ],
+        "track_b_fit_only": [
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M1",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+            "ratio": 0.9827001398055796
+          },
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+            "ratio": 1.2519147904626862
+          },
+          {
+            "numerator_model": "M1",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+            "ratio": 1.2739540168482817
+          }
+        ],
+        "track_b_assign_after_fit": [
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M1",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+            "ratio": 0.9949385051605795
+          },
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+            "ratio": 0.8835959280368918
+          },
+          {
+            "numerator_model": "M1",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+            "ratio": 0.8880909960302347
+          }
+        ],
+        "track_b_total_fit_plus_assign": [
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M1",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+            "ratio": 0.98337450022676
+          },
+          {
+            "numerator_model": "B0",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+            "ratio": 1.235458067324717
+          },
+          {
+            "numerator_model": "M1",
+            "denominator_model": "M2",
+            "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+            "ratio": 1.2563454381213142
+          }
+        ]
+      },
+      "spark_application_id": "local-1791272756303",
+      "spark_event_log": {
+        "enabled": false,
+        "issue": "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n",
+        "path": "file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/benchmark/stage23/spark-events"
+      },
+      "spark_ui_evidence": {
+        "spark_application_id": "local-1791272756303",
+        "spark_application_name": "Stage23-Primary-B0-M1-M2-Runtime-Benchmark",
+        "spark_ui_url": "http://localhost:4040",
+        "spark_ui_port": "4040",
+        "spark_version": "4.2.0",
+        "master": "local[4]",
+        "event_log_enabled": false,
+        "event_log_path": "file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/benchmark/stage23/spark-events",
+        "event_log_directory": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage23\\spark-events",
+        "event_log_issue": "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n",
+        "screenshots_fabricated": false,
+        "evidence_scope": "runtime configuration and application identity; no fake screenshots",
+        "benchmark_operations": [
+          "Track A locked B0 assignment",
+          "Track A locked M1 assignment",
+          "Track A locked M2 assignment",
+          "Track B fresh B0 random K-Means fit plus assignment",
+          "Track B fresh M1 k-means|| K-Means fit plus assignment",
+          "Track B fresh M2 k-means|| K-Means fit plus assignment"
+        ]
+      },
+      "quality_models_modified": false,
+      "final_model_authorities_modified": false,
+      "runtime_quality_combined_score_used": false,
+      "stage20_auxiliary_preserved": true,
+      "primary_runtime_benchmark_complete": true,
+      "ready_for_stage24": true,
+      "warnings": [
+        "Runtime is machine-, JVM-, Spark-, cache-, and cohort-specific; no universal speed claim is made.",
+        "Track B is comparison-only and does not replace or serialize any final model.",
+        "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n"
+      ],
+      "blockers": [],
+      "artifact_readback": {
+        "output\\benchmark\\stage23\\benchmark_environment.json": true,
+        "output\\benchmark\\stage23\\benchmark_input_validation.json": true,
+        "output\\benchmark\\stage23\\track_a_assignment_trials.json": true,
+        "output\\benchmark\\stage23\\track_a_assignment_summary.csv": true,
+        "output\\benchmark\\stage23\\track_b_build_assign_trials.json": true,
+        "output\\benchmark\\stage23\\track_b_build_assign_summary.csv": true,
+        "output\\benchmark\\stage23\\benchmark_determinism_validation.json": true,
+        "output\\benchmark\\stage23\\runtime_ratios.json": true,
+        "output\\benchmark\\stage23\\b0_m1_initialization_runtime_analysis.json": true,
+        "output\\benchmark\\stage23\\m1_m2_runtime_tradeoff.json": true,
+        "output\\benchmark\\stage23\\spark_ui_evidence_manifest.json": true,
+        "output\\benchmark\\stage23\\stage23_final_summary.json": true,
+        "reports\\stage23_primary_b0_m1_m2_runtime_benchmark.txt": true,
+        "reports\\stage23_run.log": true
+      },
+      "artifact_readback_pass": true
+    },
+    "checks": {
+      "stage": true,
+      "authority": true,
+      "cohort_count": true,
+      "complete": true,
+      "ready": true,
+      "models_unmodified": true
+    }
+  },
+  "source_discovery": {
+    "csv_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\data\\transactions_train.csv",
+    "parquet_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions",
+    "csv_files": [
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\data\\transactions_train.csv"
+    ],
+    "parquet_files": [
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+      "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet"
+    ],
+    "csv_header": [
+      "t_dat",
+      "customer_id",
+      "article_id",
+      "price",
+      "sales_channel_id"
+    ],
+    "required_columns": [
+      "t_dat",
+      "customer_id",
+      "article_id",
+      "price",
+      "sales_channel_id"
+    ],
+    "script_evidence": {
+      "stage2_script": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\src\\02_data_profiling.py",
+      "stage3_script": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\src\\03_clean_data.py",
+      "stage2_exists": true,
+      "stage3_exists": true,
+      "stage2_contains_transactions_source": true,
+      "stage3_contains_transactions_source": true,
+      "stage3_contains_clean_transactions_output": true
+    },
+    "checks": {
+      "csv_exists": true,
+      "parquet_directory_exists": true,
+      "csv_data_file_count": true,
+      "parquet_data_file_count_positive": true,
+      "csv_required_columns": true,
+      "stage2_stage3_evidence": true
+    },
+    "pass": true
+  },
+  "pass": true
+}

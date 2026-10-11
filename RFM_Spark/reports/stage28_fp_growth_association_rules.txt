@@ -1,0 +1,3 @@
+STAGE 28 FAILED CLOSED
+RuntimeError: FP-Growth produced no association rules
+READY_FOR_STAGE_29=False

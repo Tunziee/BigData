@@ -1,0 +1,71 @@
+{
+  "criterion_winners": {
+    "highest_silhouette_rfm3d": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "value": 0.6858449879433209,
+      "metric": "Silhouette_RFM3D"
+    },
+    "highest_silhouette_erfm5d": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "value": 0.481806967562302,
+      "metric": "Silhouette_ERFM5D"
+    },
+    "lowest_sse_per_customer_rfm3d": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "value": 0.7691390463586639,
+      "metric": "SSEPerCustomer_RFM3D"
+    },
+    "lowest_sse_per_customer_erfm5d": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "value": 1.3474493014326931,
+      "metric": "SSEPerCustomer_ERFM5D"
+    },
+    "highest_normalized_entropy": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "value": 0.9837592492612488,
+      "metric": "NormalizedEntropy"
+    },
+    "lowest_cluster_size_cv": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "value": 0.22861831448945644,
+      "metric": "ClusterSizeCV"
+    },
+    "largest_raw_distinctness_min": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "value": 1.3377777133377713,
+      "metric": "RawDistinctnessMin"
+    },
+    "largest_raw_distinctness_mean": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "value": 7.535123114603716,
+      "metric": "RawDistinctnessMean"
+    }
+  },
+  "winner_model_ids": [
+    "K1",
+    "K2",
+    "R1"
+  ],
+  "no_single_universal_winner": true,
+  "weighted_score_used": false,
+  "classification_accuracy_used": false,
+  "interpretability_evidence": {
+    "R1": "Transparent ordinal quintile baseline with directly explainable R/F/M bands.",
+    "K1": "Compactness and four-segment behavioral grouping from the locked 3D RFM model; names remain descriptive, not causal.",
+    "K2": "Five-dimensional behavioral grouping using recency, frequency, monetary, basket size, and product variety; names remain descriptive, not causal."
+  },
+  "recommendation": "NO_SINGLE_UNIVERSAL_WINNER",
+  "use_case_guidance": {
+    "compactness": "Select the criterion winner separately for the required common space.",
+    "balance": "Use the highest normalized entropy / lowest CV winner when balanced coverage is the priority.",
+    "interpretability": "Use R1 when transparent ordinal rules are the primary requirement; use K1/K2 when behavioral grouping is the requirement and profile evidence supports it."
+  }
+}

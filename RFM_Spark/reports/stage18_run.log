@@ -1,0 +1,56 @@
+Picked up JAVA_TOOL_OPTIONS: --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+26/10/06 08:32:41 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/10/06 08:32:42 INFO SparkContext: Running Spark version 4.2.0
+26/10/06 08:32:42 INFO SparkContext: OS info Windows 11, 10.0, amd64
+26/10/06 08:32:42 INFO SparkContext: Java version 21.0.8+-14196175-b1038.72
+26/10/06 08:32:42 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/06 08:32:43 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in standalone/kubernetes and LOCAL_DIRS in YARN).
+26/10/06 08:32:43 INFO ResourceUtils: ==============================================================
+26/10/06 08:32:43 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/06 08:32:43 INFO ResourceUtils: ==============================================================
+26/10/06 08:32:43 INFO SparkContext: Submitted application: Stage18-Build-Rule-Based-RFM-Baseline
+26/10/06 08:32:43 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 08:32:43 INFO Utils: Successfully started service 'sparkDriver' on port 63415.
+26/10/06 08:32:43 INFO SparkEnv: Registering MapOutputTracker
+26/10/06 08:32:43 INFO SparkEnv: Registering BlockManagerMaster
+26/10/06 08:32:43 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/06 08:32:43 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/06 08:32:43 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/06 08:32:43 INFO DiskBlockManager: Created local directory at D:\Doan_bigdata\BigData\BigData\spark_tmp\blockmgr-1a4cf679-37e7-4cc8-86b4-16500b9380f4
+26/10/06 08:32:43 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/06 08:32:43 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/06 08:32:43 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/06 08:32:43 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/06 08:32:43 INFO ResourceProfile: Limiting resource is cpu
+26/10/06 08:32:43 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/06 08:32:43 INFO SecurityManager: Changing view acls to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing modify acls to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing view acls groups to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: Changing modify acls groups to: tayb1
+26/10/06 08:32:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: tayb1 groups with view permissions: EMPTY; users with modify permissions: tayb1; groups with modify permissions: EMPTY; RPC SSL disabled
+26/10/06 08:32:43 INFO Executor: Starting executor ID driver on host Tay-Nguyen
+26/10/06 08:32:43 INFO Executor: Running Spark version 4.2.0
+26/10/06 08:32:43 INFO Executor: OS info Windows 11, 10.0, amd64
+26/10/06 08:32:43 INFO Executor: Java version 21.0.8+-14196175-b1038.72
+26/10/06 08:32:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/06 08:32:43 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7979394d for default.
+26/10/06 08:32:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63416.
+26/10/06 08:32:43 INFO NettyBlockTransferService: Server created on Tay-Nguyen:63416
+26/10/06 08:32:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/06 08:32:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, Tay-Nguyen, 63416, None)
+26/10/06 08:32:43 INFO BlockManagerMasterEndpoint: Registering block manager Tay-Nguyen:63416 with 1048.8 MiB RAM, BlockManagerId(driver, Tay-Nguyen, 63416, None)
+26/10/06 08:32:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, Tay-Nguyen, 63416, None)
+26/10/06 08:32:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, Tay-Nguyen, 63416, None)
+Windows Hadoop NativeIO fallback: enabled
+INPUT_VALIDATION={'row_count': 1000000, 'distinct_customer_id': 1000000, 'duplicate_customer_id': 0, 'nulls': {'Recency': 0, 'Frequency': 0, 'Monetary': 0}, 'nan_counts': {'Recency': 0, 'Frequency': 0, 'Monetary': 0}, 'non_finite': {'Recency': 0, 'Frequency': 0, 'Monetary': 0}, 'invalid_domain_counts': {'Recency_lt_0': 0, 'Frequency_le_0': 0, 'Monetary_le_0': 0}, 'pass': True}
+AUTHORITY_AUDIT_PASS=True
+RULE_PREDICTION_SHA256=ac372dfcd82f0f7183a69efa3cb0f8742fa726854e06d3059a8f56de66433bde
+PREDICTION_VALIDATION_PASS=True
+REPRODUCIBILITY_PASS=True
+CUSTOMER_UNIVERSE_MATCH_PASS=True
+READY_FOR_STAGE_19=True

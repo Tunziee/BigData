@@ -1,0 +1,44 @@
+{
+  "cache_storage_level": {
+    "string": "Disk Memory Serialized 1x Replicated",
+    "useDisk": true,
+    "useMemory": true,
+    "useOffHeap": false,
+    "deserialized": false,
+    "replication": 1,
+    "is_cached_property": true
+  },
+  "no_cache_storage_level": {
+    "string": "Serialized 1x Replicated",
+    "useDisk": false,
+    "useMemory": false,
+    "useOffHeap": false,
+    "deserialized": false,
+    "replication": 1,
+    "is_cached_property": false
+  },
+  "persistent_rdd_before_unpersist": {
+    "available": false,
+    "persistent_rdd_count": null,
+    "reason": "AttributeError: 'SparkContext' object has no attribute 'getPersistentRDDs'"
+  },
+  "cached_partition_count": 8,
+  "memory_used_bytes": null,
+  "disk_used_bytes": null,
+  "optional_metrics_status": "memory/disk storage metrics unavailable through this local application interface",
+  "unpersist_requested": true,
+  "cache_storage_level_after_unpersist": {
+    "string": "Serialized 1x Replicated",
+    "useDisk": false,
+    "useMemory": false,
+    "useOffHeap": false,
+    "deserialized": false,
+    "replication": 1,
+    "is_cached_property": false
+  },
+  "persistent_rdd_after_unpersist": {
+    "available": false,
+    "persistent_rdd_count": null,
+    "reason": "AttributeError: 'SparkContext' object has no attribute 'getPersistentRDDs'"
+  }
+}

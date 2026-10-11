@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": {
+    "transaction_rows": true,
+    "customers": true,
+    "articles": true,
+    "date_range": true,
+    "m2_silhouette_erfm": true,
+    "m2_sse_erfm": true,
+    "storage_reduction": true,
+    "selected_support": true,
+    "rules": true,
+    "m2_distribution_total": true
+  },
+  "source": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\deliverables\\BigData_Nhom11_Final_Report.docx",
+  "note": "Rounded values in report are checked against locked artifact values."
+}

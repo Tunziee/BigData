@@ -1,0 +1,51 @@
+{
+  "stage": 11,
+  "authority": "MAIN_KMEANS_FINAL_CLUSTER_PROFILE",
+  "prediction_ids_unchanged": true,
+  "segments": {
+    "0": {
+      "segment_name_vi": "Khách hàng mua sắm cơ bản",
+      "segment_name_en": "Mainstream Occasional Customers",
+      "evidence": "Largest cluster with moderate Recency and lower Frequency/Monetary than the global baseline.",
+      "reason": "The distribution represents the broad mainstream customer base with relatively limited repeat-date frequency and spend per customer.",
+      "business_strategy": [
+        "low-cost automated engagement",
+        "cross-sell and repeat-purchase nudges",
+        "maintain broad retention coverage"
+      ]
+    },
+    "1": {
+      "segment_name_vi": "Khách hàng hoạt động trung thành",
+      "segment_name_en": "Active Loyal Customers",
+      "evidence": "Lower Recency and substantially higher Frequency and Monetary than the global baseline and cluster 0.",
+      "reason": "Repeated purchase dates and higher observed spend support an active, engaged customer profile without asserting unmeasured loyalty causes.",
+      "business_strategy": [
+        "retention and loyalty rewards",
+        "personalized cross-sell",
+        "protect repeat-purchase continuity"
+      ]
+    },
+    "2": {
+      "segment_name_vi": "Khách hàng lâu chưa quay lại",
+      "segment_name_en": "Lapsed Customers",
+      "evidence": "Very high Recency with low Frequency and low Monetary; the distribution is checked against the long-inactivity quantiles.",
+      "reason": "The measured gap since last purchase is large, so reactivation language is appropriate; confirmed churn is not claimed.",
+      "business_strategy": [
+        "reactivation reminders",
+        "targeted win-back offers",
+        "low-cost automated campaigns before higher-cost outreach"
+      ]
+    },
+    "3": {
+      "segment_name_vi": "Khách hàng hoạt động giá trị cao",
+      "segment_name_en": "Active High-Value Customers",
+      "evidence": "Very low Recency with very high Frequency and Monetary; median and interquartile values are checked to confirm coherence.",
+      "reason": "The small cluster is a measured high-activity/high-spend niche rather than a label based only on a few extreme centroid values.",
+      "business_strategy": [
+        "high-touch retention",
+        "loyalty rewards and VIP-care style service",
+        "personalized high-value cross-sell"
+      ]
+    }
+  }
+}

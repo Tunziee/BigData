@@ -1,0 +1,39 @@
+{
+  "stage": 8,
+  "k": 6,
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 216485,
+      "ratio_pct": 15.891361620693528
+    },
+    {
+      "cluster_id": 1,
+      "count": 58260,
+      "ratio_pct": 4.27665070569141
+    },
+    {
+      "cluster_id": 2,
+      "count": 306627,
+      "ratio_pct": 22.50835180113354
+    },
+    {
+      "cluster_id": 3,
+      "count": 258953,
+      "ratio_pct": 19.008780126860756
+    },
+    {
+      "cluster_id": 4,
+      "count": 7933,
+      "ratio_pct": 0.5823321326510463
+    },
+    {
+      "cluster_id": 5,
+      "count": 514023,
+      "ratio_pct": 37.732523612969715
+    }
+  ],
+  "cluster_count_sum": 1362281,
+  "num_produced_clusters": 6,
+  "expected_row_count": 1362281
+}

@@ -1,0 +1,3 @@
+TrialOrder,MinSupport,MinimumSupportBasketCount,FrequentItemsetCount,SingletonItemsetCount,PairOrLargerItemsetCount,MaximumItemsetSize,AssociationRuleCount,SelectionGatePass,Selected,FailureReason
+1,0.0005,4541,380,376,4,2,5,False,False,ASSOCIATION_RULE_COUNT_BELOW_10
+2,0.0002,1817,2655,2592,63,2,104,True,True,

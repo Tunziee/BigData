@@ -1,0 +1,35 @@
+{
+  "stage": 13,
+  "authority": "ENHANCED_KMEANS_K_SWEEP",
+  "k": 5,
+  "feature_space": "standardized improved 5D",
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 210248,
+      "ratio_pct": 15.433526563168684
+    },
+    {
+      "cluster_id": 1,
+      "count": 172774,
+      "ratio_pct": 12.682699090716232
+    },
+    {
+      "cluster_id": 2,
+      "count": 269066,
+      "ratio_pct": 19.751137981077324
+    },
+    {
+      "cluster_id": 3,
+      "count": 343639,
+      "ratio_pct": 25.225265565621193
+    },
+    {
+      "cluster_id": 4,
+      "count": 366554,
+      "ratio_pct": 26.90737079941657
+    }
+  ],
+  "cluster_count_sum": 1362281,
+  "num_produced_clusters": 5
+}

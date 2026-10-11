@@ -1,0 +1,12 @@
+stage = 28
+version = 2
+authority = FP_GROWTH_ASSOCIATION_RULES_V2
+spark_application_id = local-1791300973174
+selected_minSupport = 0.0002
+frequent_itemset_count = 2655
+association_rule_count = 104
+manual_rule_validation_pass = True
+model_reload_validation_pass = True
+artifact_readback_pass = True
+final_summary_self_readback_pass = True
+ready_for_stage29 = True

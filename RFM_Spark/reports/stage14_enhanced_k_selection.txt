@@ -1,0 +1,58 @@
+STAGE 14 — ENHANCED K-MEANS OPTIMAL-K SELECTION
+
+AUTHORITY: ENHANCED_KMEANS_OPTIMAL_K
+FEATURE AUTHORITY: IMPROVED_ERFM_FEATURE_SPACE
+SOURCE AUTHORITY: ENHANCED_KMEANS_K_SWEEP
+SELECTED_K: 5
+READY_FOR_STAGE_15: True
+
+METHOD: silhouette + WCSS/geometric elbow + balance + convergence + center separation + raw candidate profiling + parsimony
+WEIGHTED_SCORE_USED: False
+FINAL_MODEL_SAVED: False
+GMM_USED: False
+
+SILHOUETTE RANKING:
+  K=2: silhouette=0.590165216070, rank=1
+  K=4: silhouette=0.483541905719, rank=2
+  K=5: silhouette=0.481860285005, rank=3
+  K=7: silhouette=0.454732039284, rank=4
+  K=3: silhouette=0.450542883746, rank=5
+  K=8: silhouette=0.450084592354, rank=6
+  K=6: silhouette=0.446313011310, rank=7
+
+WCSS REDUCTION:
+  K=2 -> K=3: reduction=829577.443037 (22.331004%)
+  K=3 -> K=4: reduction=612849.510341 (21.240144%)
+  K=4 -> K=5: reduction=436271.544105 (19.197982%)
+  K=5 -> K=6: reduction=210657.423221 (11.472373%)
+  K=6 -> K=7: reduction=184439.846423 (11.346252%)
+  K=7 -> K=8: reduction=116766.644136 (8.102506%)
+
+GEOMETRIC ELBOW SUPPORT: K=5 (distance=0.202148665591)
+
+TARGETED CANDIDATE REFIT:
+  K=4: reproducibility_pass=True
+  K=5: reproducibility_pass=True
+
+SELECTION REASON:
+K=5 is selected because the objective geometric elbow is K=5, K=4 and K=5 are a near-tie in silhouette (K4=0.483541905719, K5=0.481860285005, difference=0.001681620714), the 4→5 WCSS reduction remains meaningful within the enhanced 5D space, all five clusters are well-sized (minimum ratio=12.682699%), convergence is below maxIter, and targeted raw profiling is retained to verify the added group is behaviorally distinguishable. K=5 therefore accepts one additional cluster for segmentation granularity while preserving parsimony relative to K>=6.
+
+REJECTED ALTERNATIVES:
+  K=2: Rejected despite silhouette rank 1 because two clusters are too coarse for the 5D eRFM objective; the partition does not separately represent multiple distinct regions of the improved feature space.
+  K=3: Rejected because silhouette is materially below K=4/K=5 and it is not the supporting elbow; its balance is valid but adds insufficient granularity.
+  K=4: Retained as the primary near-tie candidate, but not selected because K=5 is the geometric elbow and adds a fifth balanced partition with only a small silhouette trade-off.
+  K=6: Rejected by parsimony: lower silhouette than K=4/K=5 and post-elbow diminishing returns, despite acceptable balance and convergence.
+  K=7: Rejected by parsimony: lower silhouette and post-elbow WCSS reduction; no convergence failure, but extra complexity is not justified by the evidence.
+  K=8: Rejected by parsimony: lowest post-elbow region of silhouette and further complexity; balance remains valid but does not establish additional useful structure.
+
+ARTIFACT READBACK:
+  output\analysis\stage14\enhanced_optimal_k_selection.json: True
+  reports\stage14_enhanced_k_selection.txt: True
+  output\analysis\stage14\k_selection_table.csv: True
+  output\analysis\stage14\wcss_reduction_table.csv: True
+  output\analysis\stage14\elbow_analysis.json: True
+  output\analysis\stage14\center_separation.json: True
+  output\analysis\stage14\representative_centers.json: True
+  output\analysis\stage14\candidate_raw_profiles.json: True
+  output\analysis\stage14\candidate_raw_profiles.csv: True
+  output\analysis\stage14\candidate_reproducibility.json: True

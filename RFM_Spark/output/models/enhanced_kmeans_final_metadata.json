@@ -1,0 +1,187 @@
+{
+  "stage": 15,
+  "authority": "ENHANCED_KMEANS_FINAL",
+  "model": "Enhanced K-Means",
+  "selected_k": 5,
+  "feature_authority": "IMPROVED_ERFM_FEATURE_SPACE",
+  "feature_order": [
+    "Recency_improved",
+    "Frequency_log1p",
+    "Monetary_log1p",
+    "AvgBasketSize_log1p",
+    "ProductVariety_log1p"
+  ],
+  "transformations": {
+    "Recency": "identity",
+    "Frequency": "log1p",
+    "Monetary": "log1p",
+    "AvgBasketSize": "log1p",
+    "ProductVariety": "log1p"
+  },
+  "configuration": {
+    "k": 5,
+    "seed": 42,
+    "featuresCol": "features_improved",
+    "predictionCol": "prediction",
+    "distanceMeasure": "euclidean",
+    "initMode": "k-means||",
+    "maxIter": 100,
+    "tol": 0.0001
+  },
+  "training": {
+    "cache_materialization_runtime_sec": 5.184735000000046,
+    "fit_runtime_sec": 10.019966100000147,
+    "silhouette": 0.4818602850050599,
+    "wcss": 1836214.8866214142,
+    "num_iter": 21
+  },
+  "cluster_distribution": [
+    {
+      "cluster_id": 0,
+      "count": 210248,
+      "ratio_pct": 15.433526563168684
+    },
+    {
+      "cluster_id": 1,
+      "count": 172774,
+      "ratio_pct": 12.682699090716232
+    },
+    {
+      "cluster_id": 2,
+      "count": 269066,
+      "ratio_pct": 19.751137981077324
+    },
+    {
+      "cluster_id": 3,
+      "count": 343639,
+      "ratio_pct": 25.225265565621193
+    },
+    {
+      "cluster_id": 4,
+      "count": 366554,
+      "ratio_pct": 26.90737079941657
+    }
+  ],
+  "centers_scaled": [
+    [
+      0.4384881086223742,
+      -0.6277936731632828,
+      -0.22468769888358062,
+      1.4107246474865613,
+      0.02021307195709716
+    ],
+    [
+      -0.8242008775874676,
+      1.6847161708882905,
+      2.1162954215808014,
+      0.6485789880916449,
+      1.707939955918849
+    ],
+    [
+      1.5010696874292808,
+      -0.8214514768207108,
+      -0.7047556871713285,
+      -0.5978824670374556,
+      -0.9611976846487754
+    ],
+    [
+      -0.3571272320349401,
+      -0.6098974464753231,
+      -0.6480581506029948,
+      -0.6463221943705175,
+      -0.7966932250058133
+    ],
+    [
+      -0.6300713974476971,
+      0.7407739420483642,
+      0.2562618097910844,
+      -0.07007297204547962,
+      0.6358417794344826
+    ]
+  ],
+  "reproducibility_vs_stage13_k5": {
+    "silhouette": {
+      "final": 0.4818602850050599,
+      "reference": 0.4818602850050599,
+      "absolute_difference": 0.0,
+      "allowed_difference": 1e-08,
+      "pass": true
+    },
+    "wcss": {
+      "final": 1836214.8866214142,
+      "reference": 1836214.8866214142,
+      "absolute_difference": 0.0,
+      "allowed_difference": 0.018362148866214144,
+      "pass": true
+    },
+    "num_iter": {
+      "final": 21,
+      "reference": 21,
+      "pass": true
+    },
+    "cluster_sizes": {
+      "final": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657
+        }
+      ],
+      "reference": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657
+        }
+      ],
+      "pass": true
+    },
+    "centers_scaled": {
+      "max_absolute_difference": 0.0,
+      "allowed_difference": 2.1162954215808015e-08,
+      "pass": true
+    },
+    "pass": true
+  },
+  "representative_center_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+}

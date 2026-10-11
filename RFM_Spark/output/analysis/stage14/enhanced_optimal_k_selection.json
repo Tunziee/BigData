@@ -1,0 +1,3780 @@
+{
+  "stage": 14,
+  "authority": "ENHANCED_KMEANS_OPTIMAL_K",
+  "model": "Enhanced K-Means",
+  "feature_authority": "IMPROVED_ERFM_FEATURE_SPACE",
+  "source_stage13": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage13\\enhanced_kmeans_k_sweep.json",
+  "selection_method": {
+    "silhouette": true,
+    "wcss_elbow": true,
+    "cluster_balance": true,
+    "convergence": true,
+    "center_separation": true,
+    "raw_candidate_profiling": true,
+    "interpretability": true,
+    "parsimony": true,
+    "weighted_score_used": false
+  },
+  "algorithm_config": {
+    "seed": 42,
+    "distanceMeasure": "euclidean",
+    "initMode": "k-means||",
+    "maxIter": 100,
+    "tol": 0.0001
+  },
+  "silhouette_ranking": [
+    {
+      "k": 2,
+      "silhouette": 0.5901652160699704,
+      "silhouette_rank": 1,
+      "difference_from_best": 0.0,
+      "relative_difference_from_best_pct": 0.0
+    },
+    {
+      "k": 4,
+      "silhouette": 0.4835419057189569,
+      "silhouette_rank": 2,
+      "difference_from_best": 0.10662331035101352,
+      "relative_difference_from_best_pct": 18.066688352295603
+    },
+    {
+      "k": 5,
+      "silhouette": 0.4818602850050599,
+      "silhouette_rank": 3,
+      "difference_from_best": 0.10830493106491051,
+      "relative_difference_from_best_pct": 18.351629021129874
+    },
+    {
+      "k": 7,
+      "silhouette": 0.45473203928382633,
+      "silhouette_rank": 4,
+      "difference_from_best": 0.13543317678614408,
+      "relative_difference_from_best_pct": 22.94834956353765
+    },
+    {
+      "k": 3,
+      "silhouette": 0.45054288374642865,
+      "silhouette_rank": 5,
+      "difference_from_best": 0.13962233232354176,
+      "relative_difference_from_best_pct": 23.65817715474916
+    },
+    {
+      "k": 8,
+      "silhouette": 0.45008459235434695,
+      "silhouette_rank": 6,
+      "difference_from_best": 0.14008062371562346,
+      "relative_difference_from_best_pct": 23.73583191643328
+    },
+    {
+      "k": 6,
+      "silhouette": 0.44631301130989254,
+      "silhouette_rank": 7,
+      "difference_from_best": 0.14385220476007787,
+      "relative_difference_from_best_pct": 24.374903983331787
+    }
+  ],
+  "wcss_reduction_table": [
+    {
+      "from_k": 2,
+      "to_k": 3,
+      "wcss_previous": 3714913.3841042947,
+      "wcss_current": 2885335.9410676965,
+      "absolute_reduction": 829577.4430365982,
+      "reduction_pct": 22.331003640253595
+    },
+    {
+      "from_k": 3,
+      "to_k": 4,
+      "wcss_previous": 2885335.9410676965,
+      "wcss_current": 2272486.43072675,
+      "absolute_reduction": 612849.5103409467,
+      "reduction_pct": 21.240144054566017
+    },
+    {
+      "from_k": 4,
+      "to_k": 5,
+      "wcss_previous": 2272486.43072675,
+      "wcss_current": 1836214.8866214142,
+      "absolute_reduction": 436271.5441053356,
+      "reduction_pct": 19.19798236004491
+    },
+    {
+      "from_k": 5,
+      "to_k": 6,
+      "wcss_previous": 1836214.8866214142,
+      "wcss_current": 1625557.4634005036,
+      "absolute_reduction": 210657.4232209106,
+      "reduction_pct": 11.472373127772348
+    },
+    {
+      "from_k": 6,
+      "to_k": 7,
+      "wcss_previous": 1625557.4634005036,
+      "wcss_current": 1441117.6169774146,
+      "absolute_reduction": 184439.84642308904,
+      "reduction_pct": 11.346252013586732
+    },
+    {
+      "from_k": 7,
+      "to_k": 8,
+      "wcss_previous": 1441117.6169774146,
+      "wcss_current": 1324350.9728409864,
+      "absolute_reduction": 116766.64413642813,
+      "reduction_pct": 8.102506191086146
+    }
+  ],
+  "elbow_analysis": {
+    "method": "normalized maximum perpendicular distance to the line connecting first and last WCSS points",
+    "formula": "x=(K-Kmin)/(Kmax-Kmin); y=(WCSS-WCSSlast)/(WCSSfirst-WCSSlast); distance=abs(x+y-1)/sqrt(2)",
+    "points": [
+      {
+        "k": 2,
+        "normalized_x": 0.0,
+        "normalized_wcss": 1.0,
+        "distance_to_endpoint_line": 0.0
+      },
+      {
+        "k": 3,
+        "normalized_x": 0.16666666666666666,
+        "normalized_wcss": 0.6529781280220989,
+        "distance_to_endpoint_line": 0.12753038869786593
+      },
+      {
+        "k": 4,
+        "normalized_x": 0.3333333333333333,
+        "normalized_wcss": 0.396616065499296,
+        "distance_to_endpoint_line": 0.1909546113489516
+      },
+      {
+        "k": 5,
+        "normalized_x": 0.5,
+        "normalized_wcss": 0.21411861550601807,
+        "distance_to_endpoint_line": 0.20214866559069333
+      },
+      {
+        "k": 6,
+        "normalized_x": 0.6666666666666666,
+        "normalized_wcss": 0.12599817061473104,
+        "distance_to_endpoint_line": 0.14660809953673995
+      },
+      {
+        "k": 7,
+        "normalized_x": 0.8333333333333334,
+        "normalized_wcss": 0.04884484236273172,
+        "distance_to_endpoint_line": 0.08331261093708238
+      },
+      {
+        "k": 8,
+        "normalized_x": 1.0,
+        "normalized_wcss": 0.0,
+        "distance_to_endpoint_line": 0.0
+      }
+    ],
+    "supporting_elbow_k": 5,
+    "supporting_elbow_distance": 0.20214866559069333,
+    "supporting_only": true
+  },
+  "cluster_balance_analysis": {
+    "2": {
+      "k": 2,
+      "status": "PASS",
+      "silhouette": 0.5901652160699704,
+      "wcss_trainingCost": 3714913.3841042947,
+      "fit_runtime_sec": 6.980148700000427,
+      "transform_evaluation_runtime_sec": 1.6473045999991882,
+      "total_runtime_sec": 8.62745460000042,
+      "num_iter": 13,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 2,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 853860,
+          "ratio_pct": 62.67869844767709
+        },
+        {
+          "cluster_id": 1,
+          "count": 508421,
+          "ratio_pct": 37.32130155232291
+        }
+      ],
+      "min_cluster_size": 508421,
+      "max_cluster_size": 853860,
+      "min_cluster_ratio_pct": 37.32130155232291,
+      "max_cluster_ratio_pct": 62.67869844767709,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.4152662113362465,
+          -0.6329574778372903,
+          -0.5762874020901237,
+          -0.20342601385290213,
+          -0.6378406812630084
+        ],
+        [
+          -0.6974279112593563,
+          1.06303426485137,
+          0.9678584680211854,
+          0.34164826336490006,
+          1.0712354675276692
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "3": {
+      "k": 3,
+      "status": "PASS",
+      "silhouette": 0.45054288374642865,
+      "wcss_trainingCost": 2885335.9410676965,
+      "fit_runtime_sec": 7.389640499999587,
+      "transform_evaluation_runtime_sec": 1.391050299998824,
+      "total_runtime_sec": 8.780691600000864,
+      "num_iter": 47,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 3,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 299393,
+          "ratio_pct": 21.977330668195474
+        },
+        {
+          "cluster_id": 1,
+          "count": 512246,
+          "ratio_pct": 37.60208062800553
+        },
+        {
+          "cluster_id": 2,
+          "count": 550642,
+          "ratio_pct": 40.420588703799
+        }
+      ],
+      "min_cluster_size": 299393,
+      "max_cluster_size": 550642,
+      "min_cluster_ratio_pct": 21.977330668195474,
+      "max_cluster_ratio_pct": 40.420588703799,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.789292536612118,
+          1.4715482175338652,
+          1.5271817740313758,
+          0.3871654952334261,
+          1.4235078219850374
+        ],
+        [
+          0.8245422580130006,
+          -0.8222333408551222,
+          -0.7033719523648102,
+          -0.578866883859392,
+          -0.9618122982022186
+        ],
+        [
+          -0.3378650814937706,
+          -0.035241567118916774,
+          -0.17606051517096705,
+          0.3279740925014674,
+          0.12072111326283817
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "4": {
+      "k": 4,
+      "status": "PASS",
+      "silhouette": 0.4835419057189569,
+      "wcss_trainingCost": 2272486.43072675,
+      "fit_runtime_sec": 10.946643600000243,
+      "transform_evaluation_runtime_sec": 1.6823456999991322,
+      "total_runtime_sec": 12.628989799999545,
+      "num_iter": 77,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 4,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 221108,
+          "ratio_pct": 16.230718919224447
+        },
+        {
+          "cluster_id": 1,
+          "count": 460572,
+          "ratio_pct": 33.808883776548306
+        },
+        {
+          "cluster_id": 2,
+          "count": 257685,
+          "ratio_pct": 18.91570094569329
+        },
+        {
+          "cluster_id": 3,
+          "count": 422916,
+          "ratio_pct": 31.044696358533958
+        }
+      ],
+      "min_cluster_size": 221108,
+      "max_cluster_size": 460572,
+      "min_cluster_ratio_pct": 16.230718919224447,
+      "max_cluster_ratio_pct": 33.808883776548306,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.8043062996760503,
+          1.582497911060541,
+          1.862006508229386,
+          0.565985799197027,
+          1.5917542636671975
+        ],
+        [
+          0.5964864416666381,
+          -0.7939641449314276,
+          -0.7221134152539244,
+          -0.818407883851418,
+          -1.026975413416077
+        ],
+        [
+          0.6182889252969677,
+          -0.7157591772776516,
+          -0.3438327918070948,
+          1.1977009597522137,
+          -0.15489399156809155
+        ],
+        [
+          -0.6057514930536779,
+          0.47331743332664994,
+          0.022327121762334076,
+          -0.13441879875645205,
+          0.38050101347204773
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "5": {
+      "k": 5,
+      "status": "PASS",
+      "silhouette": 0.4818602850050599,
+      "wcss_trainingCost": 1836214.8866214142,
+      "fit_runtime_sec": 7.206893599999603,
+      "transform_evaluation_runtime_sec": 1.858800699999847,
+      "total_runtime_sec": 9.065694999999323,
+      "num_iter": 21,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 5,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657
+        }
+      ],
+      "min_cluster_size": 172774,
+      "max_cluster_size": 366554,
+      "min_cluster_ratio_pct": 12.682699090716232,
+      "max_cluster_ratio_pct": 26.90737079941657,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.4384881086223742,
+          -0.6277936731632828,
+          -0.22468769888358062,
+          1.4107246474865613,
+          0.02021307195709716
+        ],
+        [
+          -0.8242008775874676,
+          1.6847161708882905,
+          2.1162954215808014,
+          0.6485789880916449,
+          1.707939955918849
+        ],
+        [
+          1.5010696874292808,
+          -0.8214514768207108,
+          -0.7047556871713285,
+          -0.5978824670374556,
+          -0.9611976846487754
+        ],
+        [
+          -0.3571272320349401,
+          -0.6098974464753231,
+          -0.6480581506029948,
+          -0.6463221943705175,
+          -0.7966932250058133
+        ],
+        [
+          -0.6300713974476971,
+          0.7407739420483642,
+          0.2562618097910844,
+          -0.07007297204547962,
+          0.6358417794344826
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "6": {
+      "k": 6,
+      "status": "PASS",
+      "silhouette": 0.44631301130989254,
+      "wcss_trainingCost": 1625557.4634005036,
+      "fit_runtime_sec": 10.670279300000402,
+      "transform_evaluation_runtime_sec": 2.2507966000011947,
+      "total_runtime_sec": 12.921076799999355,
+      "num_iter": 63,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 6,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 192418,
+          "ratio_pct": 14.124692335869032
+        },
+        {
+          "cluster_id": 1,
+          "count": 295937,
+          "ratio_pct": 21.723638515108114
+        },
+        {
+          "cluster_id": 2,
+          "count": 256838,
+          "ratio_pct": 18.853525814424486
+        },
+        {
+          "cluster_id": 3,
+          "count": 271538,
+          "ratio_pct": 19.93259834057731
+        },
+        {
+          "cluster_id": 4,
+          "count": 246704,
+          "ratio_pct": 18.1096264280277
+        },
+        {
+          "cluster_id": 5,
+          "count": 98846,
+          "ratio_pct": 7.255918565993359
+        }
+      ],
+      "min_cluster_size": 98846,
+      "max_cluster_size": 295937,
+      "min_cluster_ratio_pct": 7.255918565993359,
+      "max_cluster_ratio_pct": 21.723638515108114,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.49699421294264273,
+          -0.6691274215051166,
+          -0.23134236755734908,
+          1.4815168600671387,
+          0.004366648856466908
+        ],
+        [
+          -0.49813838629514984,
+          0.25813420032114,
+          -0.18116064754231911,
+          -0.18823774017751388,
+          0.17704619094480367
+        ],
+        [
+          1.5415992517076202,
+          -0.8234886649159715,
+          -0.7046312091179,
+          -0.5750816627149813,
+          -0.9538423506355744
+        ],
+        [
+          -0.2851955626811458,
+          -0.7771509271257754,
+          -0.7142982277802012,
+          -0.7553390971111269,
+          -0.9934696647952479
+        ],
+        [
+          -0.7404917981419998,
+          1.1795623315345178,
+          0.8487235484655349,
+          0.15550829353623058,
+          1.0957004892537794
+        ],
+        [
+          -0.8501935523397693,
+          1.8606061720230476,
+          2.6677913336505394,
+          0.8607455116834117,
+          1.9345623983630837
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "7": {
+      "k": 7,
+      "status": "PASS",
+      "silhouette": 0.45473203928382633,
+      "wcss_trainingCost": 1441117.6169774146,
+      "fit_runtime_sec": 11.94677589999992,
+      "transform_evaluation_runtime_sec": 2.2049700999996276,
+      "total_runtime_sec": 14.151746900000944,
+      "num_iter": 74,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 7,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 147959,
+          "ratio_pct": 10.861121897758245
+        },
+        {
+          "cluster_id": 1,
+          "count": 224395,
+          "ratio_pct": 16.47200540857576
+        },
+        {
+          "cluster_id": 2,
+          "count": 212515,
+          "ratio_pct": 15.599938632337967
+        },
+        {
+          "cluster_id": 3,
+          "count": 275791,
+          "ratio_pct": 20.24479531021867
+        },
+        {
+          "cluster_id": 4,
+          "count": 142011,
+          "ratio_pct": 10.424501259284979
+        },
+        {
+          "cluster_id": 5,
+          "count": 93820,
+          "ratio_pct": 6.886978530861107
+        },
+        {
+          "cluster_id": 6,
+          "count": 265790,
+          "ratio_pct": 19.51065896096327
+        }
+      ],
+      "min_cluster_size": 93820,
+      "max_cluster_size": 275791,
+      "min_cluster_ratio_pct": 6.886978530861107,
+      "max_cluster_ratio_pct": 20.24479531021867,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          1.3512366523792405,
+          -0.7470829868952088,
+          -0.44669573965437576,
+          0.993519597655087,
+          -0.26837920048333047
+        ],
+        [
+          -0.7591420115252582,
+          1.2655656132215471,
+          0.9032179557138851,
+          0.08778897195852851,
+          1.1350608951908001
+        ],
+        [
+          1.504178534045521,
+          -0.847056010721166,
+          -0.7392270984134669,
+          -0.8423191652540749,
+          -1.080063006542359
+        ],
+        [
+          -0.3157408935216091,
+          -0.7613487660874075,
+          -0.7047897314652646,
+          -0.7024423703624464,
+          -0.955933550854151
+        ],
+        [
+          -0.3629069641253837,
+          -0.39229951453916695,
+          0.014090116735300093,
+          1.4417639703669212,
+          0.2722607537356944
+        ],
+        [
+          -0.8509360686946968,
+          1.8694891212307576,
+          2.7152550560934423,
+          0.8841883477041198,
+          1.9524032867101409
+        ],
+        [
+          -0.4920705272472893,
+          0.36431161688424596,
+          -0.15757031315948278,
+          -0.3073146225579742,
+          0.21186708315934757
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    "8": {
+      "k": 8,
+      "status": "PASS",
+      "silhouette": 0.45008459235434695,
+      "wcss_trainingCost": 1324350.9728409864,
+      "fit_runtime_sec": 13.127294699999766,
+      "transform_evaluation_runtime_sec": 2.357757699999638,
+      "total_runtime_sec": 15.485053000000335,
+      "num_iter": 80,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 8,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 179219,
+          "ratio_pct": 13.155802657454666
+        },
+        {
+          "cluster_id": 1,
+          "count": 83084,
+          "ratio_pct": 6.098888555298062
+        },
+        {
+          "cluster_id": 2,
+          "count": 103917,
+          "ratio_pct": 7.628161884368938
+        },
+        {
+          "cluster_id": 3,
+          "count": 170741,
+          "ratio_pct": 12.533464094412238
+        },
+        {
+          "cluster_id": 4,
+          "count": 274086,
+          "ratio_pct": 20.119637578443804
+        },
+        {
+          "cluster_id": 5,
+          "count": 263999,
+          "ratio_pct": 19.379188287878932
+        },
+        {
+          "cluster_id": 6,
+          "count": 170096,
+          "ratio_pct": 12.486117034591249
+        },
+        {
+          "cluster_id": 7,
+          "count": 117139,
+          "ratio_pct": 8.598739907552112
+        }
+      ],
+      "min_cluster_size": 83084,
+      "max_cluster_size": 274086,
+      "min_cluster_ratio_pct": 6.098888555298062,
+      "max_cluster_ratio_pct": 20.119637578443804,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.8076214825876356,
+          1.4017215120535966,
+          0.8416125483637916,
+          -0.1901249600219853,
+          1.1103868702180177
+        ],
+        [
+          -0.8840729784700202,
+          1.9943793561430347,
+          2.816388037747625,
+          0.7666691408709435,
+          1.9986150392594342
+        ],
+        [
+          -0.5074611979279052,
+          0.5825114926740476,
+          0.9589574707106424,
+          1.1974167626512127,
+          1.084143503669035
+        ],
+        [
+          1.4284995894281785,
+          -0.7511689296483652,
+          -0.5379472241127846,
+          0.5305552102051386,
+          -0.44345236548493777
+        ],
+        [
+          -0.4968187712705036,
+          0.29450654134544213,
+          -0.1773723567903028,
+          -0.24116914506101422,
+          0.18488452915312262
+        ],
+        [
+          -0.333081947519042,
+          -0.7637118971859458,
+          -0.7084946541202946,
+          -0.7179546267138768,
+          -0.96535143467184
+        ],
+        [
+          1.4809495518872646,
+          -0.8582164479949136,
+          -0.759587836478076,
+          -1.0594935301441986,
+          -1.179356814388391
+        ],
+        [
+          -0.006577630635335669,
+          -0.702873488495015,
+          -0.2372262910918124,
+          1.6323512972045238,
+          0.023601682652943008
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    }
+  },
+  "convergence_analysis": {
+    "2": {
+      "num_iter": 13,
+      "flag": "NORMAL"
+    },
+    "3": {
+      "num_iter": 47,
+      "flag": "NORMAL"
+    },
+    "4": {
+      "num_iter": 77,
+      "flag": "NORMAL"
+    },
+    "5": {
+      "num_iter": 21,
+      "flag": "NORMAL"
+    },
+    "6": {
+      "num_iter": 63,
+      "flag": "NORMAL"
+    },
+    "7": {
+      "num_iter": 74,
+      "flag": "NORMAL"
+    },
+    "8": {
+      "num_iter": 80,
+      "flag": "NORMAL"
+    }
+  },
+  "center_separation_analysis": {
+    "2": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.1171958424132438
+        }
+      ],
+      "minimum_pairwise_center_distance": 3.1171958424132438,
+      "mean_pairwise_center_distance": 3.1171958424132438,
+      "maximum_pairwise_center_distance": 3.1171958424132438,
+      "closest_pair": {
+        "cluster_a": 0,
+        "cluster_b": 1,
+        "distance": 3.1171958424132438
+      }
+    },
+    "3": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 4.411829228507592
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.6600739329342784
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.059816343756985
+        }
+      ],
+      "minimum_pairwise_center_distance": 2.059816343756985,
+      "mean_pairwise_center_distance": 3.043906501732952,
+      "maximum_pairwise_center_distance": 4.411829228507592,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 2,
+        "distance": 2.059816343756985
+      }
+    },
+    "4": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 4.802266025327255
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 3.95238333254632
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.571347239357864
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.230450284342307
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 2.4605693089609812
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 2.259965060875616
+        }
+      ],
+      "minimum_pairwise_center_distance": 2.230450284342307,
+      "mean_pairwise_center_distance": 3.046163541901724,
+      "maximum_pairwise_center_distance": 4.802266025327255,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 2,
+        "distance": 2.230450284342307
+      }
+    },
+    "5": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.981403680363495
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.5287779348163513
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.389841875986748
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 2.4120260074873254
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 5.322034455033682
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 4.59075337594346
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 2.4605473706604717
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8789022418266308
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 3.2764284099186733
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.2585008331088767
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.8789022418266308,
+      "mean_pairwise_center_distance": 3.1099216185145715,
+      "maximum_pairwise_center_distance": 5.322034455033682,
+      "closest_pair": {
+        "cluster_a": 2,
+        "cluster_b": 3,
+        "distance": 1.8789022418266308
+      }
+    },
+    "6": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 2.1611385563390675
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.5469180156894313
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.6183846485546205
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 3.010793264787202
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 4.5530710344797445
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.6519834458772706
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 1.7587230988072555
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 1.7118742622948153
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 3.8726755264538077
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8367043849660747
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 4.045670697648165
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 5.8909042927998065
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 3.4166260277177716
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 5.468145596967304
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 2.232915500204563
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.7118742622948153,
+      "mean_pairwise_center_distance": 3.1851018902391264,
+      "maximum_pairwise_center_distance": 5.8909042927998065,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 4,
+        "distance": 1.7118742622948153
+      }
+    },
+    "7": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 3.621700090569146
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 2.0366872575180217
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 2.4889050084883118
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 1.9415709704965989
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 5.161179642565862
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 6,
+          "distance": 2.5766992446633314
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 4.249151776616033
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 3.44781068539164
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 2.5047434377775533
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 2.226865230828362
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 6,
+          "distance": 1.7370237073744204
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 1.8318329690176207
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 3.3624565243256503
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 6.085746397426716
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 6,
+          "distance": 2.783174388560105
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.6002485084861298
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 5.466284698955099
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 6,
+          "distance": 1.765654775764505
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 3.972898409916868
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 6,
+          "distance": 1.9187324600104207
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 6,
+          "distance": 3.8854362692838933
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.7370237073744204,
+      "mean_pairwise_center_distance": 3.126895354954109,
+      "maximum_pairwise_center_distance": 6.085746397426716,
+      "closest_pair": {
+        "cluster_a": 1,
+        "cluster_b": 6,
+        "distance": 1.7370237073744204
+      }
+    },
+    "8": {
+      "pairwise_distances": [
+        {
+          "cluster_a": 0,
+          "cluster_b": 1,
+          "distance": 2.4415631502454995
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 2,
+          "distance": 1.6434511947685486
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 3,
+          "distance": 3.8042287190295205
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 4,
+          "distance": 1.794439646741327
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 5,
+          "distance": 3.4502776159048474
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 6,
+          "distance": 4.348269481924362
+        },
+        {
+          "cluster_a": 0,
+          "cluster_b": 7,
+          "distance": 3.2767981876624477
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 2,
+          "distance": 2.5704196761574427
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 3,
+          "distance": 5.4915421620831495
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 4,
+          "distance": 4.038253469170338
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 5,
+          "distance": 5.596843883759365
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 6,
+          "distance": 6.320807942622068
+        },
+        {
+          "cluster_a": 1,
+          "cluster_b": 7,
+          "distance": 4.69252755103702
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 3,
+          "distance": 3.247402773608159
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 4,
+          "distance": 2.0621594766697604
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 5,
+          "distance": 3.5344305324147642
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 6,
+          "distance": 4.381774759322649
+        },
+        {
+          "cluster_a": 2,
+          "cluster_b": 7,
+          "distance": 2.1558922731133454
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 4,
+          "distance": 2.433242270983423
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 5,
+          "distance": 2.2279068011323653
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 6,
+          "distance": 1.770069231809362
+        },
+        {
+          "cluster_a": 3,
+          "cluster_b": 7,
+          "distance": 1.8932264148663156
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 5,
+          "distance": 1.7260052357430458
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 6,
+          "distance": 2.8478275821541312
+        },
+        {
+          "cluster_a": 4,
+          "cluster_b": 7,
+          "distance": 2.1851262658046213
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 6,
+          "distance": 1.8613702021224459
+        },
+        {
+          "cluster_a": 5,
+          "cluster_b": 7,
+          "distance": 2.614262124420506
+        },
+        {
+          "cluster_a": 6,
+          "cluster_b": 7,
+          "distance": 3.3470685469580927
+        }
+      ],
+      "minimum_pairwise_center_distance": 1.6434511947685486,
+      "mean_pairwise_center_distance": 3.134185256151033,
+      "maximum_pairwise_center_distance": 6.320807942622068,
+      "closest_pair": {
+        "cluster_a": 0,
+        "cluster_b": 2,
+        "distance": 1.6434511947685486
+      }
+    }
+  },
+  "representative_center_analysis": {
+    "2": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            0.4152662113362465,
+            -0.6329574778372903,
+            -0.5762874020901237,
+            -0.20342601385290213,
+            -0.6378406812630084
+          ],
+          "transformed_center": [
+            327.97159979247283,
+            1.0231875436755449,
+            0.13837336899161456,
+            1.2827147746360956,
+            1.607880906220998
+          ],
+          "representative_center_raw_scale": [
+            327.97159979247283,
+            1.782048546808459,
+            0.14840424877416586,
+            2.6064170574928767,
+            3.9922210264610802
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            -0.6974279112593563,
+            1.06303426485137,
+            0.9678584680211854,
+            0.34164826336490006,
+            1.0712354675276692
+          ],
+          "transformed_center": [
+            81.93402030629485,
+            2.5185483497028436,
+            0.7888261745835654,
+            1.5401552445149658,
+            3.5806396903055404
+          ],
+          "representative_center_raw_scale": [
+            81.93402030629485,
+            11.410567776523255,
+            1.2008115409271674,
+            3.6653144792554855,
+            34.89649614472594
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "3": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            -0.789292536612118,
+            1.4715482175338652,
+            1.5271817740313758,
+            0.3871654952334261,
+            1.4235078219850374
+          ],
+          "transformed_center": [
+            61.62102538413819,
+            2.8787362787951576,
+            1.0244343646317429,
+            1.561653190849235,
+            3.9872619359776564
+          ],
+          "representative_center_raw_scale": [
+            61.62102538413819,
+            16.79177512347567,
+            1.7855194265709504,
+            3.7666949914828924,
+            52.907086055329145
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            0.8245422580130006,
+            -0.8222333408551222,
+            -0.7033719523648102,
+            -0.578866883859392,
+            -0.9618122982022186
+          ],
+          "transformed_center": [
+            418.47022454580764,
+            0.8563024699102916,
+            0.0848405364570805,
+            1.1053927507835897,
+            1.2339257412840046
+          ],
+          "representative_center_raw_scale": [
+            418.47022454580764,
+            1.3544389702881379,
+            0.0885434698592574,
+            2.0204105044754987,
+            2.434686795899171
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            -0.3378650814937706,
+            -0.035241567118916774,
+            -0.17606051517096705,
+            0.3279740925014674,
+            0.12072111326283817
+          ],
+          "transformed_center": [
+            161.44011862409593,
+            1.5501953842975889,
+            0.3069641132398456,
+            1.5336968862334954,
+            2.4834764403817635
+          ],
+          "representative_center_raw_scale": [
+            161.44011862409593,
+            3.7123908198190776,
+            0.35929218660400103,
+            3.6352812937800447,
+            10.98284975426994
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "4": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            -0.8043062996760503,
+            1.582497911060541,
+            1.862006508229386,
+            0.565985799197027,
+            1.5917542636671975
+          ],
+          "transformed_center": [
+            58.30120024242544,
+            2.976560943246362,
+            1.1654752416344938,
+            1.6461106400454235,
+            4.181466065474346
+          ],
+          "representative_center_raw_scale": [
+            58.30120024242544,
+            18.620225417616346,
+            2.2074468333274804,
+            4.186767340653288,
+            64.46175411593177
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            0.5964864416666381,
+            -0.7939641449314276,
+            -0.7221134152539244,
+            -0.818407883851418,
+            -1.026975413416077
+          ],
+          "transformed_center": [
+            368.04279808406466,
+            0.881227501405542,
+            0.07694592147731633,
+            0.9922567064485526,
+            1.1587090178937605
+          ],
+          "representative_center_raw_scale": [
+            368.04279808406466,
+            1.4138609062621255,
+            0.07998367089192862,
+            1.6973146565526385,
+            2.1858177864199835
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            0.6182889252969677,
+            -0.7157591772776516,
+            -0.3438327918070948,
+            1.1977009597522137,
+            -0.15489399156809155
+          ],
+          "transformed_center": [
+            372.86373691196115,
+            0.9501810467103656,
+            0.23629206719107967,
+            1.9444718993457766,
+            2.165338410390338
+          ],
+          "representative_center_raw_scale": [
+            372.86373691196115,
+            1.5861778359232646,
+            0.26654417215071363,
+            5.989939488531324,
+            7.717551527748901
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 3,
+          "scaled_center": [
+            -0.6057514930536779,
+            0.47331743332664994,
+            0.022327121762334076,
+            -0.13441879875645205,
+            0.38050101347204773
+          ],
+          "transformed_center": [
+            102.20539909157256,
+            1.9985933202528252,
+            0.3905325102001154,
+            1.3153071214445724,
+            2.7833361513893458
+          ],
+          "representative_center_raw_scale": [
+            102.20539909157256,
+            6.378669370478549,
+            0.4777675106695259,
+            2.725895111838391,
+            15.17288624358888
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "5": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            0.4384881086223742,
+            -0.6277936731632828,
+            -0.22468769888358062,
+            1.4107246474865613,
+            0.02021307195709716
+          ],
+          "transformed_center": [
+            333.1063976523084,
+            1.0277404851345935,
+            0.28648049916805807,
+            2.0450837252157887,
+            2.3674616440268252
+          ],
+          "representative_center_raw_scale": [
+            333.1063976523084,
+            1.7947439297153966,
+            0.3317321977552104,
+            6.729805690467448,
+            9.670272928360015
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            -0.8242008775874676,
+            1.6847161708882905,
+            2.1162954215808014,
+            0.6485789880916449,
+            1.707939955918849
+          ],
+          "transformed_center": [
+            53.90213522102849,
+            3.0666870774481794,
+            1.2725913763999444,
+            1.6851196893558325,
+            4.3155773191692575
+          ],
+          "representative_center_raw_scale": [
+            53.90213522102849,
+            20.470654105483096,
+            2.5700920379583683,
+            4.3930963899543904,
+            73.8568272528723
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            1.5010696874292808,
+            -0.8214514768207108,
+            -0.7047556871713285,
+            -0.5978824670374556,
+            -0.9611976846487754
+          ],
+          "transformed_center": [
+            568.063152026456,
+            0.856991841682142,
+            0.08425765487541348,
+            1.0964116249572735,
+            1.234635179706178
+          ],
+          "representative_center_raw_scale": [
+            568.063152026456,
+            1.356062613635444,
+            0.08790916280074218,
+            1.9934052679227543,
+            2.437124359228619
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 3,
+          "scaled_center": [
+            -0.3571272320349401,
+            -0.6098974464753231,
+            -0.6480581506029948,
+            -0.6463221943705175,
+            -0.7966932250058133
+          ],
+          "transformed_center": [
+            157.18089517839957,
+            1.043519639768053,
+            0.10814080765576994,
+            1.0735333738883006,
+            1.4245200002341378
+          ],
+          "representative_center_raw_scale": [
+            157.18089517839957,
+            1.8391923836231272,
+            0.11420462288242827,
+            1.925698846094574,
+            3.155862550873124
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 4,
+          "scaled_center": [
+            -0.6300713974476971,
+            0.7407739420483642,
+            0.2562618097910844,
+            -0.07007297204547962,
+            0.6358417794344826
+          ],
+          "transformed_center": [
+            96.82781122719015,
+            2.2344104945896044,
+            0.4890746732812561,
+            1.3456978783663083,
+            3.0780718419808384
+          ],
+          "representative_center_raw_scale": [
+            96.82781122719015,
+            8.340973674286454,
+            0.6308064927468,
+            2.840866062834033,
+            20.716489178771237
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "6": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            0.49699421294264273,
+            -0.6691274215051166,
+            -0.23134236755734908,
+            1.4815168600671387,
+            0.004366648856466908
+          ],
+          "transformed_center": [
+            346.04319672386805,
+            0.9912964001306251,
+            0.2836773003298385,
+            2.0785191325212526,
+            2.349170375735352
+          ],
+          "representative_center_raw_scale": [
+            346.04319672386805,
+            1.694725651564399,
+            0.3280043150450024,
+            6.99262412903977,
+            9.476874249142794
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            -0.49813838629514984,
+            0.25813420032114,
+            -0.18116064754231911,
+            -0.18823774017751388,
+            0.17704619094480367
+          ],
+          "transformed_center": [
+            126.00067918714171,
+            1.8088656437250104,
+            0.30481574405138473,
+            1.2898882489222037,
+            2.5484915608841274
+          ],
+          "representative_center_raw_scale": [
+            126.00067918714171,
+            5.103519937709143,
+            0.3563750598068478,
+            2.632380610622625,
+            11.787799609601471
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            1.5415992517076202,
+            -0.8234886649159715,
+            -0.7046312091179,
+            -0.5750816627149813,
+            -0.9538423506355744
+          ],
+          "transformed_center": [
+            577.025000292007,
+            0.8551956470689956,
+            0.08431008975261933,
+            1.1071805238463481,
+            1.2431253220527816
+          ],
+          "representative_center_raw_scale": [
+            577.025000292007,
+            1.3518344650861982,
+            0.0879662086796885,
+            2.0258151427077005,
+            2.4664302639159077
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 3,
+          "scaled_center": [
+            -0.2851955626811458,
+            -0.7771509271257754,
+            -0.7142982277802012,
+            -0.7553390971111269,
+            -0.9934696647952479
+          ],
+          "transformed_center": [
+            173.08633896282743,
+            0.8960517639871011,
+            0.08023797484928424,
+            1.0220443129670362,
+            1.1973841582354237
+          ],
+          "representative_center_raw_scale": [
+            173.08633896282743,
+            1.4499111632152863,
+            0.08354489342842572,
+            1.7788698408205428,
+            2.311443371491397
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 4,
+          "scaled_center": [
+            -0.7404917981419998,
+            1.1795623315345178,
+            0.8487235484655349,
+            0.15550829353623058,
+            1.0957004892537794
+          ],
+          "transformed_center": [
+            72.41178568969042,
+            2.6212914818385418,
+            0.7386420280149785,
+            1.4522406917671695,
+            3.608879266726494
+          ],
+          "representative_center_raw_scale": [
+            72.41178568969042,
+            12.753474482640929,
+            1.0930912244534592,
+            3.2726775506718235,
+            35.924646936249644
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 5,
+          "scaled_center": [
+            -0.8501935523397693,
+            1.8606061720230476,
+            2.6677913336505394,
+            0.8607455116834117,
+            1.9345623983630837
+          ],
+          "transformed_center": [
+            48.1546663968833,
+            3.221769798223723,
+            1.5049023712494105,
+            1.7853266736311253,
+            4.577163916301808
+          ],
+          "representative_center_raw_scale": [
+            48.1546663968833,
+            24.072454123472035,
+            3.5037139168617815,
+            4.961527103228932,
+            96.23822702503534
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "7": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            1.3512366523792405,
+            -0.7470829868952088,
+            -0.44669573965437576,
+            0.993519597655087,
+            -0.26837920048333047
+          ],
+          "transformed_center": [
+            534.9322524178692,
+            0.9225627535202704,
+            0.19296229225608638,
+            1.8480363345139617,
+            2.034344280661466
+          ],
+          "representative_center_raw_scale": [
+            534.9322524178692,
+            1.5157293299004295,
+            0.21283705930761668,
+            5.347343218161111,
+            6.647236040528308
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            -0.7591420115252582,
+            1.2655656132215471,
+            0.9032179557138851,
+            0.08778897195852851,
+            1.1350608951908001
+          ],
+          "transformed_center": [
+            68.28787304870912,
+            2.6971208230950214,
+            0.7615971391672718,
+            1.4202566215303059,
+            3.654312342726258
+          ],
+          "representative_center_raw_scale": [
+            68.28787304870912,
+            13.83695195974665,
+            1.1416940738662253,
+            3.138182250665709,
+            37.640940253317915
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            1.504178534045521,
+            -0.847056010721166,
+            -0.7392270984134669,
+            -0.8423191652540749,
+            -1.080063006542359
+          ],
+          "transformed_center": [
+            568.7505764326074,
+            0.8344162503702175,
+            0.06973698905674536,
+            0.980963325386569,
+            1.097430873125381
+          ],
+          "representative_center_raw_scale": [
+            568.7505764326074,
+            1.303469006561607,
+            0.07222613695781056,
+            1.6670242169678544,
+            1.9964578461616083
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 3,
+          "scaled_center": [
+            -0.3157408935216091,
+            -0.7613487660874075,
+            -0.7047897314652646,
+            -0.7024423703624464,
+            -0.955933550854151
+          ],
+          "transformed_center": [
+            166.33219232721746,
+            0.9099845749038844,
+            0.0842433141276035,
+            1.047027620304053,
+            1.2407114836738449
+          ],
+          "representative_center_raw_scale": [
+            166.33219232721746,
+            1.4842842127665072,
+            0.08789356148166584,
+            1.8491697051359894,
+            2.458072952164788
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 4,
+          "scaled_center": [
+            -0.3629069641253837,
+            -0.39229951453916695,
+            0.014090116735300093,
+            1.4417639703669212,
+            0.2722607537356944
+          ],
+          "transformed_center": [
+            155.90288780446457,
+            1.2353763633002597,
+            0.387062771276342,
+            2.059743704967225,
+            2.6583961811384147
+          ],
+          "representative_center_raw_scale": [
+            155.90288780446457,
+            2.4396728437452864,
+            0.47264892842474693,
+            6.8439591848964225,
+            13.273378817451928
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 5,
+          "scaled_center": [
+            -0.8509360686946968,
+            1.8694891212307576,
+            2.7152550560934423,
+            0.8841883477041198,
+            1.9524032867101409
+          ],
+          "transformed_center": [
+            47.99048207795374,
+            3.229601920133752,
+            1.524895891307589,
+            1.796398806315994,
+            4.597757363368185
+          ],
+          "representative_center_raw_scale": [
+            47.99048207795374,
+            24.26959565123437,
+            3.5946651998198895,
+            5.027900692843936,
+            98.26145845862914
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 6,
+          "scaled_center": [
+            -0.4920705272472893,
+            0.36431161688424596,
+            -0.15757031315948278,
+            -0.3073146225579742,
+            0.21186708315934757
+          ],
+          "transformed_center": [
+            127.34239684564461,
+            1.9024825778275303,
+            0.31475288760833514,
+            1.2336478247579803,
+            2.588684750072631
+          ],
+          "representative_center_raw_scale": [
+            127.34239684564461,
+            5.702513315866981,
+            0.36992074473514225,
+            2.433732372308061,
+            12.31225114647823
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    },
+    "8": {
+      "feature_order": [
+        "Recency",
+        "log1p(Frequency)",
+        "log1p(Monetary)",
+        "log1p(AvgBasketSize)",
+        "log1p(ProductVariety)"
+      ],
+      "centers": [
+        {
+          "cluster_id": 0,
+          "scaled_center": [
+            -0.8076214825876356,
+            1.4017215120535966,
+            0.8416125483637916,
+            -0.1901249600219853,
+            1.1103868702180177
+          ],
+          "transformed_center": [
+            57.56815100404387,
+            2.8171698713882005,
+            0.7356466050719309,
+            1.2889969084502129,
+            3.6258315172591074
+          ],
+          "representative_center_raw_scale": [
+            57.56815100404387,
+            15.729437151863973,
+            1.086830911800833,
+            2.6291443652871878,
+            36.55593859083776
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 1,
+          "scaled_center": [
+            -0.8840729784700202,
+            1.9943793561430347,
+            2.816388037747625,
+            0.7666691408709435,
+            1.9986150392594342
+          ],
+          "transformed_center": [
+            40.66328864068282,
+            3.3397180000901887,
+            1.567496938869307,
+            1.7408940777102886,
+            4.651098837259836
+          ],
+          "representative_center_raw_scale": [
+            40.66328864068282,
+            27.211170036165466,
+            3.7946319045395036,
+            4.702439568269678,
+            103.69997061944031
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 2,
+          "scaled_center": [
+            -0.5074611979279052,
+            0.5825114926740476,
+            0.9589574707106424,
+            1.1974167626512127,
+            1.084143503669035
+          ],
+          "transformed_center": [
+            123.93923034729521,
+            2.0948700369898194,
+            0.785076736926622,
+            1.9443376720701964,
+            3.5955392263508936
+          ],
+          "representative_center_raw_scale": [
+            123.93923034729521,
+            7.12438503206303,
+            1.1925751857589728,
+            5.989001310963227,
+            35.43534158805702
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 3,
+          "scaled_center": [
+            1.4284995894281785,
+            -0.7511689296483652,
+            -0.5379472241127846,
+            0.5305552102051386,
+            -0.44345236548493777
+          ],
+          "transformed_center": [
+            552.0165396711977,
+            0.9189601660223765,
+            0.15452370609056837,
+            1.6293766500932394,
+            1.8322601755390653
+          ],
+          "representative_center_raw_scale": [
+            552.0165396711977,
+            1.5066825006500455,
+            0.1671019451539682,
+            4.100694210094614,
+            5.24799227123928
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 4,
+          "scaled_center": [
+            -0.4968187712705036,
+            0.29450654134544213,
+            -0.1773723567903028,
+            -0.24116914506101422,
+            0.18488452915312262
+          ],
+          "transformed_center": [
+            126.29247086638611,
+            1.840935241602283,
+            0.3064115157953259,
+            1.2648885629819477,
+            2.5575392271124744
+          ],
+          "representative_center_raw_scale": [
+            126.29247086638611,
+            5.302429800135541,
+            0.35854125271651066,
+            2.5426979264184033,
+            11.904024340703526
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 5,
+          "scaled_center": [
+            -0.333081947519042,
+            -0.7637118971859458,
+            -0.7084946541202946,
+            -0.7179546267138768,
+            -0.96535143467184
+          ],
+          "transformed_center": [
+            162.4977594272621,
+            0.9079009954056397,
+            0.08268266018802994,
+            1.0397011278774106,
+            1.2298405736550138
+          ],
+          "representative_center_raw_scale": [
+            162.4977594272621,
+            1.4791133978855848,
+            0.08619706027908436,
+            1.8283715666038889,
+            2.4206841456453176
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 6,
+          "scaled_center": [
+            1.4809495518872646,
+            -0.8582164479949136,
+            -0.759587836478076,
+            -1.0594935301441986,
+            -1.179356814388391
+          ],
+          "transformed_center": [
+            563.6142119744103,
+            0.8245760606704543,
+            0.06116027395851881,
+            0.878391120313281,
+            0.9828176466918681
+          ],
+          "representative_center_raw_scale": [
+            563.6142119744103,
+            1.2809135913535754,
+            0.06306928285614317,
+            1.4070239774796431,
+            1.6719743249220325
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        },
+        {
+          "cluster_id": 7,
+          "scaled_center": [
+            -0.006577630635335669,
+            -0.702873488495015,
+            -0.2372262910918124,
+            1.6323512972045238,
+            0.023601682652943008
+          ],
+          "transformed_center": [
+            234.69399933411304,
+            0.9615423956363183,
+            0.28119876857648524,
+            2.1497587598409753,
+            2.3713730622048876
+          ],
+          "representative_center_raw_scale": [
+            234.69399933411304,
+            1.6157278508573794,
+            0.32471688985834946,
+            7.5827876343585725,
+            9.712090557659945
+          ],
+          "interpretation_note": "Representative value implied by transformed-space centroid; not an arithmetic mean of assigned raw customer values."
+        }
+      ]
+    }
+  },
+  "targeted_candidate_refit": {
+    "k_values": [
+      4,
+      5
+    ],
+    "final_model_saved": false,
+    "purpose": "raw profiling only"
+  },
+  "candidate_reproducibility": {
+    "4": {
+      "silhouette": {
+        "final": 0.4835419057189569,
+        "reference": 0.4835419057189569,
+        "absolute_difference": 0.0,
+        "allowed_difference": 1e-08,
+        "pass": true
+      },
+      "wcss": {
+        "final": 2272486.43072675,
+        "reference": 2272486.43072675,
+        "absolute_difference": 0.0,
+        "allowed_difference": 0.022724864307267497,
+        "pass": true
+      },
+      "num_iter": {
+        "final": 77,
+        "reference": 77,
+        "pass": true
+      },
+      "cluster_sizes": {
+        "final": [
+          {
+            "cluster_id": 0,
+            "count": 221108,
+            "ratio_pct": 16.230718919224447
+          },
+          {
+            "cluster_id": 1,
+            "count": 460572,
+            "ratio_pct": 33.808883776548306
+          },
+          {
+            "cluster_id": 2,
+            "count": 257685,
+            "ratio_pct": 18.91570094569329
+          },
+          {
+            "cluster_id": 3,
+            "count": 422916,
+            "ratio_pct": 31.044696358533958
+          }
+        ],
+        "reference": [
+          {
+            "cluster_id": 0,
+            "count": 221108,
+            "ratio_pct": 16.230718919224447
+          },
+          {
+            "cluster_id": 1,
+            "count": 460572,
+            "ratio_pct": 33.808883776548306
+          },
+          {
+            "cluster_id": 2,
+            "count": 257685,
+            "ratio_pct": 18.91570094569329
+          },
+          {
+            "cluster_id": 3,
+            "count": 422916,
+            "ratio_pct": 31.044696358533958
+          }
+        ],
+        "pass": true
+      },
+      "centers_scaled": {
+        "max_absolute_difference": 0.0,
+        "allowed_difference": 1.862006508229386e-08,
+        "pass": true
+      },
+      "pass": true
+    },
+    "5": {
+      "silhouette": {
+        "final": 0.4818602850050599,
+        "reference": 0.4818602850050599,
+        "absolute_difference": 0.0,
+        "allowed_difference": 1e-08,
+        "pass": true
+      },
+      "wcss": {
+        "final": 1836214.8866214142,
+        "reference": 1836214.8866214142,
+        "absolute_difference": 0.0,
+        "allowed_difference": 0.018362148866214144,
+        "pass": true
+      },
+      "num_iter": {
+        "final": 21,
+        "reference": 21,
+        "pass": true
+      },
+      "cluster_sizes": {
+        "final": [
+          {
+            "cluster_id": 0,
+            "count": 210248,
+            "ratio_pct": 15.433526563168684
+          },
+          {
+            "cluster_id": 1,
+            "count": 172774,
+            "ratio_pct": 12.682699090716232
+          },
+          {
+            "cluster_id": 2,
+            "count": 269066,
+            "ratio_pct": 19.751137981077324
+          },
+          {
+            "cluster_id": 3,
+            "count": 343639,
+            "ratio_pct": 25.225265565621193
+          },
+          {
+            "cluster_id": 4,
+            "count": 366554,
+            "ratio_pct": 26.90737079941657
+          }
+        ],
+        "reference": [
+          {
+            "cluster_id": 0,
+            "count": 210248,
+            "ratio_pct": 15.433526563168684
+          },
+          {
+            "cluster_id": 1,
+            "count": 172774,
+            "ratio_pct": 12.682699090716232
+          },
+          {
+            "cluster_id": 2,
+            "count": 269066,
+            "ratio_pct": 19.751137981077324
+          },
+          {
+            "cluster_id": 3,
+            "count": 343639,
+            "ratio_pct": 25.225265565621193
+          },
+          {
+            "cluster_id": 4,
+            "count": 366554,
+            "ratio_pct": 26.90737079941657
+          }
+        ],
+        "pass": true
+      },
+      "centers_scaled": {
+        "max_absolute_difference": 0.0,
+        "allowed_difference": 2.1162954215808015e-08,
+        "pass": true
+      },
+      "pass": true
+    }
+  },
+  "candidate_raw_profile_summary": {
+    "4": {
+      "k": 4,
+      "quantile_relative_error": 0.001,
+      "clusters": [
+        {
+          "cluster_id": 0,
+          "count": 221108,
+          "ratio_pct": 16.230718919224447,
+          "raw_features": {
+            "Recency": {
+              "mean": 58.30006603107984,
+              "std": 72.71683214268225,
+              "p05": 3.0,
+              "p25": 13.0,
+              "median": 32.0,
+              "p75": 75.0,
+              "p95": 211.0
+            },
+            "Frequency": {
+              "mean": 21.975591113844818,
+              "std": 15.087384221472188,
+              "p05": 7.0,
+              "p25": 13.0,
+              "median": 18.0,
+              "p75": 27.0,
+              "p95": 48.0
+            },
+            "Monetary": {
+              "mean": 2.537847504080384,
+              "std": 2.0440106214087,
+              "p05": 1.0583050847457625,
+              "p25": 1.378135593220339,
+              "median": 1.8786779661016946,
+              "p75": 2.902118644067796,
+              "p95": 6.1568474576271175
+            },
+            "AvgBasketSize": {
+              "mean": 4.656983497953013,
+              "std": 2.774202580805816,
+              "p05": 1.9722222222222223,
+              "p25": 2.8688524590163933,
+              "median": 3.9166666666666665,
+              "p75": 5.6,
+              "p95": 9.7
+            },
+            "ProductVariety": {
+              "mean": 74.06953615427754,
+              "std": 48.69787154860034,
+              "p05": 34.0,
+              "p25": 45.0,
+              "median": 59.0,
+              "p75": 86.0,
+              "p95": 164.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.8043062996760503,
+            1.582497911060541,
+            1.862006508229386,
+            0.565985799197027,
+            1.5917542636671975
+          ]
+        },
+        {
+          "cluster_id": 1,
+          "count": 460572,
+          "ratio_pct": 33.808883776548306,
+          "raw_features": {
+            "Recency": {
+              "mean": 368.0352453036659,
+              "std": 219.28161744471447,
+              "p05": 32.0,
+              "p25": 173.0,
+              "median": 355.0,
+              "p75": 572.0,
+              "p95": 705.0
+            },
+            "Frequency": {
+              "mean": 1.5308420833224772,
+              "std": 0.8975194368922246,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "Monetary": {
+              "mean": 0.08183793969091377,
+              "std": 0.06597419056439587,
+              "p05": 0.016932203389830508,
+              "p25": 0.037254237288135594,
+              "median": 0.06354237288135593,
+              "p75": 0.10501694915254237,
+              "p95": 0.20835593220338983
+            },
+            "AvgBasketSize": {
+              "mean": 1.78829515294108,
+              "std": 0.7238278621040803,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "ProductVariety": {
+              "mean": 2.4978526701579775,
+              "std": 1.661508329945808,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 6.0
+            }
+          },
+          "representative_center_scaled": [
+            0.5964864416666381,
+            -0.7939641449314276,
+            -0.7221134152539244,
+            -0.818407883851418,
+            -1.026975413416077
+          ]
+        },
+        {
+          "cluster_id": 2,
+          "count": 257685,
+          "ratio_pct": 18.91570094569329,
+          "raw_features": {
+            "Recency": {
+              "mean": 372.8577371597105,
+              "std": 213.86831191175682,
+              "p05": 46.0,
+              "p25": 171.0,
+              "median": 385.0,
+              "p75": 556.0,
+              "p95": 705.0
+            },
+            "Frequency": {
+              "mean": 1.7489609406833926,
+              "std": 1.0787252869557802,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 4.0
+            },
+            "Monetary": {
+              "mean": 0.2864307462501048,
+              "std": 0.2534319711129866,
+              "p05": 0.06552542372881356,
+              "p25": 0.12362711864406778,
+              "median": 0.20659322033898303,
+              "p75": 0.35377966101694913,
+              "p95": 0.7954745762711863
+            },
+            "AvgBasketSize": {
+              "mean": 6.612003334944112,
+              "std": 4.023376255535084,
+              "p05": 3.5,
+              "p25": 4.0,
+              "median": 5.333333333333333,
+              "p75": 7.666666666666667,
+              "p95": 13.5
+            },
+            "ProductVariety": {
+              "mean": 9.359663930768185,
+              "std": 7.058659793619155,
+              "p05": 3.0,
+              "p25": 5.0,
+              "median": 7.0,
+              "p75": 11.0,
+              "p95": 23.0
+            }
+          },
+          "representative_center_scaled": [
+            0.6182889252969677,
+            -0.7157591772776516,
+            -0.3438327918070948,
+            1.1977009597522137,
+            -0.15489399156809155
+          ]
+        },
+        {
+          "cluster_id": 3,
+          "count": 422916,
+          "ratio_pct": 31.044696358533958,
+          "raw_features": {
+            "Recency": {
+              "mean": 102.20313963056493,
+              "std": 98.4164125211287,
+              "p05": 6.0,
+              "p25": 30.0,
+              "median": 72.0,
+              "p75": 137.0,
+              "p95": 307.0
+            },
+            "Frequency": {
+              "mean": 7.24838029301327,
+              "std": 4.073617377293454,
+              "p05": 3.0,
+              "p25": 4.0,
+              "median": 6.0,
+              "p75": 9.0,
+              "p95": 15.0
+            },
+            "Monetary": {
+              "mean": 0.5012967532840217,
+              "std": 0.27221664725373707,
+              "p05": 0.1455593220338983,
+              "p25": 0.2790169491525424,
+              "median": 0.45111864406779656,
+              "p75": 0.6891186440677965,
+              "p95": 0.999457627118644
+            },
+            "AvgBasketSize": {
+              "mean": 2.8787297384099815,
+              "std": 1.1624710267577087,
+              "p05": 1.4705882352941178,
+              "p25": 2.0,
+              "median": 2.642857142857143,
+              "p75": 3.5,
+              "p95": 5.142857142857143
+            },
+            "ProductVariety": {
+              "mean": 17.41902883787797,
+              "std": 9.136809160589332,
+              "p05": 6.0,
+              "p25": 10.0,
+              "median": 16.0,
+              "p75": 24.0,
+              "p95": 34.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.6057514930536779,
+            0.47331743332664994,
+            0.022327121762334076,
+            -0.13441879875645205,
+            0.38050101347204773
+          ]
+        }
+      ]
+    },
+    "5": {
+      "k": 5,
+      "quantile_relative_error": 0.001,
+      "clusters": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684,
+          "raw_features": {
+            "Recency": {
+              "mean": 333.10277862334004,
+              "std": 203.36509642855123,
+              "p05": 36.0,
+              "p25": 152.0,
+              "median": 328.0,
+              "p75": 487.0,
+              "p95": 683.0
+            },
+            "Frequency": {
+              "mean": 1.9970225638293824,
+              "std": 1.212076653753814,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0
+            },
+            "Monetary": {
+              "mean": 0.35722646580728784,
+              "std": 0.29510809086555806,
+              "p05": 0.08686440677966101,
+              "p25": 0.16464406779661017,
+              "median": 0.2676101694915254,
+              "p75": 0.44383050847457617,
+              "p95": 0.9487118644067796
+            },
+            "AvgBasketSize": {
+              "mean": 7.368863745113108,
+              "std": 4.233897572745373,
+              "p05": 4.0,
+              "p25": 5.0,
+              "median": 6.0,
+              "p75": 8.2,
+              "p95": 14.5
+            },
+            "ProductVariety": {
+              "mean": 11.54721566911457,
+              "std": 8.145772478952571,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 9.0,
+              "p75": 14.0,
+              "p95": 28.0
+            }
+          },
+          "representative_center_scaled": [
+            0.4384881086223742,
+            -0.6277936731632828,
+            -0.22468769888358062,
+            1.4107246474865613,
+            0.02021307195709716
+          ],
+          "nearest_k4_cluster": 2,
+          "nearest_k4_distance": 0.3609756113521438
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232,
+          "raw_features": {
+            "Recency": {
+              "mean": 53.902010719205435,
+              "std": 68.68702134466601,
+              "p05": 2.0,
+              "p25": 12.0,
+              "median": 29.0,
+              "p75": 68.0,
+              "p95": 197.0
+            },
+            "Frequency": {
+              "mean": 24.07674187088335,
+              "std": 16.140077833770093,
+              "p05": 8.0,
+              "p25": 14.0,
+              "median": 20.0,
+              "p75": 29.0,
+              "p95": 52.0
+            },
+            "Monetary": {
+              "mean": 2.9133534566465213,
+              "std": 2.165841059788042,
+              "p05": 1.3226101694915253,
+              "p25": 1.6682542372881355,
+              "median": 2.213135593220339,
+              "p75": 3.3255932203389826,
+              "p95": 6.7854406779661005
+            },
+            "AvgBasketSize": {
+              "mean": 4.875730807887345,
+              "std": 2.810055656968439,
+              "p05": 2.0689655172413794,
+              "p25": 3.0,
+              "median": 4.142857142857143,
+              "p75": 5.9,
+              "p95": 10.0
+            },
+            "ProductVariety": {
+              "mean": 83.5391378332388,
+              "std": 51.08191710192732,
+              "p05": 39.0,
+              "p25": 53.0,
+              "median": 68.0,
+              "p75": 96.0,
+              "p95": 178.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.8242008775874676,
+            1.6847161708882905,
+            2.1162954215808014,
+            0.6485789880916449,
+            1.707939955918849
+          ],
+          "nearest_k4_cluster": 0,
+          "nearest_k4_distance": 0.30956092818976355
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324,
+          "raw_features": {
+            "Recency": {
+              "mean": 568.063887670683,
+              "std": 108.85990489883258,
+              "p05": 385.0,
+              "p25": 473.0,
+              "median": 579.0,
+              "p75": 667.0,
+              "p95": 724.0
+            },
+            "Frequency": {
+              "mean": 1.4775854251373268,
+              "std": 0.9503640668628657,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "Monetary": {
+              "mean": 0.09047617382516669,
+              "std": 0.07884698418849488,
+              "p05": 0.016932203389830508,
+              "p25": 0.03894915254237288,
+              "median": 0.06776271186440677,
+              "p75": 0.11522033898305084,
+              "p95": 0.24222033898305084
+            },
+            "AvgBasketSize": {
+              "mean": 2.1633301107076117,
+              "std": 1.0768339539977954,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0
+            },
+            "ProductVariety": {
+              "mean": 2.888176135223328,
+              "std": 2.1715419717307354,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 4.0,
+              "p95": 7.0
+            }
+          },
+          "representative_center_scaled": [
+            1.5010696874292808,
+            -0.8214514768207108,
+            -0.7047556871713285,
+            -0.5978824670374556,
+            -0.9611976846487754
+          ],
+          "nearest_k4_cluster": 1,
+          "nearest_k4_distance": 0.9339624519839195
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193,
+          "raw_features": {
+            "Recency": {
+              "mean": 157.18148405739745,
+              "std": 104.68858998686912,
+              "p05": 12.0,
+              "p25": 67.0,
+              "median": 145.0,
+              "p75": 244.0,
+              "p95": 334.0
+            },
+            "Frequency": {
+              "mean": 2.0571646408003748,
+              "std": 1.2651828007893595,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 5.0
+            },
+            "Monetary": {
+              "mean": 0.11732698691832902,
+              "std": 0.0862002207838109,
+              "p05": 0.022016949152542376,
+              "p25": 0.050813559322033894,
+              "median": 0.09488135593220337,
+              "p75": 0.1643050847457627,
+              "p95": 0.27952542372881356
+            },
+            "AvgBasketSize": {
+              "mean": 2.0486663318283957,
+              "std": 0.8902359952811215,
+              "p05": 1.0,
+              "p25": 1.25,
+              "median": 2.0,
+              "p75": 2.6666666666666665,
+              "p95": 4.0
+            },
+            "ProductVariety": {
+              "mean": 3.7338369626264774,
+              "std": 2.4086048278154317,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 3.0,
+              "p75": 5.0,
+              "p95": 8.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.3571272320349401,
+            -0.6098974464753231,
+            -0.6480581506029948,
+            -0.6463221943705175,
+            -0.7966932250058133
+          ],
+          "nearest_k4_cluster": 1,
+          "nearest_k4_distance": 1.0155723219922876
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657,
+          "raw_features": {
+            "Recency": {
+              "mean": 96.82912749553954,
+              "std": 98.08760467736808,
+              "p05": 5.0,
+              "p25": 27.0,
+              "median": 64.0,
+              "p75": 125.0,
+              "p95": 306.0
+            },
+            "Frequency": {
+              "mean": 9.264621310911899,
+              "std": 4.752111438879184,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 8.0,
+              "p75": 12.0,
+              "p95": 19.0
+            },
+            "Monetary": {
+              "mean": 0.6589094739249459,
+              "std": 0.3130504775534991,
+              "p05": 0.2517118644067796,
+              "p25": 0.40315254237288134,
+              "median": 0.599593220338983,
+              "p75": 0.8752033898305084,
+              "p95": 1.2355254237288136
+            },
+            "AvgBasketSize": {
+              "mean": 2.992304870237259,
+              "std": 1.1672735098898452,
+              "p05": 1.5555555555555556,
+              "p25": 2.142857142857143,
+              "median": 2.75,
+              "p75": 3.6,
+              "p95": 5.25
+            },
+            "ProductVariety": {
+              "mean": 22.875393530011948,
+              "std": 10.436719279923977,
+              "p05": 10.0,
+              "p25": 14.0,
+              "median": 21.0,
+              "p75": 30.0,
+              "p95": 42.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.6300713974476971,
+            0.7407739420483642,
+            0.2562618097910844,
+            -0.07007297204547962,
+            0.6358417794344826
+          ],
+          "nearest_k4_cluster": 3,
+          "nearest_k4_distance": 0.44293246917318313
+        }
+      ]
+    }
+  },
+  "candidate_interpretability_review": {
+    "k2_review": "K=2 has two well-sized groups but only two centers; representative centers show the 5D behavioral space is collapsed into a coarse partition, so multiple distinct regions of the improved feature space are not separately represented.",
+    "k4_vs_k5": {
+      "silhouette_k4": 0.4835419057189569,
+      "silhouette_k5": 0.4818602850050599,
+      "silhouette_k4_minus_k5": 0.0016816207138969919,
+      "wcss_reduction_4_to_5": {
+        "from_k": 4,
+        "to_k": 5,
+        "wcss_previous": 2272486.43072675,
+        "wcss_current": 1836214.8866214142,
+        "absolute_reduction": 436271.5441053356,
+        "reduction_pct": 19.19798236004491
+      },
+      "k5_nearest_k4_review": {
+        "nearest_k4_mapping": [
+          {
+            "k5_cluster": 0,
+            "nearest_k4_cluster": 2,
+            "distance": 0.3609756113521438
+          },
+          {
+            "k5_cluster": 1,
+            "nearest_k4_cluster": 0,
+            "distance": 0.30956092818976355
+          },
+          {
+            "k5_cluster": 2,
+            "nearest_k4_cluster": 1,
+            "distance": 0.9339624519839195
+          },
+          {
+            "k5_cluster": 3,
+            "nearest_k4_cluster": 1,
+            "distance": 1.0155723219922876
+          },
+          {
+            "k5_cluster": 4,
+            "nearest_k4_cluster": 3,
+            "distance": 0.44293246917318313
+          }
+        ],
+        "k4_centers_with_multiple_k5_neighbors": [
+          1
+        ],
+        "assessment": "K=5 adds a fifth balanced group; raw-profile review determines whether it is a meaningful behavioral split or only a fine-grained split."
+      },
+      "k4_raw_profiles": {
+        "0": {
+          "cluster_id": 0,
+          "count": 221108,
+          "ratio_pct": 16.230718919224447,
+          "raw_features": {
+            "Recency": {
+              "mean": 58.30006603107984,
+              "std": 72.71683214268225,
+              "p05": 3.0,
+              "p25": 13.0,
+              "median": 32.0,
+              "p75": 75.0,
+              "p95": 211.0
+            },
+            "Frequency": {
+              "mean": 21.975591113844818,
+              "std": 15.087384221472188,
+              "p05": 7.0,
+              "p25": 13.0,
+              "median": 18.0,
+              "p75": 27.0,
+              "p95": 48.0
+            },
+            "Monetary": {
+              "mean": 2.537847504080384,
+              "std": 2.0440106214087,
+              "p05": 1.0583050847457625,
+              "p25": 1.378135593220339,
+              "median": 1.8786779661016946,
+              "p75": 2.902118644067796,
+              "p95": 6.1568474576271175
+            },
+            "AvgBasketSize": {
+              "mean": 4.656983497953013,
+              "std": 2.774202580805816,
+              "p05": 1.9722222222222223,
+              "p25": 2.8688524590163933,
+              "median": 3.9166666666666665,
+              "p75": 5.6,
+              "p95": 9.7
+            },
+            "ProductVariety": {
+              "mean": 74.06953615427754,
+              "std": 48.69787154860034,
+              "p05": 34.0,
+              "p25": 45.0,
+              "median": 59.0,
+              "p75": 86.0,
+              "p95": 164.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.8043062996760503,
+            1.582497911060541,
+            1.862006508229386,
+            0.565985799197027,
+            1.5917542636671975
+          ]
+        },
+        "1": {
+          "cluster_id": 1,
+          "count": 460572,
+          "ratio_pct": 33.808883776548306,
+          "raw_features": {
+            "Recency": {
+              "mean": 368.0352453036659,
+              "std": 219.28161744471447,
+              "p05": 32.0,
+              "p25": 173.0,
+              "median": 355.0,
+              "p75": 572.0,
+              "p95": 705.0
+            },
+            "Frequency": {
+              "mean": 1.5308420833224772,
+              "std": 0.8975194368922246,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "Monetary": {
+              "mean": 0.08183793969091377,
+              "std": 0.06597419056439587,
+              "p05": 0.016932203389830508,
+              "p25": 0.037254237288135594,
+              "median": 0.06354237288135593,
+              "p75": 0.10501694915254237,
+              "p95": 0.20835593220338983
+            },
+            "AvgBasketSize": {
+              "mean": 1.78829515294108,
+              "std": 0.7238278621040803,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "ProductVariety": {
+              "mean": 2.4978526701579775,
+              "std": 1.661508329945808,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 6.0
+            }
+          },
+          "representative_center_scaled": [
+            0.5964864416666381,
+            -0.7939641449314276,
+            -0.7221134152539244,
+            -0.818407883851418,
+            -1.026975413416077
+          ]
+        },
+        "2": {
+          "cluster_id": 2,
+          "count": 257685,
+          "ratio_pct": 18.91570094569329,
+          "raw_features": {
+            "Recency": {
+              "mean": 372.8577371597105,
+              "std": 213.86831191175682,
+              "p05": 46.0,
+              "p25": 171.0,
+              "median": 385.0,
+              "p75": 556.0,
+              "p95": 705.0
+            },
+            "Frequency": {
+              "mean": 1.7489609406833926,
+              "std": 1.0787252869557802,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 4.0
+            },
+            "Monetary": {
+              "mean": 0.2864307462501048,
+              "std": 0.2534319711129866,
+              "p05": 0.06552542372881356,
+              "p25": 0.12362711864406778,
+              "median": 0.20659322033898303,
+              "p75": 0.35377966101694913,
+              "p95": 0.7954745762711863
+            },
+            "AvgBasketSize": {
+              "mean": 6.612003334944112,
+              "std": 4.023376255535084,
+              "p05": 3.5,
+              "p25": 4.0,
+              "median": 5.333333333333333,
+              "p75": 7.666666666666667,
+              "p95": 13.5
+            },
+            "ProductVariety": {
+              "mean": 9.359663930768185,
+              "std": 7.058659793619155,
+              "p05": 3.0,
+              "p25": 5.0,
+              "median": 7.0,
+              "p75": 11.0,
+              "p95": 23.0
+            }
+          },
+          "representative_center_scaled": [
+            0.6182889252969677,
+            -0.7157591772776516,
+            -0.3438327918070948,
+            1.1977009597522137,
+            -0.15489399156809155
+          ]
+        },
+        "3": {
+          "cluster_id": 3,
+          "count": 422916,
+          "ratio_pct": 31.044696358533958,
+          "raw_features": {
+            "Recency": {
+              "mean": 102.20313963056493,
+              "std": 98.4164125211287,
+              "p05": 6.0,
+              "p25": 30.0,
+              "median": 72.0,
+              "p75": 137.0,
+              "p95": 307.0
+            },
+            "Frequency": {
+              "mean": 7.24838029301327,
+              "std": 4.073617377293454,
+              "p05": 3.0,
+              "p25": 4.0,
+              "median": 6.0,
+              "p75": 9.0,
+              "p95": 15.0
+            },
+            "Monetary": {
+              "mean": 0.5012967532840217,
+              "std": 0.27221664725373707,
+              "p05": 0.1455593220338983,
+              "p25": 0.2790169491525424,
+              "median": 0.45111864406779656,
+              "p75": 0.6891186440677965,
+              "p95": 0.999457627118644
+            },
+            "AvgBasketSize": {
+              "mean": 2.8787297384099815,
+              "std": 1.1624710267577087,
+              "p05": 1.4705882352941178,
+              "p25": 2.0,
+              "median": 2.642857142857143,
+              "p75": 3.5,
+              "p95": 5.142857142857143
+            },
+            "ProductVariety": {
+              "mean": 17.41902883787797,
+              "std": 9.136809160589332,
+              "p05": 6.0,
+              "p25": 10.0,
+              "median": 16.0,
+              "p75": 24.0,
+              "p95": 34.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.6057514930536779,
+            0.47331743332664994,
+            0.022327121762334076,
+            -0.13441879875645205,
+            0.38050101347204773
+          ]
+        }
+      },
+      "k5_raw_profiles": {
+        "0": {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684,
+          "raw_features": {
+            "Recency": {
+              "mean": 333.10277862334004,
+              "std": 203.36509642855123,
+              "p05": 36.0,
+              "p25": 152.0,
+              "median": 328.0,
+              "p75": 487.0,
+              "p95": 683.0
+            },
+            "Frequency": {
+              "mean": 1.9970225638293824,
+              "std": 1.212076653753814,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0
+            },
+            "Monetary": {
+              "mean": 0.35722646580728784,
+              "std": 0.29510809086555806,
+              "p05": 0.08686440677966101,
+              "p25": 0.16464406779661017,
+              "median": 0.2676101694915254,
+              "p75": 0.44383050847457617,
+              "p95": 0.9487118644067796
+            },
+            "AvgBasketSize": {
+              "mean": 7.368863745113108,
+              "std": 4.233897572745373,
+              "p05": 4.0,
+              "p25": 5.0,
+              "median": 6.0,
+              "p75": 8.2,
+              "p95": 14.5
+            },
+            "ProductVariety": {
+              "mean": 11.54721566911457,
+              "std": 8.145772478952571,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 9.0,
+              "p75": 14.0,
+              "p95": 28.0
+            }
+          },
+          "representative_center_scaled": [
+            0.4384881086223742,
+            -0.6277936731632828,
+            -0.22468769888358062,
+            1.4107246474865613,
+            0.02021307195709716
+          ],
+          "nearest_k4_cluster": 2,
+          "nearest_k4_distance": 0.3609756113521438
+        },
+        "1": {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232,
+          "raw_features": {
+            "Recency": {
+              "mean": 53.902010719205435,
+              "std": 68.68702134466601,
+              "p05": 2.0,
+              "p25": 12.0,
+              "median": 29.0,
+              "p75": 68.0,
+              "p95": 197.0
+            },
+            "Frequency": {
+              "mean": 24.07674187088335,
+              "std": 16.140077833770093,
+              "p05": 8.0,
+              "p25": 14.0,
+              "median": 20.0,
+              "p75": 29.0,
+              "p95": 52.0
+            },
+            "Monetary": {
+              "mean": 2.9133534566465213,
+              "std": 2.165841059788042,
+              "p05": 1.3226101694915253,
+              "p25": 1.6682542372881355,
+              "median": 2.213135593220339,
+              "p75": 3.3255932203389826,
+              "p95": 6.7854406779661005
+            },
+            "AvgBasketSize": {
+              "mean": 4.875730807887345,
+              "std": 2.810055656968439,
+              "p05": 2.0689655172413794,
+              "p25": 3.0,
+              "median": 4.142857142857143,
+              "p75": 5.9,
+              "p95": 10.0
+            },
+            "ProductVariety": {
+              "mean": 83.5391378332388,
+              "std": 51.08191710192732,
+              "p05": 39.0,
+              "p25": 53.0,
+              "median": 68.0,
+              "p75": 96.0,
+              "p95": 178.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.8242008775874676,
+            1.6847161708882905,
+            2.1162954215808014,
+            0.6485789880916449,
+            1.707939955918849
+          ],
+          "nearest_k4_cluster": 0,
+          "nearest_k4_distance": 0.30956092818976355
+        },
+        "2": {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324,
+          "raw_features": {
+            "Recency": {
+              "mean": 568.063887670683,
+              "std": 108.85990489883258,
+              "p05": 385.0,
+              "p25": 473.0,
+              "median": 579.0,
+              "p75": 667.0,
+              "p95": 724.0
+            },
+            "Frequency": {
+              "mean": 1.4775854251373268,
+              "std": 0.9503640668628657,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 3.0
+            },
+            "Monetary": {
+              "mean": 0.09047617382516669,
+              "std": 0.07884698418849488,
+              "p05": 0.016932203389830508,
+              "p25": 0.03894915254237288,
+              "median": 0.06776271186440677,
+              "p75": 0.11522033898305084,
+              "p95": 0.24222033898305084
+            },
+            "AvgBasketSize": {
+              "mean": 2.1633301107076117,
+              "std": 1.0768339539977954,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0
+            },
+            "ProductVariety": {
+              "mean": 2.888176135223328,
+              "std": 2.1715419717307354,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 4.0,
+              "p95": 7.0
+            }
+          },
+          "representative_center_scaled": [
+            1.5010696874292808,
+            -0.8214514768207108,
+            -0.7047556871713285,
+            -0.5978824670374556,
+            -0.9611976846487754
+          ],
+          "nearest_k4_cluster": 1,
+          "nearest_k4_distance": 0.9339624519839195
+        },
+        "3": {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193,
+          "raw_features": {
+            "Recency": {
+              "mean": 157.18148405739745,
+              "std": 104.68858998686912,
+              "p05": 12.0,
+              "p25": 67.0,
+              "median": 145.0,
+              "p75": 244.0,
+              "p95": 334.0
+            },
+            "Frequency": {
+              "mean": 2.0571646408003748,
+              "std": 1.2651828007893595,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 5.0
+            },
+            "Monetary": {
+              "mean": 0.11732698691832902,
+              "std": 0.0862002207838109,
+              "p05": 0.022016949152542376,
+              "p25": 0.050813559322033894,
+              "median": 0.09488135593220337,
+              "p75": 0.1643050847457627,
+              "p95": 0.27952542372881356
+            },
+            "AvgBasketSize": {
+              "mean": 2.0486663318283957,
+              "std": 0.8902359952811215,
+              "p05": 1.0,
+              "p25": 1.25,
+              "median": 2.0,
+              "p75": 2.6666666666666665,
+              "p95": 4.0
+            },
+            "ProductVariety": {
+              "mean": 3.7338369626264774,
+              "std": 2.4086048278154317,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 3.0,
+              "p75": 5.0,
+              "p95": 8.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.3571272320349401,
+            -0.6098974464753231,
+            -0.6480581506029948,
+            -0.6463221943705175,
+            -0.7966932250058133
+          ],
+          "nearest_k4_cluster": 1,
+          "nearest_k4_distance": 1.0155723219922876
+        },
+        "4": {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657,
+          "raw_features": {
+            "Recency": {
+              "mean": 96.82912749553954,
+              "std": 98.08760467736808,
+              "p05": 5.0,
+              "p25": 27.0,
+              "median": 64.0,
+              "p75": 125.0,
+              "p95": 306.0
+            },
+            "Frequency": {
+              "mean": 9.264621310911899,
+              "std": 4.752111438879184,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 8.0,
+              "p75": 12.0,
+              "p95": 19.0
+            },
+            "Monetary": {
+              "mean": 0.6589094739249459,
+              "std": 0.3130504775534991,
+              "p05": 0.2517118644067796,
+              "p25": 0.40315254237288134,
+              "median": 0.599593220338983,
+              "p75": 0.8752033898305084,
+              "p95": 1.2355254237288136
+            },
+            "AvgBasketSize": {
+              "mean": 2.992304870237259,
+              "std": 1.1672735098898452,
+              "p05": 1.5555555555555556,
+              "p25": 2.142857142857143,
+              "median": 2.75,
+              "p75": 3.6,
+              "p95": 5.25
+            },
+            "ProductVariety": {
+              "mean": 22.875393530011948,
+              "std": 10.436719279923977,
+              "p05": 10.0,
+              "p25": 14.0,
+              "median": 21.0,
+              "p75": 30.0,
+              "p95": 42.0
+            }
+          },
+          "representative_center_scaled": [
+            -0.6300713974476971,
+            0.7407739420483642,
+            0.2562618097910844,
+            -0.07007297204547962,
+            0.6358417794344826
+          ],
+          "nearest_k4_cluster": 3,
+          "nearest_k4_distance": 0.44293246917318313
+        }
+      },
+      "interpretation": "K=5 is reviewed as an additional balanced split; raw profiles and nearest-center distances are retained as evidence for whether the split adds behaviorally distinct information."
+    }
+  },
+  "decision_table": [
+    {
+      "K": 2,
+      "Silhouette": 0.5901652160699704,
+      "SilhouetteRank": 1,
+      "WCSS": 3714913.3841042947,
+      "WCSSReductionPctFromPrevious": null,
+      "ElbowDistance": 0.0,
+      "MinClusterRatioPct": 37.32130155232291,
+      "MaxClusterRatioPct": 62.67869844767709,
+      "BalanceRatio": 1.6794349564632458,
+      "NumIter": 13,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 3.1171958424132438,
+      "MeanCenterDistance": 3.1171958424132438,
+      "InterpretabilityAssessment": "Two-group coarse partition.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 3,
+      "Silhouette": 0.45054288374642865,
+      "SilhouetteRank": 5,
+      "WCSS": 2885335.9410676965,
+      "WCSSReductionPctFromPrevious": 22.331003640253595,
+      "ElbowDistance": 0.12753038869786593,
+      "MinClusterRatioPct": 21.977330668195474,
+      "MaxClusterRatioPct": 40.420588703799,
+      "BalanceRatio": 1.8391946371491652,
+      "NumIter": 47,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 2.059816343756985,
+      "MeanCenterDistance": 3.043906501732952,
+      "InterpretabilityAssessment": "Lower-silhouette/post-elbow alternative; no targeted raw profiling performed.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 4,
+      "Silhouette": 0.4835419057189569,
+      "SilhouetteRank": 2,
+      "WCSS": 2272486.43072675,
+      "WCSSReductionPctFromPrevious": 21.240144054566017,
+      "ElbowDistance": 0.1909546113489516,
+      "MinClusterRatioPct": 16.230718919224447,
+      "MaxClusterRatioPct": 33.808883776548306,
+      "BalanceRatio": 2.083018253523165,
+      "NumIter": 77,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 2.230450284342307,
+      "MeanCenterDistance": 3.046163541901724,
+      "InterpretabilityAssessment": "Serious alternative: four balanced raw-profile groups with near-tied silhouette.",
+      "SelectionStatus": "CANDIDATE"
+    },
+    {
+      "K": 5,
+      "Silhouette": 0.4818602850050599,
+      "SilhouetteRank": 3,
+      "WCSS": 1836214.8866214142,
+      "WCSSReductionPctFromPrevious": 19.19798236004491,
+      "ElbowDistance": 0.20214866559069333,
+      "MinClusterRatioPct": 12.682699090716232,
+      "MaxClusterRatioPct": 26.90737079941657,
+      "BalanceRatio": 2.1215807934064155,
+      "NumIter": 21,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 1.8789022418266308,
+      "MeanCenterDistance": 3.1099216185145715,
+      "InterpretabilityAssessment": "Selected: five balanced raw-profile groups are retained for targeted review.",
+      "SelectionStatus": "SELECTED"
+    },
+    {
+      "K": 6,
+      "Silhouette": 0.44631301130989254,
+      "SilhouetteRank": 7,
+      "WCSS": 1625557.4634005036,
+      "WCSSReductionPctFromPrevious": 11.472373127772348,
+      "ElbowDistance": 0.14660809953673995,
+      "MinClusterRatioPct": 7.255918565993359,
+      "MaxClusterRatioPct": 21.723638515108114,
+      "BalanceRatio": 2.9939198348946845,
+      "NumIter": 63,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 1.7118742622948153,
+      "MeanCenterDistance": 3.1851018902391264,
+      "InterpretabilityAssessment": "Lower-silhouette/post-elbow alternative; no targeted raw profiling performed.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 7,
+      "Silhouette": 0.45473203928382633,
+      "SilhouetteRank": 4,
+      "WCSS": 1441117.6169774146,
+      "WCSSReductionPctFromPrevious": 11.346252013586732,
+      "ElbowDistance": 0.08331261093708238,
+      "MinClusterRatioPct": 6.886978530861107,
+      "MaxClusterRatioPct": 20.24479531021867,
+      "BalanceRatio": 2.93957578341505,
+      "NumIter": 74,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 1.7370237073744204,
+      "MeanCenterDistance": 3.126895354954109,
+      "InterpretabilityAssessment": "Lower-silhouette/post-elbow alternative; no targeted raw profiling performed.",
+      "SelectionStatus": "REJECTED"
+    },
+    {
+      "K": 8,
+      "Silhouette": 0.45008459235434695,
+      "SilhouetteRank": 6,
+      "WCSS": 1324350.9728409864,
+      "WCSSReductionPctFromPrevious": 8.102506191086146,
+      "ElbowDistance": 0.0,
+      "MinClusterRatioPct": 6.098888555298062,
+      "MaxClusterRatioPct": 20.119637578443804,
+      "BalanceRatio": 3.2989023157286606,
+      "NumIter": 80,
+      "ConvergenceFlag": "NORMAL",
+      "MinCenterDistance": 1.6434511947685486,
+      "MeanCenterDistance": 3.134185256151033,
+      "InterpretabilityAssessment": "Lower-silhouette/post-elbow alternative; no targeted raw profiling performed.",
+      "SelectionStatus": "REJECTED"
+    }
+  ],
+  "selected_k": 5,
+  "selected_k_metrics": {
+    "K": 5,
+    "Silhouette": 0.4818602850050599,
+    "SilhouetteRank": 3,
+    "WCSS": 1836214.8866214142,
+    "WCSSReductionPctFromPrevious": 19.19798236004491,
+    "ElbowDistance": 0.20214866559069333,
+    "MinClusterRatioPct": 12.682699090716232,
+    "MaxClusterRatioPct": 26.90737079941657,
+    "BalanceRatio": 2.1215807934064155,
+    "NumIter": 21,
+    "ConvergenceFlag": "NORMAL",
+    "MinCenterDistance": 1.8789022418266308,
+    "MeanCenterDistance": 3.1099216185145715,
+    "InterpretabilityAssessment": "Selected: five balanced raw-profile groups are retained for targeted review.",
+    "SelectionStatus": "SELECTED"
+  },
+  "selection_reason": "K=5 is selected because the objective geometric elbow is K=5, K=4 and K=5 are a near-tie in silhouette (K4=0.483541905719, K5=0.481860285005, difference=0.001681620714), the 4→5 WCSS reduction remains meaningful within the enhanced 5D space, all five clusters are well-sized (minimum ratio=12.682699%), convergence is below maxIter, and targeted raw profiling is retained to verify the added group is behaviorally distinguishable. K=5 therefore accepts one additional cluster for segmentation granularity while preserving parsimony relative to K>=6.",
+  "rejected_alternatives": {
+    "2": "Rejected despite silhouette rank 1 because two clusters are too coarse for the 5D eRFM objective; the partition does not separately represent multiple distinct regions of the improved feature space.",
+    "3": "Rejected because silhouette is materially below K=4/K=5 and it is not the supporting elbow; its balance is valid but adds insufficient granularity.",
+    "4": "Retained as the primary near-tie candidate, but not selected because K=5 is the geometric elbow and adds a fifth balanced partition with only a small silhouette trade-off.",
+    "6": "Rejected by parsimony: lower silhouette than K=4/K=5 and post-elbow diminishing returns, despite acceptable balance and convergence.",
+    "7": "Rejected by parsimony: lower silhouette and post-elbow WCSS reduction; no convergence failure, but extra complexity is not justified by the evidence.",
+    "8": "Rejected by parsimony: lowest post-elbow region of silhouette and further complexity; balance remains valid but does not establish additional useful structure."
+  },
+  "main_model_reference": {
+    "authority": "MAIN_KMEANS_FINAL",
+    "k": 4,
+    "silhouette": 0.6859294450224572,
+    "comparison_conclusion": "No Enhanced-versus-Main conclusion made in Stage 14."
+  },
+  "no_final_model_training": true,
+  "ready_for_stage15": true,
+  "artifact_readback": {
+    "output\\analysis\\stage14\\enhanced_optimal_k_selection.json": true,
+    "reports\\stage14_enhanced_k_selection.txt": true,
+    "output\\analysis\\stage14\\k_selection_table.csv": true,
+    "output\\analysis\\stage14\\wcss_reduction_table.csv": true,
+    "output\\analysis\\stage14\\elbow_analysis.json": true,
+    "output\\analysis\\stage14\\center_separation.json": true,
+    "output\\analysis\\stage14\\representative_centers.json": true,
+    "output\\analysis\\stage14\\candidate_raw_profiles.json": true,
+    "output\\analysis\\stage14\\candidate_raw_profiles.csv": true,
+    "output\\analysis\\stage14\\candidate_reproducibility.json": true
+  },
+  "warnings": [],
+  "blockers": []
+}

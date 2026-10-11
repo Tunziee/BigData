@@ -1,0 +1,29 @@
+{
+  "rest_base_url": "http://Tay-Nguyen:4040/api/v1/applications/local-1791292254665",
+  "endpoints": {
+    "jobs": true,
+    "stages": true,
+    "executors": true,
+    "environment": true,
+    "sql": true
+  },
+  "raw_artifacts": [
+    "environment.json",
+    "source_validation.json",
+    "q2_result.json",
+    "q3_result.json",
+    "q2_physical_plan_before.txt",
+    "q2_physical_plan_after.txt",
+    "q3_physical_plan_before.txt",
+    "q3_physical_plan_after.txt",
+    "q2_executed_plan.txt",
+    "q3_executed_plan.txt",
+    "q2_rdd_lineage.txt",
+    "q3_rdd_lineage.txt",
+    "spark_ui_jobs_raw.json",
+    "spark_ui_stages_raw.json",
+    "spark_ui_executors_raw.json",
+    "spark_ui_environment_raw.json",
+    "spark_ui_sql_raw.json"
+  ]
+}

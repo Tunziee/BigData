@@ -1,0 +1,13 @@
+﻿Category,Experiment,Metric,Value,Unit,Authority,Interpretation,Caveat
+Quality,B0,Silhouette RFM3D,0.6858111002170737,score,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,Baseline,RFM3D
+Quality,M1,Silhouette RFM3D,0.6858449879433209,score,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,Strongest RFM3D,Not accuracy
+Quality,M2,Silhouette eRFM5D,0.481806967562302,score,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,Improved eRFM objective,Different representation and K
+Quality,M2,SSE/customer eRFM5D,1.3474493014326931,SSE/customer,PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1,Lower than B0/M1,Common-space comparison
+Runtime,B0,Track B total median,16.630921100000705,s,PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1,Controlled runtime,Environment dependent
+Runtime,M1,Track B total median,16.912093099999765,s,PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1,Controlled runtime,Environment dependent
+Runtime,M2,Track B total median,13.461339999999836,s,PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1,Observed lowest total,No universal speed claim
+Storage,CSV vs Parquet,Storage reduction,77.80519590163235,%,CSV_PARQUET_IO_BENCHMARK_V1,Parquet reduces storage,Measured setup
+Cache,Q3,Steady-state cache improvement,3.34637505307505,%,CACHE_NO_CACHE_BENCHMARK_V1,Mild improvement,Workload dependent
+Spark,Q3,Shuffle bytes,327776023,bytes,SPARK_EXECUTION_EVIDENCE_V1,Larger aggregation shuffle,Not direct speed comparison
+FP-Growth,Stage 28 V2,Selected minSupport,0.0002,support,FP_GROWTH_ASSOCIATION_RULES_V2,Protocol-selected,Highest predefined support meeting gate
+FP-Growth,Stage 28 V2,Association rules,104,rules,FP_GROWTH_ASSOCIATION_RULES_V2,Rules available for interpretation,No causality or accuracy claim

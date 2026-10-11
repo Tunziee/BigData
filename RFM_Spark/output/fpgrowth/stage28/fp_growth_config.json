@@ -1,0 +1,11 @@
+{
+  "itemsCol": "items",
+  "minSupport": 0.001,
+  "minConfidence": 0.2,
+  "numPartitions": 64,
+  "basket_count": 9080179,
+  "minimum_support_basket_count": 9081,
+  "basket_storage_level_during_fit": "Disk Serialized 1x Replicated",
+  "fit_completed": true,
+  "model_class": "FPGrowthModel"
+}

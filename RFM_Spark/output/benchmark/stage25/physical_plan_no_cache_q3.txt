@@ -1,0 +1,63 @@
+== Physical Plan ==
+AdaptiveSparkPlan (9)
++- HashAggregate (8)
+   +- Exchange (7)
+      +- HashAggregate (6)
+         +- HashAggregate (5)
+            +- Exchange (4)
+               +- HashAggregate (3)
+                  +- Project (2)
+                     +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [3]: [t_dat#97, customer_id#98, price#100]
+Batched: true
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,price:double>
+
+(2) Project
+Output [3]: [customer_id#98, coalesce(t_dat#97, 1900-01-01) AS t_dat#104, coalesce(price#100, 0.0) AS price#105]
+Input [3]: [t_dat#97, customer_id#98, price#100]
+
+(3) HashAggregate
+Input [3]: [customer_id#98, t_dat#104, price#105]
+Keys [1]: [customer_id#98]
+Functions [3]: [partial_count(1), partial_sum(price#105), partial_max(t_dat#104)]
+Aggregate Attributes [3]: [count#1805L, sum#1806, max#1807]
+Results [4]: [customer_id#98, count#1808L, sum#1809, max#1810]
+
+(4) Exchange
+Input [4]: [customer_id#98, count#1808L, sum#1809, max#1810]
+Arguments: hashpartitioning(customer_id#98, 64), ENSURE_REQUIREMENTS, [plan_id=1885]
+
+(5) HashAggregate
+Input [4]: [customer_id#98, count#1808L, sum#1809, max#1810]
+Keys [1]: [customer_id#98]
+Functions [3]: [count(1), sum(price#105), max(t_dat#104)]
+Aggregate Attributes [3]: [count(1)#1782L, sum(price#105)#1783, max(t_dat#104)#1784]
+Results [3]: [count(1)#1782L AS transaction_row_count#1776L, sum(price#105)#1783 AS customer_sum_price#1777, max(t_dat#104)#1784 AS customer_max_t_dat#1778]
+
+(6) HashAggregate
+Input [3]: [transaction_row_count#1776L, customer_sum_price#1777, customer_max_t_dat#1778]
+Keys: []
+Functions [4]: [partial_count(1), partial_sum(transaction_row_count#1776L), partial_sum(customer_sum_price#1777), partial_max(customer_max_t_dat#1778)]
+Aggregate Attributes [4]: [count#1797L, sum#1798L, sum#1799, max#1800]
+Results [4]: [count#1801L, sum#1802L, sum#1803, max#1804]
+
+(7) Exchange
+Input [4]: [count#1801L, sum#1802L, sum#1803, max#1804]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=1889]
+
+(8) HashAggregate
+Input [4]: [count#1801L, sum#1802L, sum#1803, max#1804]
+Keys: []
+Functions [4]: [count(1), sum(transaction_row_count#1776L), sum(customer_sum_price#1777), max(customer_max_t_dat#1778)]
+Aggregate Attributes [4]: [count(1)#1793L, sum(transaction_row_count#1776L)#1794L, sum(customer_sum_price#1777)#1795, max(customer_max_t_dat#1778)#1796]
+Results [4]: [count(1)#1793L AS grouped_customer_count#1785L, sum(transaction_row_count#1776L)#1794L AS sum_grouped_transaction_rows#1786L, sum(customer_sum_price#1777)#1795 AS sum_grouped_monetary#1787, max(customer_max_t_dat#1778)#1796 AS max_customer_max_t_dat#1788]
+
+(9) AdaptiveSparkPlan
+Output [4]: [grouped_customer_count#1785L, sum_grouped_transaction_rows#1786L, sum_grouped_monetary#1787, max_customer_max_t_dat#1788]
+Arguments: isFinalPlan=false
+
+

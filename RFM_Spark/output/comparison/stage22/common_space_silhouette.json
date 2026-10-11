@@ -1,0 +1,68 @@
+{
+  "B0": {
+    "RFM3D": {
+      "model_id": "B0",
+      "model_name": "Basic K-Means Baseline",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": 0.6858111002170737,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "B0",
+      "model_name": "Basic K-Means Baseline",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.3566311380934453,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    }
+  },
+  "M1": {
+    "RFM3D": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": 0.6858449879433209,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.3565725452534894,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    }
+  },
+  "M2": {
+    "RFM3D": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": 0.21521780350092465,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.481806967562302,
+      "metric_name": "silhouette",
+      "distance_measure": "squaredEuclidean",
+      "customer_count": 1000000
+    }
+  }
+}

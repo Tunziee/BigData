@@ -1,0 +1,883 @@
+{
+  "cohort_count": 1000000,
+  "global_iqr": {
+    "Recency": 350.0,
+    "Frequency": 7.0,
+    "Monetary": 0.6097118644067795,
+    "AvgBasketSize": 2.095238095238095,
+    "ProductVariety": 21.0
+  },
+  "models": {
+    "B0": {
+      "model_id": "B0",
+      "model_name": "Basic K-Means Baseline",
+      "feature_order": [
+        "Recency",
+        "Frequency",
+        "Monetary",
+        "AvgBasketSize",
+        "ProductVariety"
+      ],
+      "segments": {
+        "0": {
+          "segment_id": 0,
+          "segment_name_vi": "B0 Cụm 0",
+          "segment_name_en": "B0 Cluster 0",
+          "count": 535416,
+          "ratio_pct": 53.5416,
+          "raw_features": {
+            "Recency": {
+              "count": 535416,
+              "mean": 125.16738013059005,
+              "p05": 9.0,
+              "p25": 46.0,
+              "median": 99.0,
+              "p75": 196.0,
+              "p95": 299.0,
+              "max": 379.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 535416,
+              "mean": 4.389659629148176,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 3.0,
+              "p75": 7.0,
+              "p95": 11.0,
+              "max": 19.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 535416,
+              "mean": 0.36527742081367226,
+              "p05": 0.03201694915254238,
+              "p25": 0.10366101694915254,
+              "median": 0.2592033898305085,
+              "p75": 0.5285593220338982,
+              "p95": 1.0420508474576269,
+              "max": 2.766847457627117,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 535416,
+              "mean": 3.321965359333029,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 2.6666666666666665,
+              "p75": 4.0,
+              "p95": 7.8,
+              "max": 93.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 535416,
+              "mean": 12.252949108730407,
+              "p05": 1.0,
+              "p25": 4.0,
+              "median": 9.0,
+              "p75": 18.0,
+              "p95": 34.0,
+              "max": 131.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "1": {
+          "segment_id": 1,
+          "segment_name_vi": "B0 Cụm 1",
+          "segment_name_en": "B0 Cluster 1",
+          "count": 145205,
+          "ratio_pct": 14.5205,
+          "raw_features": {
+            "Recency": {
+              "count": 145205,
+              "mean": 52.985792500258256,
+              "p05": 3.0,
+              "p25": 14.0,
+              "median": 32.0,
+              "p75": 69.0,
+              "p95": 177.0,
+              "max": 676.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 145205,
+              "mean": 19.775737750077475,
+              "p05": 10.0,
+              "p25": 14.0,
+              "median": 18.0,
+              "p75": 24.0,
+              "p95": 35.0,
+              "max": 62.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 145205,
+              "mean": 1.9350624603789264,
+              "p05": 0.7833728813559322,
+              "p25": 1.2075932203389828,
+              "median": 1.7006610169491523,
+              "p75": 2.438525423728813,
+              "p95": 3.889542372881356,
+              "max": 7.125661016949148,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 145205,
+              "mean": 3.940839386157566,
+              "p05": 1.7083333333333333,
+              "p25": 2.4166666666666665,
+              "median": 3.259259259259259,
+              "p75": 4.6521739130434785,
+              "p95": 8.375,
+              "max": 109.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 145205,
+              "mean": 60.2077958747977,
+              "p05": 28.0,
+              "p25": 40.0,
+              "median": 54.0,
+              "p75": 74.0,
+              "p95": 113.0,
+              "max": 310.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "2": {
+          "segment_id": 2,
+          "segment_name_vi": "B0 Cụm 2",
+          "segment_name_en": "B0 Cluster 2",
+          "count": 301081,
+          "ratio_pct": 30.1081,
+          "raw_features": {
+            "Recency": {
+              "count": 301081,
+              "mean": 535.4156389808722,
+              "p05": 348.0,
+              "p25": 433.0,
+              "median": 534.0,
+              "p75": 646.0,
+              "p95": 720.0,
+              "max": 734.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 301081,
+              "mean": 1.8025581155901569,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 5.0,
+              "max": 23.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 301081,
+              "mean": 0.167504742318625,
+              "p05": 0.020305084745762713,
+              "p25": 0.050813559322033894,
+              "median": 0.09993220338983051,
+              "p75": 0.20155932203389829,
+              "p95": 0.5382881355932203,
+              "max": 3.9472033898305026,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 301081,
+              "mean": 3.5232509783726673,
+              "p05": 1.0,
+              "p25": 1.5,
+              "median": 2.5,
+              "p75": 4.0,
+              "p95": 9.0,
+              "max": 156.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 301081,
+              "mean": 5.438576329957719,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 3.0,
+              "p75": 7.0,
+              "p95": 17.0,
+              "max": 142.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "3": {
+          "segment_id": 3,
+          "segment_name_vi": "B0 Cụm 3",
+          "segment_name_en": "B0 Cluster 3",
+          "count": 18298,
+          "ratio_pct": 1.8297999999999999,
+          "raw_features": {
+            "Recency": {
+              "count": 18298,
+              "mean": 26.26494698874194,
+              "p05": 1.0,
+              "p25": 6.0,
+              "median": 14.0,
+              "p75": 29.0,
+              "p95": 88.0,
+              "max": 609.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 18298,
+              "mean": 48.90911575035523,
+              "p05": 21.0,
+              "p25": 34.0,
+              "median": 44.0,
+              "p75": 58.0,
+              "p95": 91.0,
+              "max": 427.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 18298,
+              "mean": 6.641699178941478,
+              "p05": 3.2497966101694917,
+              "p25": 4.622508474576271,
+              "median": 5.880203389830508,
+              "p75": 7.641288135593219,
+              "p95": 12.524949152542371,
+              "max": 57.676406779661086,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 18298,
+              "mean": 5.084065241077264,
+              "p05": 1.955223880597015,
+              "p25": 3.0,
+              "median": 4.25531914893617,
+              "p75": 6.222222222222222,
+              "p95": 10.866666666666667,
+              "max": 181.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 18298,
+              "mean": 168.46179910372717,
+              "p05": 87.0,
+              "p25": 121.0,
+              "median": 152.0,
+              "p75": 196.0,
+              "p95": 304.0,
+              "max": 1346.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        }
+      }
+    },
+    "M1": {
+      "model_id": "M1",
+      "model_name": "Project Main K-Means",
+      "feature_order": [
+        "Recency",
+        "Frequency",
+        "Monetary",
+        "AvgBasketSize",
+        "ProductVariety"
+      ],
+      "segments": {
+        "0": {
+          "segment_id": 0,
+          "segment_name_vi": "Khách hàng mua sắm cơ bản",
+          "segment_name_en": "Mainstream Occasional Customers",
+          "count": 535490,
+          "ratio_pct": 53.549,
+          "raw_features": {
+            "Recency": {
+              "count": 535490,
+              "mean": 125.1483370371062,
+              "p05": 9.0,
+              "p25": 46.0,
+              "median": 99.0,
+              "p75": 196.0,
+              "p95": 299.0,
+              "max": 379.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 535490,
+              "mean": 4.391101607873163,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 3.0,
+              "p75": 7.0,
+              "p95": 11.0,
+              "max": 19.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 535490,
+              "mean": 0.3654151210154114,
+              "p05": 0.03201694915254238,
+              "p25": 0.10367796610169491,
+              "median": 0.25922033898305086,
+              "p75": 0.5289322033898305,
+              "p95": 1.0424915254237288,
+              "max": 2.766847457627117,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 535490,
+              "mean": 3.3220958774714195,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 2.6666666666666665,
+              "p75": 4.0,
+              "p95": 7.8,
+              "max": 93.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 535490,
+              "mean": 12.257833012754674,
+              "p05": 1.0,
+              "p25": 4.0,
+              "median": 9.0,
+              "p75": 18.0,
+              "p95": 34.0,
+              "max": 131.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "1": {
+          "segment_id": 1,
+          "segment_name_vi": "Khách hàng hoạt động trung thành",
+          "segment_name_en": "Active Loyal Customers",
+          "count": 145123,
+          "ratio_pct": 14.5123,
+          "raw_features": {
+            "Recency": {
+              "count": 145123,
+              "mean": 52.97482135843388,
+              "p05": 3.0,
+              "p25": 14.0,
+              "median": 32.0,
+              "p75": 69.0,
+              "p95": 177.0,
+              "max": 676.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 145123,
+              "mean": 19.782226111643226,
+              "p05": 10.0,
+              "p25": 14.0,
+              "median": 18.0,
+              "p75": 24.0,
+              "p95": 35.0,
+              "max": 62.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 145123,
+              "mean": 1.9358294744014335,
+              "p05": 0.7836949152542373,
+              "p25": 1.2082881355932202,
+              "median": 1.701457627118644,
+              "p75": 2.4392203389830507,
+              "p95": 3.889542372881356,
+              "max": 7.125661016949148,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 145123,
+              "mean": 3.9410565682581575,
+              "p05": 1.7083333333333333,
+              "p25": 2.4166666666666665,
+              "median": 3.259259259259259,
+              "p75": 4.653846153846154,
+              "p95": 8.375,
+              "max": 109.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 145123,
+              "mean": 60.22860607898128,
+              "p05": 28.0,
+              "p25": 40.0,
+              "median": 54.0,
+              "p75": 74.0,
+              "p95": 113.0,
+              "max": 310.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "2": {
+          "segment_id": 2,
+          "segment_name_vi": "Khách hàng lâu chưa quay lại",
+          "segment_name_en": "Lapsed Customers",
+          "count": 301103,
+          "ratio_pct": 30.110300000000002,
+          "raw_features": {
+            "Recency": {
+              "count": 301103,
+              "mean": 535.4010454894172,
+              "p05": 348.0,
+              "p25": 433.0,
+              "median": 535.0,
+              "p75": 646.0,
+              "p95": 720.0,
+              "max": 734.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 301103,
+              "mean": 1.8026754964248115,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 5.0,
+              "max": 23.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 301103,
+              "mean": 0.16751216625742754,
+              "p05": 0.020305084745762713,
+              "p25": 0.050813559322033894,
+              "median": 0.09993220338983051,
+              "p75": 0.20155932203389829,
+              "p95": 0.5382881355932203,
+              "max": 3.9472033898305026,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 301103,
+              "mean": 3.523169609504164,
+              "p05": 1.0,
+              "p25": 1.5,
+              "median": 2.5,
+              "p75": 4.0,
+              "p95": 9.0,
+              "max": 156.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 301103,
+              "mean": 5.438736910625268,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 3.0,
+              "p75": 7.0,
+              "p95": 17.0,
+              "max": 142.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "3": {
+          "segment_id": 3,
+          "segment_name_vi": "Khách hàng hoạt động giá trị cao",
+          "segment_name_en": "Active High-Value Customers",
+          "count": 18284,
+          "ratio_pct": 1.8284000000000002,
+          "raw_features": {
+            "Recency": {
+              "count": 18284,
+              "mean": 26.25700065631153,
+              "p05": 1.0,
+              "p25": 6.0,
+              "median": 14.0,
+              "p75": 29.0,
+              "p95": 88.0,
+              "max": 609.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 18284,
+              "mean": 48.91965653029972,
+              "p05": 21.0,
+              "p25": 34.0,
+              "median": 44.0,
+              "p75": 58.0,
+              "p95": 91.0,
+              "max": 427.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 18284,
+              "mean": 6.6435401026738194,
+              "p05": 3.2497966101694917,
+              "p25": 4.635186440677966,
+              "median": 5.880203389830508,
+              "p75": 7.641288135593219,
+              "p95": 12.524949152542371,
+              "max": 57.676406779661086,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 18284,
+              "mean": 5.083741456316154,
+              "p05": 1.955223880597015,
+              "p25": 3.0,
+              "median": 4.25531914893617,
+              "p75": 6.222222222222222,
+              "p95": 10.866666666666667,
+              "max": 181.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 18284,
+              "mean": 168.49381973309997,
+              "p05": 87.0,
+              "p25": 121.0,
+              "median": 152.0,
+              "p75": 196.0,
+              "p95": 304.0,
+              "max": 1346.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        }
+      }
+    },
+    "M2": {
+      "model_id": "M2",
+      "model_name": "Enhanced K-Means",
+      "feature_order": [
+        "Recency",
+        "Frequency",
+        "Monetary",
+        "AvgBasketSize",
+        "ProductVariety"
+      ],
+      "segments": {
+        "0": {
+          "segment_id": 0,
+          "segment_name_vi": "Khách hàng mua ít nhưng giỏ lớn",
+          "segment_name_en": "Infrequent Large-Basket Customers",
+          "count": 154437,
+          "ratio_pct": 15.4437,
+          "raw_features": {
+            "Recency": {
+              "count": 154437,
+              "mean": 333.35714886976564,
+              "p05": 37.0,
+              "p25": 152.0,
+              "median": 328.0,
+              "p75": 487.0,
+              "p95": 683.0,
+              "max": 734.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 154437,
+              "mean": 1.9962832740858731,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0,
+              "max": 10.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 154437,
+              "mean": 0.356723877094088,
+              "p05": 0.08677966101694914,
+              "p25": 0.16464406779661017,
+              "median": 0.267406779661017,
+              "p75": 0.44242372881355924,
+              "p95": 0.9485762711864407,
+              "max": 7.813898305084755,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 154437,
+              "mean": 7.36846266022484,
+              "p05": 4.0,
+              "p25": 5.0,
+              "median": 6.0,
+              "p75": 8.2,
+              "p95": 14.5,
+              "max": 181.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 154437,
+              "mean": 11.5439693855747,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 9.0,
+              "p75": 14.0,
+              "p95": 28.0,
+              "max": 128.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "1": {
+          "segment_id": 1,
+          "segment_name_vi": "Khách hàng hoạt động giá trị cao",
+          "segment_name_en": "Active High-Value Customers",
+          "count": 126550,
+          "ratio_pct": 12.655,
+          "raw_features": {
+            "Recency": {
+              "count": 126550,
+              "mean": 53.964077439747136,
+              "p05": 2.0,
+              "p25": 12.0,
+              "median": 29.0,
+              "p75": 68.0,
+              "p95": 197.0,
+              "max": 695.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 126550,
+              "mean": 24.083808771236665,
+              "p05": 8.0,
+              "p25": 14.0,
+              "median": 20.0,
+              "p75": 29.0,
+              "p95": 52.0,
+              "max": 427.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 126550,
+              "mean": 2.9136110304093643,
+              "p05": 1.3222881355932203,
+              "p25": 1.6692542372881356,
+              "median": 2.216474576271186,
+              "p75": 3.329372881355932,
+              "p95": 6.765152542372879,
+              "max": 57.676406779661086,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 126550,
+              "mean": 4.876729262090259,
+              "p05": 2.0652173913043477,
+              "p25": 3.0238095238095237,
+              "median": 4.142857142857143,
+              "p75": 5.9,
+              "p95": 10.0,
+              "max": 161.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 126550,
+              "mean": 83.52803634926906,
+              "p05": 39.0,
+              "p25": 53.0,
+              "median": 68.0,
+              "p75": 97.0,
+              "p95": 177.0,
+              "max": 1346.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "2": {
+          "segment_id": 2,
+          "segment_name_vi": "Khách hàng lâu chưa quay lại",
+          "segment_name_en": "Lapsed Customers",
+          "count": 197817,
+          "ratio_pct": 19.7817,
+          "raw_features": {
+            "Recency": {
+              "count": 197817,
+              "mean": 567.974451134129,
+              "p05": 384.0,
+              "p25": 472.0,
+              "median": 579.0,
+              "p75": 666.0,
+              "p95": 724.0,
+              "max": 734.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 197817,
+              "mean": 1.4785837415388972,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 1.0,
+              "p75": 2.0,
+              "p95": 3.0,
+              "max": 13.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 197817,
+              "mean": 0.0904989203769312,
+              "p05": 0.016932203389830508,
+              "p25": 0.03893220338983051,
+              "median": 0.06776271186440677,
+              "p75": 0.11520338983050848,
+              "p95": 0.24220338983050846,
+              "max": 1.6964745762711864,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 197817,
+              "mean": 2.1626644999023252,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 4.0,
+              "max": 7.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 197817,
+              "mean": 2.889979122117917,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 4.0,
+              "p95": 7.0,
+              "max": 25.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "3": {
+          "segment_id": 3,
+          "segment_name_vi": "Khách hàng ít tương tác",
+          "segment_name_en": "Low-Engagement Customers",
+          "count": 252287,
+          "ratio_pct": 25.2287,
+          "raw_features": {
+            "Recency": {
+              "count": 252287,
+              "mean": 157.2648214137074,
+              "p05": 12.0,
+              "p25": 67.0,
+              "median": 145.0,
+              "p75": 244.0,
+              "p95": 334.0,
+              "max": 418.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 252287,
+              "mean": 2.057739796343054,
+              "p05": 1.0,
+              "p25": 1.0,
+              "median": 2.0,
+              "p75": 3.0,
+              "p95": 5.0,
+              "max": 10.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 252287,
+              "mean": 0.11727904727552342,
+              "p05": 0.022016949152542376,
+              "p25": 0.050813559322033894,
+              "median": 0.09488135593220337,
+              "p75": 0.16427118644067795,
+              "p95": 0.2794915254237288,
+              "max": 1.4846949152542372,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 252287,
+              "mean": 2.048658088504772,
+              "p05": 1.0,
+              "p25": 1.25,
+              "median": 2.0,
+              "p75": 2.6666666666666665,
+              "p95": 4.0,
+              "max": 6.0,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 252287,
+              "mean": 3.7346870825686618,
+              "p05": 1.0,
+              "p25": 2.0,
+              "median": 3.0,
+              "p75": 5.0,
+              "p95": 8.0,
+              "max": 12.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        },
+        "4": {
+          "segment_id": 4,
+          "segment_name_vi": "Khách hàng hoạt động thường xuyên",
+          "segment_name_en": "Active Regular Customers",
+          "count": 268909,
+          "ratio_pct": 26.890900000000002,
+          "raw_features": {
+            "Recency": {
+              "count": 268909,
+              "mean": 96.87956892480356,
+              "p05": 5.0,
+              "p25": 27.0,
+              "median": 64.0,
+              "p75": 124.0,
+              "p95": 305.0,
+              "max": 689.0,
+              "quantile_relative_error": 0.001
+            },
+            "Frequency": {
+              "count": 268909,
+              "mean": 9.266142077803272,
+              "p05": 4.0,
+              "p25": 6.0,
+              "median": 8.0,
+              "p75": 12.0,
+              "p95": 19.0,
+              "max": 49.0,
+              "quantile_relative_error": 0.001
+            },
+            "Monetary": {
+              "count": 268909,
+              "mean": 0.6590310542328889,
+              "p05": 0.2522372881355932,
+              "p25": 0.40316949152542375,
+              "median": 0.5998983050847457,
+              "p75": 0.8747966101694915,
+              "p95": 1.2338305084745762,
+              "max": 2.7981525423728812,
+              "quantile_relative_error": 0.001
+            },
+            "AvgBasketSize": {
+              "count": 268909,
+              "mean": 2.9932065456115997,
+              "p05": 1.5555555555555556,
+              "p25": 2.142857142857143,
+              "median": 2.75,
+              "p75": 3.6,
+              "p95": 5.25,
+              "max": 10.444444444444445,
+              "quantile_relative_error": 0.001
+            },
+            "ProductVariety": {
+              "count": 268909,
+              "mean": 22.891294080897254,
+              "p05": 10.0,
+              "p25": 14.0,
+              "median": 21.0,
+              "p75": 30.0,
+              "p95": 42.0,
+              "max": 78.0,
+              "quantile_relative_error": 0.001
+            }
+          }
+        }
+      }
+    }
+  }
+}

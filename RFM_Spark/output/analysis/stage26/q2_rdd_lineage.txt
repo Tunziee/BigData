@@ -1,0 +1,10 @@
+RDD lineage textual evidence
+(1) MapPartitionsRDD[44] at javaToPython at <unknown>:0 []
+ |  MapPartitionsRDD[43] at javaToPython at <unknown>:0 []
+ |  SQLExecutionRDD[42] at javaToPython at <unknown>:0 []
+ |  MapPartitionsRDD[41] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []
+ |  ShuffledRowRDD[40] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []
+ +-(8) MapPartitionsRDD[39] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []
+    |  MapPartitionsRDD[38] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []
+    |  MapPartitionsRDD[37] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []
+    |  FileScanRDD[36] at $anonfun$withThreadLocalCaptured$1 at <unknown>:0 []

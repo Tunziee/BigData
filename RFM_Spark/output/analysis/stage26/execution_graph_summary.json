@@ -1,0 +1,22 @@
+{
+  "Q2_FILTER_AGGREGATION": [
+    "Parquet scan",
+    "Filter",
+    "Aggregation",
+    "Exchange/final aggregation only if visible in actual plan"
+  ],
+  "Q3_CUSTOMER_AGGREGATION": [
+    "Parquet scan",
+    "Partial hash aggregate by customer",
+    "Hashpartitioning shuffle if visible",
+    "Final customer aggregate",
+    "Scalar aggregate"
+  ],
+  "evidence_basis": [
+    "physical plan",
+    "job-stage mapping",
+    "stage/task metrics",
+    "RDD lineage"
+  ],
+  "dag_terminology_note": "Spark execution graph / DAG evidence is reconstructed from job-stage mapping, RDD lineage and physical-plan shuffle boundaries; no UI screenshot is claimed."
+}

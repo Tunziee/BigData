@@ -1,0 +1,253 @@
+{
+  "stage": 30,
+  "authority": "BIGDATA_PROJECT_FINAL_LOCK_V1",
+  "entries": [
+    {
+      "stage": 7,
+      "authority": "MAIN_RFM_FEATURE_SPACE",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage7\\main_rfm_pipeline_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 7
+      }
+    },
+    {
+      "stage": 8,
+      "authority": "MAIN_KMEANS_K_SWEEP",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage8\\kmeans_k_sweep.json",
+      "exists": true,
+      "observed": {
+        "stage": 8
+      }
+    },
+    {
+      "stage": 9,
+      "authority": "MAIN_KMEANS_OPTIMAL_K_4",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage9\\optimal_k_selection.json",
+      "exists": true,
+      "observed": {
+        "stage": 9,
+        "selected_k": 4
+      }
+    },
+    {
+      "stage": 10,
+      "authority": "MAIN_KMEANS_FINAL",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage10\\final_model_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 10,
+        "authority": "MAIN_KMEANS_FINAL",
+        "selected_k": 4
+      }
+    },
+    {
+      "stage": 11,
+      "authority": "MAIN_KMEANS_CLUSTER_PROFILE",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage11\\final_cluster_profile_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 11,
+        "authority": "MAIN_KMEANS_FINAL_CLUSTER_PROFILE",
+        "selected_k": 4
+      }
+    },
+    {
+      "stage": 12,
+      "authority": "IMPROVED_ERFM_FEATURE_SPACE",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage12\\transformation_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 12,
+        "authority": "IMPROVED_ERFM_FEATURE_SPACE"
+      }
+    },
+    {
+      "stage": 13,
+      "authority": "ENHANCED_KMEANS_K_SWEEP",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage13\\enhanced_kmeans_k_sweep.json",
+      "exists": true,
+      "observed": {
+        "stage": 13,
+        "authority": "ENHANCED_KMEANS_K_SWEEP"
+      }
+    },
+    {
+      "stage": 14,
+      "authority": "ENHANCED_KMEANS_OPTIMAL_K_5",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage14\\enhanced_optimal_k_selection.json",
+      "exists": true,
+      "observed": {
+        "stage": 14,
+        "authority": "ENHANCED_KMEANS_OPTIMAL_K",
+        "selected_k": 5,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 15,
+      "authority": "ENHANCED_KMEANS_FINAL",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage15\\final_enhanced_model_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 15,
+        "authority": "ENHANCED_KMEANS_FINAL",
+        "selected_k": 5,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 16,
+      "authority": "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage16\\final_enhanced_cluster_profile_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 16,
+        "authority": "ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE",
+        "selected_k": 5,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 17,
+      "authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\comparison\\stage17\\stage17_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 17,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 21,
+      "authority": "BASIC_KMEANS_BASELINE_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage21\\stage21_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 21,
+        "authority": "BASIC_KMEANS_BASELINE_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 22,
+      "authority": "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\comparison\\stage22\\stage22_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 22,
+        "authority": "PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 23,
+      "authority": "PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage23\\stage23_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 23,
+        "authority": "PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 24,
+      "authority": "CSV_PARQUET_IO_BENCHMARK_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage24\\stage24_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 24,
+        "authority": "CSV_PARQUET_IO_BENCHMARK_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 25,
+      "authority": "CACHE_NO_CACHE_BENCHMARK_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage25\\stage25_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 25,
+        "authority": "CACHE_NO_CACHE_BENCHMARK_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 26,
+      "authority": "SPARK_EXECUTION_EVIDENCE_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage26\\stage26_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 26,
+        "authority": "SPARK_EXECUTION_EVIDENCE_V1",
+        "blockers": []
+      }
+    },
+    {
+      "stage": 27,
+      "authority": "SPARK_SQL_ANALYTICAL_LAYER_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\sql\\stage27\\stage27_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 27,
+        "authority": "SPARK_SQL_ANALYTICAL_LAYER_V1",
+        "ready_for_stage28": true,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 28,
+      "authority": "FP_GROWTH_ASSOCIATION_RULES_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\fpgrowth\\stage28\\stage28_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 28,
+        "authority": "FP_GROWTH_ASSOCIATION_RULES_V1",
+        "ready_for_stage29": false,
+        "blockers": [
+          "RuntimeError: FP-Growth produced no association rules"
+        ]
+      }
+    },
+    {
+      "stage": 28,
+      "authority": "FP_GROWTH_ASSOCIATION_RULES_V2",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\fpgrowth\\stage28_v2\\stage28_v2_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 28,
+        "authority": "FP_GROWTH_ASSOCIATION_RULES_V2",
+        "ready_for_stage29": true,
+        "blockers": []
+      }
+    },
+    {
+      "stage": 29,
+      "authority": "FINAL_VISUALIZATION_LAYER_V1",
+      "artifact": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\visualization\\stage29\\stage29_final_summary.json",
+      "exists": true,
+      "observed": {
+        "stage": 29,
+        "authority": "FINAL_VISUALIZATION_LAYER_V1",
+        "ready_for_stage30": true,
+        "blockers": []
+      }
+    }
+  ],
+  "stage29_entry_gate": {
+    "stage": true,
+    "authority": true,
+    "figure_count": true,
+    "required_figures_complete": true,
+    "figure_source_data_complete": true,
+    "visual_value_consistency_pass": true,
+    "m2_cluster_count_reconciliation": true,
+    "fig09_fig10_profile_consistency_pass": true,
+    "fig23_all_rules_visualized": true,
+    "stage29_ready": true,
+    "blockers_empty": true
+  },
+  "missing_artifacts": [],
+  "authority_chain_pass": true
+}

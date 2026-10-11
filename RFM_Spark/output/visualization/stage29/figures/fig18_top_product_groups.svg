@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="679" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="150" y1="553.75" x2="1330" y2="553.75" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="542.75" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">101695</text>
+<line x1="150" y1="417.5" x2="1330" y2="417.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="406.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">203389</text>
+<line x1="150" y1="281.25" x2="1330" y2="281.25" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="270.25" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">305084</text>
+<line x1="150" y1="145" x2="1330" y2="145" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="134" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">406778</text>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="145" x2="150" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="209" y1="690" x2="209" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="209" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Garment Upper body</text>
+<line x1="327" y1="690" x2="327" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="327" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Garment Lower body</text>
+<line x1="445" y1="690" x2="445" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="445" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Garment Full body</text>
+<line x1="563" y1="690" x2="563" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="563" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Swimwear</text>
+<line x1="681" y1="690" x2="681" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="681" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Underwear</text>
+<line x1="799" y1="690" x2="799" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="799" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Shoes</text>
+<line x1="917" y1="690" x2="917" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="917" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Accessories</text>
+<line x1="1035" y1="690" x2="1035" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1035" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Nightwear</text>
+<line x1="1153" y1="690" x2="1153" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1153" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Socks &amp; Tights</text>
+<line x1="1271" y1="690" x2="1271" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1271" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Unknown</text>
+<text x="66" y="417.5" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 417.5)">Monetary sum</text>
+<rect x="170.65" y="235.833" width="76.7" height="454.167" fill="#275DAD"/>
+<text x="209" y="207.833" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">338982</text>
+<rect x="288.65" y="379.469" width="76.7" height="310.531" fill="#D97706"/>
+<text x="327" y="351.469" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">231775</text>
+<rect x="406.65" y="517.864" width="76.7" height="172.136" fill="#168A6A"/>
+<text x="445" y="489.864" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">128479</text>
+<rect x="524.65" y="612.79" width="76.7" height="77.21" fill="#8B5CF6"/>
+<text x="563" y="584.79" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">57628</text>
+<rect x="642.65" y="617.121" width="76.7" height="72.8794" fill="#C2415A"/>
+<text x="681" y="589.121" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">54396</text>
+<rect x="760.65" y="651.295" width="76.7" height="38.7045" fill="#596273"/>
+<text x="799" y="623.295" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">28888</text>
+<rect x="878.65" y="656.647" width="76.7" height="33.3527" fill="#275DAD"/>
+<text x="917" y="628.647" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">24894</text>
+<rect x="996.65" y="678.139" width="76.7" height="11.861" fill="#D97706"/>
+<text x="1035" y="650.139" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">8853</text>
+<rect x="1114.65" y="679.535" width="76.7" height="10.4653" fill="#168A6A"/>
+<text x="1153" y="651.535" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">7811</text>
+<rect x="1232.65" y="686.518" width="76.7" height="3.48178" fill="#8B5CF6"/>
+<text x="1271" y="658.518" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2599</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Top product groups</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Stage 27 SQL output; top ten by source order</text>
+</svg>

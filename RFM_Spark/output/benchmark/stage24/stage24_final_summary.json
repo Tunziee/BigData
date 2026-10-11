@@ -1,0 +1,311 @@
+{
+  "stage": 24,
+  "authority": "CSV_PARQUET_IO_BENCHMARK_V1",
+  "source_row_count": 31788324,
+  "source_paths": {
+    "csv": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\data\\transactions_train.csv",
+    "parquet": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions"
+  },
+  "semantic_equivalence_pass": true,
+  "storage": {
+    "csv_bytes": 3488002253,
+    "parquet_bytes": 774155267,
+    "parquet_to_csv_ratio": 0.22194804098367651,
+    "storage_reduction_pct": 77.80519590163235,
+    "csv_files": [
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\data\\transactions_train.csv",
+        "bytes": 3488002253
+      }
+    ],
+    "parquet_data_files": [
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00000-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 29344793
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00001-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 30760225
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00002-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 32604162
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00003-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 30894454
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00004-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 29555490
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00005-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 30083600
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00006-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 28811688
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00007-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 27928500
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00008-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 28166176
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00009-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 27226760
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00010-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 27139077
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00011-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 27389596
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00012-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 28740402
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00013-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 30981485
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00014-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 31018739
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00015-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 32952706
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00016-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 33838586
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00017-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 31342799
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00018-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 31554078
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00019-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 27171255
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00020-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 26446554
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00021-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 28638069
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00022-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 28594273
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00023-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 30160627
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00024-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 31028435
+      },
+      {
+        "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions\\part-00025-ec0878dc-5891-4794-9a92-6b3cb154ef7d-c000.snappy.parquet",
+        "bytes": 31782738
+      }
+    ],
+    "metadata_excluded": true,
+    "size_measurement": "CSV sums .csv files; Parquet recursively sums .parquet data files only."
+  },
+  "queries": {
+    "Q1": {
+      "query_id": "Q1",
+      "query_name": "FULL_SCAN",
+      "CSV": {
+        "min_sec": 3.731787999999824,
+        "max_sec": 4.27168689999985,
+        "mean_sec": 3.9193591333332733,
+        "median_sec": 3.7546025000001464,
+        "population_std_sec": 0.24930739623439338,
+        "trial_times_sec": [
+          3.731787999999824,
+          3.7546025000001464,
+          4.27168689999985
+        ],
+        "all_finite": true
+      },
+      "PARQUET": {
+        "min_sec": 0.17797110000014982,
+        "max_sec": 0.22611050000000432,
+        "mean_sec": 0.20638913333338374,
+        "median_sec": 0.2150857999999971,
+        "population_std_sec": 0.020592465716359077,
+        "trial_times_sec": [
+          0.17797110000014982,
+          0.2150857999999971,
+          0.22611050000000432
+        ],
+        "all_finite": true
+      },
+      "csv_over_parquet_ratio": 17.456301159817137,
+      "parquet_runtime_reduction_pct": 94.27140955667109,
+      "result_equality_pass": true
+    },
+    "Q2": {
+      "query_id": "Q2",
+      "query_name": "PROJECTION_FILTER",
+      "CSV": {
+        "min_sec": 17.686746099999937,
+        "max_sec": 25.48547099999996,
+        "mean_sec": 20.92830723333327,
+        "median_sec": 19.612704599999915,
+        "population_std_sec": 3.3169398781703743,
+        "trial_times_sec": [
+          17.686746099999937,
+          25.48547099999996,
+          19.612704599999915
+        ],
+        "all_finite": true
+      },
+      "PARQUET": {
+        "min_sec": 0.3100079000000733,
+        "max_sec": 0.49283679999985,
+        "mean_sec": 0.3727508666666684,
+        "median_sec": 0.315407900000082,
+        "population_std_sec": 0.08494219029581636,
+        "trial_times_sec": [
+          0.315407900000082,
+          0.3100079000000733,
+          0.49283679999985
+        ],
+        "all_finite": true
+      },
+      "csv_over_parquet_ratio": 62.18203348741365,
+      "parquet_runtime_reduction_pct": 98.3918184338529,
+      "result_equality_pass": true
+    },
+    "Q3": {
+      "query_id": "Q3",
+      "query_name": "CUSTOMER_AGGREGATION",
+      "CSV": {
+        "min_sec": 29.210809199999858,
+        "max_sec": 30.51882599999999,
+        "mean_sec": 29.92521929999998,
+        "median_sec": 30.046022700000094,
+        "population_std_sec": 0.5407846665475006,
+        "trial_times_sec": [
+          29.210809199999858,
+          30.51882599999999,
+          30.046022700000094
+        ],
+        "all_finite": true
+      },
+      "PARQUET": {
+        "min_sec": 7.419256999999789,
+        "max_sec": 9.196170100000018,
+        "mean_sec": 8.014507633333247,
+        "median_sec": 7.428095799999937,
+        "population_std_sec": 0.8355693348223141,
+        "trial_times_sec": [
+          7.428095799999937,
+          9.196170100000018,
+          7.419256999999789
+        ],
+        "all_finite": true
+      },
+      "csv_over_parquet_ratio": 4.044915885441373,
+      "parquet_runtime_reduction_pct": 75.27760704247916,
+      "result_equality_pass": true
+    }
+  },
+  "query_result_equality_pass": true,
+  "physical_plan_evidence": {
+    "CSV_Q2": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage24\\physical_plan_csv_q2.txt",
+      "file_scan_evidence_lines": [
+        "+- Scan csv  (1)",
+        "(1) Scan csv",
+        "PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)]",
+        "ReadSchema: struct<t_dat:date,price:double>"
+      ],
+      "plan_line_count": 38,
+      "plan_captured_without_inference": true
+    },
+    "PARQUET_Q2": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage24\\physical_plan_parquet_q2.txt",
+      "file_scan_evidence_lines": [
+        "+- Scan parquet  (1)",
+        "(1) Scan parquet",
+        "PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)]",
+        "ReadSchema: struct<t_dat:date,price:double>"
+      ],
+      "plan_line_count": 38,
+      "plan_captured_without_inference": true
+    },
+    "CSV_Q3": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage24\\physical_plan_csv_q3.txt",
+      "file_scan_evidence_lines": [
+        "+- Scan csv  (1)",
+        "(1) Scan csv",
+        "ReadSchema: struct<t_dat:date,customer_id:string,price:double>"
+      ],
+      "plan_line_count": 47,
+      "plan_captured_without_inference": true
+    },
+    "PARQUET_Q3": {
+      "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage24\\physical_plan_parquet_q3.txt",
+      "file_scan_evidence_lines": [
+        "+- Scan parquet  (1)",
+        "(1) Scan parquet",
+        "ReadSchema: struct<t_dat:date,customer_id:string,price:double>"
+      ],
+      "plan_line_count": 47,
+      "plan_captured_without_inference": true
+    }
+  },
+  "primary_finding": "PARQUET_CLEAR_ADVANTAGE",
+  "cache_used_in_measured_trials": false,
+  "primary_runtime_authority_modified": false,
+  "models_modified": false,
+  "stage23_authority_preserved": true,
+  "event_log_enabled": false,
+  "benchmark_complete": true,
+  "ready_for_stage25": true,
+  "warnings": [
+    "This is a controlled repeated-read benchmark, not a cold-disk benchmark; Windows filesystem/page cache cannot be cleared reliably.",
+    "Runtime differences include parsing, decoding, column pruning, predicate pushdown, planning, shuffle, and scheduling effects; they are not interpreted as pure disk I/O.",
+    "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n"
+  ],
+  "blockers": [],
+  "artifact_readback": {
+    "output\\benchmark\\stage24\\benchmark_environment.json": true,
+    "output\\benchmark\\stage24\\source_authority_validation.json": true,
+    "output\\benchmark\\stage24\\format_semantic_equivalence.json": true,
+    "output\\benchmark\\stage24\\storage_size_comparison.json": true,
+    "output\\benchmark\\stage24\\full_scan_trials.json": true,
+    "output\\benchmark\\stage24\\projection_filter_trials.json": true,
+    "output\\benchmark\\stage24\\customer_aggregation_trials.json": true,
+    "output\\benchmark\\stage24\\runtime_summary.json": true,
+    "output\\benchmark\\stage24\\runtime_ratios.json": true,
+    "output\\benchmark\\stage24\\query_result_equality.json": true,
+    "output\\benchmark\\stage24\\csv_vs_parquet_benchmark_summary.csv": true,
+    "output\\benchmark\\stage24\\physical_plan_csv_q2.txt": true,
+    "output\\benchmark\\stage24\\physical_plan_parquet_q2.txt": true,
+    "output\\benchmark\\stage24\\physical_plan_csv_q3.txt": true,
+    "output\\benchmark\\stage24\\physical_plan_parquet_q3.txt": true,
+    "output\\benchmark\\stage24\\stage24_final_summary.json": true,
+    "reports\\stage24_csv_vs_parquet_benchmark.txt": true,
+    "reports\\stage24_run.log": true
+  },
+  "artifact_readback_pass": true
+}

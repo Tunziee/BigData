@@ -1,0 +1,36 @@
+{
+  "runtime_basis": "Track B median of 3 measured fresh-fit trials",
+  "feature_dimension": {
+    "M1": 3,
+    "M2": 5
+  },
+  "cluster_count": {
+    "M1": 4,
+    "M2": 5
+  },
+  "fit": {
+    "M1_sec": 16.382895400000052,
+    "M2_sec": 12.85987969999951,
+    "M2_divided_by_M1": 0.7849576882484075,
+    "M2_overhead_pct_vs_M1": -21.504231175159248
+  },
+  "assignment_after_fit": {
+    "M1_sec": 0.5341504999996687,
+    "M2_sec": 0.6014592000001358,
+    "M2_divided_by_M1": 1.1260107404196174,
+    "M2_overhead_pct_vs_M1": 12.601074041961734
+  },
+  "total_fit_plus_assign": {
+    "M1_sec": 16.912093099999765,
+    "M2_sec": 13.461339999999836,
+    "M2_divided_by_M1": 0.7959594309470791,
+    "M2_overhead_pct_vs_M1": -20.40405690529209
+  },
+  "quality_context_from_stage22": {
+    "silhouette_relative_improvement_pct": 35.121723188133494,
+    "sse_per_customer_reduction_pct": 40.30196996970776,
+    "entropy_change": 0.21947212673954763,
+    "cv_reduction_pct": 64.55297351284483
+  },
+  "no_weighted_runtime_quality_score_used": true
+}

@@ -1,0 +1,11 @@
+{
+  "authority": "BASIC_KMEANS_BASELINE_V1",
+  "model_id": "B0",
+  "full_prediction_count": 1362281,
+  "comparison_cohort_count": 1000000,
+  "cohort_fingerprint": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "b0_prediction_sha256": "98e75c0b34cff5ffade7e8b62cd3176b2983062c414b2cf62be14f3f0819bf09",
+  "customer_universe_match_pass": true,
+  "prediction_readback_pass": true,
+  "model_readback_pass": true
+}

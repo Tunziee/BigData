@@ -1,0 +1,235 @@
+== Physical Plan ==
+AdaptiveSparkPlan (41)
++- == Final Plan ==
+   ResultQueryStage (25)
+   +- * Sort (24)
+      +- * Project (23)
+         +- Window (22)
+            +- ShuffleQueryStage (21), Statistics(sizeInBytes=984.0 B, rowCount=5)
+               +- Exchange (20)
+                  +- ObjectHashAggregate (19)
+                     +- AQEShuffleRead (18), coalesced
+                        +- ShuffleQueryStage (17), Statistics(sizeInBytes=40.9 MiB, rowCount=20)
+                           +- Exchange (16)
+                              +- ObjectHashAggregate (15)
+                                 +- * Project (14)
+                                    +- * SortMergeJoin Inner (13)
+                                       :- * Sort (6)
+                                       :  +- AQEShuffleRead (5), coalesced
+                                       :     +- ShuffleQueryStage (4), Statistics(sizeInBytes=114.3 MiB, rowCount=1.36E+6)
+                                       :        +- Exchange (3)
+                                       :           +- * Filter (2)
+                                       :              +- Scan parquet  (1)
+                                       +- * Sort (12)
+                                          +- AQEShuffleRead (11), coalesced
+                                             +- ShuffleQueryStage (10), Statistics(sizeInBytes=155.9 MiB, rowCount=1.36E+6)
+                                                +- Exchange (9)
+                                                   +- * Filter (8)
+                                                      +- Scan parquet  (7)
++- == Initial Plan ==
+   Sort (40)
+   +- Project (39)
+      +- Window (38)
+         +- Exchange (37)
+            +- ObjectHashAggregate (36)
+               +- Exchange (35)
+                  +- ObjectHashAggregate (34)
+                     +- Project (33)
+                        +- SortMergeJoin Inner (32)
+                           :- Sort (28)
+                           :  +- Exchange (27)
+                           :     +- Filter (26)
+                           :        +- Scan parquet  (1)
+                           +- Sort (31)
+                              +- Exchange (30)
+                                 +- Filter (29)
+                                    +- Scan parquet  (7)
+
+
+(1) Scan parquet 
+Output [2]: [customer_id#50, prediction#56]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/final/enhanced_kmeans_predictions]
+PushedFilters: [IsNotNull(customer_id)]
+ReadSchema: struct<customer_id:string,prediction:int>
+
+(2) Filter [codegen id : 1]
+Input [2]: [customer_id#50, prediction#56]
+Condition : isnotnull(customer_id#50)
+
+(3) Exchange
+Input [2]: [customer_id#50, prediction#56]
+Arguments: hashpartitioning(customer_id#50, 64), ENSURE_REQUIREMENTS, [plan_id=4244]
+
+(4) ShuffleQueryStage
+Output [2]: [customer_id#50, prediction#56]
+Arguments: 0
+
+(5) AQEShuffleRead
+Input [2]: [customer_id#50, prediction#56]
+Arguments: coalesced
+
+(6) Sort [codegen id : 3]
+Input [2]: [customer_id#50, prediction#56]
+Arguments: [customer_id#50 ASC NULLS FIRST], false, 0
+
+(7) Scan parquet 
+Output [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/features/customer_features]
+PushedFilters: [IsNotNull(customer_id)]
+ReadSchema: struct<customer_id:string,Recency:int,Frequency:bigint,Monetary:double,AvgBasketSize:double,ProductVariety:bigint>
+
+(8) Filter [codegen id : 2]
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Condition : isnotnull(customer_id#38)
+
+(9) Exchange
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: hashpartitioning(customer_id#38, 64), ENSURE_REQUIREMENTS, [plan_id=4256]
+
+(10) ShuffleQueryStage
+Output [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: 1
+
+(11) AQEShuffleRead
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: coalesced
+
+(12) Sort [codegen id : 4]
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: [customer_id#38 ASC NULLS FIRST], false, 0
+
+(13) SortMergeJoin [codegen id : 5]
+Left keys [1]: [customer_id#50]
+Right keys [1]: [customer_id#38]
+Join type: Inner
+Join condition: None
+
+(14) Project [codegen id : 5]
+Output [8]: [prediction#56, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L, CASE WHEN (prediction#56 = 0) THEN Khách hàng mua ít nhưng giỏ lớn WHEN (prediction#56 = 1) THEN Khách hàng hoạt động giá trị cao WHEN (prediction#56 = 2) THEN Khách hàng lâu chưa quay lại WHEN (prediction#56 = 3) THEN Khách hàng ít tương tác WHEN (prediction#56 = 4) THEN Khách hàng hoạt động thường xuyên END AS segment_name_vi#3015, CASE WHEN (prediction#56 = 0) THEN Infrequent Large-Basket Customers WHEN (prediction#56 = 1) THEN Active High-Value Customers WHEN (prediction#56 = 2) THEN Lapsed Customers WHEN (prediction#56 = 3) THEN Low-Engagement Customers WHEN (prediction#56 = 4) THEN Active Regular Customers END AS segment_name_en#3016]
+Input [8]: [customer_id#50, prediction#56, customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+
+(15) ObjectHashAggregate
+Input [8]: [prediction#56, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L, segment_name_vi#3015, segment_name_en#3016]
+Keys [3]: [prediction#56, segment_name_vi#3015, segment_name_en#3016]
+Functions [11]: [partial_count(1), partial_avg(Recency#40), partial_percentile_approx(Recency#40, 0.5, 10000, 0, 0), partial_avg(Frequency#41L), partial_percentile_approx(Frequency#41L, 0.5, 10000, 0, 0), partial_avg(Monetary#42), partial_percentile_approx(Monetary#42, 0.5, 10000, 0, 0), partial_avg(AvgBasketSize#44), partial_percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0), partial_avg(ProductVariety#45L), partial_percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)]
+Aggregate Attributes [16]: [count#3033L, sum#3034, count#3035L, buf#3491, sum#3037, count#3038L, buf#3492, sum#3040, count#3041L, buf#3493, sum#3043, count#3044L, buf#3494, sum#3046, count#3047L, buf#3495]
+Results [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+
+(16) Exchange
+Input [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Arguments: hashpartitioning(prediction#56, segment_name_vi#3015, segment_name_en#3016, 64), ENSURE_REQUIREMENTS, [plan_id=4383]
+
+(17) ShuffleQueryStage
+Output [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Arguments: 2
+
+(18) AQEShuffleRead
+Input [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Arguments: coalesced
+
+(19) ObjectHashAggregate
+Input [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Keys [3]: [prediction#56, segment_name_vi#3015, segment_name_en#3016]
+Functions [11]: [count(1), avg(Recency#40), percentile_approx(Recency#40, 0.5, 10000, 0, 0), avg(Frequency#41L), percentile_approx(Frequency#41L, 0.5, 10000, 0, 0), avg(Monetary#42), percentile_approx(Monetary#42, 0.5, 10000, 0, 0), avg(AvgBasketSize#44), percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0), avg(ProductVariety#45L), percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)]
+Aggregate Attributes [11]: [count(1)#3017L, avg(Recency#40)#3021, percentile_approx(Recency#40, 0.5, 10000, 0, 0)#3022, avg(Frequency#41L)#3023, percentile_approx(Frequency#41L, 0.5, 10000, 0, 0)#3024L, avg(Monetary#42)#3025, percentile_approx(Monetary#42, 0.5, 10000, 0, 0)#3026, avg(AvgBasketSize#44)#3027, percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0)#3028, avg(ProductVariety#45L)#3029, percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)#3030L]
+Results [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count(1)#3017L AS customer_count#3002L, avg(Recency#40)#3021 AS mean_recency#3004, percentile_approx(Recency#40, 0.5, 10000, 0, 0)#3022 AS median_recency#3005, avg(Frequency#41L)#3023 AS mean_frequency#3006, percentile_approx(Frequency#41L, 0.5, 10000, 0, 0)#3024L AS median_frequency#3007L, avg(Monetary#42)#3025 AS mean_monetary#3008, percentile_approx(Monetary#42, 0.5, 10000, 0, 0)#3026 AS median_monetary#3009, avg(AvgBasketSize#44)#3027 AS mean_avg_basket_size#3010, percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0)#3028 AS median_avg_basket_size#3011, avg(ProductVariety#45L)#3029 AS mean_product_variety#3012, percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)#3030L AS median_product_variety#3013L, count(1)#3017L AS _w0#3031L]
+
+(20) Exchange
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=4430]
+
+(21) ShuffleQueryStage
+Output [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L]
+Arguments: 3
+
+(22) Window
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L]
+Arguments: [sum(_w0#3031L) windowspecdefinition(specifiedwindowframe(RowFrame, unboundedpreceding$(), unboundedfollowing$())) AS _we0#3032L]
+
+(23) Project [codegen id : 6]
+Output [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, (cast(_w0#3031L as double) / cast(_we0#3032L as double)) AS customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Input [16]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L, _we0#3032L]
+
+(24) Sort [codegen id : 6]
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Arguments: [prediction#56 ASC NULLS FIRST], true, 0
+
+(25) ResultQueryStage
+Output [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Arguments: 4
+
+(26) Filter
+Input [2]: [customer_id#50, prediction#56]
+Condition : isnotnull(customer_id#50)
+
+(27) Exchange
+Input [2]: [customer_id#50, prediction#56]
+Arguments: hashpartitioning(customer_id#50, 64), ENSURE_REQUIREMENTS, [plan_id=4201]
+
+(28) Sort
+Input [2]: [customer_id#50, prediction#56]
+Arguments: [customer_id#50 ASC NULLS FIRST], false, 0
+
+(29) Filter
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Condition : isnotnull(customer_id#38)
+
+(30) Exchange
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: hashpartitioning(customer_id#38, 64), ENSURE_REQUIREMENTS, [plan_id=4202]
+
+(31) Sort
+Input [6]: [customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+Arguments: [customer_id#38 ASC NULLS FIRST], false, 0
+
+(32) SortMergeJoin
+Left keys [1]: [customer_id#50]
+Right keys [1]: [customer_id#38]
+Join type: Inner
+Join condition: None
+
+(33) Project
+Output [8]: [prediction#56, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L, CASE WHEN (prediction#56 = 0) THEN Khách hàng mua ít nhưng giỏ lớn WHEN (prediction#56 = 1) THEN Khách hàng hoạt động giá trị cao WHEN (prediction#56 = 2) THEN Khách hàng lâu chưa quay lại WHEN (prediction#56 = 3) THEN Khách hàng ít tương tác WHEN (prediction#56 = 4) THEN Khách hàng hoạt động thường xuyên END AS segment_name_vi#3015, CASE WHEN (prediction#56 = 0) THEN Infrequent Large-Basket Customers WHEN (prediction#56 = 1) THEN Active High-Value Customers WHEN (prediction#56 = 2) THEN Lapsed Customers WHEN (prediction#56 = 3) THEN Low-Engagement Customers WHEN (prediction#56 = 4) THEN Active Regular Customers END AS segment_name_en#3016]
+Input [8]: [customer_id#50, prediction#56, customer_id#38, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L]
+
+(34) ObjectHashAggregate
+Input [8]: [prediction#56, Recency#40, Frequency#41L, Monetary#42, AvgBasketSize#44, ProductVariety#45L, segment_name_vi#3015, segment_name_en#3016]
+Keys [3]: [prediction#56, segment_name_vi#3015, segment_name_en#3016]
+Functions [11]: [partial_count(1), partial_avg(Recency#40), partial_percentile_approx(Recency#40, 0.5, 10000, 0, 0), partial_avg(Frequency#41L), partial_percentile_approx(Frequency#41L, 0.5, 10000, 0, 0), partial_avg(Monetary#42), partial_percentile_approx(Monetary#42, 0.5, 10000, 0, 0), partial_avg(AvgBasketSize#44), partial_percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0), partial_avg(ProductVariety#45L), partial_percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)]
+Aggregate Attributes [16]: [count#3033L, sum#3034, count#3035L, buf#3491, sum#3037, count#3038L, buf#3492, sum#3040, count#3041L, buf#3493, sum#3043, count#3044L, buf#3494, sum#3046, count#3047L, buf#3495]
+Results [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+
+(35) Exchange
+Input [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Arguments: hashpartitioning(prediction#56, segment_name_vi#3015, segment_name_en#3016, 64), ENSURE_REQUIREMENTS, [plan_id=4209]
+
+(36) ObjectHashAggregate
+Input [19]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count#3049L, sum#3050, count#3051L, buf#3496, sum#3053, count#3054L, buf#3497, sum#3056, count#3057L, buf#3498, sum#3059, count#3060L, buf#3499, sum#3062, count#3063L, buf#3500]
+Keys [3]: [prediction#56, segment_name_vi#3015, segment_name_en#3016]
+Functions [11]: [count(1), avg(Recency#40), percentile_approx(Recency#40, 0.5, 10000, 0, 0), avg(Frequency#41L), percentile_approx(Frequency#41L, 0.5, 10000, 0, 0), avg(Monetary#42), percentile_approx(Monetary#42, 0.5, 10000, 0, 0), avg(AvgBasketSize#44), percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0), avg(ProductVariety#45L), percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)]
+Aggregate Attributes [11]: [count(1)#3017L, avg(Recency#40)#3021, percentile_approx(Recency#40, 0.5, 10000, 0, 0)#3022, avg(Frequency#41L)#3023, percentile_approx(Frequency#41L, 0.5, 10000, 0, 0)#3024L, avg(Monetary#42)#3025, percentile_approx(Monetary#42, 0.5, 10000, 0, 0)#3026, avg(AvgBasketSize#44)#3027, percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0)#3028, avg(ProductVariety#45L)#3029, percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)#3030L]
+Results [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, count(1)#3017L AS customer_count#3002L, avg(Recency#40)#3021 AS mean_recency#3004, percentile_approx(Recency#40, 0.5, 10000, 0, 0)#3022 AS median_recency#3005, avg(Frequency#41L)#3023 AS mean_frequency#3006, percentile_approx(Frequency#41L, 0.5, 10000, 0, 0)#3024L AS median_frequency#3007L, avg(Monetary#42)#3025 AS mean_monetary#3008, percentile_approx(Monetary#42, 0.5, 10000, 0, 0)#3026 AS median_monetary#3009, avg(AvgBasketSize#44)#3027 AS mean_avg_basket_size#3010, percentile_approx(AvgBasketSize#44, 0.5, 10000, 0, 0)#3028 AS median_avg_basket_size#3011, avg(ProductVariety#45L)#3029 AS mean_product_variety#3012, percentile_approx(ProductVariety#45L, 0.5, 10000, 0, 0)#3030L AS median_product_variety#3013L, count(1)#3017L AS _w0#3031L]
+
+(37) Exchange
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=4212]
+
+(38) Window
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L]
+Arguments: [sum(_w0#3031L) windowspecdefinition(specifiedwindowframe(RowFrame, unboundedpreceding$(), unboundedfollowing$())) AS _we0#3032L]
+
+(39) Project
+Output [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, (cast(_w0#3031L as double) / cast(_we0#3032L as double)) AS customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Input [16]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L, _w0#3031L, _we0#3032L]
+
+(40) Sort
+Input [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Arguments: [prediction#56 ASC NULLS FIRST], true, 0
+
+(41) AdaptiveSparkPlan
+Output [15]: [prediction#56, segment_name_vi#3015, segment_name_en#3016, customer_count#3002L, customer_ratio#3003, mean_recency#3004, median_recency#3005, mean_frequency#3006, median_frequency#3007L, mean_monetary#3008, median_monetary#3009, mean_avg_basket_size#3010, median_avg_basket_size#3011, mean_product_variety#3012, median_product_variety#3013L]
+Arguments: isFinalPlan=true
+
+

@@ -1,0 +1,183 @@
+{
+  "R1_vs_K1": {
+    "left_model": "rule_prediction",
+    "right_model": "main_prediction",
+    "left_k": 5,
+    "right_k": 4,
+    "customer_count": 1000000,
+    "contingency_table": [
+      [
+        64276,
+        0,
+        203713,
+        0
+      ],
+      [
+        101231,
+        0,
+        58396,
+        0
+      ],
+      [
+        163102,
+        51,
+        36697,
+        3
+      ],
+      [
+        132647,
+        7416,
+        2297,
+        182
+      ],
+      [
+        74234,
+        137656,
+        0,
+        18099
+      ]
+    ],
+    "row_sums": [
+      267989,
+      159627,
+      199853,
+      142542,
+      229989
+    ],
+    "column_sums": [
+      535490,
+      145123,
+      301103,
+      18284
+    ],
+    "adjusted_rand_index": 0.20729208274675479,
+    "mutual_information_natural_log": 0.45811903156004535,
+    "entropy_left_natural_log": 1.583299432468762,
+    "entropy_right_natural_log": 1.0491476256648056,
+    "normalized_mutual_information_arithmetic_mean": 0.3480556466612146,
+    "nmi_definition": "MI / ((H(left)+H(right))/2), natural logs",
+    "ari_definition": "Manual Hubert-Arnold ARI from pair-count contingency formula"
+  },
+  "R1_vs_K2": {
+    "left_model": "rule_prediction",
+    "right_model": "enhanced_prediction",
+    "left_k": 5,
+    "right_k": 5,
+    "customer_count": 1000000,
+    "contingency_table": [
+      [
+        37714,
+        0,
+        162550,
+        67725,
+        0
+      ],
+      [
+        47610,
+        0,
+        27704,
+        84302,
+        11
+      ],
+      [
+        58256,
+        128,
+        7562,
+        88761,
+        45146
+      ],
+      [
+        10217,
+        8844,
+        1,
+        11397,
+        112083
+      ],
+      [
+        640,
+        117578,
+        0,
+        102,
+        111669
+      ]
+    ],
+    "row_sums": [
+      267989,
+      159627,
+      199853,
+      142542,
+      229989
+    ],
+    "column_sums": [
+      154437,
+      126550,
+      197817,
+      252287,
+      268909
+    ],
+    "adjusted_rand_index": 0.29779725940403384,
+    "mutual_information_natural_log": 0.6547270285095251,
+    "entropy_left_natural_log": 1.583299432468762,
+    "entropy_right_natural_log": 1.5712494353549107,
+    "normalized_mutual_information_arithmetic_mean": 0.4151002605714726,
+    "nmi_definition": "MI / ((H(left)+H(right))/2), natural logs",
+    "ari_definition": "Manual Hubert-Arnold ARI from pair-count contingency formula"
+  },
+  "K1_vs_K2": {
+    "left_model": "main_prediction",
+    "right_model": "enhanced_prediction",
+    "left_k": 4,
+    "right_k": 5,
+    "customer_count": 1000000,
+    "contingency_table": [
+      [
+        77430,
+        7307,
+        0,
+        234674,
+        216079
+      ],
+      [
+        28,
+        100573,
+        0,
+        0,
+        44522
+      ],
+      [
+        76978,
+        387,
+        197817,
+        17613,
+        8308
+      ],
+      [
+        1,
+        18283,
+        0,
+        0,
+        0
+      ]
+    ],
+    "row_sums": [
+      535490,
+      145123,
+      301103,
+      18284
+    ],
+    "column_sums": [
+      154437,
+      126550,
+      197817,
+      252287,
+      268909
+    ],
+    "adjusted_rand_index": 0.3615169302033522,
+    "mutual_information_natural_log": 0.6401945143166362,
+    "entropy_left_natural_log": 1.0491476256648056,
+    "entropy_right_natural_log": 1.5712494353549107,
+    "normalized_mutual_information_arithmetic_mean": 0.4886240515530935,
+    "nmi_definition": "MI / ((H(left)+H(right))/2), natural logs",
+    "ari_definition": "Manual Hubert-Arnold ARI from pair-count contingency formula"
+  }
+}

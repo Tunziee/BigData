@@ -1,0 +1,34 @@
+{
+  "row_count": 1000000,
+  "distinct_customer_id": 1000000,
+  "duplicate_customer_id": 0,
+  "rfm_nulls": {
+    "Recency": 0,
+    "Frequency": 0,
+    "Monetary": 0
+  },
+  "rfm_nan": {
+    "Recency": 0,
+    "Frequency": 0,
+    "Monetary": 0
+  },
+  "eval_rfm3d_scaled": {
+    "column": "eval_rfm3d_scaled",
+    "dimension": 3,
+    "null": 0,
+    "wrong_dimension": 0,
+    "nan": 0,
+    "infinity": 0,
+    "pass": true
+  },
+  "eval_erfm5d_scaled": {
+    "column": "eval_erfm5d_scaled",
+    "dimension": 5,
+    "null": 0,
+    "wrong_dimension": 0,
+    "nan": 0,
+    "infinity": 0,
+    "pass": true
+  },
+  "pass": true
+}

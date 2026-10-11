@@ -1,0 +1,20 @@
+{
+  "row_count": 31788324,
+  "distinct_customers": 1362281,
+  "min_date": "2018-09-20",
+  "max_date": "2020-09-22",
+  "null_customer_id": 0,
+  "null_article_id": 0,
+  "null_t_dat": 0,
+  "null_price": 0,
+  "customer_authority_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\customers",
+  "article_authority_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\articles",
+  "rfm_authority_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\features\\customer_features",
+  "prediction_authority_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\enhanced_kmeans_predictions",
+  "missing_customer_references": 0,
+  "missing_article_references": 0,
+  "age_column": "age",
+  "product_group_column": "product_group_name",
+  "product_name_column": "prod_name",
+  "pass": true
+}

@@ -1,0 +1,185 @@
+{
+  "stage": 11,
+  "authority": "MAIN_KMEANS_FINAL_CLUSTER_PROFILE",
+  "selected_k": 4,
+  "final_model_authority": "MAIN_KMEANS_FINAL",
+  "cluster_count": 4,
+  "source": {
+    "predictions": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\final\\main_kmeans_predictions",
+    "final_model_summary": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\analysis\\stage10\\final_model_summary.json",
+    "final_model_metadata": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\models\\main_kmeans_final_metadata.json"
+  },
+  "semantic_lock": {
+    "Recency": "days from last purchase date to analysis date; lower is more recent",
+    "Frequency": "number of distinct purchase dates per customer",
+    "Monetary": "SUM(price)"
+  },
+  "quantile_method": {
+    "method": "Spark approxQuantile",
+    "probabilities": [
+      0.01,
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95,
+      0.99
+    ],
+    "relative_error": 0.001
+  },
+  "global_statistics": {
+    "Recency": {
+      "count": 1362281,
+      "mean": 236.148437069885,
+      "std": 221.11879131008746,
+      "min": 1.0,
+      "max": 734.0,
+      "p01": 2.0,
+      "p05": 8.0,
+      "p25": 49.0,
+      "median": 152.0,
+      "p75": 400.0,
+      "p95": 674.0,
+      "p99": 725.0
+    },
+    "Frequency": {
+      "count": 1362281,
+      "mean": 6.6654229193536425,
+      "std": 9.707005074461001,
+      "min": 1.0,
+      "max": 427.0,
+      "p01": 1.0,
+      "p05": 1.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 8.0,
+      "p95": 25.0,
+      "p99": 45.0
+    },
+    "Monetary": {
+      "count": 1362281,
+      "mean": 0.6493858271904174,
+      "std": 1.1975819653583566,
+      "min": 0.0007627118644067797,
+      "max": 57.676406779661086,
+      "p01": 0.013542372881355931,
+      "p05": 0.0274406779661017,
+      "p25": 0.08806779661016949,
+      "median": 0.24559322033898304,
+      "p75": 0.7001016949152542,
+      "p95": 2.558627118644068,
+      "p99": 5.5818135593220335
+    }
+  },
+  "segment_mapping": {
+    "0": "Mainstream Occasional Customers",
+    "1": "Active Loyal Customers",
+    "2": "Lapsed Customers",
+    "3": "Active High-Value Customers"
+  },
+  "cluster_distribution": [
+    {
+      "cluster_id": 0,
+      "count": 729944,
+      "ratio_pct": 53.582484083680235
+    },
+    {
+      "cluster_id": 1,
+      "count": 198035,
+      "ratio_pct": 14.537015490930285
+    },
+    {
+      "cluster_id": 2,
+      "count": 409493,
+      "ratio_pct": 30.059363670197264
+    },
+    {
+      "cluster_id": 3,
+      "count": 24809,
+      "ratio_pct": 1.8211367551922109
+    }
+  ],
+  "centroid_mean_consistency_pass": true,
+  "profiling_validation_pass": true,
+  "special_reviews": {
+    "cluster_0": {
+      "count": 729944,
+      "ratio_pct": 53.582484083680235,
+      "rfm_iqr": {
+        "Recency": 150.0,
+        "Frequency": 6.0,
+        "Monetary": 0.4258644067796611
+      },
+      "mean_median": {
+        "Recency": {
+          "mean": 125.08183504488015,
+          "median": 99.0,
+          "flags": []
+        },
+        "Frequency": {
+          "mean": 4.392325986651031,
+          "median": 3.0,
+          "flags": []
+        },
+        "Monetary": {
+          "mean": 0.36555754077351416,
+          "median": 0.2600338983050847,
+          "flags": []
+        }
+      },
+      "p05_p95": {
+        "Recency": {
+          "p05": 9.0,
+          "p95": 299.0
+        },
+        "Frequency": {
+          "p05": 1.0,
+          "p95": 11.0
+        },
+        "Monetary": {
+          "p05": 0.03201694915254238,
+          "p95": 1.045864406779661
+        }
+      }
+    },
+    "cluster_1_vs_cluster_0": {
+      "frequency_mean_multiple": 4.505974419139187,
+      "monetary_mean_multiple": 5.2971864946812595,
+      "recency_reduction_pct": 57.68100508403623
+    },
+    "cluster_2": {
+      "recency_mean": 535.4611238775755,
+      "recency_median": 535.0,
+      "recency_p25": 433.0,
+      "recency_p75": 646.0,
+      "recency_p95": 720.0,
+      "long_inactivity_supported": true
+    },
+    "cluster_3": {
+      "count": 24809,
+      "ratio_pct": 1.8211367551922109,
+      "frequency_median": 45.0,
+      "frequency_p25": 34.0,
+      "frequency_p75": 58.0,
+      "frequency_p95": 91.0,
+      "monetary_median": 5.891016949152541,
+      "monetary_p25": 4.639016949152542,
+      "monetary_p75": 7.695864406779663,
+      "monetary_p95": 12.63494915254237,
+      "coherent_high_activity_high_value": true
+    }
+  },
+  "main_model_branch_complete": true,
+  "ready_for_improved_model_stage": true,
+  "artifact_readback": {
+    "global_json_exists": true,
+    "profiles_json_exists": true,
+    "profiles_csv_exists": true,
+    "centroid_validation_exists": true,
+    "segment_names_exists": true,
+    "business_csv_exists": true,
+    "summary_exists": true,
+    "profile_rows": true,
+    "business_rows": true
+  }
+}

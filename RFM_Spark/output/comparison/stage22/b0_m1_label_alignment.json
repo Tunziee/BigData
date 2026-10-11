@@ -1,0 +1,41 @@
+{
+  "mapping_b0_to_m1": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3
+  },
+  "matched_customers": 999870,
+  "mismatched_customers": 130,
+  "mismatch_ratio": 0.00013,
+  "ARI": 0.9996501516955725,
+  "NMI": 0.9988393925332469,
+  "contingency_table": [
+    [
+      535396,
+      0,
+      20,
+      0
+    ],
+    [
+      94,
+      145109,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      301081,
+      0
+    ],
+    [
+      0,
+      14,
+      0,
+      18284
+    ]
+  ],
+  "mapping_is_comparison_only": true,
+  "saved_b0_ids_unchanged": true
+}

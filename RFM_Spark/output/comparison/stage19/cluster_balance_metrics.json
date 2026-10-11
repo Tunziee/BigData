@@ -1,0 +1,143 @@
+{
+  "R1": {
+    "cluster_count": 5,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 267989,
+        "ratio": 0.267989,
+        "ratio_pct": 26.798899999999996
+      },
+      {
+        "cluster_id": 1,
+        "count": 159627,
+        "ratio": 0.159627,
+        "ratio_pct": 15.9627
+      },
+      {
+        "cluster_id": 2,
+        "count": 199853,
+        "ratio": 0.199853,
+        "ratio_pct": 19.9853
+      },
+      {
+        "cluster_id": 3,
+        "count": 142542,
+        "ratio": 0.142542,
+        "ratio_pct": 14.2542
+      },
+      {
+        "cluster_id": 4,
+        "count": 229989,
+        "ratio": 0.229989,
+        "ratio_pct": 22.9989
+      }
+    ],
+    "min_count": 142542,
+    "max_count": 267989,
+    "min_ratio": 0.142542,
+    "max_ratio": 0.267989,
+    "min_ratio_pct": 14.2542,
+    "max_ratio_pct": 26.798899999999996,
+    "below_1pct": 0,
+    "below_2pct": 0,
+    "below_5pct": 0,
+    "mean_count": 200000.0,
+    "population_std_count": 45723.662897891285,
+    "coefficient_of_variation": 0.22861831448945644,
+    "entropy_natural_log": 1.583299432468762,
+    "normalized_entropy": 0.9837592492612488
+  },
+  "K1": {
+    "cluster_count": 4,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 535490,
+        "ratio": 0.53549,
+        "ratio_pct": 53.549
+      },
+      {
+        "cluster_id": 1,
+        "count": 145123,
+        "ratio": 0.145123,
+        "ratio_pct": 14.5123
+      },
+      {
+        "cluster_id": 2,
+        "count": 301103,
+        "ratio": 0.301103,
+        "ratio_pct": 30.110300000000002
+      },
+      {
+        "cluster_id": 3,
+        "count": 18284,
+        "ratio": 0.018284,
+        "ratio_pct": 1.8284000000000002
+      }
+    ],
+    "min_count": 18284,
+    "max_count": 535490,
+    "min_ratio": 0.018284,
+    "max_ratio": 0.53549,
+    "min_ratio_pct": 1.8284000000000002,
+    "max_ratio_pct": 53.549,
+    "below_1pct": 0,
+    "below_2pct": 1,
+    "below_5pct": 1,
+    "mean_count": 250000.0,
+    "population_std_count": 192877.90600143917,
+    "coefficient_of_variation": 0.7715116240057567,
+    "entropy_natural_log": 1.0491476256648056,
+    "normalized_entropy": 0.7568000383535228
+  },
+  "K2": {
+    "cluster_count": 5,
+    "cluster_sizes": [
+      {
+        "cluster_id": 0,
+        "count": 154437,
+        "ratio": 0.154437,
+        "ratio_pct": 15.4437
+      },
+      {
+        "cluster_id": 1,
+        "count": 126550,
+        "ratio": 0.12655,
+        "ratio_pct": 12.655
+      },
+      {
+        "cluster_id": 2,
+        "count": 197817,
+        "ratio": 0.197817,
+        "ratio_pct": 19.7817
+      },
+      {
+        "cluster_id": 3,
+        "count": 252287,
+        "ratio": 0.252287,
+        "ratio_pct": 25.2287
+      },
+      {
+        "cluster_id": 4,
+        "count": 268909,
+        "ratio": 0.268909,
+        "ratio_pct": 26.890900000000002
+      }
+    ],
+    "min_count": 126550,
+    "max_count": 268909,
+    "min_ratio": 0.12655,
+    "max_ratio": 0.268909,
+    "min_ratio_pct": 12.655,
+    "max_ratio_pct": 26.890900000000002,
+    "below_1pct": 0,
+    "below_2pct": 0,
+    "below_5pct": 0,
+    "mean_count": 200000.0,
+    "population_std_count": 54695.5859425603,
+    "coefficient_of_variation": 0.2734779297128015,
+    "entropy_natural_log": 1.5712494353549107,
+    "normalized_entropy": 0.9762721650930705
+  }
+}

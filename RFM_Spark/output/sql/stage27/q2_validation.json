@@ -1,0 +1,12 @@
+{
+  "monthly_row_count": 25,
+  "monthly_purchase_item_rows": 31788324,
+  "monthly_monetary_sum": 884645.9740487677,
+  "row_difference": 0.0,
+  "row_tolerance": 0.31788324,
+  "monetary_difference": 2.0330771803855896e-06,
+  "monetary_tolerance": 0.008846459740508008,
+  "purchase_item_rows_reconcile": true,
+  "monetary_reconcile": true,
+  "pass": true
+}

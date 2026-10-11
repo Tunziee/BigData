@@ -1,0 +1,217 @@
+{
+  "Q2_FILTER_AGGREGATION": {
+    "job_group": "STAGE26_Q2",
+    "job_ids": [
+      11,
+      10
+    ],
+    "status_tracker_job_info": [
+      {
+        "job_id": 11,
+        "available": true,
+        "status": "SUCCEEDED",
+        "stage_ids": [
+          17,
+          18
+        ]
+      },
+      {
+        "job_id": 10,
+        "available": true,
+        "status": "SUCCEEDED",
+        "stage_ids": [
+          16
+        ]
+      }
+    ],
+    "rest_jobs": [
+      {
+        "jobId": 11,
+        "name": "collect at D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\src\\26_collect_spark_execution_evidence.py:462",
+        "description": "Stage26 Q2 Filter Aggregation",
+        "submissionTime": "2026-10-06T13:11:10.860GMT",
+        "completionTime": "2026-10-06T13:11:10.883GMT",
+        "stageIds": [
+          17,
+          18
+        ],
+        "jobGroup": "STAGE26_Q2",
+        "jobTags": [
+          "spark-session-eb423c0e-f4ab-4db9-a62a-5d764518351f",
+          "spark-session-eb423c0e-f4ab-4db9-a62a-5d764518351f-execution-root-id-4"
+        ],
+        "status": "SUCCEEDED",
+        "numTasks": 9,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 8,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 1,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+      },
+      {
+        "jobId": 10,
+        "name": "$anonfun$withThreadLocalCaptured$1 at <unknown>:0",
+        "description": "Stage26 Q2 Filter Aggregation",
+        "submissionTime": "2026-10-06T13:11:10.444GMT",
+        "completionTime": "2026-10-06T13:11:10.810GMT",
+        "stageIds": [
+          16
+        ],
+        "jobGroup": "STAGE26_Q2",
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 8,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 8,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 8,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+      }
+    ],
+    "stage_ids": [
+      16,
+      17,
+      18
+    ]
+  },
+  "Q3_CUSTOMER_AGGREGATION": {
+    "job_group": "STAGE26_Q3",
+    "job_ids": [
+      14,
+      13,
+      12
+    ],
+    "status_tracker_job_info": [
+      {
+        "job_id": 14,
+        "available": true,
+        "status": "SUCCEEDED",
+        "stage_ids": [
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "job_id": 13,
+        "available": true,
+        "status": "SUCCEEDED",
+        "stage_ids": [
+          20,
+          21
+        ]
+      },
+      {
+        "job_id": 12,
+        "available": true,
+        "status": "SUCCEEDED",
+        "stage_ids": [
+          19
+        ]
+      }
+    ],
+    "rest_jobs": [
+      {
+        "jobId": 14,
+        "name": "collect at D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\src\\26_collect_spark_execution_evidence.py:482",
+        "description": "Stage26 Q3 Customer Aggregation",
+        "submissionTime": "2026-10-06T13:11:19.135GMT",
+        "completionTime": "2026-10-06T13:11:19.157GMT",
+        "stageIds": [
+          22,
+          23,
+          24
+        ],
+        "jobGroup": "STAGE26_Q3",
+        "jobTags": [
+          "spark-session-eb423c0e-f4ab-4db9-a62a-5d764518351f",
+          "spark-session-eb423c0e-f4ab-4db9-a62a-5d764518351f-execution-root-id-5"
+        ],
+        "status": "SUCCEEDED",
+        "numTasks": 15,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 1,
+        "numSkippedTasks": 14,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 1,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 2,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+      },
+      {
+        "jobId": 13,
+        "name": "$anonfun$withThreadLocalCaptured$1 at <unknown>:0",
+        "description": "Stage26 Q3 Customer Aggregation",
+        "submissionTime": "2026-10-06T13:11:17.469GMT",
+        "completionTime": "2026-10-06T13:11:19.101GMT",
+        "stageIds": [
+          20,
+          21
+        ],
+        "jobGroup": "STAGE26_Q3",
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 14,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 6,
+        "numSkippedTasks": 8,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 6,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 1,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+      },
+      {
+        "jobId": 12,
+        "name": "$anonfun$withThreadLocalCaptured$1 at <unknown>:0",
+        "description": "Stage26 Q3 Customer Aggregation",
+        "submissionTime": "2026-10-06T13:11:11.062GMT",
+        "completionTime": "2026-10-06T13:11:17.375GMT",
+        "stageIds": [
+          19
+        ],
+        "jobGroup": "STAGE26_Q3",
+        "jobTags": [],
+        "status": "SUCCEEDED",
+        "numTasks": 8,
+        "numActiveTasks": 0,
+        "numCompletedTasks": 8,
+        "numSkippedTasks": 0,
+        "numFailedTasks": 0,
+        "numKilledTasks": 0,
+        "numCompletedIndices": 8,
+        "numActiveStages": 0,
+        "numCompletedStages": 1,
+        "numSkippedStages": 0,
+        "numFailedStages": 0,
+        "killedTasksSummary": {}
+      }
+    ],
+    "stage_ids": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  }
+}

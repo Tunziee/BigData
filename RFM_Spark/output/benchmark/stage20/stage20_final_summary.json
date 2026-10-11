@@ -1,0 +1,188 @@
+{
+  "stage": 20,
+  "authority": "THREE_MODEL_RUNTIME_BENCHMARK_1M_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "quality_authority": "THREE_MODEL_QUALITY_COMPARISON_V1",
+  "rule_authority": "RULE_BASED_RFM_BASELINE_V1",
+  "cohort_count": 1000000,
+  "cohort_fingerprint": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "input_validation_pass": true,
+  "track_a_assignment": {
+    "R1": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "min_sec": 0.5575828000000911,
+      "max_sec": 0.5886438999996244,
+      "mean_sec": 0.5708751333331747,
+      "median_sec": 0.5663986999998087,
+      "std_sec": 0.013069731566646781,
+      "trial_times_sec": [
+        0.5886438999996244,
+        0.5575828000000911,
+        0.5663986999998087
+      ],
+      "customers_per_second": 1765540.7754296358,
+      "model_load_sec": null,
+      "assignment_only": true,
+      "prediction_mismatch_vs_locked": 0
+    },
+    "K1": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "min_sec": 0.3557045999996262,
+      "max_sec": 0.383089899999959,
+      "mean_sec": 0.373454599999756,
+      "median_sec": 0.3815692999996827,
+      "std_sec": 0.01256648800298277,
+      "trial_times_sec": [
+        0.383089899999959,
+        0.3557045999996262,
+        0.3815692999996827
+      ],
+      "customers_per_second": 2620755.915113799,
+      "model_load_sec": 0.4917909000000691,
+      "assignment_only": true,
+      "prediction_mismatch_vs_locked": 0
+    },
+    "K2": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "min_sec": 0.3595234999997956,
+      "max_sec": 0.40520340000011856,
+      "mean_sec": 0.382996099999976,
+      "median_sec": 0.38426140000001396,
+      "std_sec": 0.01867019110913523,
+      "trial_times_sec": [
+        0.3595234999997956,
+        0.38426140000001396,
+        0.40520340000011856
+      ],
+      "customers_per_second": 2602395.1403913163,
+      "model_load_sec": 0.2619483000003129,
+      "assignment_only": true,
+      "prediction_mismatch_vs_locked": 0
+    }
+  },
+  "track_b_build_assign": {
+    "R1": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "min_sec": 3.275528099999974,
+      "max_sec": 3.612280499999997,
+      "mean_sec": 3.4539128999999775,
+      "median_sec": 3.4739300999999614,
+      "std_sec": 0.13820530850471072,
+      "trial_times_sec": [
+        3.612280499999997,
+        3.275528099999974,
+        3.4739300999999614
+      ],
+      "median_fit_only_sec": null,
+      "median_assign_after_fit_sec": null,
+      "customers_per_second_end_to_end": 287858.4114286039,
+      "numIter": null,
+      "rule_reproducibility_pass": true
+    },
+    "K1": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "min_sec": 6.955704999999853,
+      "max_sec": 7.494224400000348,
+      "mean_sec": 7.178790233333378,
+      "median_sec": 7.086441299999933,
+      "std_sec": 0.22934258241052444,
+      "trial_times_sec": [
+        6.955704999999853,
+        7.086441299999933,
+        7.494224400000348
+      ],
+      "median_fit_only_sec": 6.7319744000001265,
+      "median_assign_after_fit_sec": 0.3903738999997586,
+      "customers_per_second_end_to_end": 141114.55350656886,
+      "numIter": 38,
+      "rule_reproducibility_pass": null
+    },
+    "K2": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "min_sec": 8.713479500000176,
+      "max_sec": 10.551147299999684,
+      "mean_sec": 9.415343633333274,
+      "median_sec": 8.981404099999963,
+      "std_sec": 0.8105485281507032,
+      "trial_times_sec": [
+        10.551147299999684,
+        8.713479500000176,
+        8.981404099999963
+      ],
+      "median_fit_only_sec": 8.642463700000008,
+      "median_assign_after_fit_sec": 0.40435749999960535,
+      "customers_per_second_end_to_end": 111341.165464318,
+      "numIter": 50,
+      "rule_reproducibility_pass": null
+    }
+  },
+  "track_a_assignment_equality": {
+    "R1": true,
+    "K1": true,
+    "K2": true
+  },
+  "track_b_rule_reproducibility_pass": true,
+  "determinism_validation_pass": true,
+  "spark_evidence": {
+    "spark_application_id": "local-1791267397786",
+    "application_name": "Stage20-Controlled-1M-Runtime-Benchmark",
+    "master": "local[4]",
+    "spark_version": "4.2.0",
+    "event_log_enabled": false,
+    "event_log_path": "file:///D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/benchmark/stage20/spark-events",
+    "event_log_directory": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\benchmark\\stage20\\spark-events",
+    "event_log_issue": "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n",
+    "spark_ui_port": "4040",
+    "benchmark_operations": [
+      "Track A R1 assignment",
+      "Track A K1 assignment",
+      "Track A K2 assignment",
+      "Track B R1 rule derivation plus assignment",
+      "Track B K1 fit plus assignment",
+      "Track B K2 fit plus assignment"
+    ],
+    "instructions": "While the application is running, open Spark UI at http://localhost:<spark_ui_port>. After completion, use the event-log path with a compatible Spark History Server when event logging is enabled; no screenshots are fabricated by Stage 20.",
+    "resource_diagnostics": {
+      "available": false,
+      "reason": "Optional event-log stage/task parsing is not required for core benchmark validity."
+    }
+  },
+  "fastest_assignment_model": "K1",
+  "fastest_end_to_end_build_model": "R1",
+  "k1_vs_k2_fit_runtime": 0.7789415881492358,
+  "k1_vs_k2_assignment_runtime": 0.9654177305976508,
+  "quality_models_modified": false,
+  "final_model_authorities_modified": false,
+  "runtime_quality_combined_score_used": false,
+  "gmm_executed": false,
+  "csv_vs_parquet_benchmark_executed": false,
+  "cache_vs_no_cache_benchmark_executed": false,
+  "warnings": [
+    "Runtime is machine-, JVM-, Spark-, and cohort-specific; no universal speed claim is made.",
+    "Spark event logging unavailable on this Windows runtime: Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.\n: java.lang.RuntimeException: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:790)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:299)\r\n\tat org.apache.hadoop.util.Shell.getSetPermissionCommand(Shell.java:315)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:1179)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:861)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:901)\r\n\tat org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:873)\r\n\tat org.apache.hadoop.fs.ChecksumFileSystem.mkdirs(ChecksumFileSystem.java:1047)\r\n\tat org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:768)\r\n\tat org.apache.spark.deploy.history.RollingEventLogFilesWriter.start(EventLogFileWriters.scala:339)\r\n\tat org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:83)\r\n\tat org.apache.spark.SparkContext.<init>(SparkContext.scala:663)\r\n\tat org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)\r\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\r\n\tat py4j.Gateway.invoke(Gateway.java:238)\r\n\tat py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)\r\n\tat py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)\r\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)\r\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:108)\r\n\tat java.base/java.lang.Thread.run(Unknown Source)\r\nCaused by: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems\r\n\tat org.apache.hadoop.util.Shell.fileNotFoundException(Shell.java:602)\r\n\tat org.apache.hadoop.util.Shell.getHadoopHomeDir(Shell.java:623)\r\n\tat org.apache.hadoop.util.Shell.getQualifiedBin(Shell.java:646)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:743)\r\n\tat org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:80)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDurationHelper(Configuration.java:1938)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1896)\r\n\tat org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)\r\n\tat org.apache.hadoop.util.ShutdownHookManager$HookEntry.<init>(ShutdownHookManager.java:208)\r\n\tat org.apache.hadoop.util.ShutdownHookManager.addShutdownHook(ShutdownHookManager.java:305)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$install$1(ShutdownHookManager.scala:194)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\r\n\tat scala.Option.fold(Option.scala:263)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.install(ShutdownHookManager.scala:195)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks$lzycompute(ShutdownHookManager.scala:55)\r\n\tat org.apache.spark.util.ShutdownHookManager$.shutdownHooks(ShutdownHookManager.scala:53)\r\n\tat org.apache.spark.util.ShutdownHookManager$.addShutdownHook(ShutdownHookManager.scala:159)\r\n\tat org.apache.spark.util.ShutdownHookManager$.<clinit>(ShutdownHookManager.scala:63)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:249)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir(SparkFileUtils.scala:125)\r\n\tat org.apache.spark.util.SparkFileUtils.createTempDir$(SparkFileUtils.scala:124)\r\n\tat org.apache.spark.util.Utils$.createTempDir(Utils.scala:97)\r\n\tat org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:381)\r\n\tat org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:965)\r\n\tat org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:203)\r\n\tat org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:226)\r\n\tat org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:95)\r\n\tat org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1171)\r\n\tat org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1180)\r\n\tat org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)\r\nCaused by: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset.\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHomeInner(Shell.java:522)\r\n\tat org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:493)\r\n\tat org.apache.hadoop.util.Shell.<clinit>(Shell.java:570)\r\n\t... 27 more\r\n"
+  ],
+  "blockers": [],
+  "runtime_benchmark_complete": true,
+  "ready_for_stage21": true,
+  "artifact_readback": {
+    "output\\benchmark\\stage20\\benchmark_environment.json": true,
+    "output\\benchmark\\stage20\\benchmark_input_validation.json": true,
+    "output\\benchmark\\stage20\\track_a_assignment_trials.json": true,
+    "output\\benchmark\\stage20\\track_a_assignment_summary.csv": true,
+    "output\\benchmark\\stage20\\track_b_build_assign_trials.json": true,
+    "output\\benchmark\\stage20\\track_b_build_assign_summary.csv": true,
+    "output\\benchmark\\stage20\\benchmark_determinism_validation.json": true,
+    "output\\benchmark\\stage20\\runtime_ratios.json": true,
+    "output\\benchmark\\stage20\\spark_ui_evidence_manifest.json": true,
+    "output\\benchmark\\stage20\\stage20_final_summary.json": true,
+    "reports\\stage20_three_model_runtime_benchmark.txt": true,
+    "reports\\stage20_run.log": true
+  },
+  "artifact_readback_pass": true
+}

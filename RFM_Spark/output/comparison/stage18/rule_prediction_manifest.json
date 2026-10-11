@@ -1,0 +1,12 @@
+{
+  "stage": 18,
+  "authority": "RULE_BASED_RFM_BASELINE_V1",
+  "method_authority": "RULE_BASED_RFM_QUINTILE_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "cohort_customer_id_sha256": "ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5",
+  "row_count": 1000000,
+  "segment_count": 5,
+  "rule_prediction_sha256": "ac372dfcd82f0f7183a69efa3cb0f8742fa726854e06d3059a8f56de66433bde",
+  "reproducibility_pass": true,
+  "readback_pass": true
+}

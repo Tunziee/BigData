@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<text x="80" y="125" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">RFM · Recency</text>
+<line x1="80" y1="235" x2="430" y2="235" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="101.547" y="210" width="184.459" height="50" fill="#275DAD"/>
+<line x1="155.676" y1="180" x2="155.676" y2="290" stroke="#172033" stroke-width="4"/>
+<text x="80" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 8</text>
+<text x="430" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 674</text>
+<text x="510" y="125" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">RFM · Frequency</text>
+<line x1="510" y1="235" x2="860" y2="235" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="510" y="210" width="102.083" height="50" fill="#275DAD"/>
+<line x1="539.167" y1="180" x2="539.167" y2="290" stroke="#172033" stroke-width="4"/>
+<text x="510" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 1</text>
+<text x="860" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 25</text>
+<text x="940" y="125" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">RFM · Monetary</text>
+<line x1="940" y1="235" x2="1290" y2="235" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="948.383" y="210" width="84.629" height="50" fill="#275DAD"/>
+<line x1="970.165" y1="180" x2="970.165" y2="290" stroke="#172033" stroke-width="4"/>
+<text x="940" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 0.0274407</text>
+<text x="1290" y="332" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 2.55863</text>
+<text x="80" y="665" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">eRFM · Recency</text>
+<line x1="80" y1="775" x2="430" y2="775" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="101.547" y="750" width="184.459" height="50" fill="#168A6A"/>
+<line x1="155.676" y1="720" x2="155.676" y2="830" stroke="#172033" stroke-width="4"/>
+<text x="80" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 8</text>
+<text x="430" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 674</text>
+<text x="510" y="665" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">eRFM · Frequency</text>
+<line x1="510" y1="775" x2="860" y2="775" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="510" y="750" width="102.083" height="50" fill="#168A6A"/>
+<line x1="539.167" y1="720" x2="539.167" y2="830" stroke="#172033" stroke-width="4"/>
+<text x="510" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 1</text>
+<text x="860" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 25</text>
+<text x="940" y="665" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">eRFM · Monetary</text>
+<line x1="940" y1="775" x2="1290" y2="775" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="948.383" y="750" width="84.629" height="50" fill="#168A6A"/>
+<line x1="970.165" y1="720" x2="970.165" y2="830" stroke="#172033" stroke-width="4"/>
+<text x="940" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 0.0274407</text>
+<text x="1290" y="872" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 2.55863</text>
+<text x="80" y="935" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">eRFM · AvgBasketSize</text>
+<line x1="80" y1="1045" x2="430" y2="1045" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="127.458" y="1020" width="100.188" height="50" fill="#168A6A"/>
+<line x1="167.006" y1="990" x2="167.006" y2="1100" stroke="#172033" stroke-width="4"/>
+<text x="80" y="1142" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 1</text>
+<text x="430" y="1142" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 8.375</text>
+<text x="510" y="935" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="19px" font-weight="700" text-anchor="start">eRFM · ProductVariety</text>
+<line x1="510" y1="1045" x2="860" y2="1045" stroke="#D7DEE9" stroke-width="4"/>
+<rect x="519.091" y="1020" width="95.4545" height="50" fill="#168A6A"/>
+<line x1="541.818" y1="990" x2="541.818" y2="1100" stroke="#172033" stroke-width="4"/>
+<text x="510" y="1142" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="start">P05 1</text>
+<text x="860" y="1142" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="end">P95 78</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">RFM and eRFM feature distributions</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Locked quantile profiles; P25-P75 is the central band and P05-P95 is the broad band</text>
+</svg>

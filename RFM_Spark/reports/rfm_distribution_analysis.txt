@@ -1,0 +1,89 @@
+STAGE 6 — RFM/eRFM DISTRIBUTION & OUTLIER ANALYSIS
+====================================================================================================
+Project root: D:\Doan_bigdata\BigData\BigData\RFM_Spark
+Analysis scope: verified RFM/eRFM Parquet only; no source overwrite and no automatic outlier removal.
+Quantile method: approxQuantile(relativeError=0.001)
+
+SEMANTIC NOTES
+- Frequency = number of distinct purchase dates per customer, not invoice/order count.
+- AvgBasketSize = average item count per distinct purchase date.
+- Monetary = SUM(price) on the cleaned transactions.
+- AnalysisDate and Recency follow Stage 5: max(t_dat) + 1 day and date difference to last purchase.
+
+INPUTS
+rfm: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\features\rfm
+erfm: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\features\erfm
+
+====================================================================================================
+DATASET: RFM
+====================================================================================================
+Feature | Count | Mean | Std | Min | P01 | P05 | P25 | P50 | P75 | P95 | P99 | Max | Skewness | IQR outlier count | IQR outlier ratio % | P01-P99 outlier count | P01-P99 ratio % | P05-P95 outlier count | P05-P95 ratio %
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Recency | 1362281 | 236.148437069885 | 221.11879131008746 | 1.0 | 2.0 | 8.0 | 49.0 | 152.0 | 400.0 | 674.0 | 725.0 | 734.0 | 0.8015830865771745 | 0 | 0.0 | 20286 | 1.489120086090902 | 136283 | 10.004030005556857
+Frequency | 1362281 | 6.6654229193536425 | 9.707005074461001 | 1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 8.0 | 25.0 | 45.0 | 427.0 | 4.495758096759159 | 117557 | 8.629423738567887 | 13340 | 0.979239965910117 | 62003 | 4.551410465241753
+Monetary | 1362281 | 0.6493858271904174 | 1.1975819653583566 | 0.0007627118644067797 | 0.013542372881355931 | 0.0274406779661017 | 0.08806779661016949 | 0.24559322033898304 | 0.7001016949152542 | 2.558627118644068 | 5.5818135593220335 | 57.676406779661086 | 6.2768705460869745 | 136773 | 10.03999908976195 | 25645 | 1.882504417223759 | 137282 | 10.077362893558671
+
+DATA QUALITY / NON-POSITIVE CHECKS
+Recency: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+Frequency: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+Monetary: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+
+IQR BOUNDARIES AND EXTREME-VALUE IMPACT
+Recency: IQR=351.0, lower=-477.5, upper=926.5; P01-P99 low/high=10528/9758; P05-P95 low/high=68984/67299
+Frequency: IQR=7.0, lower=-9.5, upper=18.5; P01-P99 low/high=0/13340; P05-P95 low/high=0/62003
+Monetary: IQR=0.6120338983050847, lower=-0.8299830508474575, upper=1.618152542372881; P01-P99 low/high=11318/14327; P05-P95 low/high=68502/68780
+
+RAW VS LOG1P SKEWNESS
+Recency: log1p not applied by design
+Frequency: raw=4.495758096759159, log1p=0.7588150322222211, absolute skewness reduction=83.121533323396%
+Monetary: raw=6.2768705460869745, log1p=1.9173401092541524, absolute skewness reduction=69.45388477942356%
+
+RECOMMENDED TRANSFORMATIONS / HANDLING FOR STAGE 7
+Recency: do not log by default; retain raw Recency unless Stage 7 justifies otherwise; evaluate percentile capping or robust treatment; do not remove rows automatically
+Frequency: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+Monetary: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+
+====================================================================================================
+DATASET: ERFM
+====================================================================================================
+Feature | Count | Mean | Std | Min | P01 | P05 | P25 | P50 | P75 | P95 | P99 | Max | Skewness | IQR outlier count | IQR outlier ratio % | P01-P99 outlier count | P01-P99 ratio % | P05-P95 outlier count | P05-P95 ratio %
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Recency | 1362281 | 236.148437069885 | 221.11879131008746 | 1.0 | 2.0 | 8.0 | 49.0 | 152.0 | 400.0 | 674.0 | 725.0 | 734.0 | 0.8015830865771745 | 0 | 0.0 | 20286 | 1.489120086090902 | 136283 | 10.004030005556857
+Frequency | 1362281 | 6.6654229193536425 | 9.707005074461001 | 1.0 | 1.0 | 1.0 | 1.0 | 3.0 | 8.0 | 25.0 | 45.0 | 427.0 | 4.495758096759159 | 117557 | 8.629423738567887 | 13340 | 0.979239965910117 | 62003 | 4.551410465241753
+Monetary | 1362281 | 0.6493858271904174 | 1.1975819653583566 | 0.0007627118644067797 | 0.013542372881355931 | 0.0274406779661017 | 0.08806779661016949 | 0.24559322033898304 | 0.7001016949152542 | 2.558627118644068 | 5.5818135593220335 | 57.676406779661086 | 6.2768705460869745 | 136773 | 10.03999908976195 | 25645 | 1.882504417223759 | 137282 | 10.077362893558671
+AvgBasketSize | 1362281 | 3.5048642151364247 | 2.8403040575453624 | 1.0 | 1.0 | 1.0 | 2.0 | 2.8333333333333335 | 4.111111111111111 | 8.375 | 14.0 | 181.0 | 4.836153897327308 | 99062 | 7.27177432556132 | 13107 | 0.9621362993391231 | 68219 | 5.007703990586377
+ProductVariety | 1362281 | 20.04464497412795 | 31.980251265698243 | 1.0 | 1.0 | 1.0 | 3.0 | 8.0 | 24.0 | 78.0 | 151.0 | 1346.0 | 4.576968021286257 | 122262 | 8.974800353231089 | 14096 | 1.0347351243979765 | 66409 | 4.874838597910417
+
+DATA QUALITY / NON-POSITIVE CHECKS
+Recency: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+Frequency: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+Monetary: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+AvgBasketSize: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+ProductVariety: null=0 (0.0%), NaN=0 (0.0%), <=0=0 (0.0%)
+
+IQR BOUNDARIES AND EXTREME-VALUE IMPACT
+Recency: IQR=351.0, lower=-477.5, upper=926.5; P01-P99 low/high=10528/9758; P05-P95 low/high=68984/67299
+Frequency: IQR=7.0, lower=-9.5, upper=18.5; P01-P99 low/high=0/13340; P05-P95 low/high=0/62003
+Monetary: IQR=0.6120338983050847, lower=-0.8299830508474575, upper=1.618152542372881; P01-P99 low/high=11318/14327; P05-P95 low/high=68502/68780
+AvgBasketSize: IQR=2.1111111111111107, lower=-1.166666666666666, upper=7.277777777777777; P01-P99 low/high=0/13107; P05-P95 low/high=0/68219
+ProductVariety: IQR=21.0, lower=-28.5, upper=55.5; P01-P99 low/high=0/14096; P05-P95 low/high=0/66409
+
+RAW VS LOG1P SKEWNESS
+Recency: log1p not applied by design
+Frequency: raw=4.495758096759159, log1p=0.7588150322222211, absolute skewness reduction=83.121533323396%
+Monetary: raw=6.2768705460869745, log1p=1.9173401092541524, absolute skewness reduction=69.45388477942356%
+AvgBasketSize: raw=4.836153897327308, log1p=0.7363221792873056, absolute skewness reduction=84.77463300549157%
+ProductVariety: raw=4.576968021286257, log1p=0.38241385432646763, absolute skewness reduction=91.64482136322641%
+
+RECOMMENDED TRANSFORMATIONS / HANDLING FOR STAGE 7
+Recency: do not log by default; retain raw Recency unless Stage 7 justifies otherwise; evaluate percentile capping or robust treatment; do not remove rows automatically
+Frequency: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+Monetary: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+AvgBasketSize: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+ProductVariety: evaluate log1p before StandardScaler/K-Means; evaluate percentile capping or robust treatment; do not remove rows automatically
+
+VALIDATION CHECKLIST
+- No full dataset was collected to Pandas.
+- NULL, NaN, non-positive values, skewness, IQR outliers, and percentile tails were measured.
+- IQR and percentile-capping effects are measured only; no rows were removed and no values were capped.
+- RFM/eRFM input namespaces were not overwritten.

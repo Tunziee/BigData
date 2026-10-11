@@ -1,0 +1,62 @@
+{
+  "stage": 12,
+  "authority": "IMPROVED_ERFM_FEATURE_SPACE",
+  "comparison_tolerance": 0.1,
+  "raw_vs_transformed_skewness": {
+    "Recency": {
+      "raw_feature": "Recency",
+      "transformed_feature": "Recency_improved",
+      "stage6_raw_skewness": 0.8015830865771745,
+      "stage6_log1p_skewness": null,
+      "stage12_raw_skewness": 0.8015830865771745,
+      "stage12_transformed_skewness": 0.8015830865771745,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": null,
+      "comparison_pass": true
+    },
+    "Frequency": {
+      "raw_feature": "Frequency",
+      "transformed_feature": "Frequency_log1p",
+      "stage6_raw_skewness": 4.495758096759159,
+      "stage6_log1p_skewness": 0.7588150322222211,
+      "stage12_raw_skewness": 4.495758096759159,
+      "stage12_transformed_skewness": 0.7588150322222211,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "Monetary": {
+      "raw_feature": "Monetary",
+      "transformed_feature": "Monetary_log1p",
+      "stage6_raw_skewness": 6.2768705460869745,
+      "stage6_log1p_skewness": 1.9173401092541524,
+      "stage12_raw_skewness": 6.2768705460869745,
+      "stage12_transformed_skewness": 1.9173401092541524,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "AvgBasketSize": {
+      "raw_feature": "AvgBasketSize",
+      "transformed_feature": "AvgBasketSize_log1p",
+      "stage6_raw_skewness": 4.836153897327308,
+      "stage6_log1p_skewness": 0.7363221792873056,
+      "stage12_raw_skewness": 4.836153897327308,
+      "stage12_transformed_skewness": 0.7363221792873056,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    },
+    "ProductVariety": {
+      "raw_feature": "ProductVariety",
+      "transformed_feature": "ProductVariety_log1p",
+      "stage6_raw_skewness": 4.576968021286257,
+      "stage6_log1p_skewness": 0.38241385432646763,
+      "stage12_raw_skewness": 4.576968021286257,
+      "stage12_transformed_skewness": 0.38241385432646763,
+      "raw_difference_vs_stage6": 0.0,
+      "transformed_difference_vs_stage6": 0.0,
+      "comparison_pass": true
+    }
+  }
+}

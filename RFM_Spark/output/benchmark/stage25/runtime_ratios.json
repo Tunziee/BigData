@@ -1,0 +1,23 @@
+{
+  "Q1": {
+    "no_cache_median_sec": 0.1045865999999478,
+    "cache_median_sec": 0.35909350000019913,
+    "no_cache_over_cache_ratio": 0.29125172134803273,
+    "cache_runtime_reduction_pct": -243.34561024106182,
+    "interpretation_rule": "ratio > 1 means CACHE was faster"
+  },
+  "Q2": {
+    "no_cache_median_sec": 0.3254504999999881,
+    "cache_median_sec": 0.44672840000021097,
+    "no_cache_over_cache_ratio": 0.7285198344225136,
+    "cache_runtime_reduction_pct": -37.264622423449126,
+    "interpretation_rule": "ratio > 1 means CACHE was faster"
+  },
+  "Q3": {
+    "no_cache_median_sec": 7.393477900000107,
+    "cache_median_sec": 7.1460643999998865,
+    "no_cache_over_cache_ratio": 1.0346223440136117,
+    "cache_runtime_reduction_pct": 3.34637505307505,
+    "interpretation_rule": "ratio > 1 means CACHE was faster"
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<circle cx="700" cy="425" r="250" fill="#FBFCFE" stroke="#D7DEE9" stroke-width="2"/>
+<circle cx="700" cy="425" r="62.5" fill="#FBFCFE" stroke="#D7DEE9" stroke-width="1"/>
+<circle cx="700" cy="425" r="125" fill="#FBFCFE" stroke="#D7DEE9" stroke-width="1"/>
+<circle cx="700" cy="425" r="187.5" fill="#FBFCFE" stroke="#D7DEE9" stroke-width="1"/>
+<circle cx="700" cy="425" r="250" fill="#FBFCFE" stroke="#D7DEE9" stroke-width="1"/>
+<line x1="700" y1="425" x2="700" y2="175" stroke="#D7DEE9" stroke-width="1"/>
+<text x="700" y="140" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="middle">Recency</text>
+<line x1="700" y1="425" x2="937.764" y2="347.746" stroke="#D7DEE9" stroke-width="1"/>
+<text x="971.051" y="336.93" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="middle">Frequency</text>
+<line x1="700" y1="425" x2="846.946" y2="627.254" stroke="#D7DEE9" stroke-width="1"/>
+<text x="867.519" y="655.57" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="middle">Monetary</text>
+<line x1="700" y1="425" x2="553.054" y2="627.254" stroke="#D7DEE9" stroke-width="1"/>
+<text x="532.481" y="655.57" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="middle">Basket</text>
+<line x1="700" y1="425" x2="462.236" y2="347.746" stroke="#D7DEE9" stroke-width="1"/>
+<text x="428.949" y="336.93" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="middle">Variety</text>
+<polygon points="700,289.091 712.514,420.934 713.679,443.827 553.054,627.254 674.783,416.806 700,289.091" fill="none" stroke="#275DAD" stroke-width="3" stroke-linejoin="round"/>
+<text x="1050" y="230" fill="#275DAD" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="start">S0</text>
+<polygon points="700,425 937.764,347.746 846.946,627.254 621.279,533.35 462.236,347.746 700,425" fill="none" stroke="#D97706" stroke-width="3" stroke-linejoin="round"/>
+<text x="1050" y="265" fill="#D97706" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="start">S1</text>
+<polygon points="700,175 700,425 700,425 700,425 700,425 700,175" fill="none" stroke="#168A6A" stroke-width="3" stroke-linejoin="round"/>
+<text x="1050" y="300" fill="#168A6A" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="start">S2</text>
+<polygon points="700,371.818 712.514,420.934 701.857,427.556 700,425 696.398,423.829 700,371.818" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linejoin="round"/>
+<text x="1050" y="335" fill="#8B5CF6" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="start">S3</text>
+<polygon points="700,409.091 787.597,396.538 736.423,475.131 672.448,462.923 631.553,402.76 700,409.091" fill="none" stroke="#C2415A" stroke-width="3" stroke-linejoin="round"/>
+<text x="1050" y="370" fill="#C2415A" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="start">S4</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">M2 segment radar profiles</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">The same normalized locked medians used by Figure 09</text>
+</svg>

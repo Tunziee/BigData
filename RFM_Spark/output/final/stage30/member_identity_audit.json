@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "authoritative_source_report": "D:\\Doan_bigdata\\Bao_cao_BigData_Chuong_1_2_RFM_KMeans_Sparknew.docx",
+  "authoritative_assignment": "D:\\Doan_bigdata\\Phan_Cong_Bigdata_Nhom11 (1).docx",
+  "members": [
+    "2001230266 - Nguyễn Huy Hoàng",
+    "2001231062 - Nguyễn Việt Vương",
+    "2001231032 – Nguyên Ngọc Tường Vi"
+  ],
+  "checks": [
+    {
+      "member": "Nguyễn Huy Hoàng",
+      "in_source_report": true,
+      "in_assignment": true
+    },
+    {
+      "member": "Nguyễn Việt Vương",
+      "in_source_report": true,
+      "in_assignment": true
+    },
+    {
+      "member": "Nguyên Ngọc Tường Vi",
+      "in_source_report": true,
+      "in_assignment": true
+    }
+  ],
+  "spelling_rule": "Use Nguyên Ngọc Tường Vi as present in the authoritative report and assignment."
+}

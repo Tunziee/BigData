@@ -1,0 +1,96 @@
+== Physical Plan ==
+AdaptiveSparkPlan (15)
++- == Final Plan ==
+   ResultQueryStage (9)
+   +- * HashAggregate (8)
+      +- ShuffleQueryStage (7), Statistics(sizeInBytes=192.0 B, rowCount=8)
+         +- Exchange (6)
+            +- * HashAggregate (5)
+               +- * Project (4)
+                  +- * Filter (3)
+                     +- * ColumnarToRow (2)
+                        +- Scan parquet  (1)
++- == Initial Plan ==
+   HashAggregate (14)
+   +- Exchange (13)
+      +- HashAggregate (12)
+         +- Project (11)
+            +- Filter (10)
+               +- Scan parquet  (1)
+
+
+(1) Scan parquet 
+Output [2]: [t_dat#0, price#3]
+Batched: true
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+PushedFilters: [IsNotNull(t_dat), GreaterThanOrEqual(t_dat,2020-01-01)]
+ReadSchema: struct<t_dat:date,price:double>
+
+(2) ColumnarToRow [codegen id : 1]
+Input [2]: [t_dat#0, price#3]
+
+(3) Filter [codegen id : 1]
+Input [2]: [t_dat#0, price#3]
+Condition : (isnotnull(t_dat#0) AND (t_dat#0 >= 2020-01-01))
+
+(4) Project [codegen id : 1]
+Output [1]: [price#3]
+Input [2]: [t_dat#0, price#3]
+
+(5) HashAggregate [codegen id : 1]
+Input [1]: [price#3]
+Keys: []
+Functions [2]: [partial_count(1), partial_sum(price#3)]
+Aggregate Attributes [2]: [count#72L, sum#73]
+Results [2]: [count#74L, sum#75]
+
+(6) Exchange
+Input [2]: [count#74L, sum#75]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=341]
+
+(7) ShuffleQueryStage
+Output [2]: [count#74L, sum#75]
+Arguments: 0
+
+(8) HashAggregate [codegen id : 2]
+Input [2]: [count#74L, sum#75]
+Keys: []
+Functions [2]: [count(1), sum(price#3)]
+Aggregate Attributes [2]: [count(1)#70L, sum(price#3)#71]
+Results [2]: [count(1)#70L AS filtered_rows#65L, sum(price#3)#71 AS sum_price#66]
+
+(9) ResultQueryStage
+Output [2]: [filtered_rows#65L, sum_price#66]
+Arguments: 2
+
+(10) Filter
+Input [2]: [t_dat#0, price#3]
+Condition : (isnotnull(t_dat#0) AND (t_dat#0 >= 2020-01-01))
+
+(11) Project
+Output [1]: [price#3]
+Input [2]: [t_dat#0, price#3]
+
+(12) HashAggregate
+Input [1]: [price#3]
+Keys: []
+Functions [2]: [partial_count(1), partial_sum(price#3)]
+Aggregate Attributes [2]: [count#72L, sum#73]
+Results [2]: [count#74L, sum#75]
+
+(13) Exchange
+Input [2]: [count#74L, sum#75]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=320]
+
+(14) HashAggregate
+Input [2]: [count#74L, sum#75]
+Keys: []
+Functions [2]: [count(1), sum(price#3)]
+Aggregate Attributes [2]: [count(1)#70L, sum(price#3)#71]
+Results [2]: [count(1)#70L AS filtered_rows#65L, sum(price#3)#71 AS sum_price#66]
+
+(15) AdaptiveSparkPlan
+Output [2]: [filtered_rows#65L, sum_price#66]
+Arguments: isFinalPlan=true
+
+

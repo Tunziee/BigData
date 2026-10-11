@@ -1,0 +1,66 @@
+{
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary",
+    "AvgBasketSize",
+    "ProductVariety"
+  ],
+  "centers": [
+    {
+      "cluster_id": 0,
+      "values": [
+        333.1063976523084,
+        1.7947439297153966,
+        0.3317321977552104,
+        6.729805690467448,
+        9.670272928360015
+      ],
+      "interpretation_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 1,
+      "values": [
+        53.90213522102849,
+        20.470654105483096,
+        2.5700920379583683,
+        4.3930963899543904,
+        73.8568272528723
+      ],
+      "interpretation_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 2,
+      "values": [
+        568.063152026456,
+        1.356062613635444,
+        0.08790916280074218,
+        1.9934052679227543,
+        2.437124359228619
+      ],
+      "interpretation_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 3,
+      "values": [
+        157.18089517839957,
+        1.8391923836231272,
+        0.11420462288242827,
+        1.925698846094574,
+        3.155862550873124
+      ],
+      "interpretation_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 4,
+      "values": [
+        96.82781122719015,
+        8.340973674286454,
+        0.6308064927468,
+        2.840866062834033,
+        20.716489178771237
+      ],
+      "interpretation_note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "stage": 17,
+  "authority": "THREE_MODEL_COMPARISON_PROTOCOL_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "cohort_size": 1000000,
+  "models": [
+    {
+      "id": "R1",
+      "name": "Rule-based RFM",
+      "type": "deterministic business-rule segmentation",
+      "authority_status": "PENDING_STAGE18"
+    },
+    {
+      "id": "K1",
+      "name": "Main K-Means",
+      "authority": "MAIN_KMEANS_FINAL",
+      "k": 4,
+      "training_feature_space": "standardized raw RFM 3D",
+      "prediction_column": "main_prediction"
+    },
+    {
+      "id": "K2",
+      "name": "Enhanced K-Means",
+      "authority": "ENHANCED_KMEANS_FINAL",
+      "k": 5,
+      "training_feature_space": "standardized transformed eRFM 5D",
+      "prediction_column": "enhanced_prediction"
+    }
+  ],
+  "common_evaluation_spaces": {
+    "RFM_3D": {
+      "column": "eval_rfm3d_scaled",
+      "dimension": 3,
+      "feature_order": [
+        "Recency",
+        "Frequency",
+        "Monetary"
+      ],
+      "source_authority": "Stage 7 main_rfm_scaled"
+    },
+    "ERFM_5D": {
+      "column": "eval_erfm5d_scaled",
+      "dimension": 5,
+      "feature_order": [
+        "Recency_improved",
+        "Frequency_log1p",
+        "Monetary_log1p",
+        "AvgBasketSize_log1p",
+        "ProductVariety_log1p"
+      ],
+      "source_authority": "Stage 12 improved_erfm_scaled"
+    }
+  },
+  "quality_metrics": [
+    "silhouette_rfm3d",
+    "silhouette_erfm5d",
+    "cluster_balance",
+    "normalized_cluster_entropy",
+    "common_space_sse_per_customer",
+    "pairwise_partition_agreement",
+    "raw_profile_distinctness",
+    "business_interpretability"
+  ],
+  "agreement_metrics": [
+    "ARI",
+    "NMI"
+  ],
+  "native_metric_cross_space_comparison_allowed": false,
+  "rule_based_is_ground_truth": false,
+  "classification_accuracy_allowed": false,
+  "arbitrary_weighted_score_allowed": false,
+  "gmm_in_mandatory_comparison": false,
+  "runtime_track_separate": true,
+  "ready_for_stage18": true
+}

@@ -1,0 +1,251 @@
+{
+  "feature_order": [
+    "Recency",
+    "log1p(Frequency)",
+    "log1p(Monetary)",
+    "log1p(AvgBasketSize)",
+    "log1p(ProductVariety)"
+  ],
+  "preferred_tolerance": 0.001,
+  "fallback_tolerance": 0.01,
+  "fallback_used": true,
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "features": [
+        {
+          "feature": "Recency",
+          "actual_transformed_mean": 333.10277862334004,
+          "stage15_transformed_center": 333.1063976523084,
+          "absolute_difference": 0.00361902896833044,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Frequency)",
+          "actual_transformed_mean": 1.0277420765561085,
+          "stage15_transformed_center": 1.0277404851345935,
+          "absolute_difference": 1.59142151501257e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Monetary)",
+          "actual_transformed_mean": 0.28648291882154864,
+          "stage15_transformed_center": 0.28648049916805807,
+          "absolute_difference": 2.4196534905707168e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(AvgBasketSize)",
+          "actual_transformed_mean": 2.04508928062465,
+          "stage15_transformed_center": 2.0450837252157887,
+          "absolute_difference": 5.555408861379618e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(ProductVariety)",
+          "actual_transformed_mean": 2.3674709758462353,
+          "stage15_transformed_center": 2.3674616440268252,
+          "absolute_difference": 9.331819410096642e-06,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "max_absolute_difference": 0.00361902896833044,
+      "pass": true
+    },
+    {
+      "cluster_id": 1,
+      "features": [
+        {
+          "feature": "Recency",
+          "actual_transformed_mean": 53.902010719205435,
+          "stage15_transformed_center": 53.90213522102849,
+          "absolute_difference": 0.00012450182305201452,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Frequency)",
+          "actual_transformed_mean": 3.066677581603644,
+          "stage15_transformed_center": 3.0666870774481794,
+          "absolute_difference": 9.495844535578613e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Monetary)",
+          "actual_transformed_mean": 1.2725797397335779,
+          "stage15_transformed_center": 1.2725913763999444,
+          "absolute_difference": 1.1636666366499071e-05,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(AvgBasketSize)",
+          "actual_transformed_mean": 1.685113947906573,
+          "stage15_transformed_center": 1.6851196893558325,
+          "absolute_difference": 5.741449259355491e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(ProductVariety)",
+          "actual_transformed_mean": 4.315558558657566,
+          "stage15_transformed_center": 4.3155773191692575,
+          "absolute_difference": 1.876051169169557e-05,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "max_absolute_difference": 0.00012450182305201452,
+      "pass": true
+    },
+    {
+      "cluster_id": 2,
+      "features": [
+        {
+          "feature": "Recency",
+          "actual_transformed_mean": 568.063887670683,
+          "stage15_transformed_center": 568.063152026456,
+          "absolute_difference": 0.00073564422700656,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Frequency)",
+          "actual_transformed_mean": 0.8569953158015864,
+          "stage15_transformed_center": 0.856991841682142,
+          "absolute_difference": 3.474119444346613e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Monetary)",
+          "actual_transformed_mean": 0.08425818502434956,
+          "stage15_transformed_center": 0.08425765487541348,
+          "absolute_difference": 5.301489360842737e-07,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(AvgBasketSize)",
+          "actual_transformed_mean": 1.0964169370994756,
+          "stage15_transformed_center": 1.0964116249572735,
+          "absolute_difference": 5.312142202118508e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(ProductVariety)",
+          "actual_transformed_mean": 1.2346439094736896,
+          "stage15_transformed_center": 1.234635179706178,
+          "absolute_difference": 8.729767511539421e-06,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "max_absolute_difference": 0.00073564422700656,
+      "pass": true
+    },
+    {
+      "cluster_id": 3,
+      "features": [
+        {
+          "feature": "Recency",
+          "actual_transformed_mean": 157.18148405739745,
+          "stage15_transformed_center": 157.18089517839957,
+          "absolute_difference": 0.0005888789978882869,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Frequency)",
+          "actual_transformed_mean": 1.0435131490928389,
+          "stage15_transformed_center": 1.043519639768053,
+          "absolute_difference": 6.490675214188002e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Monetary)",
+          "actual_transformed_mean": 0.10813911205717076,
+          "stage15_transformed_center": 0.10814080765576994,
+          "absolute_difference": 1.6955985991801148e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(AvgBasketSize)",
+          "actual_transformed_mean": 1.0735311786920603,
+          "stage15_transformed_center": 1.0735333738883006,
+          "absolute_difference": 2.195196240339925e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(ProductVariety)",
+          "actual_transformed_mean": 1.4245108849287504,
+          "stage15_transformed_center": 1.4245200002341378,
+          "absolute_difference": 9.11530538738603e-06,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "max_absolute_difference": 0.0005888789978882869,
+      "pass": true
+    },
+    {
+      "cluster_id": 4,
+      "features": [
+        {
+          "feature": "Recency",
+          "actual_transformed_mean": 96.82912749553954,
+          "stage15_transformed_center": 96.82781122719015,
+          "absolute_difference": 0.0013162683493845861,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Frequency)",
+          "actual_transformed_mean": 2.2344002077203755,
+          "stage15_transformed_center": 2.2344104945896044,
+          "absolute_difference": 1.0286869228881557e-05,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(Monetary)",
+          "actual_transformed_mean": 0.4890677563916397,
+          "stage15_transformed_center": 0.4890746732812561,
+          "absolute_difference": 6.9168896164040206e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(AvgBasketSize)",
+          "actual_transformed_mean": 1.3456920299271935,
+          "stage15_transformed_center": 1.3456978783663083,
+          "absolute_difference": 5.848439114775061e-06,
+          "tolerance": 0.01,
+          "pass": true
+        },
+        {
+          "feature": "log1p(ProductVariety)",
+          "actual_transformed_mean": 3.078054657659166,
+          "stage15_transformed_center": 3.0780718419808384,
+          "absolute_difference": 1.7184321672303327e-05,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "max_absolute_difference": 0.0013162683493845861,
+      "pass": true
+    }
+  ],
+  "max_absolute_difference": 0.00361902896833044,
+  "pass": true
+}

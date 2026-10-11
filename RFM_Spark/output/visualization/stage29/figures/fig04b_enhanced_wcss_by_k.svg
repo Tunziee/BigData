@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="679" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">1037483.48</text>
+<line x1="150" y1="553.75" x2="1330" y2="553.75" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="542.75" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">1778557.83</text>
+<line x1="150" y1="417.5" x2="1330" y2="417.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="406.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">2519632.18</text>
+<line x1="150" y1="281.25" x2="1330" y2="281.25" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="270.25" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">3260706.53</text>
+<line x1="150" y1="145" x2="1330" y2="145" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="134" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">4001780.87</text>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="145" x2="150" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="-243.333" y1="690" x2="-243.333" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="-243.333" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2</text>
+<line x1="-46.6667" y1="690" x2="-46.6667" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="-46.6667" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">3</text>
+<line x1="150" y1="690" x2="150" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="150" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">4</text>
+<line x1="346.667" y1="690" x2="346.667" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="346.667" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">5</text>
+<line x1="543.333" y1="690" x2="543.333" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="543.333" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">6</text>
+<line x1="740" y1="690" x2="740" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="740" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">7</text>
+<line x1="936.667" y1="690" x2="936.667" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="936.667" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">8</text>
+<text x="740" y="745" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle">K</text>
+<text x="66" y="417.5" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 417.5)">WCSS / training cost</text>
+<polyline points="150,197.742 346.667,350.264 543.333,462.939 740,543.149 936.667,581.88 1133.33,615.79 1330,637.258" fill="none" stroke="#275DAD" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="150" cy="197.742" r="6" fill="#275DAD"/>
+<circle cx="346.667" cy="350.264" r="6" fill="#275DAD"/>
+<circle cx="543.333" cy="462.939" r="6" fill="#275DAD"/>
+<circle cx="740" cy="543.149" r="6" fill="#275DAD"/>
+<circle cx="936.667" cy="581.88" r="6" fill="#275DAD"/>
+<circle cx="1133.33" cy="615.79" r="6" fill="#275DAD"/>
+<circle cx="1330" cy="637.258" r="6" fill="#275DAD"/>
+<text x="1320" y="170" fill="#275DAD" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="end">WCSS / training cost</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Enhanced eRFM K-Means: WCSS / training cost</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Locked k=2..8 sweep; no refit performed in Stage 29</text>
+</svg>

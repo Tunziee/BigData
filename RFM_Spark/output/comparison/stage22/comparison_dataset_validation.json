@@ -1,0 +1,40 @@
+{
+  "row_count": 1000000,
+  "distinct_customer_id": 1000000,
+  "duplicate_customer_id": 0,
+  "label_checks": {
+    "B0": {
+      "null": 0,
+      "invalid": 0
+    },
+    "M1": {
+      "null": 0,
+      "invalid": 0
+    },
+    "M2": {
+      "null": 0,
+      "invalid": 0
+    }
+  },
+  "vector_checks": {
+    "RFM3D": {
+      "column": "eval_rfm3d_scaled",
+      "dimension": 3,
+      "null": 0,
+      "wrong_dimension": 0,
+      "nan": 0,
+      "infinity": 0,
+      "pass": true
+    },
+    "ERFM5D": {
+      "column": "eval_erfm5d_scaled",
+      "dimension": 5,
+      "null": 0,
+      "wrong_dimension": 0,
+      "nan": 0,
+      "infinity": 0,
+      "pass": true
+    }
+  },
+  "pass": true
+}

@@ -1,0 +1,340 @@
+{
+  "stage": 9,
+  "model": "Main RFM K-Means",
+  "formula": "original_value = scaled_center * scaler_std + scaler_mean",
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "scaler_metadata": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaler_metadata\\scaler_metadata.json",
+  "inverse_center_validation": {
+    "pass": true,
+    "formula": "original_value = scaled_center * scaler_std + scaler_mean",
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary"
+    ],
+    "negative_values_found": false,
+    "all_values_finite": true,
+    "all_dimensions_three": true
+  },
+  "inverse_centers": [
+    {
+      "k": 2,
+      "cluster_id": 0,
+      "Recency_original": 264.2522531006969,
+      "Frequency_original": 3.888407820050699,
+      "Monetary_original": 0.33258601039678015,
+      "cluster_count": 1189245,
+      "cluster_ratio_pct": 87.29806846017819
+    },
+    {
+      "k": 2,
+      "cluster_id": 1,
+      "Recency_original": 42.98962035706353,
+      "Frequency_original": 25.751975079612244,
+      "Monetary_original": 2.8267654997453775,
+      "cluster_count": 173036,
+      "cluster_ratio_pct": 12.701931539821814
+    },
+    {
+      "k": 3,
+      "cluster_id": 0,
+      "Recency_original": 516.8035304058119,
+      "Frequency_original": 1.8132820536993544,
+      "Monetary_original": 0.1671530549717315,
+      "cluster_count": 446188,
+      "cluster_ratio_pct": 32.75300763939305
+    },
+    {
+      "k": 3,
+      "cluster_id": 1,
+      "Recency_original": 38.43665261867031,
+      "Frequency_original": 31.548952240056423,
+      "Monetary_original": 3.6771593823786435,
+      "cluster_count": 102738,
+      "cluster_ratio_pct": 7.541615863393823
+    },
+    {
+      "k": 3,
+      "cluster_id": 2,
+      "Recency_original": 107.16513904718263,
+      "Frequency_original": 6.183868830046351,
+      "Monetary_original": 0.5314555237205529,
+      "cluster_count": 813355,
+      "cluster_ratio_pct": 59.70537649721312
+    },
+    {
+      "k": 4,
+      "cluster_id": 0,
+      "Recency_original": 125.08151254402787,
+      "Frequency_original": 4.392383577484173,
+      "Monetary_original": 0.3655620960842205,
+      "cluster_count": 729944,
+      "cluster_ratio_pct": 53.582484083680235
+    },
+    {
+      "k": 4,
+      "cluster_id": 1,
+      "Recency_original": 52.93274251377872,
+      "Frequency_original": 19.7918850679208,
+      "Monetary_original": 1.936449339297162,
+      "cluster_count": 198035,
+      "cluster_ratio_pct": 14.537015490930285
+    },
+    {
+      "k": 4,
+      "cluster_id": 2,
+      "Recency_original": 535.4611238775719,
+      "Frequency_original": 1.8030637886399346,
+      "Monetary_original": 0.16760376169176283,
+      "cluster_count": 409493,
+      "cluster_ratio_pct": 30.059363670197264
+    },
+    {
+      "k": 4,
+      "cluster_id": 3,
+      "Recency_original": 26.101455117094474,
+      "Frequency_original": 49.02390261598602,
+      "Monetary_original": 6.6788930520703484,
+      "cluster_count": 24809,
+      "cluster_ratio_pct": 1.8211367551922109
+    },
+    {
+      "k": 5,
+      "cluster_id": 0,
+      "Recency_original": 541.3030135554664,
+      "Frequency_original": 1.7947561723160543,
+      "Monetary_original": 0.1670671312779825,
+      "cluster_count": 398072,
+      "cluster_ratio_pct": 29.220990383041386
+    },
+    {
+      "k": 5,
+      "cluster_id": 1,
+      "Recency_original": 20.689849836286783,
+      "Frequency_original": 64.4292649881449,
+      "Monetary_original": 9.4731467038424,
+      "cluster_count": 8857,
+      "cluster_ratio_pct": 0.6501595485806526
+    },
+    {
+      "k": 5,
+      "cluster_id": 2,
+      "Recency_original": 63.13340073038299,
+      "Frequency_original": 14.491105655162226,
+      "Monetary_original": 1.3063115182830456,
+      "cluster_count": 242341,
+      "cluster_ratio_pct": 17.78935476601377
+    },
+    {
+      "k": 5,
+      "cluster_id": 3,
+      "Recency_original": 37.12979677042617,
+      "Frequency_original": 31.344492540062852,
+      "Monetary_original": 3.576159627674357,
+      "cluster_count": 65147,
+      "cluster_ratio_pct": 4.7821998545087245
+    },
+    {
+      "k": 5,
+      "cluster_id": 4,
+      "Recency_original": 136.3295557857154,
+      "Frequency_original": 3.4593980517498752,
+      "Monetary_original": 0.28506107396058356,
+      "cluster_count": 647864,
+      "cluster_ratio_pct": 47.55729544785547
+    },
+    {
+      "k": 6,
+      "cluster_id": 0,
+      "Recency_original": 61.74439594449433,
+      "Frequency_original": 15.618873415091706,
+      "Monetary_original": 1.4260767566166832,
+      "cluster_count": 216485,
+      "cluster_ratio_pct": 15.891361620693528
+    },
+    {
+      "k": 6,
+      "cluster_id": 1,
+      "Recency_original": 35.76034121725604,
+      "Frequency_original": 32.57958875424816,
+      "Monetary_original": 3.776975310534705,
+      "cluster_count": 58260,
+      "cluster_ratio_pct": 4.27665070569141
+    },
+    {
+      "k": 6,
+      "cluster_id": 2,
+      "Recency_original": 334.9885462325154,
+      "Frequency_original": 2.664543545191461,
+      "Monetary_original": 0.23837053016293686,
+      "cluster_count": 306627,
+      "cluster_ratio_pct": 22.50835180113354
+    },
+    {
+      "k": 6,
+      "cluster_id": 3,
+      "Recency_original": 612.5578811598899,
+      "Frequency_original": 1.4886987213940985,
+      "Monetary_original": 0.13787931996299796,
+      "cluster_count": 258953,
+      "cluster_ratio_pct": 19.008780126860756
+    },
+    {
+      "k": 6,
+      "cluster_id": 4,
+      "Recency_original": 20.460229421403227,
+      "Frequency_original": 66.27215429219707,
+      "Monetary_original": 9.800765713699686,
+      "cluster_count": 7933,
+      "cluster_ratio_pct": 0.5823321326510463
+    },
+    {
+      "k": 6,
+      "cluster_id": 5,
+      "Recency_original": 87.05631947768231,
+      "Frequency_original": 4.03173065325208,
+      "Monetary_original": 0.3293869188289058,
+      "cluster_count": 514023,
+      "cluster_ratio_pct": 37.732523612969715
+    },
+    {
+      "k": 7,
+      "cluster_id": 0,
+      "Recency_original": 70.09492950120088,
+      "Frequency_original": 10.15491191821366,
+      "Monetary_original": 0.8635435247087414,
+      "cluster_count": 269585,
+      "cluster_ratio_pct": 19.789235847817007
+    },
+    {
+      "k": 7,
+      "cluster_id": 1,
+      "Recency_original": 51.22160158835251,
+      "Frequency_original": 20.9019280829481,
+      "Monetary_original": 2.124072447400795,
+      "cluster_count": 113334,
+      "cluster_ratio_pct": 8.319428957755411
+    },
+    {
+      "k": 7,
+      "cluster_id": 2,
+      "Recency_original": 24.224732515956845,
+      "Frequency_original": 45.34848693575793,
+      "Monetary_original": 3.425003014376076,
+      "cluster_count": 21788,
+      "cluster_ratio_pct": 1.5993763401236605
+    },
+    {
+      "k": 7,
+      "cluster_id": 3,
+      "Recency_original": 547.7651237242248,
+      "Frequency_original": 1.7818312950481108,
+      "Monetary_original": 0.16613445922850095,
+      "cluster_count": 385451,
+      "cluster_ratio_pct": 28.294529542730174
+    },
+    {
+      "k": 7,
+      "cluster_id": 4,
+      "Recency_original": 17.004967320261898,
+      "Frequency_original": 82.21150326797394,
+      "Monetary_original": 11.852975119087183,
+      "cluster_count": 3825,
+      "cluster_ratio_pct": 0.28077907568262345
+    },
+    {
+      "k": 7,
+      "cluster_id": 5,
+      "Recency_original": 153.48482968204337,
+      "Frequency_original": 2.65966163196953,
+      "Monetary_original": 0.21864839393192192,
+      "cluster_count": 551149,
+      "cluster_ratio_pct": 40.457805695007124
+    },
+    {
+      "k": 7,
+      "cluster_id": 6,
+      "Recency_original": 39.18552432054102,
+      "Frequency_original": 30.27825731949139,
+      "Monetary_original": 6.221137481292271,
+      "cluster_count": 17149,
+      "cluster_ratio_pct": 1.2588445408840025
+    },
+    {
+      "k": 8,
+      "cluster_id": 0,
+      "Recency_original": 69.9211669797503,
+      "Frequency_original": 11.857596743474883,
+      "Monetary_original": 1.0280443704254885,
+      "cluster_count": 229461,
+      "cluster_ratio_pct": 16.84388169547986
+    },
+    {
+      "k": 8,
+      "cluster_id": 1,
+      "Recency_original": 16.927429274293075,
+      "Frequency_original": 84.44895448954497,
+      "Monetary_original": 12.507058159776518,
+      "cluster_count": 3252,
+      "cluster_ratio_pct": 0.23871726905095206
+    },
+    {
+      "k": 8,
+      "cluster_id": 2,
+      "Recency_original": 47.045557869806515,
+      "Frequency_original": 22.91730014907596,
+      "Monetary_original": 2.3428499364830158,
+      "cluster_count": 94589,
+      "cluster_ratio_pct": 6.943427971174816
+    },
+    {
+      "k": 8,
+      "cluster_id": 3,
+      "Recency_original": 615.0797995570948,
+      "Frequency_original": 1.4784000755246094,
+      "Monetary_original": 0.13659544034151905,
+      "cluster_count": 254237,
+      "cluster_ratio_pct": 18.6625960429603
+    },
+    {
+      "k": 8,
+      "cluster_id": 4,
+      "Recency_original": 38.68907669021169,
+      "Frequency_original": 30.509649344096854,
+      "Monetary_original": 6.394214376421692,
+      "cluster_count": 15856,
+      "cluster_ratio_pct": 1.1639302023591316
+    },
+    {
+      "k": 8,
+      "cluster_id": 5,
+      "Recency_original": 93.11440779384307,
+      "Frequency_original": 3.188246296773847,
+      "Monetary_original": 0.2582366302322694,
+      "cluster_count": 451208,
+      "cluster_ratio_pct": 33.12150723675952
+    },
+    {
+      "k": 8,
+      "cluster_id": 6,
+      "Recency_original": 22.114890580400157,
+      "Frequency_original": 49.82962654614647,
+      "Monetary_original": 3.7959700194729784,
+      "cluster_count": 16816,
+      "cluster_ratio_pct": 1.234400244883398
+    },
+    {
+      "k": 8,
+      "cluster_id": 7,
+      "Recency_original": 342.8372779271158,
+      "Frequency_original": 2.631148479767484,
+      "Monetary_original": 0.23588953978388616,
+      "cluster_count": 296862,
+      "cluster_ratio_pct": 21.79153933733202
+    }
+  ]
+}

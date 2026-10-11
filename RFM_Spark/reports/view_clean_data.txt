@@ -1,0 +1,140 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+
+
+====================================================================================================
+1. CLEAN TRANSACTIONS
+====================================================================================================
+
+--- SCHEMA ---
+root
+ |-- t_dat: date (nullable = true)
+ |-- customer_id: string (nullable = true)
+ |-- article_id: string (nullable = true)
+ |-- price: double (nullable = true)
+ |-- sales_channel_id: integer (nullable = true)
+
+
+--- CAC COT ---
+['t_dat', 'customer_id', 'article_id', 'price', 'sales_channel_id']
+
+--- 10 DONG DAU ---
++----------+----------------------------------------------------------------+----------+--------------------+----------------+
+|t_dat     |customer_id                                                     |article_id|price               |sales_channel_id|
++----------+----------------------------------------------------------------+----------+--------------------+----------------+
+|2019-11-29|aaa78c87aacba903d16f393da3edeca27d62e642b1a639a882f4dac368626041|0706016003|0.025288135593220337|2               |
+|2019-11-29|aaa78c87aacba903d16f393da3edeca27d62e642b1a639a882f4dac368626041|0706016001|0.025288135593220337|2               |
+|2019-11-29|aaa78c87aacba903d16f393da3edeca27d62e642b1a639a882f4dac368626041|0682236013|0.018983050847457626|2               |
+|2019-11-29|aaa78c87aacba903d16f393da3edeca27d62e642b1a639a882f4dac368626041|0706016016|0.025288135593220337|2               |
+|2019-11-29|aaa7a0483dd5b9e395d95324dcbfeb617af9800f39487d4b6aaee662bcd384c7|0783335003|0.020322033898305086|2               |
+|2019-11-29|aaa7b371465a823fec4312ef0f2807f924d54e5d41afb686223b76266bd9c599|0563519008|0.020322033898305086|1               |
+|2019-11-29|aaa85d7e704f11e59526f493b9d6016d0d6540a0aa131a4aeec8b76e7c775aa2|0783056001|0.023220338983050846|2               |
+|2019-11-29|aaa85d7e704f11e59526f493b9d6016d0d6540a0aa131a4aeec8b76e7c775aa2|0695325016|0.01742372881355932 |2               |
+|2019-11-29|aaa8f491632b9022bf20aa444c793bdf23621bd9463c050e86b73ada4cb059b6|0757333001|0.056932203389830516|2               |
+|2019-11-29|aaa8f491632b9022bf20aa444c793bdf23621bd9463c050e86b73ada4cb059b6|0685044006|0.03794915254237288 |2               |
++----------+----------------------------------------------------------------+----------+--------------------+----------------+
+only showing top 10 rows
+
+--- SO LUONG COT ---
+5
+
+
+====================================================================================================
+2. CLEAN CUSTOMERS
+====================================================================================================
+
+--- SCHEMA ---
+root
+ |-- customer_id: string (nullable = true)
+ |-- FN: string (nullable = true)
+ |-- Active: string (nullable = true)
+ |-- club_member_status: string (nullable = true)
+ |-- fashion_news_frequency: string (nullable = true)
+ |-- age: double (nullable = true)
+ |-- postal_code: string (nullable = true)
+
+
+--- CAC COT ---
+['customer_id', 'FN', 'Active', 'club_member_status', 'fashion_news_frequency', 'age', 'postal_code']
+
+--- 10 DONG DAU ---
++----------------------------------------------------------------+----+------+------------------+----------------------+----+----------------------------------------------------------------+
+|customer_id                                                     |FN  |Active|club_member_status|fashion_news_frequency|age |postal_code                                                     |
++----------------------------------------------------------------+----+------+------------------+----------------------+----+----------------------------------------------------------------+
+|c3f15bf960d69c1daeb9529574509f11e0971e18e966de08980018490caa747e|NULL|NULL  |ACTIVE            |NONE                  |23.0|2c29ae653a9282cce4151bd87643c907644e09541abc28ae87dea0d1f6603b1c|
+|c3f173b0d6bf41d49219b99306ad3609ec4d47336e449e819cb2a41fa14e49d4|NULL|NULL  |ACTIVE            |NONE                  |30.0|4a83661e0f89c5c2d3facf2d5c0a0f113271c2290246a633e0cea69e23a19d6d|
+|c3f179e846252ac3a753553a1875ac0e04891a05ee97d591b31e775fd584effd|1.0 |1.0   |ACTIVE            |REGULARLY             |27.0|2f809859be1d3993ddb1552b38d6b5e9e25bda3d15b60be13727c8ecc07d2fd8|
+|c3f18bcc83257fd6363fb45d882662dee30f68ee9ca1c0b7068cb1661c842b2a|NULL|NULL  |ACTIVE            |NONE                  |19.0|33b364fbee4259ce6d641229393fe6c0fcfadf2e9020eb21aed76db3128f82f7|
+|c3f193f48dc70b4e05f76ada0b6aaee3834914605cf46baaef8e9d42f13193f6|1.0 |1.0   |ACTIVE            |REGULARLY             |28.0|cf1d0d731643977e9f9dfaa79ea07d53b80d2b3187fae9becea57459ae7768ca|
+|c3f1a1bab3783cc660fbbd568e6aeadbed3fc7286f80628ba076d205581bccb6|1.0 |1.0   |ACTIVE            |REGULARLY             |41.0|eb4364a413de41855b65b3d0740c0db96bdc96b8959c015b79900c4739c3dd4a|
+|c3f1a641118b36f1ada0b33c136eaa24328036fc26df55eaefdae5ff5a31501d|1.0 |1.0   |ACTIVE            |REGULARLY             |45.0|1335c26d32bcb9ea0a413df4cfa4060666a94ab7409c305d58571934a12786c7|
+|c3f1aa43a48c3f7a1006111c449e8136cdc0c9c4ebd7a0cfe5abcdaf3f38afd4|NULL|NULL  |ACTIVE            |NONE                  |24.0|433c2dcc366083addaab59e30d405124e3a8cbc5d42357f47d9bae10ae5844a0|
+|c3f1b947b75c76ac88324099372a267a43aabd943c1beac4dcee1f874fd52bcc|NULL|NULL  |ACTIVE            |NONE                  |30.0|842fa9f17a0d87f9ad9d0657b97c5bf6c0f3bf0af8da26797245e9db8c4e702f|
+|c3f1cd3dc2bcbaf35cc953ac68bc86053c1280ca158ac3541e8c9601d98bdcf1|NULL|NULL  |ACTIVE            |NONE                  |22.0|2c29ae653a9282cce4151bd87643c907644e09541abc28ae87dea0d1f6603b1c|
++----------------------------------------------------------------+----+------+------------------+----------------------+----+----------------------------------------------------------------+
+only showing top 10 rows
+
+--- SO LUONG COT ---
+7
+
+
+====================================================================================================
+3. CLEAN ARTICLES
+====================================================================================================
+
+--- SCHEMA ---
+root
+ |-- article_id: string (nullable = true)
+ |-- product_code: string (nullable = true)
+ |-- prod_name: string (nullable = true)
+ |-- product_type_no: string (nullable = true)
+ |-- product_type_name: string (nullable = true)
+ |-- product_group_name: string (nullable = true)
+ |-- graphical_appearance_no: string (nullable = true)
+ |-- graphical_appearance_name: string (nullable = true)
+ |-- colour_group_code: string (nullable = true)
+ |-- colour_group_name: string (nullable = true)
+ |-- perceived_colour_value_id: string (nullable = true)
+ |-- perceived_colour_value_name: string (nullable = true)
+ |-- perceived_colour_master_id: string (nullable = true)
+ |-- perceived_colour_master_name: string (nullable = true)
+ |-- department_no: string (nullable = true)
+ |-- department_name: string (nullable = true)
+ |-- index_code: string (nullable = true)
+ |-- index_name: string (nullable = true)
+ |-- index_group_no: string (nullable = true)
+ |-- index_group_name: string (nullable = true)
+ |-- section_no: string (nullable = true)
+ |-- section_name: string (nullable = true)
+ |-- garment_group_no: string (nullable = true)
+ |-- garment_group_name: string (nullable = true)
+ |-- detail_desc: string (nullable = true)
+
+
+--- CAC COT ---
+['article_id', 'product_code', 'prod_name', 'product_type_no', 'product_type_name', 'product_group_name', 'graphical_appearance_no', 'graphical_appearance_name', 'colour_group_code', 'colour_group_name', 'perceived_colour_value_id', 'perceived_colour_value_name', 'perceived_colour_master_id', 'perceived_colour_master_name', 'department_no', 'department_name', 'index_code', 'index_name', 'index_group_no', 'index_group_name', 'section_no', 'section_name', 'garment_group_no', 'garment_group_name', 'detail_desc']
+
+--- 5 DONG DAU ---
++----------+------------+------------------------+---------------+-----------------+------------------+-----------------------+-------------------------+-----------------+-----------------+-------------------------+---------------------------+--------------------------+----------------------------+-------------+---------------+----------+----------+--------------+----------------+----------+--------------------------+----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|article_id|product_code|prod_name               |product_type_no|product_type_name|product_group_name|graphical_appearance_no|graphical_appearance_name|colour_group_code|colour_group_name|perceived_colour_value_id|perceived_colour_value_name|perceived_colour_master_id|perceived_colour_master_name|department_no|department_name|index_code|index_name|index_group_no|index_group_name|section_no|section_name              |garment_group_no|garment_group_name|detail_desc                                                                                                                                                                                                   |
++----------+------------+------------------------+---------------+-----------------+------------------+-----------------------+-------------------------+-----------------+-----------------+-------------------------+---------------------------+--------------------------+----------------------------+-------------+---------------+----------+----------+--------------+----------------+----------+--------------------------+----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|0825720010|0825720     |Fidde tee(1)            |255            |T-shirt          |Garment Upper body|1010016                |Solid                    |72               |Blue             |1                        |Dusty Light                |2                         |Blue                        |1643         |Basic 1        |D         |Divided   |2             |Divided         |51        |Divided Basics            |1002            |Jersey Basic      |Cropped, boxy-style T-shirt in soft cotton jersey with dropped shoulders and ribbing around the neckline.                                                                                                     |
+|0825726001|0825726     |SPEED Lucy Cable Sweater|252            |Sweater          |Garment Upper body|1010016                |Solid                    |10               |White            |3                        |Light                      |9                         |White                       |1647         |Tops Knitwear  |D         |Divided   |2             |Divided         |53        |Divided Collection        |1003            |Knitwear          |Jumper in a soft cable knit with dropped shoulders, long, wide sleeves and ribbing around the neckline, cuffs and hem.                                                                                        |
+|0825728001|0825728     |Clash HW PU             |272            |Trousers         |Garment Lower body|1010016                |Solid                    |09               |Black            |4                        |Dark                       |5                         |Black                       |1722         |Trouser        |A         |Ladieswear|1             |Ladieswear      |15        |Womens Everyday Collection|1009            |Trousers          |Ankle-length trousers in imitation leather with a high waist, zip fly with a concealed hook-and-eye fastening, front pockets and wide, tapered legs.                                                          |
+|0825728002|0825728     |Clash HW PU             |272            |Trousers         |Garment Lower body|1010016                |Solid                    |14               |Dark Beige       |2                        |Medium Dusty               |13                        |Brown                       |1722         |Trouser        |A         |Ladieswear|1             |Ladieswear      |15        |Womens Everyday Collection|1009            |Trousers          |Ankle-length trousers in imitation leather with a high waist, zip fly with a concealed hook-and-eye fastening, front pockets and wide, tapered legs.                                                          |
+|0825733002|0825733     |Pointer                 |252            |Sweater          |Garment Upper body|1010016                |Solid                    |11               |Off White        |1                        |Dusty Light                |9                         |White                       |1626         |Knitwear       |A         |Ladieswear|1             |Ladieswear      |15        |Womens Everyday Collection|1003            |Knitwear          |Boxy-style, long-sleeved jumper in a rib knit containing some wool. Polo neck with large metal and imitation pearl buttons, and ribbing at the cuffs and hem. The polyester content of the jumper is recycled.|
++----------+------------+------------------------+---------------+-----------------+------------------+-----------------------+-------------------------+-----------------+-----------------+-------------------------+---------------------------+--------------------------+----------------------------+-------------+---------------+----------+----------+--------------+----------------+----------+--------------------------+----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+--- SO LUONG COT ---
+25
+
+
+====================================================================================================
+VIEW CLEAN DATA HOAN TAT
+====================================================================================================
+SUCCESS: The process with PID 15916 (child process of PID 6944) has been terminated.
+SUCCESS: The process with PID 6944 (child process of PID 21948) has been terminated.
+SUCCESS: The process with PID 21948 (child process of PID 14176) has been terminated.

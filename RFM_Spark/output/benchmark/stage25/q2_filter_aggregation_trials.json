@@ -1,0 +1,147 @@
+{
+  "query_id": "Q2",
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "mode": "NO_CACHE",
+      "runtime_sec": 0.4674640999996882,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "mode": "CACHE",
+      "runtime_sec": 0.6532607000003736,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    }
+  ],
+  "measured_order": [
+    [
+      "NO_CACHE",
+      "CACHE"
+    ],
+    [
+      "CACHE",
+      "NO_CACHE"
+    ],
+    [
+      "NO_CACHE",
+      "CACHE"
+    ]
+  ],
+  "trials": [
+    {
+      "query_id": "Q2",
+      "round": 1,
+      "order_index": 1,
+      "trial": 1,
+      "mode": "NO_CACHE",
+      "runtime_sec": 0.36398529999996754,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q2",
+      "round": 1,
+      "order_index": 2,
+      "trial": 1,
+      "mode": "CACHE",
+      "runtime_sec": 0.4832038999998076,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q2",
+      "round": 2,
+      "order_index": 1,
+      "trial": 2,
+      "mode": "CACHE",
+      "runtime_sec": 0.44672840000021097,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q2",
+      "round": 2,
+      "order_index": 2,
+      "trial": 2,
+      "mode": "NO_CACHE",
+      "runtime_sec": 0.30773709999994026,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q2",
+      "round": 3,
+      "order_index": 1,
+      "trial": 3,
+      "mode": "NO_CACHE",
+      "runtime_sec": 0.3254504999999881,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q2",
+      "round": 3,
+      "order_index": 2,
+      "trial": 3,
+      "mode": "CACHE",
+      "runtime_sec": 0.44168749999971624,
+      "result": {
+        "filtered_row_count": 10980132,
+        "filtered_sum_price": 298167.1367814389
+      },
+      "pass": true
+    }
+  ],
+  "summary_by_mode": {
+    "NO_CACHE": {
+      "min_sec": 0.30773709999994026,
+      "max_sec": 0.36398529999996754,
+      "mean_sec": 0.332390966666632,
+      "median_sec": 0.3254504999999881,
+      "population_std_sec": 0.023481802301269568,
+      "trial_times_sec": [
+        0.36398529999996754,
+        0.30773709999994026,
+        0.3254504999999881
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 0.44168749999971624,
+      "max_sec": 0.4832038999998076,
+      "mean_sec": 0.4572065999999116,
+      "median_sec": 0.44672840000021097,
+      "population_std_sec": 0.018497700283498158,
+      "trial_times_sec": [
+        0.4832038999998076,
+        0.44672840000021097,
+        0.44168749999971624
+      ],
+      "all_finite": true
+    }
+  }
+}

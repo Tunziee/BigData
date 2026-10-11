@@ -1,0 +1,89 @@
+{
+  "v1_negative_result": "At minSupport 0.001, no article pair occurred in at least 0.1% of the complete customer-day basket universe, so no association rule was produced.",
+  "v2_selection": "Stage 28 V2 evaluated the pre-registered descending support ladder and selected the highest threshold satisfying the predefined rule-generation gate.",
+  "highest_lift_rule": {
+    "antecedent": [
+      "0733935001"
+    ],
+    "consequent": [
+      "0733936001"
+    ],
+    "support": 0.0002537394912589278,
+    "confidence": 0.8121254846669017,
+    "lift": 2819.9788800142346,
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "antecedent_products": [
+      {
+        "article_id": "0733935001",
+        "prod_name": "Pretty Please Triangle Top",
+        "product_group_name": "Swimwear"
+      }
+    ],
+    "consequent_products": [
+      {
+        "article_id": "0733936001",
+        "prod_name": "Pretty Please Cheeky Tanga",
+        "product_group_name": "Swimwear"
+      }
+    ]
+  },
+  "highest_confidence_rule": {
+    "ranking": "confidence",
+    "antecedent": "0712924008",
+    "consequent": "0590928019",
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "support": 0.0002951483665685445,
+    "confidence": 0.9103260869565217,
+    "lift": 2380.738426824534
+  },
+  "highest_support_rule": {
+    "ranking": "support",
+    "antecedent": "0684209013",
+    "consequent": "0688537011",
+    "antecedent_size": 1,
+    "consequent_size": 1,
+    "support": 0.0007689275729035738,
+    "confidence": 0.7174270448006577,
+    "lift": 601.1781087330187
+  },
+  "frequent_itemsets": [
+    {
+      "items": "0706016001",
+      "freq": 42146,
+      "support": 0.00464153845425294,
+      "itemset_size": 1,
+      "products": "[{\"article_id\": \"0706016001\", \"prod_name\": \"Jade HW Skinny Denim TRS\", \"product_group_name\": \"Garment Lower body\"}]"
+    },
+    {
+      "items": "0706016002",
+      "freq": 30544,
+      "support": 0.003363810338981203,
+      "itemset_size": 1,
+      "products": "[{\"article_id\": \"0706016002\", \"prod_name\": \"Jade HW Skinny Denim TRS\", \"product_group_name\": \"Garment Lower body\"}]"
+    },
+    {
+      "items": "0372860001",
+      "freq": 29179,
+      "support": 0.003213482906008791,
+      "itemset_size": 1,
+      "products": "[{\"article_id\": \"0372860001\", \"prod_name\": \"7p Basic Shaftless\", \"product_group_name\": \"Socks & Tights\"}]"
+    },
+    {
+      "items": "0610776002",
+      "freq": 24975,
+      "support": 0.0027504964384512686,
+      "itemset_size": 1,
+      "products": "[{\"article_id\": \"0610776002\", \"prod_name\": \"Tilly (1)\", \"product_group_name\": \"Garment Upper body\"}]"
+    },
+    {
+      "items": "0759871002",
+      "freq": 23579,
+      "support": 0.002596754975865564,
+      "itemset_size": 1,
+      "products": "[{\"article_id\": \"0759871002\", \"prod_name\": \"Tilda tank\", \"product_group_name\": \"Garment Upper body\"}]"
+    }
+  ],
+  "safe_interpretation": "Rules describe product co-occurrence within customer-day basket proxies and do not establish causality or classification accuracy."
+}

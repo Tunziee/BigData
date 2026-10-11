@@ -1,0 +1,21 @@
+{
+  "missing_sql_customers": 0,
+  "missing_stage5_customers": 0,
+  "recency_mismatch_count": 0,
+  "frequency_mismatch_count": 0,
+  "total_items_mismatch_count": 0,
+  "product_variety_mismatch_count": 0,
+  "monetary_max_abs_diff": 9.947598300641403e-14,
+  "monetary_mean_abs_diff": 3.56937251811053e-17,
+  "avg_basket_max_abs_diff": 0.0,
+  "avg_basket_mean_abs_diff": 0.0,
+  "sql_customer_count": 1362281,
+  "stage5_customer_count": 1362281,
+  "monetary_tolerance": 1e-08,
+  "avg_basket_tolerance": 1e-08,
+  "monetary_pass": true,
+  "avg_basket_pass": true,
+  "customer_universe_pass": true,
+  "exact_feature_pass": true,
+  "pass": true
+}

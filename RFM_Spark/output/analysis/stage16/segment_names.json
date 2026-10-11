@@ -1,0 +1,29 @@
+{
+  "segments": {
+    "0": {
+      "name_vi": "Khách hàng mua ít nhưng giỏ lớn",
+      "name_en": "Infrequent Large-Basket Customers",
+      "evidence_supported": true
+    },
+    "1": {
+      "name_vi": "Khách hàng hoạt động giá trị cao",
+      "name_en": "Active High-Value Customers",
+      "evidence_supported": true
+    },
+    "2": {
+      "name_vi": "Khách hàng lâu chưa quay lại",
+      "name_en": "Lapsed Customers",
+      "evidence_supported": true
+    },
+    "3": {
+      "name_vi": "Khách hàng ít tương tác",
+      "name_en": "Low-Engagement Customers",
+      "evidence_supported": true
+    },
+    "4": {
+      "name_vi": "Khách hàng hoạt động thường xuyên",
+      "name_en": "Active Regular Customers",
+      "evidence_supported": true
+    }
+  }
+}

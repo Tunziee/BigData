@@ -1,0 +1,101 @@
+{
+  "Q1": {
+    "query_id": "Q1",
+    "query_name": "FULL_SCAN",
+    "CSV": {
+      "min_sec": 3.731787999999824,
+      "max_sec": 4.27168689999985,
+      "mean_sec": 3.9193591333332733,
+      "median_sec": 3.7546025000001464,
+      "population_std_sec": 0.24930739623439338,
+      "trial_times_sec": [
+        3.731787999999824,
+        3.7546025000001464,
+        4.27168689999985
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 0.17797110000014982,
+      "max_sec": 0.22611050000000432,
+      "mean_sec": 0.20638913333338374,
+      "median_sec": 0.2150857999999971,
+      "population_std_sec": 0.020592465716359077,
+      "trial_times_sec": [
+        0.17797110000014982,
+        0.2150857999999971,
+        0.22611050000000432
+      ],
+      "all_finite": true
+    },
+    "csv_over_parquet_ratio": 17.456301159817137,
+    "parquet_runtime_reduction_pct": 94.27140955667109,
+    "result_equality_pass": true
+  },
+  "Q2": {
+    "query_id": "Q2",
+    "query_name": "PROJECTION_FILTER",
+    "CSV": {
+      "min_sec": 17.686746099999937,
+      "max_sec": 25.48547099999996,
+      "mean_sec": 20.92830723333327,
+      "median_sec": 19.612704599999915,
+      "population_std_sec": 3.3169398781703743,
+      "trial_times_sec": [
+        17.686746099999937,
+        25.48547099999996,
+        19.612704599999915
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 0.3100079000000733,
+      "max_sec": 0.49283679999985,
+      "mean_sec": 0.3727508666666684,
+      "median_sec": 0.315407900000082,
+      "population_std_sec": 0.08494219029581636,
+      "trial_times_sec": [
+        0.315407900000082,
+        0.3100079000000733,
+        0.49283679999985
+      ],
+      "all_finite": true
+    },
+    "csv_over_parquet_ratio": 62.18203348741365,
+    "parquet_runtime_reduction_pct": 98.3918184338529,
+    "result_equality_pass": true
+  },
+  "Q3": {
+    "query_id": "Q3",
+    "query_name": "CUSTOMER_AGGREGATION",
+    "CSV": {
+      "min_sec": 29.210809199999858,
+      "max_sec": 30.51882599999999,
+      "mean_sec": 29.92521929999998,
+      "median_sec": 30.046022700000094,
+      "population_std_sec": 0.5407846665475006,
+      "trial_times_sec": [
+        29.210809199999858,
+        30.51882599999999,
+        30.046022700000094
+      ],
+      "all_finite": true
+    },
+    "PARQUET": {
+      "min_sec": 7.419256999999789,
+      "max_sec": 9.196170100000018,
+      "mean_sec": 8.014507633333247,
+      "median_sec": 7.428095799999937,
+      "population_std_sec": 0.8355693348223141,
+      "trial_times_sec": [
+        7.428095799999937,
+        9.196170100000018,
+        7.419256999999789
+      ],
+      "all_finite": true
+    },
+    "csv_over_parquet_ratio": 4.044915885441373,
+    "parquet_runtime_reduction_pct": 75.27760704247916,
+    "result_equality_pass": true
+  }
+}

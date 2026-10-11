@@ -1,0 +1,205 @@
+{
+  "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means.",
+  "rows": [
+    {
+      "cluster_id": 0,
+      "feature": "Recency",
+      "actual_raw_arithmetic_mean": 333.10277862334004,
+      "representative_centroid_derived_raw_value": 333.1063976523084,
+      "absolute_difference": 0.00361902896833044,
+      "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+    },
+    {
+      "cluster_id": 0,
+      "feature": "Frequency",
+      "actual_raw_arithmetic_mean": 1.9970225638293824,
+      "representative_centroid_derived_raw_value": 1.7947439297153966,
+      "absolute_difference": 0.20227863411398572,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 0,
+      "feature": "Monetary",
+      "actual_raw_arithmetic_mean": 0.35722646580728784,
+      "representative_centroid_derived_raw_value": 0.3317321977552104,
+      "absolute_difference": 0.02549426805207744,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 0,
+      "feature": "AvgBasketSize",
+      "actual_raw_arithmetic_mean": 7.368863745113108,
+      "representative_centroid_derived_raw_value": 6.729805690467448,
+      "absolute_difference": 0.6390580546456599,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 0,
+      "feature": "ProductVariety",
+      "actual_raw_arithmetic_mean": 11.54721566911457,
+      "representative_centroid_derived_raw_value": 9.670272928360015,
+      "absolute_difference": 1.8769427407545543,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 1,
+      "feature": "Recency",
+      "actual_raw_arithmetic_mean": 53.902010719205435,
+      "representative_centroid_derived_raw_value": 53.90213522102849,
+      "absolute_difference": 0.00012450182305201452,
+      "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+    },
+    {
+      "cluster_id": 1,
+      "feature": "Frequency",
+      "actual_raw_arithmetic_mean": 24.07674187088335,
+      "representative_centroid_derived_raw_value": 20.470654105483096,
+      "absolute_difference": 3.606087765400254,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 1,
+      "feature": "Monetary",
+      "actual_raw_arithmetic_mean": 2.9133534566465213,
+      "representative_centroid_derived_raw_value": 2.5700920379583683,
+      "absolute_difference": 0.3432614186881531,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 1,
+      "feature": "AvgBasketSize",
+      "actual_raw_arithmetic_mean": 4.875730807887345,
+      "representative_centroid_derived_raw_value": 4.3930963899543904,
+      "absolute_difference": 0.4826344179329549,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 1,
+      "feature": "ProductVariety",
+      "actual_raw_arithmetic_mean": 83.5391378332388,
+      "representative_centroid_derived_raw_value": 73.8568272528723,
+      "absolute_difference": 9.68231058036649,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 2,
+      "feature": "Recency",
+      "actual_raw_arithmetic_mean": 568.063887670683,
+      "representative_centroid_derived_raw_value": 568.063152026456,
+      "absolute_difference": 0.00073564422700656,
+      "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+    },
+    {
+      "cluster_id": 2,
+      "feature": "Frequency",
+      "actual_raw_arithmetic_mean": 1.4775854251373268,
+      "representative_centroid_derived_raw_value": 1.356062613635444,
+      "absolute_difference": 0.12152281150188293,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 2,
+      "feature": "Monetary",
+      "actual_raw_arithmetic_mean": 0.09047617382516669,
+      "representative_centroid_derived_raw_value": 0.08790916280074218,
+      "absolute_difference": 0.002567011024424512,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 2,
+      "feature": "AvgBasketSize",
+      "actual_raw_arithmetic_mean": 2.1633301107076117,
+      "representative_centroid_derived_raw_value": 1.9934052679227543,
+      "absolute_difference": 0.16992484278485742,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 2,
+      "feature": "ProductVariety",
+      "actual_raw_arithmetic_mean": 2.888176135223328,
+      "representative_centroid_derived_raw_value": 2.437124359228619,
+      "absolute_difference": 0.451051775994709,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 3,
+      "feature": "Recency",
+      "actual_raw_arithmetic_mean": 157.18148405739745,
+      "representative_centroid_derived_raw_value": 157.18089517839957,
+      "absolute_difference": 0.0005888789978882869,
+      "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+    },
+    {
+      "cluster_id": 3,
+      "feature": "Frequency",
+      "actual_raw_arithmetic_mean": 2.0571646408003748,
+      "representative_centroid_derived_raw_value": 1.8391923836231272,
+      "absolute_difference": 0.21797225717724755,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 3,
+      "feature": "Monetary",
+      "actual_raw_arithmetic_mean": 0.11732698691832902,
+      "representative_centroid_derived_raw_value": 0.11420462288242827,
+      "absolute_difference": 0.003122364035900743,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 3,
+      "feature": "AvgBasketSize",
+      "actual_raw_arithmetic_mean": 2.0486663318283957,
+      "representative_centroid_derived_raw_value": 1.925698846094574,
+      "absolute_difference": 0.12296748573382166,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 3,
+      "feature": "ProductVariety",
+      "actual_raw_arithmetic_mean": 3.7338369626264774,
+      "representative_centroid_derived_raw_value": 3.155862550873124,
+      "absolute_difference": 0.5779744117533534,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 4,
+      "feature": "Recency",
+      "actual_raw_arithmetic_mean": 96.82912749553954,
+      "representative_centroid_derived_raw_value": 96.82781122719015,
+      "absolute_difference": 0.0013162683493845861,
+      "note": "Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid."
+    },
+    {
+      "cluster_id": 4,
+      "feature": "Frequency",
+      "actual_raw_arithmetic_mean": 9.264621310911899,
+      "representative_centroid_derived_raw_value": 8.340973674286454,
+      "absolute_difference": 0.9236476366254447,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 4,
+      "feature": "Monetary",
+      "actual_raw_arithmetic_mean": 0.6589094739249459,
+      "representative_centroid_derived_raw_value": 0.6308064927468,
+      "absolute_difference": 0.028102981178145914,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 4,
+      "feature": "AvgBasketSize",
+      "actual_raw_arithmetic_mean": 2.992304870237259,
+      "representative_centroid_derived_raw_value": 2.840866062834033,
+      "absolute_difference": 0.1514388074032258,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    },
+    {
+      "cluster_id": 4,
+      "feature": "ProductVariety",
+      "actual_raw_arithmetic_mean": 22.875393530011948,
+      "representative_centroid_derived_raw_value": 20.716489178771237,
+      "absolute_difference": 2.158904351240711,
+      "note": "Representative values implied by transformed-space centroids; not raw cluster arithmetic means."
+    }
+  ]
+}

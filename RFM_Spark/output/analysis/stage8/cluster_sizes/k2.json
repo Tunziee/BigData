@@ -1,0 +1,19 @@
+{
+  "stage": 8,
+  "k": 2,
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 1189245,
+      "ratio_pct": 87.29806846017819
+    },
+    {
+      "cluster_id": 1,
+      "count": 173036,
+      "ratio_pct": 12.701931539821814
+    }
+  ],
+  "cluster_count_sum": 1362281,
+  "num_produced_clusters": 2,
+  "expected_row_count": 1362281
+}

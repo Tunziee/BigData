@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="680" x2="1330" y2="680" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="669" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="150" y1="547.5" x2="1330" y2="547.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="536.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">9</text>
+<line x1="150" y1="415" x2="1330" y2="415" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="404" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">18</text>
+<line x1="150" y1="282.5" x2="1330" y2="282.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="271.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">27</text>
+<line x1="150" y1="150" x2="1330" y2="150" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="139" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">36</text>
+<line x1="150" y1="680" x2="1330" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="150" x2="150" y2="680" stroke="#172033" stroke-width="2"/>
+<line x1="346.667" y1="680" x2="346.667" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="346.667" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">FULL_SCAN</text>
+<line x1="740" y1="680" x2="740" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="740" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">PROJECTION_FILTER</text>
+<line x1="1133.33" y1="680" x2="1133.33" y2="688" stroke="#172033" stroke-width="2"/>
+<text x="1133.33" y="695" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">CUSTOMER_AGGREGATION</text>
+<text x="66" y="415" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 415.0)">Median seconds</text>
+<rect x="236.533" y="624.809" width="110.133" height="55.1914" fill="#275DAD"/>
+<text x="291.6" y="599.809" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">3.75</text>
+<rect x="346.667" y="676.838" width="110.133" height="3.16169" fill="#D97706"/>
+<text x="401.733" y="651.838" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">0.22</text>
+<rect x="629.867" y="391.7" width="110.133" height="288.3" fill="#275DAD"/>
+<text x="684.933" y="366.7" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">19.61</text>
+<rect x="740" y="675.364" width="110.133" height="4.63639" fill="#D97706"/>
+<text x="795.067" y="650.364" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">0.32</text>
+<rect x="1023.2" y="238.333" width="110.133" height="441.667" fill="#275DAD"/>
+<text x="1078.27" y="213.333" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">30.05</text>
+<rect x="1133.33" y="570.809" width="110.133" height="109.191" fill="#D97706"/>
+<text x="1188.4" y="545.809" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="14px" font-weight="400" text-anchor="middle">7.43</text>
+<text x="1320" y="170" fill="#275DAD" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="end">CSV</text>
+<text x="1320" y="198" fill="#D97706" font-family="Segoe UI, Arial, sans-serif" font-size="16px" font-weight="400" text-anchor="end">Parquet</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">CSV vs Parquet query runtime</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Stage 24 controlled repeated-read medians</text>
+</svg>

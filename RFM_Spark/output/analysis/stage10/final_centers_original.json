@@ -1,0 +1,43 @@
+{
+  "stage": 10,
+  "authority": "MAIN_KMEANS_FINAL",
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "selected_k": 4,
+  "formula": "original = scaled * std + mean",
+  "centers_original": [
+    [
+      125.08151254402787,
+      4.392383577484173,
+      0.3655620960842205
+    ],
+    [
+      52.93274251377872,
+      19.7918850679208,
+      1.936449339297162
+    ],
+    [
+      535.4611238775719,
+      1.8030637886399346,
+      0.16760376169176283
+    ],
+    [
+      26.101455117094474,
+      49.02390261598602,
+      6.6788930520703484
+    ]
+  ],
+  "validation": {
+    "pass": true,
+    "feature_order": [
+      "Recency",
+      "Frequency",
+      "Monetary"
+    ],
+    "formula": "original = scaled * std + mean",
+    "negative_values": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "violations": [],
+  "corrected_terms": [
+    "Frequency = distinct purchase days",
+    "AvgBasketSize = item-row proxy per distinct purchase day",
+    "silhouette/SSE are clustering quality metrics, not accuracy",
+    "M2 is objective-specific, not universal",
+    "cache and Parquet conclusions are workload/setup dependent",
+    "lapsed customers instead of churned customer"
+  ]
+}

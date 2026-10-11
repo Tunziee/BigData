@@ -1,0 +1,63 @@
+{
+  "queries": {
+    "Q1": {
+      "query_id": "Q1",
+      "comparisons": {
+        "row_count": {
+          "csv": 31788324,
+          "parquet": 31788324,
+          "equal": true
+        }
+      },
+      "pass": true
+    },
+    "Q2": {
+      "query_id": "Q2",
+      "comparisons": {
+        "filtered_row_count": {
+          "csv": 10980132,
+          "parquet": 10980132,
+          "equal": true
+        },
+        "filtered_sum_price": {
+          "csv": 298167.1367789283,
+          "parquet": 298167.1367814389,
+          "absolute_difference": 2.510612830519676e-06,
+          "tolerance": 0.002981671367789283,
+          "equal_within_tolerance": true
+        }
+      },
+      "pass": true
+    },
+    "Q3": {
+      "query_id": "Q3",
+      "comparisons": {
+        "grouped_customer_count": {
+          "csv": 1362281,
+          "parquet": 1362281,
+          "equal": true
+        },
+        "sum_grouped_transaction_rows": {
+          "csv": 31788324,
+          "parquet": 31788324,
+          "equal": true
+        },
+        "max_customer_max_t_dat": {
+          "csv": "2020-09-22",
+          "parquet": "2020-09-22",
+          "equal": true
+        },
+        "sum_grouped_monetary": {
+          "csv": 884645.974051063,
+          "parquet": 884645.9740506222,
+          "absolute_difference": 4.407484084367752e-07,
+          "tolerance": 0.00884645974051063,
+          "equal_within_tolerance": true
+        }
+      },
+      "pass": true
+    }
+  },
+  "price_sum_tolerance_definition": "absolute difference <= 1e-08 * max(1, abs(CSV sum))",
+  "pass": true
+}

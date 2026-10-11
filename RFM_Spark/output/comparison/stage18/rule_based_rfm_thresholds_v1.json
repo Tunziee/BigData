@@ -1,0 +1,40 @@
+{
+  "stage": 18,
+  "authority": "RULE_BASED_RFM_QUINTILE_V1",
+  "cohort_authority": "DETERMINISTIC_1M_COMPARISON_COHORT",
+  "cohort_size": 1000000,
+  "threshold_source": "locked Stage 17 1M cohort",
+  "quantile_method": "Spark approxQuantile",
+  "relative_error": 0.0,
+  "probabilities": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "thresholds": {
+    "Recency": [
+      35.0,
+      96.0,
+      232.0,
+      460.0
+    ],
+    "Frequency": [
+      1.0,
+      2.0,
+      4.0,
+      10.0
+    ],
+    "Monetary": [
+      0.06859322033898305,
+      0.1642881355932203,
+      0.36584745762711857,
+      0.8910847457627119
+    ]
+  },
+  "duplicate_thresholds": {},
+  "tie_policy": "same raw value receives same score",
+  "recency_direction": "lower_is_better",
+  "frequency_direction": "higher_is_better",
+  "monetary_direction": "higher_is_better"
+}

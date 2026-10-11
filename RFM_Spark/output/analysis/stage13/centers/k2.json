@@ -1,0 +1,29 @@
+{
+  "stage": 13,
+  "authority": "ENHANCED_KMEANS_K_SWEEP",
+  "k": 2,
+  "space": "standardized improved 5D",
+  "feature_order": [
+    "Recency_improved",
+    "Frequency_log1p",
+    "Monetary_log1p",
+    "AvgBasketSize_log1p",
+    "ProductVariety_log1p"
+  ],
+  "centers_scaled_improved_5d": [
+    [
+      0.4152662113362465,
+      -0.6329574778372903,
+      -0.5762874020901237,
+      -0.20342601385290213,
+      -0.6378406812630084
+    ],
+    [
+      -0.6974279112593563,
+      1.06303426485137,
+      0.9678584680211854,
+      0.34164826336490006,
+      1.0712354675276692
+    ]
+  ]
+}

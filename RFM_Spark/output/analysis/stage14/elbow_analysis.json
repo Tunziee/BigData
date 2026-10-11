@@ -1,0 +1,51 @@
+{
+  "method": "normalized maximum perpendicular distance to the line connecting first and last WCSS points",
+  "formula": "x=(K-Kmin)/(Kmax-Kmin); y=(WCSS-WCSSlast)/(WCSSfirst-WCSSlast); distance=abs(x+y-1)/sqrt(2)",
+  "points": [
+    {
+      "k": 2,
+      "normalized_x": 0.0,
+      "normalized_wcss": 1.0,
+      "distance_to_endpoint_line": 0.0
+    },
+    {
+      "k": 3,
+      "normalized_x": 0.16666666666666666,
+      "normalized_wcss": 0.6529781280220989,
+      "distance_to_endpoint_line": 0.12753038869786593
+    },
+    {
+      "k": 4,
+      "normalized_x": 0.3333333333333333,
+      "normalized_wcss": 0.396616065499296,
+      "distance_to_endpoint_line": 0.1909546113489516
+    },
+    {
+      "k": 5,
+      "normalized_x": 0.5,
+      "normalized_wcss": 0.21411861550601807,
+      "distance_to_endpoint_line": 0.20214866559069333
+    },
+    {
+      "k": 6,
+      "normalized_x": 0.6666666666666666,
+      "normalized_wcss": 0.12599817061473104,
+      "distance_to_endpoint_line": 0.14660809953673995
+    },
+    {
+      "k": 7,
+      "normalized_x": 0.8333333333333334,
+      "normalized_wcss": 0.04884484236273172,
+      "distance_to_endpoint_line": 0.08331261093708238
+    },
+    {
+      "k": 8,
+      "normalized_x": 1.0,
+      "normalized_wcss": 0.0,
+      "distance_to_endpoint_line": 0.0
+    }
+  ],
+  "supporting_elbow_k": 5,
+  "supporting_elbow_distance": 0.20214866559069333,
+  "supporting_only": true
+}

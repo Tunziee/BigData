@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "authority": "CSV_PARQUET_IO_BENCHMARK_V1",
+  "source_row_count": 31788324,
+  "cache_used_in_measured_trials": true
+}

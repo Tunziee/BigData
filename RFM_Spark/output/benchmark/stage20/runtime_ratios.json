@@ -1,0 +1,42 @@
+{
+  "track_a_assignment": [
+    {
+      "numerator_model": "R1",
+      "denominator_model": "K1",
+      "ratio_definition": "median R1 runtime / median K1 runtime",
+      "ratio": 1.4843927433372646
+    },
+    {
+      "numerator_model": "R1",
+      "denominator_model": "K2",
+      "ratio_definition": "median R1 runtime / median K2 runtime",
+      "ratio": 1.4739932244034613
+    },
+    {
+      "numerator_model": "K1",
+      "denominator_model": "K2",
+      "ratio_definition": "median K1 runtime / median K2 runtime",
+      "ratio": 0.9929940920416904
+    }
+  ],
+  "track_b_build_assign": [
+    {
+      "numerator_model": "R1",
+      "denominator_model": "K1",
+      "ratio_definition": "median R1 runtime / median K1 runtime",
+      "ratio": 0.4902220949745247
+    },
+    {
+      "numerator_model": "R1",
+      "denominator_model": "K2",
+      "ratio_definition": "median R1 runtime / median K2 runtime",
+      "ratio": 0.3867914260755705
+    },
+    {
+      "numerator_model": "K1",
+      "denominator_model": "K2",
+      "ratio_definition": "median K1 runtime / median K2 runtime",
+      "ratio": 0.7890126333364693
+    }
+  ]
+}

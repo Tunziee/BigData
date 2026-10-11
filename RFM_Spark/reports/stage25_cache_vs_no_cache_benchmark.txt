@@ -1,0 +1,260 @@
+STAGE 25 — CONTROLLED CACHE VS NO-CACHE BENCHMARK
+
+AUTHORITY: CACHE_NO_CACHE_BENCHMARK_V1
+STAGE24_AUTHORITY: CSV_PARQUET_IO_BENCHMARK_V1
+SOURCE: PARQUET / D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\clean\transactions
+SOURCE_ROWS: 31788324
+SPARK_APPLICATION_ID: local-1791283466755
+PRIMARY_FINDING: CACHE_QUERY_DEPENDENT
+
+A. CACHE MATERIALIZATION:
+{
+  "storage_level_requested": "MEMORY_AND_DISK",
+  "storage_level_observed": {
+    "string": "Disk Memory Serialized 1x Replicated",
+    "useDisk": true,
+    "useMemory": true,
+    "useOffHeap": false,
+    "deserialized": false,
+    "replication": 1,
+    "is_cached_property": true
+  },
+  "materialized_row_count": 31788324,
+  "cache_materialization_sec": 9.530394299999898,
+  "materialization_includes": "persist registration plus first full count()",
+  "pass": true
+}
+
+B. STEADY-STATE RUNTIME:
+{
+  "Q1": {
+    "NO_CACHE": {
+      "min_sec": 0.1022570000000087,
+      "max_sec": 0.10571630000004006,
+      "mean_sec": 0.10418663333333218,
+      "median_sec": 0.1045865999999478,
+      "population_std_sec": 0.0014402937485936554,
+      "trial_times_sec": [
+        0.1045865999999478,
+        0.1022570000000087,
+        0.10571630000004006
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 0.34532290000015564,
+      "max_sec": 0.37044269999978496,
+      "mean_sec": 0.35828636666671326,
+      "median_sec": 0.35909350000019913,
+      "population_std_sec": 0.010270984573670379,
+      "trial_times_sec": [
+        0.35909350000019913,
+        0.37044269999978496,
+        0.34532290000015564
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 0.29125172134803273,
+    "cache_runtime_reduction_pct": -243.34561024106182,
+    "result_equality_pass": true
+  },
+  "Q2": {
+    "NO_CACHE": {
+      "min_sec": 0.30773709999994026,
+      "max_sec": 0.36398529999996754,
+      "mean_sec": 0.332390966666632,
+      "median_sec": 0.3254504999999881,
+      "population_std_sec": 0.023481802301269568,
+      "trial_times_sec": [
+        0.36398529999996754,
+        0.30773709999994026,
+        0.3254504999999881
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 0.44168749999971624,
+      "max_sec": 0.4832038999998076,
+      "mean_sec": 0.4572065999999116,
+      "median_sec": 0.44672840000021097,
+      "population_std_sec": 0.018497700283498158,
+      "trial_times_sec": [
+        0.4832038999998076,
+        0.44672840000021097,
+        0.44168749999971624
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 0.7285198344225136,
+    "cache_runtime_reduction_pct": -37.264622423449126,
+    "result_equality_pass": true
+  },
+  "Q3": {
+    "NO_CACHE": {
+      "min_sec": 6.753804599999967,
+      "max_sec": 7.654679100000067,
+      "mean_sec": 7.26732053333338,
+      "median_sec": 7.393477900000107,
+      "population_std_sec": 0.3784446036615485,
+      "trial_times_sec": [
+        6.753804599999967,
+        7.393477900000107,
+        7.654679100000067
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 6.681392499999674,
+      "max_sec": 7.6031124000001,
+      "mean_sec": 7.143523099999887,
+      "median_sec": 7.1460643999998865,
+      "population_std_sec": 0.37629486414111135,
+      "trial_times_sec": [
+        7.6031124000001,
+        6.681392499999674,
+        7.1460643999998865
+      ],
+      "all_finite": true
+    },
+    "no_cache_over_cache_ratio": 1.0346223440136117,
+    "cache_runtime_reduction_pct": 3.34637505307505,
+    "result_equality_pass": true
+  }
+}
+
+C. BREAK-EVEN:
+{
+  "Q1": {
+    "no_cache_median_sec": 0.1045865999999478,
+    "cache_median_sec": 0.35909350000019913,
+    "saved_time_per_execution_sec": -0.25450690000025133,
+    "break_even_executions": null,
+    "interpretation": "NO_BREAK_EVEN_OBSERVED"
+  },
+  "Q2": {
+    "no_cache_median_sec": 0.3254504999999881,
+    "cache_median_sec": 0.44672840000021097,
+    "saved_time_per_execution_sec": -0.12127790000022287,
+    "break_even_executions": null,
+    "interpretation": "NO_BREAK_EVEN_OBSERVED"
+  },
+  "Q3": {
+    "no_cache_median_sec": 7.393477900000107,
+    "cache_median_sec": 7.1460643999998865,
+    "saved_time_per_execution_sec": 0.24741350000022067,
+    "break_even_executions": 39,
+    "interpretation": "CACHE_ADVANTAGE_AFTER_AMORTIZATION"
+  }
+}
+
+D. REPEATED WORKLOAD ESTIMATES:
+{
+  "Q1": [
+    {
+      "N": 1,
+      "no_cache_total_sec": 0.1045865999999478,
+      "cache_total_including_materialization_sec": 9.889487800000097,
+      "difference_sec_no_cache_minus_cache": -9.78490120000015,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 3,
+      "no_cache_total_sec": 0.3137597999998434,
+      "cache_total_including_materialization_sec": 10.607674800000495,
+      "difference_sec_no_cache_minus_cache": -10.293915000000652,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 5,
+      "no_cache_total_sec": 0.522932999999739,
+      "cache_total_including_materialization_sec": 11.325861800000894,
+      "difference_sec_no_cache_minus_cache": -10.802928800001155,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 10,
+      "no_cache_total_sec": 1.045865999999478,
+      "cache_total_including_materialization_sec": 13.12132930000189,
+      "difference_sec_no_cache_minus_cache": -12.075463300002411,
+      "faster_mode": "NO_CACHE"
+    }
+  ],
+  "Q2": [
+    {
+      "N": 1,
+      "no_cache_total_sec": 0.3254504999999881,
+      "cache_total_including_materialization_sec": 9.977122700000109,
+      "difference_sec_no_cache_minus_cache": -9.651672200000121,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 3,
+      "no_cache_total_sec": 0.9763514999999643,
+      "cache_total_including_materialization_sec": 10.870579500000531,
+      "difference_sec_no_cache_minus_cache": -9.894228000000567,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 5,
+      "no_cache_total_sec": 1.6272524999999405,
+      "cache_total_including_materialization_sec": 11.764036300000953,
+      "difference_sec_no_cache_minus_cache": -10.136783800001012,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 10,
+      "no_cache_total_sec": 3.254504999999881,
+      "cache_total_including_materialization_sec": 13.997678300002008,
+      "difference_sec_no_cache_minus_cache": -10.743173300002127,
+      "faster_mode": "NO_CACHE"
+    }
+  ],
+  "Q3": [
+    {
+      "N": 1,
+      "no_cache_total_sec": 7.393477900000107,
+      "cache_total_including_materialization_sec": 16.676458699999785,
+      "difference_sec_no_cache_minus_cache": -9.282980799999677,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 3,
+      "no_cache_total_sec": 22.18043370000032,
+      "cache_total_including_materialization_sec": 30.968587499999558,
+      "difference_sec_no_cache_minus_cache": -8.788153799999236,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 5,
+      "no_cache_total_sec": 36.967389500000536,
+      "cache_total_including_materialization_sec": 45.26071629999933,
+      "difference_sec_no_cache_minus_cache": -8.293326799998795,
+      "faster_mode": "NO_CACHE"
+    },
+    {
+      "N": 10,
+      "no_cache_total_sec": 73.93477900000107,
+      "cache_total_including_materialization_sec": 80.99103829999876,
+      "difference_sec_no_cache_minus_cache": -7.056259299997691,
+      "faster_mode": "NO_CACHE"
+    }
+  ]
+}
+
+COMBINED_WORKLOAD:
+{
+  "steady_state_no_cache_cycle_sec": 7.823515000000043,
+  "steady_state_cache_cycle_sec": 7.951886300000297,
+  "cache_materialization_sec": 9.530394299999898,
+  "combined_cycle_saved_time_sec": -0.12837130000025354,
+  "combined_break_even_cycles": null,
+  "interpretation": "NO_BREAK_EVEN_OBSERVED"
+}
+
+QUERY_RESULT_EQUALITY_PASS: True
+CACHE_NO_CACHE_ONLY_DIFFERENCE: True
+MODELS_MODIFIED: False
+STAGE24_AUTHORITY_MODIFIED: False
+
+BENCHMARK_COMPLETE: True
+READY_FOR_STAGE_26: True

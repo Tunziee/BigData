@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<rect width="100%" height="100%" fill="#FBFCFE"/>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="679" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">0</text>
+<line x1="150" y1="553.75" x2="1330" y2="553.75" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="542.75" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">845.994</text>
+<line x1="150" y1="417.5" x2="1330" y2="417.5" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="406.5" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">1691.99</text>
+<line x1="150" y1="281.25" x2="1330" y2="281.25" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="270.25" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">2537.98</text>
+<line x1="150" y1="145" x2="1330" y2="145" stroke="#D7DEE9" stroke-width="1"/>
+<text x="134" y="134" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="end">3383.97</text>
+<line x1="150" y1="690" x2="1330" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="150" y1="145" x2="150" y2="690" stroke="#172033" stroke-width="2"/>
+<line x1="209" y1="690" x2="209" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="209" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Pretty Please Triangle Top → Pretty Please Cheeky Tanga</text>
+<line x1="327" y1="690" x2="327" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="327" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Pretty Please Cheeky Tanga → Pretty Please Triangle Top</text>
+<line x1="445" y1="690" x2="445" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="445" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Sweet and Bitter Top → Sweet &amp; Bitter Mid Tie Brief</text>
+<line x1="563" y1="690" x2="563" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="563" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Sweet &amp; Bitter Mid Tie Brief → Sweet and Bitter Top</text>
+<line x1="681" y1="690" x2="681" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="681" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">C Antibes Tie Tanga → C Antibes Triangle</text>
+<line x1="799" y1="690" x2="799" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="799" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">C Antibes Triangle → C Antibes Tie Tanga</text>
+<line x1="917" y1="690" x2="917" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="917" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Sweet &amp; Bitter Mid Tie Brief → Sweet and Bitter Top</text>
+<line x1="1035" y1="690" x2="1035" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1035" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Sweet and Bitter Top → Sweet &amp; Bitter Mid Tie Brief</text>
+<line x1="1153" y1="690" x2="1153" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1153" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Baby Love Cheeky Brief → Baby Love Triangle Top</text>
+<line x1="1271" y1="690" x2="1271" y2="698" stroke="#172033" stroke-width="2"/>
+<text x="1271" y="705" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">Baby Love Triangle Top → Baby Love Cheeky Brief</text>
+<text x="66" y="417.5" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="middle" transform="rotate(90 66.0 417.5)">Lift</text>
+<rect x="170.65" y="235.833" width="76.7" height="454.167" fill="#275DAD"/>
+<text x="209" y="207.833" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2819.979</text>
+<rect x="288.65" y="235.833" width="76.7" height="454.167" fill="#D97706"/>
+<text x="327" y="207.833" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2819.979</text>
+<rect x="406.65" y="262.168" width="76.7" height="427.832" fill="#168A6A"/>
+<text x="445" y="234.168" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2656.461</text>
+<rect x="524.65" y="262.168" width="76.7" height="427.832" fill="#8B5CF6"/>
+<text x="563" y="234.168" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2656.461</text>
+<rect x="642.65" y="272.846" width="76.7" height="417.154" fill="#C2415A"/>
+<text x="681" y="244.846" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2590.161</text>
+<rect x="760.65" y="272.846" width="76.7" height="417.154" fill="#596273"/>
+<text x="799" y="244.846" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2590.161</text>
+<rect x="878.65" y="273.298" width="76.7" height="416.702" fill="#275DAD"/>
+<text x="917" y="245.298" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2587.353</text>
+<rect x="996.65" y="273.298" width="76.7" height="416.702" fill="#D97706"/>
+<text x="1035" y="245.298" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2587.353</text>
+<rect x="1114.65" y="304.999" width="76.7" height="385.001" fill="#168A6A"/>
+<text x="1153" y="276.999" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2390.519</text>
+<rect x="1232.65" y="304.999" width="76.7" height="385.001" fill="#8B5CF6"/>
+<text x="1271" y="276.999" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="15px" font-weight="400" text-anchor="middle">2390.519</text>
+<text x="70" y="48" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="32px" font-weight="700" text-anchor="start">Top FP-Growth rules by lift</text>
+<text x="72" y="83" fill="#5B6575" font-family="Segoe UI, Arial, sans-serif" font-size="17px" font-weight="400" text-anchor="start">Stage 28 V2 locked rules; article IDs remain in the source CSV</text>
+</svg>

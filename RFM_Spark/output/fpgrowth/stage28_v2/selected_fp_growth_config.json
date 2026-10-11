@@ -1,0 +1,31 @@
+{
+  "selection_protocol": "HIGHEST_PREDEFINED_SUPPORT_MEETING_RULE_GATE",
+  "support_ladder": [
+    0.0005,
+    0.0002,
+    0.0001,
+    5e-05
+  ],
+  "selected_minSupport": 0.0002,
+  "minConfidence": 0.2,
+  "numPartitions": 64,
+  "basket_count": 9080179,
+  "minimum_support_basket_count": 1817,
+  "selection_reason": "First threshold in the pre-registered descending ladder satisfying pair-or-larger itemsets, at least 10 valid rules, and completed fit.",
+  "higher_threshold_results": [
+    {
+      "TrialOrder": 1,
+      "MinSupport": 0.0005,
+      "MinimumSupportBasketCount": 4541,
+      "FrequentItemsetCount": 380,
+      "SingletonItemsetCount": 376,
+      "PairOrLargerItemsetCount": 4,
+      "MaximumItemsetSize": 2,
+      "AssociationRuleCount": 5,
+      "SelectionGatePass": false,
+      "Selected": false,
+      "FailureReason": "ASSOCIATION_RULE_COUNT_BELOW_10",
+      "fit_status": "completed"
+    }
+  ]
+}

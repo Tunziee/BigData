@@ -1,0 +1,110 @@
+== Physical Plan ==
+AdaptiveSparkPlan (17)
++- Project (16)
+   +- HashAggregate (15)
+      +- Exchange (14)
+         +- HashAggregate (13)
+            +- Generate (12)
+               +- Filter (11)
+                  +- InMemoryTableScan (1)
+                        +- InMemoryRelation (2)
+                              +- AdaptiveSparkPlan (10)
+                                 +- == Final Plan ==
+                                    ResultQueryStage (8)
+                                    +- ObjectHashAggregate (7)
+                                       +- ShuffleQueryStage (6), Statistics(sizeInBytes=1762.5 MiB, rowCount=9.08E+6)
+                                          +- Exchange (5)
+                                             +- ObjectHashAggregate (4)
+                                                +- Scan parquet  (3)
+                                 +- == Initial Plan ==
+                                    ObjectHashAggregate (9)
+                                    +- Exchange (5)
+                                       +- ObjectHashAggregate (4)
+                                          +- Scan parquet  (3)
+
+
+(1) InMemoryTableScan
+Output [1]: [items#284]
+Arguments: [items#284], [(size(items#284, false) > 0)]
+
+(2) InMemoryRelation
+Arguments: [basket_proxy_id#289, customer_id#5, t_dat#6, items#284], StorageLevel(disk, memory, 1 replicas)
+
+(3) Scan parquet 
+Output [3]: [t_dat#0, customer_id#1, article_id#2]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,article_id:string>
+
+(4) ObjectHashAggregate
+Input [3]: [t_dat#0, customer_id#1, article_id#2]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [partial_collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [buf#1688]
+Results [3]: [customer_id#1, t_dat#0, buf#1689]
+
+(5) Exchange
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Arguments: hashpartitioning(customer_id#1, t_dat#0, 64), ENSURE_REQUIREMENTS, [plan_id=1478]
+
+(6) ShuffleQueryStage
+Output [3]: [customer_id#1, t_dat#0, buf#1689]
+Arguments: 0
+
+(7) ObjectHashAggregate
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [collect_set(article_id#2)#288]
+Results [4]: [sha2(cast(concat_ws(||, customer_id#1, cast(t_dat#0 as string)) as binary), 256) AS basket_proxy_id#289, customer_id#1, t_dat#0, sort_array(collect_set(article_id#2)#288, true) AS items#284]
+
+(8) ResultQueryStage
+Output [4]: [basket_proxy_id#289, customer_id#1, t_dat#0, items#284]
+Arguments: 1
+
+(9) ObjectHashAggregate
+Input [3]: [customer_id#1, t_dat#0, buf#1689]
+Keys [2]: [customer_id#1, t_dat#0]
+Functions [1]: [collect_set(article_id#2, 0, 0, true)]
+Aggregate Attributes [1]: [collect_set(article_id#2)#288]
+Results [4]: [sha2(cast(concat_ws(||, customer_id#1, cast(t_dat#0 as string)) as binary), 256) AS basket_proxy_id#289, customer_id#1, t_dat#0, sort_array(collect_set(article_id#2)#288, true) AS items#284]
+
+(10) AdaptiveSparkPlan
+Output [4]: [basket_proxy_id#289, customer_id#1, t_dat#0, items#284]
+Arguments: isFinalPlan=true
+
+(11) Filter
+Input [1]: [items#284]
+Condition : (size(items#284, false) > 0)
+
+(12) Generate
+Input [1]: [items#284]
+Arguments: explode(items#284), false, [article_id#2186]
+
+(13) HashAggregate
+Input [1]: [article_id#2186]
+Keys [1]: [article_id#2186]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#2251L]
+Results [2]: [article_id#2186, count#2252L]
+
+(14) Exchange
+Input [2]: [article_id#2186, count#2252L]
+Arguments: hashpartitioning(article_id#2186, 64), ENSURE_REQUIREMENTS, [plan_id=1557]
+
+(15) HashAggregate
+Input [2]: [article_id#2186, count#2252L]
+Keys [1]: [article_id#2186]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#2189L]
+Results [2]: [article_id#2186, count(1)#2189L AS basket_frequency#2187L]
+
+(16) Project
+Output [3]: [article_id#2186, basket_frequency#2187L, (cast(basket_frequency#2187L as double) / 9080179.0) AS support#2190]
+Input [2]: [article_id#2186, basket_frequency#2187L]
+
+(17) AdaptiveSparkPlan
+Output [3]: [article_id#2186, basket_frequency#2187L, support#2190]
+Arguments: isFinalPlan=false
+
+

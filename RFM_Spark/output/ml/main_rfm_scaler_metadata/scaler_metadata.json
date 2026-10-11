@@ -1,0 +1,29 @@
+{
+  "stage": 7,
+  "model": "Main RFM K-Means",
+  "input_features": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "feature_order": {
+    "0": "Recency",
+    "1": "Frequency",
+    "2": "Monetary"
+  },
+  "vector_col": "features_raw",
+  "scaled_vector_col": "features",
+  "withMean": true,
+  "withStd": true,
+  "means": [
+    236.14843706988268,
+    6.665422919353644,
+    0.6493858271904663
+  ],
+  "stds": [
+    221.11879131008746,
+    9.707005074461001,
+    1.1975819653583568
+  ],
+  "row_count": 1362281
+}

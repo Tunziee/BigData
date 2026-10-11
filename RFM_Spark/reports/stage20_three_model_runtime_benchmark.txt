@@ -1,0 +1,26 @@
+STAGE 20 — CONTROLLED 1M RUNTIME & COMPUTATIONAL BENCHMARK
+
+AUTHORITY: THREE_MODEL_RUNTIME_BENCHMARK_1M_V1
+COHORT: DETERMINISTIC_1M_COMPARISON_COHORT / 1000000 / ca082ec1d828df9c34a10105ae11599c3cc0653dc5b4d2c11af18ec82b781cf5
+SPARK_APPLICATION_ID: local-1791267397786
+FASTEST_ASSIGNMENT_MODEL: K1
+FASTEST_END_TO_END_BUILD_MODEL: R1
+
+TRACK A SUMMARY:
+{'R1': {'model_id': 'R1', 'model_name': 'Rule-based RFM', 'min_sec': 0.5575828000000911, 'max_sec': 0.5886438999996244, 'mean_sec': 0.5708751333331747, 'median_sec': 0.5663986999998087, 'std_sec': 0.013069731566646781, 'trial_times_sec': [0.5886438999996244, 0.5575828000000911, 0.5663986999998087], 'customers_per_second': 1765540.7754296358, 'model_load_sec': None, 'assignment_only': True, 'prediction_mismatch_vs_locked': 0}, 'K1': {'model_id': 'K1', 'model_name': 'Main K-Means', 'min_sec': 0.3557045999996262, 'max_sec': 0.383089899999959, 'mean_sec': 0.373454599999756, 'median_sec': 0.3815692999996827, 'std_sec': 0.01256648800298277, 'trial_times_sec': [0.383089899999959, 0.3557045999996262, 0.3815692999996827], 'customers_per_second': 2620755.915113799, 'model_load_sec': 0.4917909000000691, 'assignment_only': True, 'prediction_mismatch_vs_locked': 0}, 'K2': {'model_id': 'K2', 'model_name': 'Enhanced K-Means', 'min_sec': 0.3595234999997956, 'max_sec': 0.40520340000011856, 'mean_sec': 0.382996099999976, 'median_sec': 0.38426140000001396, 'std_sec': 0.01867019110913523, 'trial_times_sec': [0.3595234999997956, 0.38426140000001396, 0.40520340000011856], 'customers_per_second': 2602395.1403913163, 'model_load_sec': 0.2619483000003129, 'assignment_only': True, 'prediction_mismatch_vs_locked': 0}}
+
+TRACK B SUMMARY:
+{'R1': {'model_id': 'R1', 'model_name': 'Rule-based RFM', 'min_sec': 3.275528099999974, 'max_sec': 3.612280499999997, 'mean_sec': 3.4539128999999775, 'median_sec': 3.4739300999999614, 'std_sec': 0.13820530850471072, 'trial_times_sec': [3.612280499999997, 3.275528099999974, 3.4739300999999614], 'median_fit_only_sec': None, 'median_assign_after_fit_sec': None, 'customers_per_second_end_to_end': 287858.4114286039, 'numIter': None, 'rule_reproducibility_pass': True}, 'K1': {'model_id': 'K1', 'model_name': 'Main K-Means', 'min_sec': 6.955704999999853, 'max_sec': 7.494224400000348, 'mean_sec': 7.178790233333378, 'median_sec': 7.086441299999933, 'std_sec': 0.22934258241052444, 'trial_times_sec': [6.955704999999853, 7.086441299999933, 7.494224400000348], 'median_fit_only_sec': 6.7319744000001265, 'median_assign_after_fit_sec': 0.3903738999997586, 'customers_per_second_end_to_end': 141114.55350656886, 'numIter': 38, 'rule_reproducibility_pass': None}, 'K2': {'model_id': 'K2', 'model_name': 'Enhanced K-Means', 'min_sec': 8.713479500000176, 'max_sec': 10.551147299999684, 'mean_sec': 9.415343633333274, 'median_sec': 8.981404099999963, 'std_sec': 0.8105485281507032, 'trial_times_sec': [10.551147299999684, 8.713479500000176, 8.981404099999963], 'median_fit_only_sec': 8.642463700000008, 'median_assign_after_fit_sec': 0.40435749999960535, 'customers_per_second_end_to_end': 111341.165464318, 'numIter': 50, 'rule_reproducibility_pass': None}}
+
+RUNTIME RATIOS:
+{'track_a_assignment': [{'numerator_model': 'R1', 'denominator_model': 'K1', 'ratio_definition': 'median R1 runtime / median K1 runtime', 'ratio': 1.4843927433372646}, {'numerator_model': 'R1', 'denominator_model': 'K2', 'ratio_definition': 'median R1 runtime / median K2 runtime', 'ratio': 1.4739932244034613}, {'numerator_model': 'K1', 'denominator_model': 'K2', 'ratio_definition': 'median K1 runtime / median K2 runtime', 'ratio': 0.9929940920416904}], 'track_b_build_assign': [{'numerator_model': 'R1', 'denominator_model': 'K1', 'ratio_definition': 'median R1 runtime / median K1 runtime', 'ratio': 0.4902220949745247}, {'numerator_model': 'R1', 'denominator_model': 'K2', 'ratio_definition': 'median R1 runtime / median K2 runtime', 'ratio': 0.3867914260755705}, {'numerator_model': 'K1', 'denominator_model': 'K2', 'ratio_definition': 'median K1 runtime / median K2 runtime', 'ratio': 0.7890126333364693}]}
+
+DETERMINISM_PASS: True
+RULE_REPRODUCIBILITY_PASS: True
+QUALITY_MODELS_MODIFIED: False
+FINAL_MODEL_AUTHORITIES_MODIFIED: False
+RUNTIME_QUALITY_COMBINED_SCORE_USED: False
+GMM_EXECUTED: False
+
+RUNTIME_BENCHMARK_COMPLETE: True
+READY_FOR_STAGE_21: True

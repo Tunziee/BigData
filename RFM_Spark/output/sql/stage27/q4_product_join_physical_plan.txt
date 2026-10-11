@@ -1,0 +1,237 @@
+== Physical Plan ==
+AdaptiveSparkPlan (39)
++- == Final Plan ==
+   ResultQueryStage (24)
+   +- * Sort (23)
+      +- AQEShuffleRead (22), coalesced
+         +- ShuffleQueryStage (21), Statistics(sizeInBytes=1352.0 B, rowCount=19)
+            +- Exchange (20)
+               +- * HashAggregate (19)
+                  +- AQEShuffleRead (18), coalesced
+                     +- ShuffleQueryStage (17), Statistics(sizeInBytes=22.3 KiB, rowCount=239)
+                        +- Exchange (16)
+                           +- * HashAggregate (15)
+                              +- * HashAggregate (14)
+                                 +- AQEShuffleRead (13), coalesced
+                                    +- ShuffleQueryStage (12), Statistics(sizeInBytes=1596.6 MiB, rowCount=1.09E+7)
+                                       +- Exchange (11)
+                                          +- * HashAggregate (10)
+                                             +- * Expand (9)
+                                                +- * Project (8)
+                                                   +- * BroadcastHashJoin Inner BuildRight (7)
+                                                      :- * Filter (2)
+                                                      :  +- Scan parquet  (1)
+                                                      +- BroadcastQueryStage (6), Statistics(sizeInBytes=36.0 MiB, rowCount=1.06E+5)
+                                                         +- BroadcastExchange (5)
+                                                            +- * Filter (4)
+                                                               +- Scan parquet  (3)
++- == Initial Plan ==
+   Sort (38)
+   +- Exchange (37)
+      +- HashAggregate (36)
+         +- Exchange (35)
+            +- HashAggregate (34)
+               +- HashAggregate (33)
+                  +- Exchange (32)
+                     +- HashAggregate (31)
+                        +- Expand (30)
+                           +- Project (29)
+                              +- BroadcastHashJoin Inner BuildRight (28)
+                                 :- Filter (25)
+                                 :  +- Scan parquet  (1)
+                                 +- BroadcastExchange (27)
+                                    +- Filter (26)
+                                       +- Scan parquet  (3)
+
+
+(1) Scan parquet 
+Output [3]: [customer_id#1, article_id#2, price#3]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+PushedFilters: [IsNotNull(article_id)]
+ReadSchema: struct<customer_id:string,article_id:string,price:double>
+
+(2) Filter [codegen id : 2]
+Input [3]: [customer_id#1, article_id#2, price#3]
+Condition : isnotnull(article_id#2)
+
+(3) Scan parquet 
+Output [2]: [article_id#13, product_group_name#18]
+Batched: false
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/articles]
+PushedFilters: [IsNotNull(article_id)]
+ReadSchema: struct<article_id:string,product_group_name:string>
+
+(4) Filter [codegen id : 1]
+Input [2]: [article_id#13, product_group_name#18]
+Condition : isnotnull(article_id#13)
+
+(5) BroadcastExchange
+Input [2]: [article_id#13, product_group_name#18]
+Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=2338]
+
+(6) BroadcastQueryStage
+Output [2]: [article_id#13, product_group_name#18]
+Arguments: 0
+
+(7) BroadcastHashJoin [codegen id : 2]
+Left keys [1]: [article_id#2]
+Right keys [1]: [article_id#13]
+Join type: Inner
+Join condition: None
+
+(8) Project [codegen id : 2]
+Output [4]: [customer_id#1, article_id#2, price#3, product_group_name#18]
+Input [5]: [customer_id#1, article_id#2, price#3, article_id#13, product_group_name#18]
+
+(9) Expand [codegen id : 2]
+Input [4]: [customer_id#1, article_id#2, price#3, product_group_name#18]
+Arguments: [[product_group_name#18, null, null, 0, price#3], [product_group_name#18, customer_id#1, null, 1, null], [product_group_name#18, null, article_id#2, 2, null]], [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, t.price#2186]
+
+(10) HashAggregate [codegen id : 2]
+Input [5]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, t.price#2186]
+Keys [4]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183]
+Functions [3]: [partial_count(1), partial_sum(t.price#2186), partial_avg(t.price#2186)]
+Aggregate Attributes [4]: [count#1978L, sum#2209, sum#2210, count#2211L]
+Results [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+
+(11) Exchange
+Input [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Arguments: hashpartitioning(product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, 64), ENSURE_REQUIREMENTS, [plan_id=2429]
+
+(12) ShuffleQueryStage
+Output [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Arguments: 1
+
+(13) AQEShuffleRead
+Input [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Arguments: coalesced
+
+(14) HashAggregate [codegen id : 3]
+Input [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Keys [4]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183]
+Functions [3]: [count(1), sum(t.price#2186), avg(t.price#2186)]
+Aggregate Attributes [3]: [count(1)#1947L, sum(t.price#2186)#1950, avg(t.price#2186)#1951]
+Results [7]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count(1)#1947L AS count(1)#2187L, sum(t.price#2186)#1950 AS sum(t.price)#2189, avg(t.price#2186)#1951 AS avg(t.price)#2191]
+
+(15) HashAggregate [codegen id : 3]
+Input [7]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count(1)#2187L, sum(t.price)#2189, avg(t.price)#2191]
+Keys [1]: [product_group_name#18]
+Functions [5]: [partial_first(count(1)#2187L, true) FILTER (WHERE (gid#2183 = 0)), partial_count(t.customer_id#2184) FILTER (WHERE (gid#2183 = 1)), partial_count(t.article_id#2185) FILTER (WHERE (gid#2183 = 2)), partial_first(sum(t.price)#2189, true) FILTER (WHERE (gid#2183 = 0)), partial_first(avg(t.price)#2191, true) FILTER (WHERE (gid#2183 = 0))]
+Aggregate Attributes [8]: [first#2193L, valueSet#2194, count#2195L, count#2196L, first#2197, valueSet#2198, first#2199, valueSet#2200]
+Results [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+
+(16) Exchange
+Input [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Arguments: hashpartitioning(product_group_name#18, 64), ENSURE_REQUIREMENTS, [plan_id=2484]
+
+(17) ShuffleQueryStage
+Output [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Arguments: 2
+
+(18) AQEShuffleRead
+Input [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Arguments: coalesced
+
+(19) HashAggregate [codegen id : 4]
+Input [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Keys [1]: [product_group_name#18]
+Functions [5]: [first(count(1)#2187L, true), count(t.customer_id#2184), count(t.article_id#2185), first(sum(t.price)#2189, true), first(avg(t.price)#2191, true)]
+Aggregate Attributes [5]: [first(count(1)#2187L) ignore nulls#2188L, count(t.customer_id#2184)#1948L, count(t.article_id#2185)#1949L, first(sum(t.price)#2189) ignore nulls#2190, first(avg(t.price)#2191) ignore nulls#2192]
+Results [6]: [product_group_name#18 AS product_group#1941, coalesce(first(count(1)#2187L) ignore nulls#2188L, 0) AS purchase_item_rows#1942L, count(t.customer_id#2184)#1948L AS distinct_customers#1943L, count(t.article_id#2185)#1949L AS distinct_articles#1944L, first(sum(t.price)#2189) ignore nulls#2190 AS monetary_sum#1945, first(avg(t.price)#2191) ignore nulls#2192 AS average_price_per_item_row#1946]
+
+(20) Exchange
+Input [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: rangepartitioning(monetary_sum#1945 DESC NULLS LAST, 64), ENSURE_REQUIREMENTS, [plan_id=2514]
+
+(21) ShuffleQueryStage
+Output [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: 3
+
+(22) AQEShuffleRead
+Input [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: coalesced
+
+(23) Sort [codegen id : 5]
+Input [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: [monetary_sum#1945 DESC NULLS LAST], true, 0
+
+(24) ResultQueryStage
+Output [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: 4
+
+(25) Filter
+Input [3]: [customer_id#1, article_id#2, price#3]
+Condition : isnotnull(article_id#2)
+
+(26) Filter
+Input [2]: [article_id#13, product_group_name#18]
+Condition : isnotnull(article_id#13)
+
+(27) BroadcastExchange
+Input [2]: [article_id#13, product_group_name#18]
+Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=2293]
+
+(28) BroadcastHashJoin
+Left keys [1]: [article_id#2]
+Right keys [1]: [article_id#13]
+Join type: Inner
+Join condition: None
+
+(29) Project
+Output [4]: [customer_id#1, article_id#2, price#3, product_group_name#18]
+Input [5]: [customer_id#1, article_id#2, price#3, article_id#13, product_group_name#18]
+
+(30) Expand
+Input [4]: [customer_id#1, article_id#2, price#3, product_group_name#18]
+Arguments: [[product_group_name#18, null, null, 0, price#3], [product_group_name#18, customer_id#1, null, 1, null], [product_group_name#18, null, article_id#2, 2, null]], [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, t.price#2186]
+
+(31) HashAggregate
+Input [5]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, t.price#2186]
+Keys [4]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183]
+Functions [3]: [partial_count(1), partial_sum(t.price#2186), partial_avg(t.price#2186)]
+Aggregate Attributes [4]: [count#1978L, sum#2209, sum#2210, count#2211L]
+Results [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+
+(32) Exchange
+Input [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Arguments: hashpartitioning(product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, 64), ENSURE_REQUIREMENTS, [plan_id=2299]
+
+(33) HashAggregate
+Input [8]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count#1982L, sum#2212, sum#2213, count#2214L]
+Keys [4]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183]
+Functions [3]: [count(1), sum(t.price#2186), avg(t.price#2186)]
+Aggregate Attributes [3]: [count(1)#1947L, sum(t.price#2186)#1950, avg(t.price#2186)#1951]
+Results [7]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count(1)#1947L AS count(1)#2187L, sum(t.price#2186)#1950 AS sum(t.price)#2189, avg(t.price#2186)#1951 AS avg(t.price)#2191]
+
+(34) HashAggregate
+Input [7]: [product_group_name#18, t.customer_id#2184, t.article_id#2185, gid#2183, count(1)#2187L, sum(t.price)#2189, avg(t.price)#2191]
+Keys [1]: [product_group_name#18]
+Functions [5]: [partial_first(count(1)#2187L, true) FILTER (WHERE (gid#2183 = 0)), partial_count(t.customer_id#2184) FILTER (WHERE (gid#2183 = 1)), partial_count(t.article_id#2185) FILTER (WHERE (gid#2183 = 2)), partial_first(sum(t.price)#2189, true) FILTER (WHERE (gid#2183 = 0)), partial_first(avg(t.price)#2191, true) FILTER (WHERE (gid#2183 = 0))]
+Aggregate Attributes [8]: [first#2193L, valueSet#2194, count#2195L, count#2196L, first#2197, valueSet#2198, first#2199, valueSet#2200]
+Results [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+
+(35) Exchange
+Input [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Arguments: hashpartitioning(product_group_name#18, 64), ENSURE_REQUIREMENTS, [plan_id=2303]
+
+(36) HashAggregate
+Input [9]: [product_group_name#18, first#2201L, valueSet#2202, count#2203L, count#2204L, first#2205, valueSet#2206, first#2207, valueSet#2208]
+Keys [1]: [product_group_name#18]
+Functions [5]: [first(count(1)#2187L, true), count(t.customer_id#2184), count(t.article_id#2185), first(sum(t.price)#2189, true), first(avg(t.price)#2191, true)]
+Aggregate Attributes [5]: [first(count(1)#2187L) ignore nulls#2188L, count(t.customer_id#2184)#1948L, count(t.article_id#2185)#1949L, first(sum(t.price)#2189) ignore nulls#2190, first(avg(t.price)#2191) ignore nulls#2192]
+Results [6]: [product_group_name#18 AS product_group#1941, coalesce(first(count(1)#2187L) ignore nulls#2188L, 0) AS purchase_item_rows#1942L, count(t.customer_id#2184)#1948L AS distinct_customers#1943L, count(t.article_id#2185)#1949L AS distinct_articles#1944L, first(sum(t.price)#2189) ignore nulls#2190 AS monetary_sum#1945, first(avg(t.price)#2191) ignore nulls#2192 AS average_price_per_item_row#1946]
+
+(37) Exchange
+Input [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: rangepartitioning(monetary_sum#1945 DESC NULLS LAST, 64), ENSURE_REQUIREMENTS, [plan_id=2306]
+
+(38) Sort
+Input [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: [monetary_sum#1945 DESC NULLS LAST], true, 0
+
+(39) AdaptiveSparkPlan
+Output [6]: [product_group#1941, purchase_item_rows#1942L, distinct_customers#1943L, distinct_articles#1944L, monetary_sum#1945, average_price_per_item_row#1946]
+Arguments: isFinalPlan=true
+
+

@@ -1,0 +1,4 @@
+﻿version,min_support,frequent_itemset_count,pair_or_larger_itemset_count,association_rule_count,selected
+V1,0.001,68,0,0,False
+V2,0.0005,380,4,5,False
+V2,0.0002,2655,63,104,True

@@ -1,0 +1,29 @@
+{
+  "stage": 10,
+  "authority": "MAIN_KMEANS_FINAL",
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 729944,
+      "ratio_pct": 53.582484083680235
+    },
+    {
+      "cluster_id": 1,
+      "count": 198035,
+      "ratio_pct": 14.537015490930285
+    },
+    {
+      "cluster_id": 2,
+      "count": 409493,
+      "ratio_pct": 30.059363670197264
+    },
+    {
+      "cluster_id": 3,
+      "count": 24809,
+      "ratio_pct": 1.8211367551922109
+    }
+  ],
+  "cluster_count_sum": 1362281,
+  "num_produced_clusters": 4,
+  "pass": true
+}

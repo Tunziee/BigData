@@ -1,0 +1,19 @@
+{
+  "stage": 26,
+  "authority": "SPARK_EXECUTION_EVIDENCE_V1",
+  "spark_version": "4.2.0",
+  "python_version": "3.12.10",
+  "java_version": "21.0.8",
+  "os": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 8,
+  "ram_bytes": 16934494208,
+  "master": "local[4]",
+  "spark_application_id": "local-1791292254665",
+  "spark_ui_url": "http://Tay-Nguyen:4040",
+  "spark_ui_available": true,
+  "rest_base_url": "http://Tay-Nguyen:4040/api/v1/applications/local-1791292254665",
+  "spark_sql_shuffle_partitions": 64,
+  "spark_sql_adaptive_enabled": true,
+  "event_log_enabled": "false",
+  "historical_event_log_limitation": "Stage 25 proved Windows event logging unavailable because HADOOP_HOME/hadoop.home.dir and winutils.exe are unavailable; Stage 26 uses live UI REST API and StatusTracker."
+}

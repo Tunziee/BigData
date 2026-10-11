@@ -1,0 +1,150 @@
+{
+  "stage": 10,
+  "authority": "MAIN_KMEANS_FINAL",
+  "model": "Main RFM K-Means",
+  "selected_k": 4,
+  "feature_order": [
+    "Recency",
+    "Frequency",
+    "Monetary"
+  ],
+  "input": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\main_rfm_scaled",
+    "row_count": 1362281
+  },
+  "kmeans_config": {
+    "k": 4,
+    "seed": 42,
+    "featuresCol": "features",
+    "predictionCol": "prediction",
+    "distanceMeasure": "euclidean",
+    "initMode": "k-means||",
+    "maxIter": 100,
+    "tol": 0.0001
+  },
+  "training": {
+    "fit_runtime_sec": 9.565288900001178,
+    "num_iter": 35,
+    "wcss": 1051831.216267805,
+    "silhouette": 0.6859294450224572
+  },
+  "cluster_sizes": [
+    {
+      "cluster_id": 0,
+      "count": 729944,
+      "ratio_pct": 53.582484083680235
+    },
+    {
+      "cluster_id": 1,
+      "count": 198035,
+      "ratio_pct": 14.537015490930285
+    },
+    {
+      "cluster_id": 2,
+      "count": 409493,
+      "ratio_pct": 30.059363670197264
+    },
+    {
+      "cluster_id": 3,
+      "count": 24809,
+      "ratio_pct": 1.8211367551922109
+    }
+  ],
+  "centers_scaled": [
+    [
+      -0.5022952769767058,
+      -0.23416484532905074,
+      -0.2369973323882814
+    ],
+    [
+      -0.8285849134331155,
+      1.3522669502978524,
+      1.0747185155895054
+    ],
+    [
+      1.3536284502747034,
+      -0.5009123919700538,
+      -0.40229569201515
+    ],
+    [
+      -0.9499282295651995,
+      4.363702230678436,
+      5.034734489405618
+    ]
+  ],
+  "reproducibility_vs_stage8": {
+    "tolerance": 1e-08,
+    "silhouette": {
+      "final": 0.6859294450224572,
+      "reference": 0.6859294450224572,
+      "absolute_difference": 0.0,
+      "allowed_difference": 1e-08,
+      "pass": true
+    },
+    "wcss": {
+      "final": 1051831.216267805,
+      "reference": 1051831.216267805,
+      "absolute_difference": 0.0,
+      "allowed_difference": 0.010518312162678052,
+      "pass": true
+    },
+    "num_iter": {
+      "final": 35,
+      "reference": 35,
+      "pass": true
+    },
+    "cluster_sizes": {
+      "final": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "reference": [
+        {
+          "cluster_id": 0,
+          "count": 729944,
+          "ratio_pct": 53.582484083680235
+        },
+        {
+          "cluster_id": 1,
+          "count": 198035,
+          "ratio_pct": 14.537015490930285
+        },
+        {
+          "cluster_id": 2,
+          "count": 409493,
+          "ratio_pct": 30.059363670197264
+        },
+        {
+          "cluster_id": 3,
+          "count": 24809,
+          "ratio_pct": 1.8211367551922109
+        }
+      ],
+      "pass": true
+    },
+    "centers_scaled": {
+      "pass": true,
+      "max_absolute_difference": 0.0,
+      "allowed_difference": 5.034734489405618e-08
+    },
+    "pass": true
+  }
+}

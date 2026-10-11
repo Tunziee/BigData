@@ -1,0 +1,65 @@
+== Physical Plan ==
+AdaptiveSparkPlan (11)
++- HashAggregate (10)
+   +- Exchange (9)
+      +- HashAggregate (8)
+         +- Project (7)
+            +- Filter (6)
+               +- InMemoryTableScan (1)
+                     +- InMemoryRelation (2)
+                           +- * Project (5)
+                              +- * ColumnarToRow (4)
+                                 +- Scan parquet  (3)
+
+
+(1) InMemoryTableScan
+Output [2]: [price#109, t_dat#106]
+Arguments: [price#109, t_dat#106], [isnotnull(t_dat#106), (t_dat#106 >= 2020-01-01)]
+
+(2) InMemoryRelation
+Arguments: [customer_id#107, t_dat#106, price#109], StorageLevel(disk, memory, 1 replicas)
+
+(3) Scan parquet 
+Output [3]: [t_dat#106, customer_id#107, price#109]
+Batched: true
+Location: InMemoryFileIndex [file:/D:/Doan_bigdata/BigData/BigData/RFM_Spark/output/clean/transactions]
+ReadSchema: struct<t_dat:date,customer_id:string,price:double>
+
+(4) ColumnarToRow [codegen id : 1]
+Input [3]: [t_dat#106, customer_id#107, price#109]
+
+(5) Project [codegen id : 1]
+Output [3]: [customer_id#107, t_dat#106, price#109]
+Input [3]: [t_dat#106, customer_id#107, price#109]
+
+(6) Filter
+Input [2]: [price#109, t_dat#106]
+Condition : (isnotnull(t_dat#106) AND (t_dat#106 >= 2020-01-01))
+
+(7) Project
+Output [1]: [price#109]
+Input [2]: [price#109, t_dat#106]
+
+(8) HashAggregate
+Input [1]: [price#109]
+Keys: []
+Functions [2]: [partial_count(1), partial_sum(price#109)]
+Aggregate Attributes [2]: [count#1772L, sum#1773]
+Results [2]: [count#1774L, sum#1775]
+
+(9) Exchange
+Input [2]: [count#1774L, sum#1775]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=1863]
+
+(10) HashAggregate
+Input [2]: [count#1774L, sum#1775]
+Keys: []
+Functions [2]: [count(1), sum(price#109)]
+Aggregate Attributes [2]: [count(1)#1725L, sum(price#109)#1726]
+Results [2]: [count(1)#1725L AS filtered_row_count#1720L, sum(price#109)#1726 AS filtered_sum_price#1721]
+
+(11) AdaptiveSparkPlan
+Output [2]: [filtered_row_count#1720L, filtered_sum_price#1721]
+Arguments: isFinalPlan=false
+
+

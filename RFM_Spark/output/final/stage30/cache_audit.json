@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "authority": "CACHE_NO_CACHE_BENCHMARK_V1",
+  "primary_finding": "CACHE_QUERY_DEPENDENT",
+  "query_dependent": true,
+  "no_cache_definition": "No explicit Spark DataFrame persistence; not cold physical disk."
+}

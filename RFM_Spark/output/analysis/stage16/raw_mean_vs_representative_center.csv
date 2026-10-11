@@ -1,0 +1,26 @@
+cluster_id,feature,actual_raw_arithmetic_mean,representative_centroid_derived_raw_value,absolute_difference,note
+0,Recency,333.10277862334004,333.1063976523084,0.00361902896833044,Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid.
+0,Frequency,1.9970225638293824,1.7947439297153966,0.20227863411398572,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+0,Monetary,0.35722646580728784,0.3317321977552104,0.02549426805207744,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+0,AvgBasketSize,7.368863745113108,6.729805690467448,0.6390580546456599,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+0,ProductVariety,11.54721566911457,9.670272928360015,1.8769427407545543,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+1,Recency,53.902010719205435,53.90213522102849,0.00012450182305201452,Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid.
+1,Frequency,24.07674187088335,20.470654105483096,3.606087765400254,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+1,Monetary,2.9133534566465213,2.5700920379583683,0.3432614186881531,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+1,AvgBasketSize,4.875730807887345,4.3930963899543904,0.4826344179329549,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+1,ProductVariety,83.5391378332388,73.8568272528723,9.68231058036649,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+2,Recency,568.063887670683,568.063152026456,0.00073564422700656,Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid.
+2,Frequency,1.4775854251373268,1.356062613635444,0.12152281150188293,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+2,Monetary,0.09047617382516669,0.08790916280074218,0.002567011024424512,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+2,AvgBasketSize,2.1633301107076117,1.9934052679227543,0.16992484278485742,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+2,ProductVariety,2.888176135223328,2.437124359228619,0.451051775994709,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+3,Recency,157.18148405739745,157.18089517839957,0.0005888789978882869,Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid.
+3,Frequency,2.0571646408003748,1.8391923836231272,0.21797225717724755,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+3,Monetary,0.11732698691832902,0.11420462288242827,0.003122364035900743,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+3,AvgBasketSize,2.0486663318283957,1.925698846094574,0.12296748573382166,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+3,ProductVariety,3.7338369626264774,3.155862550873124,0.5779744117533534,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+4,Recency,96.82912749553954,96.82781122719015,0.0013162683493845861,Recency is identity-transformed; arithmetic mean is expected to be close to the transformed centroid.
+4,Frequency,9.264621310911899,8.340973674286454,0.9236476366254447,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+4,Monetary,0.6589094739249459,0.6308064927468,0.028102981178145914,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+4,AvgBasketSize,2.992304870237259,2.840866062834033,0.1514388074032258,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.
+4,ProductVariety,22.875393530011948,20.716489178771237,2.158904351240711,Representative values implied by transformed-space centroids; not raw cluster arithmetic means.

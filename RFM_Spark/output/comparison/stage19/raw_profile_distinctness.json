@@ -1,0 +1,213 @@
+{
+  "R1": {
+    "model_id": "R1",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 0.9656235059627477
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 1.260435274850328
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 1.9108694989625492
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 4,
+        "normalized_median_distance": 3.835206259584384
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 0.4150752427598157
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 1.2474893093383181
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 4,
+        "normalized_median_distance": 3.376956384115503
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 0.8585416555895449
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 4,
+        "normalized_median_distance": 3.0005419449460935
+      },
+      {
+        "segment_a": 3,
+        "segment_b": 4,
+        "normalized_median_distance": 2.1635026990979185
+      }
+    ],
+    "min": 0.4150752427598157,
+    "mean": 1.9034241775207204,
+    "median": 1.5856523869064385,
+    "max": 3.835206259584384,
+    "closest_pair": {
+      "segment_a": 1,
+      "segment_b": 2,
+      "normalized_median_distance": 0.4150752427598157
+    },
+    "farthest_pair": {
+      "segment_a": 0,
+      "segment_b": 4,
+      "normalized_median_distance": 3.835206259584384
+    },
+    "normalization": "Euclidean distance of raw-feature median differences divided by global 1M-cohort IQR per feature; zero IQR contributes zero."
+  },
+  "K1": {
+    "model_id": "K1",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 3.8594844388281677
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 1.3377777133377713
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 12.895777175190386
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 4.570790392893777
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 9.098061508400054
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 13.448847458972141
+      }
+    ],
+    "min": 1.3377777133377713,
+    "mean": 7.535123114603716,
+    "median": 6.834425950646915,
+    "max": 13.448847458972141,
+    "closest_pair": {
+      "segment_a": 0,
+      "segment_b": 2,
+      "normalized_median_distance": 1.3377777133377713
+    },
+    "farthest_pair": {
+      "segment_a": 2,
+      "segment_b": 3,
+      "normalized_median_distance": 13.448847458972141
+    },
+    "normalization": "Euclidean distance of raw-feature median differences divided by global 1M-cohort IQR per feature; zero IQR contributes zero."
+  },
+  "K2": {
+    "model_id": "K2",
+    "global_iqr": {
+      "Recency": 350.0,
+      "Frequency": 7.0,
+      "Monetary": 0.6097118644067795,
+      "AvgBasketSize": 2.095238095238095,
+      "ProductVariety": 21.0
+    },
+    "pairwise_distances": [
+      {
+        "segment_a": 0,
+        "segment_b": 1,
+        "normalized_median_distance": 5.12250174346058
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 2,
+        "normalized_median_distance": 2.0970594223152537
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 3,
+        "normalized_median_distance": 2.019828696439828
+      },
+      {
+        "segment_a": 0,
+        "segment_b": 4,
+        "normalized_median_distance": 2.0817241708775835
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 2,
+        "normalized_median_distance": 5.760194565256537
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 3,
+        "normalized_median_distance": 5.427396278888163
+      },
+      {
+        "segment_a": 1,
+        "segment_b": 4,
+        "normalized_median_distance": 3.9280492381803094
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 3,
+        "normalized_median_distance": 1.2499016008882697
+      },
+      {
+        "segment_a": 2,
+        "segment_b": 4,
+        "normalized_median_distance": 2.2076112754071153
+      },
+      {
+        "segment_a": 3,
+        "segment_b": 4,
+        "normalized_median_distance": 1.5287704902350852
+      }
+    ],
+    "min": 1.2499016008882697,
+    "mean": 3.1423037481948723,
+    "median": 2.1523353488611843,
+    "max": 5.760194565256537,
+    "closest_pair": {
+      "segment_a": 2,
+      "segment_b": 3,
+      "normalized_median_distance": 1.2499016008882697
+    },
+    "farthest_pair": {
+      "segment_a": 1,
+      "segment_b": 2,
+      "normalized_median_distance": 5.760194565256537
+    },
+    "normalization": "Euclidean distance of raw-feature median differences divided by global 1M-cohort IQR per feature; zero IQR contributes zero."
+  }
+}

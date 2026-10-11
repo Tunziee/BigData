@@ -1,0 +1,26 @@
+{
+  "cache_materialization_sec": 9.530394299999898,
+  "queries": {
+    "Q1": {
+      "no_cache_median_sec": 0.1045865999999478,
+      "cache_median_sec": 0.35909350000019913,
+      "saved_time_per_execution_sec": -0.25450690000025133,
+      "break_even_executions": null,
+      "interpretation": "NO_BREAK_EVEN_OBSERVED"
+    },
+    "Q2": {
+      "no_cache_median_sec": 0.3254504999999881,
+      "cache_median_sec": 0.44672840000021097,
+      "saved_time_per_execution_sec": -0.12127790000022287,
+      "break_even_executions": null,
+      "interpretation": "NO_BREAK_EVEN_OBSERVED"
+    },
+    "Q3": {
+      "no_cache_median_sec": 7.393477900000107,
+      "cache_median_sec": 7.1460643999998865,
+      "saved_time_per_execution_sec": 0.24741350000022067,
+      "break_even_executions": 39,
+      "interpretation": "CACHE_ADVANTAGE_AFTER_AMORTIZATION"
+    }
+  }
+}

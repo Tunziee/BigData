@@ -1,0 +1,63 @@
+STAGE 29 — FINAL VISUALIZATION LAYER
+
+authority = FINAL_VISUALIZATION_LAYER_V1
+generated_utc = 2026-10-06T16:27:16.439006+00:00
+scope = visualization-only; no Stage 1-28 source artifact modified
+
+A. AUTHORITY CHAIN
+Stage 12 = IMPROVED_ERFM_FEATURE_SPACE
+Stage 16 = ENHANCED_KMEANS_FINAL_CLUSTER_PROFILE
+Stage 22 = PRIMARY_B0_M1_M2_QUALITY_COMPARISON_V1
+Stage 23 = PRIMARY_B0_M1_M2_RUNTIME_BENCHMARK_1M_V1
+Stage 24 = CSV_PARQUET_IO_BENCHMARK_V1
+Stage 25 = CACHE_NO_CACHE_BENCHMARK_V1
+Stage 26 = SPARK_EXECUTION_EVIDENCE_V1
+Stage 27 = SPARK_SQL_ANALYTICAL_LAYER_V1
+Stage 28 V2 = FP_GROWTH_ASSOCIATION_RULES_V2
+
+B. LOCKED KEY METRICS
+M2 selected K = 5
+customers = 1362281
+Stage 28 selected minSupport = 0.0002
+frequent itemsets = 2655
+pair-or-larger itemsets = 63
+association rules = 104
+
+C. FIGURE INVENTORY
+physical figure count = 28
+PNG and SVG generated for every required figure; source CSV and manifest generated for every figure.
+
+D. BUSINESS STORY
+The visual layer connects skew-aware customer features, enhanced segmentation, SQL analytics, system behavior, and FP-Growth rules without changing model semantics.
+
+E. RFM/eRFM
+fig01 shows locked quantile profiles; fig02 shows the Stage 12 log1p skewness evidence.
+
+F. MODEL QUALITY
+fig03-07 cover K sweeps, primary comparison, common-space SSE, and cluster balance/agreement.
+
+G. SEGMENTS
+fig08-10 show M2 distribution and behavioral profiles from the Stage 16/27 locked membership outputs.
+
+H. SYSTEM BENCHMARKS
+fig11-16 show agreement, runtime, storage, cache, and shuffle evidence from Stages 22-26.
+
+I. SPARK SQL
+fig17-19 show monthly monetary trend, product groups, and age-band monetary analysis.
+
+J. FP-GROWTH
+fig20 preserves the V1 negative point and V2 threshold sensitivity; fig21-23 show locked rule quality.
+
+K. RECOMMENDATIONS
+- Use fig05 and fig06 together when explaining why M2 is evaluated in its enhanced eRFM5D space rather than by raw cross-space SSE.
+- Use fig08-10 for the business segmentation narrative: size, profile contrasts, and behavioral dimensions.
+- Use fig17-19 for the Spark SQL analytical layer and fig20-23 for the association-rule story.
+- Use SVG files in reports/presentation software when available; use 300-DPI PNGs for raster export.
+
+warnings =
+- Runtime is machine-, JVM-, Spark-, cache-, and cohort-specific; no universal speed claim is made.
+- Track B is comparison-only and does not replace or serialize any final model.
+- This is a controlled repeated-read benchmark, not a cold-disk benchmark; Windows filesystem/page cache cannot be cleared reliably.
+- Runtime differences include parsing, decoding, column pruning, predicate pushdown, planning, shuffle, and scheduling effects; they are not interpreted as pure disk I/O.
+- Stage 29 creates no new Spark application; visuals are deterministic renderings of locked artifacts.
+blockers = []

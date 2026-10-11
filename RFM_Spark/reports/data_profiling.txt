@@ -1,0 +1,227 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+26/10/05 19:00:47 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/05 19:00:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[Stage 1:>                                                        (0 + 12) / 26][Stage 1:==>                                                      (1 + 12) / 26][Stage 1:======>                                                  (3 + 12) / 26][Stage 1:========>                                                (4 + 12) / 26][Stage 1:=============>                                           (6 + 12) / 26][Stage 1:=================>                                       (8 + 12) / 26][Stage 1:=====================>                                  (10 + 12) / 26][Stage 1:=========================>                              (12 + 12) / 26][Stage 1:============================>                           (13 + 12) / 26][Stage 1:================================>                       (15 + 11) / 26][Stage 1:==================================>                     (16 + 10) / 26][Stage 1:=======================================>                 (18 + 8) / 26][Stage 1:================================================>        (22 + 4) / 26][Stage 1:====================================================>    (24 + 2) / 26][Stage 3:>                                                        (0 + 12) / 13][Stage 3:====================================================>    (12 + 1) / 13]                                                                                [Stage 7:>                                                        (0 + 12) / 26][Stage 7:==========>                                              (5 + 12) / 26][Stage 7:=========================>                              (12 + 12) / 26][Stage 7:=====================================>                   (17 + 9) / 26][Stage 7:====================================================>    (24 + 2) / 26]                                                                                [Stage 10:>                                                       (0 + 12) / 26][Stage 10:===============>                                        (7 + 12) / 26][Stage 10:=========================>                             (12 + 12) / 26][Stage 10:===================================================>    (24 + 2) / 26]                                                                                [Stage 14:>                                                       (0 + 12) / 12]                                                                                [Stage 30:======>                                                   (1 + 8) / 9]                                                                                
+
+================================================================================
+1. TRANSACTIONS_TRAIN.CSV
+================================================================================
+
+--- Schema ---
+root
+ |-- t_dat: date (nullable = true)
+ |-- customer_id: string (nullable = true)
+ |-- article_id: string (nullable = true)
+ |-- price: double (nullable = true)
+ |-- sales_channel_id: integer (nullable = true)
+
+
+--- Tong quan giao dich ---
++----------+----------------+---------------+----------+----------+--------------------+------------------+--------------------+--------------------+----------+
+|total_rows|unique_customers|unique_articles|min_date  |max_date  |min_price           |max_price         |avg_price           |std_price           |price_le_0|
++----------+----------------+---------------+----------+----------+--------------------+------------------+--------------------+--------------------+----------+
+|31788324  |1362281         |104547         |2018-09-20|2020-09-22|1.694915254237288E-5|0.5915254237288136|0.027829273856951997|0.019181128054793647|0         |
++----------+----------------+---------------+----------+----------+--------------------+------------------+--------------------+--------------------+----------+
+
+
+--- NULL / rong ---
++-----+-----------+----------+-----+----------------+
+|t_dat|customer_id|article_id|price|sales_channel_id|
++-----+-----------+----------+-----+----------------+
+|0    |0          |0         |0    |0               |
++-----+-----------+----------+-----+----------------+
+
+
+--- Phan bo sales_channel_id ---
++----------------+--------+
+|sales_channel_id|count   |
++----------------+--------+
+|1               |9408462 |
+|2               |22379862|
++----------------+--------+
+
+
+
+================================================================================
+2. CUSTOMERS.CSV
+================================================================================
+
+--- Schema ---
+root
+ |-- customer_id: string (nullable = true)
+ |-- FN: string (nullable = true)
+ |-- Active: string (nullable = true)
+ |-- club_member_status: string (nullable = true)
+ |-- fashion_news_frequency: string (nullable = true)
+ |-- age: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- age_numeric: double (nullable = true)
+
+
+--- Tong quan customers ---
++----------+----------------+-------+-------+---------------+------------------+-----------+
+|total_rows|unique_customers|min_age|max_age|avg_age        |std_age           |invalid_age|
++----------+----------------+-------+-------+---------------+------------------+-----------+
+|1371980   |1371980         |16.0   |99.0   |36.386964565794|14.313627981628054|0          |
++----------+----------------+-------+-------+---------------+------------------+-----------+
+
+
+--- NULL / rong ---
++-----------+------+------+------------------+----------------------+-----+-----------+
+|customer_id|FN    |Active|club_member_status|fashion_news_frequency|age  |postal_code|
++-----------+------+------+------------------+----------------------+-----+-----------+
+|0          |895050|907576|6062              |16009                 |15861|0          |
++-----------+------+------+------------------+----------------------+-----+-----------+
+
+
+--- club_member_status ---
++------------------+-------+
+|club_member_status|count  |
++------------------+-------+
+|ACTIVE            |1272491|
+|PRE-CREATE        |92960  |
+|NULL              |6062   |
+|LEFT CLUB         |467    |
++------------------+-------+
+
+
+--- fashion_news_frequency ---
++----------------------+------+
+|fashion_news_frequency|count |
++----------------------+------+
+|NONE                  |877711|
+|Regularly             |477416|
+|NULL                  |16009 |
+|Monthly               |842   |
+|None                  |2     |
++----------------------+------+
+
+
+
+================================================================================
+3. ARTICLES.CSV
+================================================================================
+
+--- Schema ---
+root
+ |-- article_id: string (nullable = true)
+ |-- product_code: string (nullable = true)
+ |-- prod_name: string (nullable = true)
+ |-- product_type_no: string (nullable = true)
+ |-- product_type_name: string (nullable = true)
+ |-- product_group_name: string (nullable = true)
+ |-- graphical_appearance_no: string (nullable = true)
+ |-- graphical_appearance_name: string (nullable = true)
+ |-- colour_group_code: string (nullable = true)
+ |-- colour_group_name: string (nullable = true)
+ |-- perceived_colour_value_id: string (nullable = true)
+ |-- perceived_colour_value_name: string (nullable = true)
+ |-- perceived_colour_master_id: string (nullable = true)
+ |-- perceived_colour_master_name: string (nullable = true)
+ |-- department_no: string (nullable = true)
+ |-- department_name: string (nullable = true)
+ |-- index_code: string (nullable = true)
+ |-- index_name: string (nullable = true)
+ |-- index_group_no: string (nullable = true)
+ |-- index_group_name: string (nullable = true)
+ |-- section_no: string (nullable = true)
+ |-- section_name: string (nullable = true)
+ |-- garment_group_no: string (nullable = true)
+ |-- garment_group_name: string (nullable = true)
+ |-- detail_desc: string (nullable = true)
+
+
+--- Tong quan articles ---
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+|total_rows|unique_articles|product_types|product_groups|sections|garment_groups|colour_groups|
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+|105542    |105542         |131          |19            |56      |21            |50           |
++----------+---------------+-------------+--------------+--------+--------------+-------------+
+
+
+--- NULL tren cac cot quan trong ---
++----------+---------+-----------------+------------------+-----------------+---------------+----------+------------+------------------+
+|article_id|prod_name|product_type_name|product_group_name|colour_group_name|department_name|index_name|section_name|garment_group_name|
++----------+---------+-----------------+------------------+-----------------+---------------+----------+------------+------------------+
+|0         |0        |0                |0                 |0                |0              |0         |0           |0                 |
++----------+---------+-----------------+------------------+-----------------+---------------+----------+------------+------------------+
+
+
+--- Top Product Group ---
++------------------+-----+
+|product_group_name|count|
++------------------+-----+
+|Garment Upper body|42741|
+|Garment Lower body|19812|
+|Garment Full body |13292|
+|Accessories       |11158|
+|Underwear         |5490 |
+|Shoes             |5283 |
+|Swimwear          |3127 |
+|Socks & Tights    |2442 |
+|Nightwear         |1899 |
+|Unknown           |121  |
++------------------+-----+
+only showing top 10 rows
+
+--- Top Garment Group ---
++------------------+-----+
+|garment_group_name|count|
++------------------+-----+
+|Jersey Fancy      |21445|
+|Accessories       |11519|
+|Jersey Basic      |8126 |
+|Knitwear          |7490 |
+|Under-, Nightwear |7441 |
+|Trousers          |6727 |
+|Blouses           |5838 |
+|Shoes             |5145 |
+|Dresses Ladies    |4874 |
+|Outdoor           |4501 |
++------------------+-----+
+only showing top 10 rows
+
+--- Top Section ---
++-----------------------------+-----+
+|section_name                 |count|
++-----------------------------+-----+
+|Womens Everyday Collection   |7295 |
+|Divided Collection           |7124 |
+|Baby Essentials & Complements|4932 |
+|Kids Girl                    |4469 |
+|Young Girl                   |3899 |
+|Womens Lingerie              |3598 |
+|Girls Underwear & Basics     |3490 |
+|Womens Tailoring             |3376 |
+|Kids Boy                     |3328 |
+|Womens Small accessories     |3270 |
++-----------------------------+-----+
+only showing top 10 rows
+
+--- Top Colour ---
++-----------------+-----+
+|colour_group_name|count|
++-----------------+-----+
+|Black            |22670|
+|Dark Blue        |12171|
+|White            |9542 |
+|Light Pink       |5811 |
+|Grey             |4487 |
+|Light Beige      |3356 |
+|Blue             |3308 |
+|Red              |3056 |
+|Light Blue       |3012 |
+|Greenish Khaki   |2767 |
++-----------------+-----+
+only showing top 10 rows
+
+
+================================================================================
+DATA PROFILING HOAN TAT
+================================================================================
+SUCCESS: The process with PID 3836 (child process of PID 20932) has been terminated.
+SUCCESS: The process with PID 20932 (child process of PID 8320) has been terminated.
+SUCCESS: The process with PID 8320 (child process of PID 3132) has been terminated.

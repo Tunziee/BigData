@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "items": [
+    {
+      "check": "Stage29 gate",
+      "status": "PASS"
+    },
+    {
+      "check": "Authority chain Stage7-29",
+      "status": "PASS"
+    },
+    {
+      "check": "No new Spark experiment in Stage30",
+      "status": "PASS"
+    },
+    {
+      "check": "Historical model and output modification",
+      "status": "PASS",
+      "value": false
+    },
+    {
+      "check": "Source report preserved",
+      "status": "PASS"
+    },
+    {
+      "check": "Final report DOCX open/readback",
+      "status": "PASS"
+    },
+    {
+      "check": "All required figures copied",
+      "status": "PASS"
+    },
+    {
+      "check": "JSON/CSV/Markdown readback",
+      "status": "PASS"
+    },
+    {
+      "check": "Run log corresponds to summary",
+      "status": "PASS"
+    },
+    {
+      "check": "Render every DOCX page",
+      "status": "PASS"
+    }
+  ]
+}

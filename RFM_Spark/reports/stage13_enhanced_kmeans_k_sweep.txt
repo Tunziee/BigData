@@ -1,0 +1,75 @@
+STAGE 13 — ENHANCED K-MEANS K=2..8 EXPERIMENT
+===================================================================================================================
+CURRENT_STAGE: Stage 13
+IMPROVED_FEATURE_AUTHORITY: IMPROVED_ERFM_FEATURE_SPACE
+INPUT_PATH: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\ml\improved_erfm_scaled
+NO_K_SELECTION: True
+NO_FINAL_ENHANCED_MODEL: True
+NO_GMM: True
+
+SPARK_CONFIGURATION
+{'master': 'local[4]', 'version': '4.2.0', 'shuffle_partitions': 64, 'adaptive_enabled': True}
+CACHE_POLICY: MEMORY_AND_DISK; materialization={'storage_level': 'MEMORY_AND_DISK', 'materialized_row_count': 1362281, 'materialization_runtime_sec': 4.558162600000287, 'materialized_before_k_loop': True}
+
+ENHANCED_KMEANS_CONFIGURATION
+{'seed': 42, 'distanceMeasure': 'euclidean', 'initMode': 'k-means||', 'maxIter': 100, 'tol': 0.0001}
+Fairness lock: same algorithm configuration as main model; only feature space differs.
+
+INPUT_VALIDATION
+{'row_count': 1362281, 'distinct_customer_id': 1362281, 'null_customer_id': 0, 'duplicate_customer_id': 0, 'features_improved_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'features_improved_raw_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'pass': True, 'cache_materialization': {'storage_level': 'MEMORY_AND_DISK', 'materialized_row_count': 1362281, 'materialization_runtime_sec': 4.558162600000287, 'materialized_before_k_loop': True}}
+
+EXPERIMENT_RESULTS_TABLE
+K | Status | Silhouette | WCSS/trainingCost | FitSec | TransformEvalSec | TotalSec | NumIter | Clusters | MinSize | MaxSize | MinRatioPct | MaxRatioPct | Below1Pct | Below2Pct
+2 | PASS | 0.5901652160699704 | 3714913.3841042947 | 6.980148700000427 | 1.6473045999991882 | 8.62745460000042 | 13 | 2 | 508421 | 853860 | 37.32130155232291 | 62.67869844767709 | 0 | 0
+3 | PASS | 0.45054288374642865 | 2885335.9410676965 | 7.389640499999587 | 1.391050299998824 | 8.780691600000864 | 47 | 3 | 299393 | 550642 | 21.977330668195474 | 40.420588703799 | 0 | 0
+4 | PASS | 0.4835419057189569 | 2272486.43072675 | 10.946643600000243 | 1.6823456999991322 | 12.628989799999545 | 77 | 4 | 221108 | 460572 | 16.230718919224447 | 33.808883776548306 | 0 | 0
+5 | PASS | 0.4818602850050599 | 1836214.8866214142 | 7.206893599999603 | 1.858800699999847 | 9.065694999999323 | 21 | 5 | 172774 | 366554 | 12.682699090716232 | 26.90737079941657 | 0 | 0
+6 | PASS | 0.44631301130989254 | 1625557.4634005036 | 10.670279300000402 | 2.2507966000011947 | 12.921076799999355 | 63 | 6 | 98846 | 295937 | 7.255918565993359 | 21.723638515108114 | 0 | 0
+7 | PASS | 0.45473203928382633 | 1441117.6169774146 | 11.94677589999992 | 2.2049700999996276 | 14.151746900000944 | 74 | 7 | 93820 | 275791 | 6.886978530861107 | 20.24479531021867 | 0 | 0
+8 | PASS | 0.45008459235434695 | 1324350.9728409864 | 13.127294699999766 | 2.357757699999638 | 15.485053000000335 | 80 | 8 | 83084 | 274086 | 6.098888555298062 | 20.119637578443804 | 0 | 0
+
+BEST_SILHOUETTE_K_OBSERVED: K=2 (0.5901652160699704); descriptive only, no K selected.
+WCSS_TREND: {'values': [{'k': 2, 'wcss_trainingCost': 3714913.3841042947}, {'k': 3, 'wcss_trainingCost': 2885335.9410676965}, {'k': 4, 'wcss_trainingCost': 2272486.43072675}, {'k': 5, 'wcss_trainingCost': 1836214.8866214142}, {'k': 6, 'wcss_trainingCost': 1625557.4634005036}, {'k': 7, 'wcss_trainingCost': 1441117.6169774146}, {'k': 8, 'wcss_trainingCost': 1324350.9728409864}], 'non_increasing': True, 'warnings': [], 'space_note': 'WCSS is within standardized improved 5D feature space and is not directly comparable in absolute value to main 3D WCSS.'}
+
+CLUSTER_SIZE_SUMMARY
+K=2: sum=1362281; min=508421; max=853860; min_ratio=37.32130155232291; max_ratio=62.67869844767709; below0.5=0; below1=0; below2=0; below5=0
+K=3: sum=1362281; min=299393; max=550642; min_ratio=21.977330668195474; max_ratio=40.420588703799; below0.5=0; below1=0; below2=0; below5=0
+K=4: sum=1362281; min=221108; max=460572; min_ratio=16.230718919224447; max_ratio=33.808883776548306; below0.5=0; below1=0; below2=0; below5=0
+K=5: sum=1362281; min=172774; max=366554; min_ratio=12.682699090716232; max_ratio=26.90737079941657; below0.5=0; below1=0; below2=0; below5=0
+K=6: sum=1362281; min=98846; max=295937; min_ratio=7.255918565993359; max_ratio=21.723638515108114; below0.5=0; below1=0; below2=0; below5=0
+K=7: sum=1362281; min=93820; max=275791; min_ratio=6.886978530861107; max_ratio=20.24479531021867; below0.5=0; below1=0; below2=0; below5=0
+K=8: sum=1362281; min=83084; max=274086; min_ratio=6.098888555298062; max_ratio=20.119637578443804; below0.5=0; below1=0; below2=0; below5=0
+
+CONVERGENCE_SUMMARY
+K=2: numIter=13; flag=NORMAL
+K=3: numIter=47; flag=NORMAL
+K=4: numIter=77; flag=NORMAL
+K=5: numIter=21; flag=NORMAL
+K=6: numIter=63; flag=NORMAL
+K=7: numIter=74; flag=NORMAL
+K=8: numIter=80; flag=NORMAL
+
+CENTERS_VALIDATION
+Centers are retained in standardized improved 5D space only; no raw-RFM inverse interpretation was performed.
+K=2: count=2; dimensions=[5, 5]; pass=True
+K=3: count=3; dimensions=[5, 5, 5]; pass=True
+K=4: count=4; dimensions=[5, 5, 5, 5]; pass=True
+K=5: count=5; dimensions=[5, 5, 5, 5, 5]; pass=True
+K=6: count=6; dimensions=[5, 5, 5, 5, 5, 5]; pass=True
+K=7: count=7; dimensions=[5, 5, 5, 5, 5, 5, 5]; pass=True
+K=8: count=8; dimensions=[5, 5, 5, 5, 5, 5, 5, 5]; pass=True
+
+RUNTIME_SUMMARY
+K=2: fit=6.980148700000427 sec; transform/evaluation=1.6473045999991882 sec; total=8.62745460000042 sec
+K=3: fit=7.389640499999587 sec; transform/evaluation=1.391050299998824 sec; total=8.780691600000864 sec
+K=4: fit=10.946643600000243 sec; transform/evaluation=1.6823456999991322 sec; total=12.628989799999545 sec
+K=5: fit=7.206893599999603 sec; transform/evaluation=1.858800699999847 sec; total=9.065694999999323 sec
+K=6: fit=10.670279300000402 sec; transform/evaluation=2.2507966000011947 sec; total=12.921076799999355 sec
+K=7: fit=11.94677589999992 sec; transform/evaluation=2.2049700999996276 sec; total=14.151746900000944 sec
+K=8: fit=13.127294699999766 sec; transform/evaluation=2.357757699999638 sec; total=15.485053000000335 sec
+
+MAIN_MODEL_REFERENCE: {'authority': 'MAIN_KMEANS_FINAL', 'k': 4, 'silhouette': 0.6859294450224572, 'comparison_conclusion': 'No model comparison conclusion in Stage 13; WCSS absolute values are not directly comparable across 3D and 5D spaces.'}
+ARTIFACT_WRITE_READBACK: {'json_exists': True, 'csv_exists': True, 'json_k_values': [2, 3, 4, 5, 6, 7, 8], 'csv_k_values': [2, 3, 4, 5, 6, 7, 8], 'cluster_files_exist': True, 'centers_files_exist': True, 'pass': True}
+WARNINGS: []
+BLOCKERS: []
+READY_FOR_STAGE_14: True

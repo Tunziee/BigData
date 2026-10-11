@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "analysis_date": "2020-09-23",
+  "customer_count": 1362281,
+  "definitions": {
+    "recency": "DATEDIFF(2020-09-23,last_purchase_date)",
+    "frequency": "COUNT DISTINCT purchase dates; no invoice/order ID available",
+    "monetary": "SUM(price)",
+    "total_items": "transaction item rows",
+    "product_variety": "COUNT DISTINCT article_id",
+    "avg_basket_size": "TotalItems/Frequency proxy; not invoice basket size"
+  },
+  "source_authority": "MAIN_RFM_FEATURE_SPACE"
+}

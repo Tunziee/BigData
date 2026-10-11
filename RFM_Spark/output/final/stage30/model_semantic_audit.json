@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "B0": {
+    "space": "RFM3D",
+    "scaler": "StandardScaler",
+    "k": 4,
+    "init": "random"
+  },
+  "M1": {
+    "space": "RFM3D",
+    "scaler": "StandardScaler",
+    "k": 4,
+    "init": "k-means||"
+  },
+  "M2": {
+    "space": "eRFM5D",
+    "transform": [
+      "Recency identity",
+      "log1p Frequency",
+      "log1p Monetary",
+      "log1p AvgBasketSize",
+      "log1p ProductVariety"
+    ],
+    "scaler": "StandardScaler",
+    "k": 5
+  },
+  "comparison_rule": "Native 3D WCSS and native 5D WCSS are not directly compared; cross-model SSE uses common-space metric."
+}

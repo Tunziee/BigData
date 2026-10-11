@@ -1,0 +1,747 @@
+{
+  "stage": 13,
+  "authority": "ENHANCED_KMEANS_K_SWEEP",
+  "model": "Enhanced K-Means",
+  "feature_authority": "IMPROVED_ERFM_FEATURE_SPACE",
+  "input": {
+    "path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\ml\\improved_erfm_scaled",
+    "row_count": 1362281,
+    "feature_col": "features_improved",
+    "dimension": 5,
+    "feature_order": [
+      "Recency_improved",
+      "Frequency_log1p",
+      "Monetary_log1p",
+      "AvgBasketSize_log1p",
+      "ProductVariety_log1p"
+    ]
+  },
+  "algorithm_config": {
+    "seed": 42,
+    "distanceMeasure": "euclidean",
+    "initMode": "k-means||",
+    "maxIter": 100,
+    "tol": 0.0001
+  },
+  "fairness_lock": {
+    "same_algorithm_configuration_as_main_model": true,
+    "main_model_difference": "feature engineering / feature space only"
+  },
+  "spark_configuration": {
+    "master": "local[4]",
+    "version": "4.2.0",
+    "shuffle_partitions": 64,
+    "adaptive_enabled": true
+  },
+  "cache_materialization": {
+    "storage_level": "MEMORY_AND_DISK",
+    "materialized_row_count": 1362281,
+    "materialization_runtime_sec": 4.558162600000287,
+    "materialized_before_k_loop": true
+  },
+  "experiments": [
+    {
+      "k": 2,
+      "status": "PASS",
+      "silhouette": 0.5901652160699704,
+      "wcss_trainingCost": 3714913.3841042947,
+      "fit_runtime_sec": 6.980148700000427,
+      "transform_evaluation_runtime_sec": 1.6473045999991882,
+      "total_runtime_sec": 8.62745460000042,
+      "num_iter": 13,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 2,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 853860,
+          "ratio_pct": 62.67869844767709
+        },
+        {
+          "cluster_id": 1,
+          "count": 508421,
+          "ratio_pct": 37.32130155232291
+        }
+      ],
+      "min_cluster_size": 508421,
+      "max_cluster_size": 853860,
+      "min_cluster_ratio_pct": 37.32130155232291,
+      "max_cluster_ratio_pct": 62.67869844767709,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.4152662113362465,
+          -0.6329574778372903,
+          -0.5762874020901237,
+          -0.20342601385290213,
+          -0.6378406812630084
+        ],
+        [
+          -0.6974279112593563,
+          1.06303426485137,
+          0.9678584680211854,
+          0.34164826336490006,
+          1.0712354675276692
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 3,
+      "status": "PASS",
+      "silhouette": 0.45054288374642865,
+      "wcss_trainingCost": 2885335.9410676965,
+      "fit_runtime_sec": 7.389640499999587,
+      "transform_evaluation_runtime_sec": 1.391050299998824,
+      "total_runtime_sec": 8.780691600000864,
+      "num_iter": 47,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 3,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 299393,
+          "ratio_pct": 21.977330668195474
+        },
+        {
+          "cluster_id": 1,
+          "count": 512246,
+          "ratio_pct": 37.60208062800553
+        },
+        {
+          "cluster_id": 2,
+          "count": 550642,
+          "ratio_pct": 40.420588703799
+        }
+      ],
+      "min_cluster_size": 299393,
+      "max_cluster_size": 550642,
+      "min_cluster_ratio_pct": 21.977330668195474,
+      "max_cluster_ratio_pct": 40.420588703799,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.789292536612118,
+          1.4715482175338652,
+          1.5271817740313758,
+          0.3871654952334261,
+          1.4235078219850374
+        ],
+        [
+          0.8245422580130006,
+          -0.8222333408551222,
+          -0.7033719523648102,
+          -0.578866883859392,
+          -0.9618122982022186
+        ],
+        [
+          -0.3378650814937706,
+          -0.035241567118916774,
+          -0.17606051517096705,
+          0.3279740925014674,
+          0.12072111326283817
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 4,
+      "status": "PASS",
+      "silhouette": 0.4835419057189569,
+      "wcss_trainingCost": 2272486.43072675,
+      "fit_runtime_sec": 10.946643600000243,
+      "transform_evaluation_runtime_sec": 1.6823456999991322,
+      "total_runtime_sec": 12.628989799999545,
+      "num_iter": 77,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 4,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 221108,
+          "ratio_pct": 16.230718919224447
+        },
+        {
+          "cluster_id": 1,
+          "count": 460572,
+          "ratio_pct": 33.808883776548306
+        },
+        {
+          "cluster_id": 2,
+          "count": 257685,
+          "ratio_pct": 18.91570094569329
+        },
+        {
+          "cluster_id": 3,
+          "count": 422916,
+          "ratio_pct": 31.044696358533958
+        }
+      ],
+      "min_cluster_size": 221108,
+      "max_cluster_size": 460572,
+      "min_cluster_ratio_pct": 16.230718919224447,
+      "max_cluster_ratio_pct": 33.808883776548306,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.8043062996760503,
+          1.582497911060541,
+          1.862006508229386,
+          0.565985799197027,
+          1.5917542636671975
+        ],
+        [
+          0.5964864416666381,
+          -0.7939641449314276,
+          -0.7221134152539244,
+          -0.818407883851418,
+          -1.026975413416077
+        ],
+        [
+          0.6182889252969677,
+          -0.7157591772776516,
+          -0.3438327918070948,
+          1.1977009597522137,
+          -0.15489399156809155
+        ],
+        [
+          -0.6057514930536779,
+          0.47331743332664994,
+          0.022327121762334076,
+          -0.13441879875645205,
+          0.38050101347204773
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 5,
+      "status": "PASS",
+      "silhouette": 0.4818602850050599,
+      "wcss_trainingCost": 1836214.8866214142,
+      "fit_runtime_sec": 7.206893599999603,
+      "transform_evaluation_runtime_sec": 1.858800699999847,
+      "total_runtime_sec": 9.065694999999323,
+      "num_iter": 21,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 5,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 210248,
+          "ratio_pct": 15.433526563168684
+        },
+        {
+          "cluster_id": 1,
+          "count": 172774,
+          "ratio_pct": 12.682699090716232
+        },
+        {
+          "cluster_id": 2,
+          "count": 269066,
+          "ratio_pct": 19.751137981077324
+        },
+        {
+          "cluster_id": 3,
+          "count": 343639,
+          "ratio_pct": 25.225265565621193
+        },
+        {
+          "cluster_id": 4,
+          "count": 366554,
+          "ratio_pct": 26.90737079941657
+        }
+      ],
+      "min_cluster_size": 172774,
+      "max_cluster_size": 366554,
+      "min_cluster_ratio_pct": 12.682699090716232,
+      "max_cluster_ratio_pct": 26.90737079941657,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.4384881086223742,
+          -0.6277936731632828,
+          -0.22468769888358062,
+          1.4107246474865613,
+          0.02021307195709716
+        ],
+        [
+          -0.8242008775874676,
+          1.6847161708882905,
+          2.1162954215808014,
+          0.6485789880916449,
+          1.707939955918849
+        ],
+        [
+          1.5010696874292808,
+          -0.8214514768207108,
+          -0.7047556871713285,
+          -0.5978824670374556,
+          -0.9611976846487754
+        ],
+        [
+          -0.3571272320349401,
+          -0.6098974464753231,
+          -0.6480581506029948,
+          -0.6463221943705175,
+          -0.7966932250058133
+        ],
+        [
+          -0.6300713974476971,
+          0.7407739420483642,
+          0.2562618097910844,
+          -0.07007297204547962,
+          0.6358417794344826
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 6,
+      "status": "PASS",
+      "silhouette": 0.44631301130989254,
+      "wcss_trainingCost": 1625557.4634005036,
+      "fit_runtime_sec": 10.670279300000402,
+      "transform_evaluation_runtime_sec": 2.2507966000011947,
+      "total_runtime_sec": 12.921076799999355,
+      "num_iter": 63,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 6,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 192418,
+          "ratio_pct": 14.124692335869032
+        },
+        {
+          "cluster_id": 1,
+          "count": 295937,
+          "ratio_pct": 21.723638515108114
+        },
+        {
+          "cluster_id": 2,
+          "count": 256838,
+          "ratio_pct": 18.853525814424486
+        },
+        {
+          "cluster_id": 3,
+          "count": 271538,
+          "ratio_pct": 19.93259834057731
+        },
+        {
+          "cluster_id": 4,
+          "count": 246704,
+          "ratio_pct": 18.1096264280277
+        },
+        {
+          "cluster_id": 5,
+          "count": 98846,
+          "ratio_pct": 7.255918565993359
+        }
+      ],
+      "min_cluster_size": 98846,
+      "max_cluster_size": 295937,
+      "min_cluster_ratio_pct": 7.255918565993359,
+      "max_cluster_ratio_pct": 21.723638515108114,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          0.49699421294264273,
+          -0.6691274215051166,
+          -0.23134236755734908,
+          1.4815168600671387,
+          0.004366648856466908
+        ],
+        [
+          -0.49813838629514984,
+          0.25813420032114,
+          -0.18116064754231911,
+          -0.18823774017751388,
+          0.17704619094480367
+        ],
+        [
+          1.5415992517076202,
+          -0.8234886649159715,
+          -0.7046312091179,
+          -0.5750816627149813,
+          -0.9538423506355744
+        ],
+        [
+          -0.2851955626811458,
+          -0.7771509271257754,
+          -0.7142982277802012,
+          -0.7553390971111269,
+          -0.9934696647952479
+        ],
+        [
+          -0.7404917981419998,
+          1.1795623315345178,
+          0.8487235484655349,
+          0.15550829353623058,
+          1.0957004892537794
+        ],
+        [
+          -0.8501935523397693,
+          1.8606061720230476,
+          2.6677913336505394,
+          0.8607455116834117,
+          1.9345623983630837
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 7,
+      "status": "PASS",
+      "silhouette": 0.45473203928382633,
+      "wcss_trainingCost": 1441117.6169774146,
+      "fit_runtime_sec": 11.94677589999992,
+      "transform_evaluation_runtime_sec": 2.2049700999996276,
+      "total_runtime_sec": 14.151746900000944,
+      "num_iter": 74,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 7,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 147959,
+          "ratio_pct": 10.861121897758245
+        },
+        {
+          "cluster_id": 1,
+          "count": 224395,
+          "ratio_pct": 16.47200540857576
+        },
+        {
+          "cluster_id": 2,
+          "count": 212515,
+          "ratio_pct": 15.599938632337967
+        },
+        {
+          "cluster_id": 3,
+          "count": 275791,
+          "ratio_pct": 20.24479531021867
+        },
+        {
+          "cluster_id": 4,
+          "count": 142011,
+          "ratio_pct": 10.424501259284979
+        },
+        {
+          "cluster_id": 5,
+          "count": 93820,
+          "ratio_pct": 6.886978530861107
+        },
+        {
+          "cluster_id": 6,
+          "count": 265790,
+          "ratio_pct": 19.51065896096327
+        }
+      ],
+      "min_cluster_size": 93820,
+      "max_cluster_size": 275791,
+      "min_cluster_ratio_pct": 6.886978530861107,
+      "max_cluster_ratio_pct": 20.24479531021867,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          1.3512366523792405,
+          -0.7470829868952088,
+          -0.44669573965437576,
+          0.993519597655087,
+          -0.26837920048333047
+        ],
+        [
+          -0.7591420115252582,
+          1.2655656132215471,
+          0.9032179557138851,
+          0.08778897195852851,
+          1.1350608951908001
+        ],
+        [
+          1.504178534045521,
+          -0.847056010721166,
+          -0.7392270984134669,
+          -0.8423191652540749,
+          -1.080063006542359
+        ],
+        [
+          -0.3157408935216091,
+          -0.7613487660874075,
+          -0.7047897314652646,
+          -0.7024423703624464,
+          -0.955933550854151
+        ],
+        [
+          -0.3629069641253837,
+          -0.39229951453916695,
+          0.014090116735300093,
+          1.4417639703669212,
+          0.2722607537356944
+        ],
+        [
+          -0.8509360686946968,
+          1.8694891212307576,
+          2.7152550560934423,
+          0.8841883477041198,
+          1.9524032867101409
+        ],
+        [
+          -0.4920705272472893,
+          0.36431161688424596,
+          -0.15757031315948278,
+          -0.3073146225579742,
+          0.21186708315934757
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    },
+    {
+      "k": 8,
+      "status": "PASS",
+      "silhouette": 0.45008459235434695,
+      "wcss_trainingCost": 1324350.9728409864,
+      "fit_runtime_sec": 13.127294699999766,
+      "transform_evaluation_runtime_sec": 2.357757699999638,
+      "total_runtime_sec": 15.485053000000335,
+      "num_iter": 80,
+      "convergence_flag": "NORMAL",
+      "num_produced_clusters": 8,
+      "cluster_count_sum": 1362281,
+      "cluster_sizes": [
+        {
+          "cluster_id": 0,
+          "count": 179219,
+          "ratio_pct": 13.155802657454666
+        },
+        {
+          "cluster_id": 1,
+          "count": 83084,
+          "ratio_pct": 6.098888555298062
+        },
+        {
+          "cluster_id": 2,
+          "count": 103917,
+          "ratio_pct": 7.628161884368938
+        },
+        {
+          "cluster_id": 3,
+          "count": 170741,
+          "ratio_pct": 12.533464094412238
+        },
+        {
+          "cluster_id": 4,
+          "count": 274086,
+          "ratio_pct": 20.119637578443804
+        },
+        {
+          "cluster_id": 5,
+          "count": 263999,
+          "ratio_pct": 19.379188287878932
+        },
+        {
+          "cluster_id": 6,
+          "count": 170096,
+          "ratio_pct": 12.486117034591249
+        },
+        {
+          "cluster_id": 7,
+          "count": 117139,
+          "ratio_pct": 8.598739907552112
+        }
+      ],
+      "min_cluster_size": 83084,
+      "max_cluster_size": 274086,
+      "min_cluster_ratio_pct": 6.098888555298062,
+      "max_cluster_ratio_pct": 20.119637578443804,
+      "clusters_below_0_5_pct": 0,
+      "clusters_below_1_pct": 0,
+      "clusters_below_2_pct": 0,
+      "clusters_below_5_pct": 0,
+      "centers_scaled_improved_5d": [
+        [
+          -0.8076214825876356,
+          1.4017215120535966,
+          0.8416125483637916,
+          -0.1901249600219853,
+          1.1103868702180177
+        ],
+        [
+          -0.8840729784700202,
+          1.9943793561430347,
+          2.816388037747625,
+          0.7666691408709435,
+          1.9986150392594342
+        ],
+        [
+          -0.5074611979279052,
+          0.5825114926740476,
+          0.9589574707106424,
+          1.1974167626512127,
+          1.084143503669035
+        ],
+        [
+          1.4284995894281785,
+          -0.7511689296483652,
+          -0.5379472241127846,
+          0.5305552102051386,
+          -0.44345236548493777
+        ],
+        [
+          -0.4968187712705036,
+          0.29450654134544213,
+          -0.1773723567903028,
+          -0.24116914506101422,
+          0.18488452915312262
+        ],
+        [
+          -0.333081947519042,
+          -0.7637118971859458,
+          -0.7084946541202946,
+          -0.7179546267138768,
+          -0.96535143467184
+        ],
+        [
+          1.4809495518872646,
+          -0.8582164479949136,
+          -0.759587836478076,
+          -1.0594935301441986,
+          -1.179356814388391
+        ],
+        [
+          -0.006577630635335669,
+          -0.702873488495015,
+          -0.2372262910918124,
+          1.6323512972045238,
+          0.023601682652943008
+        ]
+      ],
+      "metric_validation_pass": true,
+      "cluster_validation_pass": true,
+      "centers_validation_pass": true,
+      "validation_pass": true
+    }
+  ],
+  "best_silhouette_k_observed": {
+    "k": 2,
+    "silhouette": 0.5901652160699704,
+    "descriptive_only": true,
+    "no_k_selected": true
+  },
+  "wcss_trend": {
+    "values": [
+      {
+        "k": 2,
+        "wcss_trainingCost": 3714913.3841042947
+      },
+      {
+        "k": 3,
+        "wcss_trainingCost": 2885335.9410676965
+      },
+      {
+        "k": 4,
+        "wcss_trainingCost": 2272486.43072675
+      },
+      {
+        "k": 5,
+        "wcss_trainingCost": 1836214.8866214142
+      },
+      {
+        "k": 6,
+        "wcss_trainingCost": 1625557.4634005036
+      },
+      {
+        "k": 7,
+        "wcss_trainingCost": 1441117.6169774146
+      },
+      {
+        "k": 8,
+        "wcss_trainingCost": 1324350.9728409864
+      }
+    ],
+    "non_increasing": true,
+    "warnings": [],
+    "space_note": "WCSS is within standardized improved 5D feature space and is not directly comparable in absolute value to main 3D WCSS."
+  },
+  "main_model_reference": {
+    "authority": "MAIN_KMEANS_FINAL",
+    "k": 4,
+    "silhouette": 0.6859294450224572,
+    "comparison_conclusion": "No model comparison conclusion in Stage 13; WCSS absolute values are not directly comparable across 3D and 5D spaces."
+  },
+  "validation": {
+    "input_pass": true,
+    "all_k_values_completed": true,
+    "all_experiments_pass": true,
+    "wcss_trend_sanity_warnings": [],
+    "artifact_write_readback_pass": true
+  },
+  "ready_for_stage14": true,
+  "artifact_write_readback": {
+    "json_exists": true,
+    "csv_exists": true,
+    "json_k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "csv_k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "cluster_files_exist": true,
+    "centers_files_exist": true,
+    "pass": true
+  }
+}

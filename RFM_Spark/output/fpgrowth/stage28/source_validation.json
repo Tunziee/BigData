@@ -1,0 +1,13 @@
+{
+  "row_count": 31788324,
+  "distinct_customers": 1362281,
+  "null_customer_id": 0,
+  "null_t_dat": 0,
+  "null_article_id": 0,
+  "missing_article_references": 0,
+  "min_date": "2018-09-20",
+  "max_date": "2020-09-22",
+  "transactions_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\transactions",
+  "articles_path": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark\\output\\clean\\articles",
+  "pass": true
+}

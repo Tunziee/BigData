@@ -1,0 +1,243 @@
+{
+  "tolerance": 1e-08,
+  "models": {
+    "B0": {
+      "model_id": "B0",
+      "trial_count": 3,
+      "tolerance": 1e-08,
+      "trials": [
+        {
+          "trial_index": 1,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              533256,
+              146821,
+              19206,
+              300717
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 2,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              533256,
+              146821,
+              19206,
+              300717
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 3,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              533256,
+              146821,
+              19206,
+              300717
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "M1": {
+      "model_id": "M1",
+      "trial_count": 3,
+      "tolerance": 1e-08,
+      "trials": [
+        {
+          "trial_index": 1,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              300717,
+              19206,
+              146821,
+              533256
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 2,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 1.1641532182693481e-10,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              300717,
+              19206,
+              146821,
+              533256
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 3,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 1.1641532182693481e-10,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              300717,
+              19206,
+              146821,
+              533256
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "M2": {
+      "model_id": "M2",
+      "trial_count": 3,
+      "tolerance": 1e-08,
+      "trials": [
+        {
+          "trial_index": 1,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              126282,
+              252456,
+              154445,
+              197744,
+              269073
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 2,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 2.3283064365386963e-10,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              126282,
+              252456,
+              154445,
+              197744,
+              269073
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        },
+        {
+          "trial_index": 3,
+          "numIter_equal": true,
+          "trainingCost_absolute_difference": 0.0,
+          "center_alignment": {
+            "reference_to_candidate_permutation": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "sum_squared_center_difference": 0.0,
+            "max_absolute_center_difference": 0.0,
+            "matched_cluster_sizes": [
+              126282,
+              252456,
+              154445,
+              197744,
+              269073
+            ],
+            "cluster_sizes_match": true
+          },
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  },
+  "pass": true
+}

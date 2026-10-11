@@ -1,0 +1,82 @@
+{
+  "track_a_assignment": [
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M1",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+      "ratio": 0.9893613806102329
+    },
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+      "ratio": 0.8738507485305913
+    },
+    {
+      "numerator_model": "M1",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+      "ratio": 0.8832472801713817
+    }
+  ],
+  "track_b_fit_only": [
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M1",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+      "ratio": 0.9827001398055796
+    },
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+      "ratio": 1.2519147904626862
+    },
+    {
+      "numerator_model": "M1",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+      "ratio": 1.2739540168482817
+    }
+  ],
+  "track_b_assign_after_fit": [
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M1",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+      "ratio": 0.9949385051605795
+    },
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+      "ratio": 0.8835959280368918
+    },
+    {
+      "numerator_model": "M1",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+      "ratio": 0.8880909960302347
+    }
+  ],
+  "track_b_total_fit_plus_assign": [
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M1",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M1",
+      "ratio": 0.98337450022676
+    },
+    {
+      "numerator_model": "B0",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec B0 / median median_runtime_sec M2",
+      "ratio": 1.235458067324717
+    },
+    {
+      "numerator_model": "M1",
+      "denominator_model": "M2",
+      "ratio_definition": "median median_runtime_sec M1 / median median_runtime_sec M2",
+      "ratio": 1.2563454381213142
+    }
+  ]
+}

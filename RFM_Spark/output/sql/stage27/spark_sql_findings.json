@@ -1,0 +1,96 @@
+{
+  "dataset": [
+    {
+      "metric": "transaction_item_rows",
+      "value": 31788324,
+      "source_query": "Q1"
+    },
+    {
+      "metric": "distinct_customers",
+      "value": 1362281,
+      "source_query": "Q1"
+    }
+  ],
+  "monthly_trend": [
+    {
+      "metric": "highest_monthly_monetary_sum",
+      "value": {
+        "month": "2019-06-01T00:00:00",
+        "purchase_item_rows": 1906202,
+        "distinct_customers": 305190,
+        "distinct_articles": 33346,
+        "monetary_sum": 48648.41786424664,
+        "average_price_per_item_row": 0.02552112413282886
+      },
+      "source_query": "Q2"
+    }
+  ],
+  "products": [
+    {
+      "metric": "top_product_group_by_monetary_sum",
+      "value": {
+        "product_group": "Garment Upper body",
+        "purchase_item_rows": 12552755,
+        "distinct_customers": 1092325,
+        "distinct_articles": 42313,
+        "monetary_sum": 338981.7892036557,
+        "average_price_per_item_row": 0.027004573036250264
+      },
+      "source_query": "Q4"
+    }
+  ],
+  "customer_demographics": [
+    {
+      "metric": "top_age_band_by_monetary_sum",
+      "value": {
+        "age_band": "AGE_25_34",
+        "customer_count": 391009,
+        "purchase_item_rows": 11565068,
+        "distinct_articles": 96196,
+        "monetary_sum": 324373.0741856408,
+        "average_price_per_item_row": 0.028047658188057413,
+        "average_monetary_per_customer": 0.8295795600245539,
+        "average_purchase_rows_per_customer": 29.577498216153593
+      },
+      "source_query": "Q5"
+    }
+  ],
+  "m2_segments": [
+    {
+      "metric": "largest_m2_segment_by_customer_count",
+      "value": {
+        "prediction": 4,
+        "segment_name_vi": "Khách hàng hoạt động thường xuyên",
+        "segment_name_en": "Active Regular Customers",
+        "customer_count": 366554,
+        "customer_ratio": 0.2690737079941657,
+        "mean_recency": 96.82912749553954,
+        "median_recency": 64,
+        "mean_frequency": 9.264621310911899,
+        "median_frequency": 8,
+        "mean_monetary": 0.6589094739249445,
+        "median_monetary": 0.5999830508474575,
+        "mean_avg_basket_size": 2.9923048702372657,
+        "median_avg_basket_size": 2.75,
+        "mean_product_variety": 22.875393530011948,
+        "median_product_variety": 21
+      },
+      "source_query": "Q6"
+    }
+  ],
+  "window_analysis": [
+    {
+      "metric": "top_article_within_first_product_group",
+      "value": {
+        "article_id": "0673396002",
+        "product_group": "Accessories",
+        "product_name": "Ringo hipbelt",
+        "purchase_item_rows": 19834,
+        "distinct_customers": 17147,
+        "monetary_sum": 258.53818644067707,
+        "product_group_rank": 1
+      },
+      "source_query": "Q7"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "Q1": {
+    "csv_median_sec": 3.7546025000001464,
+    "parquet_median_sec": 0.2150857999999971,
+    "csv_over_parquet_ratio": 17.456301159817137,
+    "parquet_runtime_reduction_pct": 94.27140955667109,
+    "interpretation_rule": "ratio > 1 means Parquet is faster for this query"
+  },
+  "Q2": {
+    "csv_median_sec": 19.612704599999915,
+    "parquet_median_sec": 0.315407900000082,
+    "csv_over_parquet_ratio": 62.18203348741365,
+    "parquet_runtime_reduction_pct": 98.3918184338529,
+    "interpretation_rule": "ratio > 1 means Parquet is faster for this query"
+  },
+  "Q3": {
+    "csv_median_sec": 30.046022700000094,
+    "parquet_median_sec": 7.428095799999937,
+    "csv_over_parquet_ratio": 4.044915885441373,
+    "parquet_runtime_reduction_pct": 75.27760704247916,
+    "interpretation_rule": "ratio > 1 means Parquet is faster for this query"
+  }
+}

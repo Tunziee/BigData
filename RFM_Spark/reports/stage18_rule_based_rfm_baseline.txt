@@ -1,0 +1,24 @@
+STAGE 18 — RULE-BASED RFM BASELINE
+
+AUTHORITY: RULE_BASED_RFM_BASELINE_V1
+METHOD AUTHORITY: RULE_BASED_RFM_QUINTILE_V1
+COHORT_COUNT: 1000000
+READY_FOR_STAGE_19: True
+RULE-BASED RFM IS GROUND TRUTH: False
+FORMAL THREE-MODEL COMPARISON EXECUTED: False
+GMM EXECUTED: False
+
+THRESHOLDS:
+{'Recency': [35.0, 96.0, 232.0, 460.0], 'Frequency': [1.0, 2.0, 4.0, 10.0], 'Monetary': [0.06859322033898305, 0.1642881355932203, 0.36584745762711857, 0.8910847457627119]}
+
+SEGMENT DISTRIBUTION:
+{'segments': [{'segment_id': 0, 'count': 267989, 'ratio_pct': 26.798899999999996, 'name_vi': 'RFM rất thấp', 'name_en': 'Very Low RFM', 'score_range': '3-5'}, {'segment_id': 1, 'count': 159627, 'ratio_pct': 15.9627, 'name_vi': 'RFM thấp', 'name_en': 'Low RFM', 'score_range': '6-7'}, {'segment_id': 2, 'count': 199853, 'ratio_pct': 19.9853, 'name_vi': 'RFM trung bình', 'name_en': 'Medium RFM', 'score_range': '8-10'}, {'segment_id': 3, 'count': 142542, 'ratio_pct': 14.2542, 'name_vi': 'RFM cao', 'name_en': 'High RFM', 'score_range': '11-12'}, {'segment_id': 4, 'count': 229989, 'ratio_pct': 22.9989, 'name_vi': 'RFM rất cao', 'name_en': 'Very High RFM', 'score_range': '13-15'}], 'missing_segment_ids': [], 'pass': True}
+
+ORDINAL SANITY:
+{'recency_mean_segment0_to4': [483.91422782278374, 272.8613141887024, 194.5560436921137, 106.23830870901207, 39.69206788150738], 'frequency_mean_segment0_to4': [1.0972129453074566, 1.729293916442707, 3.6206812006825015, 7.099563637384069, 18.9305227641322], 'monetary_mean_segment0_to4': [0.07420853442568427, 0.15559144533235708, 0.3209046487303754, 0.6682017917288271, 1.9323279977060022], 'recency_endpoint_improves': True, 'frequency_endpoint_increases': True, 'monetary_endpoint_increases': True, 'interpretation': 'Descriptive ordinal sanity only; individual feature means need not be strictly monotonic because total scores combine three dimensions.'}
+
+REPRODUCIBILITY:
+{'thresholds': {'original': {'Recency': [35.0, 96.0, 232.0, 460.0], 'Frequency': [1.0, 2.0, 4.0, 10.0], 'Monetary': [0.06859322033898305, 0.1642881355932203, 0.36584745762711857, 0.8910847457627119]}, 'recomputed': {'Recency': [35.0, 96.0, 232.0, 460.0], 'Frequency': [1.0, 2.0, 4.0, 10.0], 'Monetary': [0.06859322033898305, 0.1642881355932203, 0.36584745762711857, 0.8910847457627119]}, 'absolute_differences': {'Recency': [0.0, 0.0, 0.0, 0.0], 'Frequency': [0.0, 0.0, 0.0, 0.0], 'Monetary': [0.0, 0.0, 0.0, 0.0]}, 'pass': True}, 'r_score_mismatch_count': 0, 'f_score_mismatch_count': 0, 'm_score_mismatch_count': 0, 'rfm_total_score_mismatch_count': 0, 'rule_segment_id_mismatch_count': 0, 'pass': True}
+
+CUSTOMER UNIVERSE CHECK:
+{'stage17_minus_rule_predictions': 0, 'rule_predictions_minus_stage17': 0, 'pass': True}

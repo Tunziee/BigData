@@ -1,0 +1,70 @@
+STAGE 8 — MAIN MODEL K-MEANS K=2..8 EXPERIMENT
+==============================================================================================================
+PROJECT_ROOT: D:\Doan_bigdata\BigData\BigData\RFM_Spark
+INPUT_PATH: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\ml\main_rfm_scaled
+RERUN_STAGE_8: True
+
+MAIN_MODEL_AUTHORITY
+RFM -> VectorAssembler -> StandardScaler -> K-Means
+Stage 8 produces experiment evidence only; it does not select K or train a final model.
+
+SPARK_CONFIGURATION
+Spark master: local[4]
+Spark version: recorded in JSON artifact
+CACHE_POLICY: MEMORY_AND_DISK
+CACHE_MATERIALIZATION: {'storage_level': 'MEMORY_AND_DISK', 'materialized_row_count': 1362281, 'materialization_runtime_sec': 2.9616801000011037, 'materialized_before_k_loop': True}
+
+KMEANS_CONFIGURATION
+seed=42; distanceMeasure=euclidean; initMode=k-means||; maxIter=100; tol=0.0001
+All K values use the same configuration except K.
+
+PRE-FLIGHT_VALIDATION
+{'row_count': 1362281, 'distinct_customers': 1362281, 'null_customer_id': 0, 'duplicate_customer_id': 0, 'features_raw_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'features_quality': {'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'pass': True}
+
+EXPERIMENT_RESULTS_TABLE
+K | Status | Silhouette | WCSS(trainingCost) | FitRuntimeSec | TransformEvalRuntimeSec | TotalRuntimeSec | MinClusterSize | MaxClusterSize | MinRatioPct | MaxRatioPct | NumProducedClusters
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2 | PASS | 0.7572757388559014 | 2514082.497202137 | 6.775042099998245 | 1.5027143999996042 | 8.277758299998823 | 173036 | 1189245 | 12.701931539821814 | 87.29806846017819 | 2
+3 | PASS | 0.6650979272890235 | 1483537.5954085677 | 4.621737999999823 | 1.2297916999996232 | 5.851530600000842 | 102738 | 813355 | 7.541615863393823 | 59.70537649721312 | 3
+4 | PASS | 0.6859294450224572 | 1051831.216267805 | 5.304559199999858 | 1.3644824999992125 | 6.669041999999536 | 24809 | 729944 | 1.8211367551922109 | 53.582484083680235 | 4
+5 | PASS | 0.6570942072422772 | 856603.9698525455 | 7.388908299999457 | 1.5055015999987518 | 8.89441049999914 | 8857 | 647864 | 0.6501595485806526 | 47.55729544785547 | 5
+6 | PASS | 0.6116205177066648 | 717569.19390364 | 8.488186999999016 | 1.8692160000009608 | 10.357403499998327 | 7933 | 514023 | 0.5823321326510463 | 37.732523612969715 | 6
+7 | PASS | 0.5939436367506115 | 689225.2249182112 | 11.131029099999068 | 1.9942312999992282 | 13.125260699998762 | 3825 | 551149 | 0.28077907568262345 | 40.457805695007124 | 7
+8 | PASS | 0.6039793455099449 | 560331.8224876041 | 9.545705499998803 | 2.0832028000004357 | 11.62890890000017 | 3252 | 451208 | 0.23871726905095206 | 33.12150723675952 | 8
+
+BEST_SILHOUETTE_K_OBSERVED: K=2 (descriptive observation only; not a final selection)
+ELBOW_CANDIDATES: deferred to Stage 9; no final decision made.
+WCSS_TREND: {'values': [{'k': 2, 'wcss': 2514082.497202137}, {'k': 3, 'wcss': 1483537.5954085677}, {'k': 4, 'wcss': 1051831.216267805}, {'k': 5, 'wcss': 856603.9698525455}, {'k': 6, 'wcss': 717569.19390364}, {'k': 7, 'wcss': 689225.2249182112}, {'k': 8, 'wcss': 560331.8224876041}], 'non_increasing': True, 'warnings': []}
+
+CLUSTER_SIZE_SUMMARY
+K=2: sum=1362281, clusters=2, sizes=[{'cluster_id': 0, 'count': 1189245, 'ratio_pct': 87.29806846017819}, {'cluster_id': 1, 'count': 173036, 'ratio_pct': 12.701931539821814}]
+K=3: sum=1362281, clusters=3, sizes=[{'cluster_id': 0, 'count': 446188, 'ratio_pct': 32.75300763939305}, {'cluster_id': 1, 'count': 102738, 'ratio_pct': 7.541615863393823}, {'cluster_id': 2, 'count': 813355, 'ratio_pct': 59.70537649721312}]
+K=4: sum=1362281, clusters=4, sizes=[{'cluster_id': 0, 'count': 729944, 'ratio_pct': 53.582484083680235}, {'cluster_id': 1, 'count': 198035, 'ratio_pct': 14.537015490930285}, {'cluster_id': 2, 'count': 409493, 'ratio_pct': 30.059363670197264}, {'cluster_id': 3, 'count': 24809, 'ratio_pct': 1.8211367551922109}]
+K=5: sum=1362281, clusters=5, sizes=[{'cluster_id': 0, 'count': 398072, 'ratio_pct': 29.220990383041386}, {'cluster_id': 1, 'count': 8857, 'ratio_pct': 0.6501595485806526}, {'cluster_id': 2, 'count': 242341, 'ratio_pct': 17.78935476601377}, {'cluster_id': 3, 'count': 65147, 'ratio_pct': 4.7821998545087245}, {'cluster_id': 4, 'count': 647864, 'ratio_pct': 47.55729544785547}]
+K=6: sum=1362281, clusters=6, sizes=[{'cluster_id': 0, 'count': 216485, 'ratio_pct': 15.891361620693528}, {'cluster_id': 1, 'count': 58260, 'ratio_pct': 4.27665070569141}, {'cluster_id': 2, 'count': 306627, 'ratio_pct': 22.50835180113354}, {'cluster_id': 3, 'count': 258953, 'ratio_pct': 19.008780126860756}, {'cluster_id': 4, 'count': 7933, 'ratio_pct': 0.5823321326510463}, {'cluster_id': 5, 'count': 514023, 'ratio_pct': 37.732523612969715}]
+K=7: sum=1362281, clusters=7, sizes=[{'cluster_id': 0, 'count': 269585, 'ratio_pct': 19.789235847817007}, {'cluster_id': 1, 'count': 113334, 'ratio_pct': 8.319428957755411}, {'cluster_id': 2, 'count': 21788, 'ratio_pct': 1.5993763401236605}, {'cluster_id': 3, 'count': 385451, 'ratio_pct': 28.294529542730174}, {'cluster_id': 4, 'count': 3825, 'ratio_pct': 0.28077907568262345}, {'cluster_id': 5, 'count': 551149, 'ratio_pct': 40.457805695007124}, {'cluster_id': 6, 'count': 17149, 'ratio_pct': 1.2588445408840025}]
+K=8: sum=1362281, clusters=8, sizes=[{'cluster_id': 0, 'count': 229461, 'ratio_pct': 16.84388169547986}, {'cluster_id': 1, 'count': 3252, 'ratio_pct': 0.23871726905095206}, {'cluster_id': 2, 'count': 94589, 'ratio_pct': 6.943427971174816}, {'cluster_id': 3, 'count': 254237, 'ratio_pct': 18.6625960429603}, {'cluster_id': 4, 'count': 15856, 'ratio_pct': 1.1639302023591316}, {'cluster_id': 5, 'count': 451208, 'ratio_pct': 33.12150723675952}, {'cluster_id': 6, 'count': 16816, 'ratio_pct': 1.234400244883398}, {'cluster_id': 7, 'count': 296862, 'ratio_pct': 21.79153933733202}]
+
+CENTERS_VALIDATION
+Centers are stored in standardized RFM space only; no business interpretation was performed.
+K=2: count=2, dimensions=[3, 3], pass=True
+K=3: count=3, dimensions=[3, 3, 3], pass=True
+K=4: count=4, dimensions=[3, 3, 3, 3], pass=True
+K=5: count=5, dimensions=[3, 3, 3, 3, 3], pass=True
+K=6: count=6, dimensions=[3, 3, 3, 3, 3, 3], pass=True
+K=7: count=7, dimensions=[3, 3, 3, 3, 3, 3, 3], pass=True
+K=8: count=8, dimensions=[3, 3, 3, 3, 3, 3, 3, 3], pass=True
+
+RUNTIME_SUMMARY
+K=2: fit=6.775042099998245 sec; transform+evaluation=1.5027143999996042 sec; total=8.277758299998823 sec
+K=3: fit=4.621737999999823 sec; transform+evaluation=1.2297916999996232 sec; total=5.851530600000842 sec
+K=4: fit=5.304559199999858 sec; transform+evaluation=1.3644824999992125 sec; total=6.669041999999536 sec
+K=5: fit=7.388908299999457 sec; transform+evaluation=1.5055015999987518 sec; total=8.89441049999914 sec
+K=6: fit=8.488186999999016 sec; transform+evaluation=1.8692160000009608 sec; total=10.357403499998327 sec
+K=7: fit=11.131029099999068 sec; transform+evaluation=1.9942312999992282 sec; total=13.125260699998762 sec
+K=8: fit=9.545705499998803 sec; transform+evaluation=2.0832028000004357 sec; total=11.62890890000017 sec
+
+ARTIFACT_WRITE_READBACK: {'json_exists': True, 'csv_exists': True, 'json_k_values': [2, 3, 4, 5, 6, 7, 8], 'csv_k_values': [2, 3, 4, 5, 6, 7, 8], 'cluster_files_exist': True, 'centers_files_exist': True, 'pass': True}
+WARNINGS: []
+BLOCKERS: []
+READY_FOR_STAGE_9: True

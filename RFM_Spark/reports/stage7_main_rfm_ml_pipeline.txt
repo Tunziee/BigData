@@ -1,0 +1,45 @@
+STAGE 7 — MAIN RFM ML PREPROCESSING PIPELINE
+====================================================================================================
+PROJECT_ROOT: D:\Doan_bigdata\BigData\BigData\RFM_Spark
+INPUT_PATH: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\features\rfm
+OUTPUT_PATH: D:\Doan_bigdata\BigData\BigData\RFM_Spark\output\ml\main_rfm_scaled
+RERUN_STAGE_7: True
+
+MAIN_MODEL_AUTHORITY
+RFM -> VectorAssembler -> StandardScaler -> K-Means (later stages)
+Stage 7 does not train a clustering model.
+
+INPUT_VALIDATION
+INPUT_ROW_COUNT: 1362281
+INPUT_DISTINCT_CUSTOMERS: 1362281
+DUPLICATE_CUSTOMER_ID: 0
+NULL_CUSTOMER_ID: 0
+INVALID_NUMERIC_TOTAL: 0
+NON_POSITIVE_TOTAL: 0
+INPUT_VALIDATION_PASS: True
+
+FEATURE_ORDER: ['Recency', 'Frequency', 'Monetary']
+VECTORASSEMBLER_CONFIG: inputCols=['Recency', 'Frequency', 'Monetary']; outputCol='features_raw'; handleInvalid='error'
+STANDARDSCALER_CONFIG: inputCol='features_raw'; outputCol='features'; withMean=True; withStd=True
+SCALER_MEAN: [236.14843706988268, 6.665422919353644, 0.6493858271904663]
+SCALER_STD: [221.11879131008746, 9.707005074461001, 1.1975819653583568]
+
+OUTPUT_ROW_COUNT: 1362281
+OUTPUT_DISTINCT_CUSTOMERS: 1362281
+VECTOR_DIMENSION: 3
+RAW_VECTOR_VALIDATION: {'row_count': 1362281, 'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}
+SCALED_VECTOR_VALIDATION: {'row_count': 1362281, 'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}
+SCALED_FEATURE_MEAN: [1.0426654636553477e-14, -7.16404808127848e-16, -5.123114306734284e-15]
+SCALED_FEATURE_STD: [1.0000000000000004, 0.9999999999999986, 0.9999999999999958]
+STANDARDIZATION_TOLERANCE: 1e-06
+STANDARDIZATION_PASS: True
+
+READBACK_VALIDATION
+{'row_count': 1362281, 'distinct_customers': 1362281, 'features_raw_quality': {'row_count': 1362281, 'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'features_quality': {'row_count': 1362281, 'null_vector': 0, 'wrong_dimension': 0, 'nan_0': 0, 'infinity_0': 0, 'nan_1': 0, 'infinity_1': 0, 'nan_2': 0, 'infinity_2': 0, 'nan_total': 0, 'infinity_total': 0, 'pass': True}, 'pass': True}
+
+READY_FOR_STAGE_8: True
+BLOCKERS: None
+
+SEMANTIC LOCK
+Frequency = number of distinct purchase dates per customer; not invoice/order count.
+Monetary = SUM(price). Main model Stage 7 intentionally does not apply log1p.

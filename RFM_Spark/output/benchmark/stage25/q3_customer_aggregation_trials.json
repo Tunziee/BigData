@@ -1,0 +1,163 @@
+{
+  "query_id": "Q3",
+  "warmup_count": 1,
+  "measured_count": 3,
+  "warmup": [
+    {
+      "mode": "NO_CACHE",
+      "runtime_sec": 8.011136699999952,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "mode": "CACHE",
+      "runtime_sec": 8.045807999999852,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    }
+  ],
+  "measured_order": [
+    [
+      "NO_CACHE",
+      "CACHE"
+    ],
+    [
+      "CACHE",
+      "NO_CACHE"
+    ],
+    [
+      "NO_CACHE",
+      "CACHE"
+    ]
+  ],
+  "trials": [
+    {
+      "query_id": "Q3",
+      "round": 1,
+      "order_index": 1,
+      "trial": 1,
+      "mode": "NO_CACHE",
+      "runtime_sec": 6.753804599999967,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q3",
+      "round": 1,
+      "order_index": 2,
+      "trial": 1,
+      "mode": "CACHE",
+      "runtime_sec": 7.6031124000001,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q3",
+      "round": 2,
+      "order_index": 1,
+      "trial": 2,
+      "mode": "CACHE",
+      "runtime_sec": 6.681392499999674,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q3",
+      "round": 2,
+      "order_index": 2,
+      "trial": 2,
+      "mode": "NO_CACHE",
+      "runtime_sec": 7.393477900000107,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q3",
+      "round": 3,
+      "order_index": 1,
+      "trial": 3,
+      "mode": "NO_CACHE",
+      "runtime_sec": 7.654679100000067,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    },
+    {
+      "query_id": "Q3",
+      "round": 3,
+      "order_index": 2,
+      "trial": 3,
+      "mode": "CACHE",
+      "runtime_sec": 7.1460643999998865,
+      "result": {
+        "grouped_customer_count": 1362281,
+        "sum_grouped_transaction_rows": 31788324,
+        "sum_grouped_monetary": 884645.9740506222,
+        "max_customer_max_t_dat": "2020-09-22"
+      },
+      "pass": true
+    }
+  ],
+  "summary_by_mode": {
+    "NO_CACHE": {
+      "min_sec": 6.753804599999967,
+      "max_sec": 7.654679100000067,
+      "mean_sec": 7.26732053333338,
+      "median_sec": 7.393477900000107,
+      "population_std_sec": 0.3784446036615485,
+      "trial_times_sec": [
+        6.753804599999967,
+        7.393477900000107,
+        7.654679100000067
+      ],
+      "all_finite": true
+    },
+    "CACHE": {
+      "min_sec": 6.681392499999674,
+      "max_sec": 7.6031124000001,
+      "mean_sec": 7.143523099999887,
+      "median_sec": 7.1460643999998865,
+      "population_std_sec": 0.37629486414111135,
+      "trial_times_sec": [
+        7.6031124000001,
+        6.681392499999674,
+        7.1460643999998865
+      ],
+      "all_finite": true
+    }
+  }
+}

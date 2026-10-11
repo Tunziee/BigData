@@ -1,0 +1,68 @@
+{
+  "R1": {
+    "RFM3D": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": -0.03672398239788545,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "R1",
+      "model_name": "Rule-based RFM",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.15293069682185345,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    }
+  },
+  "K1": {
+    "RFM3D": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": 0.6858449879433209,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "K1",
+      "model_name": "Main K-Means",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.3565725452534894,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    }
+  },
+  "K2": {
+    "RFM3D": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "space": "COMMON_RFM_3D",
+      "feature_column": "eval_rfm3d_scaled",
+      "silhouette": 0.21521780350092465,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    },
+    "ERFM5D": {
+      "model_id": "K2",
+      "model_name": "Enhanced K-Means",
+      "space": "COMMON_ERFM_5D",
+      "feature_column": "eval_erfm5d_scaled",
+      "silhouette": 0.481806967562302,
+      "distance_measure": "squaredEuclidean",
+      "metric_name": "silhouette",
+      "customer_count": 1000000
+    }
+  }
+}
