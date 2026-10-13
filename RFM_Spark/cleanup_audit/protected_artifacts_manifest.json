@@ -1,0 +1,81 @@
+{
+  "project_root": "D:\\Doan_bigdata\\BigData\\BigData\\RFM_Spark",
+  "items": [
+    {
+      "path": "src",
+      "exists": true,
+      "type": "directory"
+    },
+    {
+      "path": "dashboard",
+      "exists": true,
+      "type": "directory"
+    },
+    {
+      "path": "data/transactions_train.csv",
+      "exists": true,
+      "bytes": 3488002253,
+      "sha256": "SKIPPED_LARGE_FILE"
+    },
+    {
+      "path": "data/customers.csv",
+      "exists": true,
+      "bytes": 207135859,
+      "sha256": "SKIPPED_LARGE_FILE"
+    },
+    {
+      "path": "data/articles.csv",
+      "exists": true,
+      "bytes": 36127865,
+      "sha256": "25f21882053517f7684ea43f524225a9481a7bb9aab9cf0abfc7fe8c4576a72b"
+    },
+    {
+      "path": "output/comparison/stage22/stage22_final_summary.json",
+      "exists": true,
+      "bytes": 7504,
+      "sha256": "6a7f9f3f35e1caa80cc060801d81aa96a68ea94d46cdec9e6032f100c1d4dc83"
+    },
+    {
+      "path": "output/analysis/stage26/stage26_final_summary.json",
+      "exists": true,
+      "bytes": 3247,
+      "sha256": "f2314e8afa058121a16419f8df7111f03e2d52d95b789df046067513524f01f0"
+    },
+    {
+      "path": "output/sql/stage27/stage27_final_summary.json",
+      "exists": true,
+      "bytes": 4083,
+      "sha256": "17d403d007064ea010bfbe92fb5036cca487803350072980620add62c3e9db0f"
+    },
+    {
+      "path": "output/fpgrowth/stage28_v2/stage28_v2_final_summary.json",
+      "exists": true,
+      "bytes": 2833,
+      "sha256": "7c10720f235671128f663e3be179396684b52260b3bcb62f0677e07113059ae7"
+    },
+    {
+      "path": "output/visualization/stage29/data/fig12_model_runtime_benchmark.csv",
+      "exists": true,
+      "bytes": 263,
+      "sha256": "ce683f46f948226996283a44af2f4aa80a14bdff877d89fa14c5e38903089883"
+    },
+    {
+      "path": "output/visualization/stage29/data/fig13_csv_parquet_storage.csv",
+      "exists": true,
+      "bytes": 52,
+      "sha256": "6b6f6225d59a72f0ee98eebdf97e5aca17795861530fec5c89518ab85841f45c"
+    },
+    {
+      "path": "output/visualization/stage29/data/fig14_csv_parquet_runtime.csv",
+      "exists": true,
+      "bytes": 207,
+      "sha256": "96cd75a78de852bc3ef27082cbe945064e296661e5a19f73bb1720632b63c909"
+    },
+    {
+      "path": "output/visualization/stage29/data/fig15_cache_vs_no_cache.csv",
+      "exists": true,
+      "bytes": 219,
+      "sha256": "e94fff984133e396d7f8c611cac0a17a076a2fe931bf3782c31772206bfa6a8f"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+:root {
+  --charcoal: #1C1C1E;
+  --muted: #6B7280;
+  --line: #E0E0E0;
+  --surface: #FFFFFF;
+  --cream: #F0EAD6;
+  --blush: #E8C3BA;
+  --midnight: #000080;
+  --purple: #581845;
+  --danger: #FF3B30;
+}
+
+.stApp { background: #FFFFFF; color: var(--charcoal); }
+[data-testid="stSidebar"] { background: #F7F7F8; border-right: 1px solid var(--line); }
+[data-testid="stSidebar"] h2 { letter-spacing: -0.02em; color: var(--charcoal); }
+.block-container { max-width: 1280px; padding-top: 2.2rem; padding-bottom: 3rem; }
+h1 { letter-spacing: -0.035em; font-weight: 700; color: var(--charcoal); }
+h2.section-title { font-size: 1.35rem; letter-spacing: -0.02em; margin: 1.6rem 0 .2rem; color: var(--charcoal); }
+.page-subtitle { color: var(--muted); font-size: 1.02rem; margin-top: -.9rem; margin-bottom: .6rem; }
+.source-note { border-left: 3px solid var(--midnight); background: #F8F8FB; padding: .7rem .9rem; border-radius: 12px; color: #45454B; margin: .8rem 0 1.2rem; }
+.empty-state { border: 1px dashed #B9BDC5; border-radius: 12px; padding: 1.1rem; color: #45454B; background: #FAFAFB; }
+.stButton > button { border-radius: 12px; border: 1px solid var(--midnight); color: #FFFFFF; background: var(--midnight); min-height: 2.5rem; transition: transform .2s ease, box-shadow .2s ease; }
+.stButton > button:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); transform: translateY(-1px); }
+.stTextInput input, .stSelectbox div[data-baseweb="select"] > div { border-radius: 12px; }
+[data-testid="stMetric"] { border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; background: var(--surface); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+[data-testid="stMetricLabel"] { color: var(--muted); }
+[data-testid="stMetricValue"] { color: var(--charcoal); font-variant-numeric: tabular-nums; }
+.stTabs [data-baseweb="tab-list"] { gap: .45rem; }
+.stTabs [data-baseweb="tab"] { border-radius: 12px; padding: .5rem .85rem; }
+@media (max-width: 768px) {
+  .block-container { padding: 1.1rem .85rem 2rem; }
+  h1 { font-size: 1.75rem; }
+  .page-subtitle { font-size: .95rem; }
+}
